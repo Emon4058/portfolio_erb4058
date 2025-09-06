@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand"><span>Emon Roy Bappy</span></a>
+            <nav class="nav-links" id="nav-menu">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button id="theme-toggle" class="theme-btn"></button>
+            <button id="nav-toggle" class="nav-toggle"><i class="fa fa-bars"></i></button>
+        </div>
+    </header>
+
+
+
+    <!-- Hero -->
+    <section id="about" class="hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h1 data-bind="name">Full Name</h1>
+                <h3 data-bind="headline">Job Title</h3>
+                <p data-bind="summary">Short summary here...</p>
+                <div class="hero-buttons">
+                    <a href="assets/files/EmonRoyBappy_CV.pdf" download class="btn">Download CV</a>
+                    <a data-bind-mailto href="mailto:emonroy4058@gmail.com" class="btn btn-primary">Contact Now</a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img id="avatar" src="assets/img/profile.jpg" alt="Avatar">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <ul id="skills-list" class="chip-list"></ul>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div id="projects-grid" class="grid cards"></div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div id="experience-list"></div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div id="education-list"></div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p>Email: <a data-bind-mailto href="#">Email</a></p>
+            <p>LinkedIn: <a data-bind-href="linkedin" href="#">LinkedIn</a></p>
+            <p>Website: <a data-bind-href="website" href="#">Website</a></p>
+        </div>
+    </section>
+    <button id="to-top"><i class="fa fa-arrow-up"></i></button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+{
+  "name": "Emon Roy Bappy",
+  "headline": "Research and Development Engineer at Cybernetics Hi-Tech Solutions",
+  "summary": "My background in Mechanical Engineering from Bangladesh University of Engineering and Technology has accelerated my passion for electromechanical systems. I have a strong foundation in Military Robotics and Bio‑Inspired Soft Robotics with extensive experience in computer‑aided design, printed circuit board design, finite element analysis, fused deposition modeling, molding, composite manufacturing, and CNC manufacturing processes. Currently, I am passionately pursuing opportunities to advance soft robotics in healthcare applications.",
+  "avatar": "assets/img/profile.jpg",
+  "themeColor": "#0ea5e9",
+  "email": "emonroy4058@gmail.com",
+  "website": "https://buetinterplanetar.com",
+  "linkedin": "https://www.linkedin.com/in/erb4058",
+  "github": "",
+
+  "skills": [
+    "Composite Structures",
+    "Topology Optimization",
+    "Solid Mechanics",
+    "FEA",
+    "Robotics",
+    "3D Printing",
+    "Soft Robotics",
+    "Healthcare"
+  ],
+
+  "projects": [
+    {
+      "title": "Military Robotics Optimization",
+      "description": "Contributed to the design and optimization of robust robotic structures for military applications using FEA and advanced materials.",
+      "tags": ["FEA", "Robotics", "Composite Structures"],
+      "liveUrl": "",
+      "codeUrl": "",
+      "image": "assets/img/project1.jpg"
+    },
+    {
+      "title": "Bio-Inspired Soft Robotics",
+      "description": "Developed prototypes of soft robotic systems inspired by biological organisms for potential use in healthcare applications.",
+      "tags": ["Soft Robotics", "Healthcare", "3D Printing"],
+      "liveUrl": "",
+      "codeUrl": "",
+      "image": "assets/img/project2.jpg"
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "Cybernetics Hi-Tech Solutions (Pvt) Ltd.",
+      "position": "Research And Development Engineer",
+      "location": "Dhaka, Bangladesh",
+      "period": "2024-07-Present",
+      "description": "With my expertise in Finite Element Analysis, manufacturing processes, and Fused Deposition Modeling, I contribute significantly to the optimization of robotic structures. My competencies ensure that the robots are designed to be both robust and efficient, thereby enabling them to perform the rigorous tasks required in military applications."
+    },
+    {
+      "company": "Automaestro",
+      "position": "Lead of Suspension Sub-team",
+      "location": "Dhaka, Bangladesh",
+      "period": "2022-12-2024-07",
+      "description": "Managed suspension sub-team and led projects for 1 year 8 months."
+    },
+    {
+      "company": "Automaestro",
+      "position": "Member of Suspension Sub-team",
+      "location": "Dhaka, Bangladesh",
+      "period": "2021-12-2022-12",
+      "description": "Worked as a team member in suspension sub-team."
+    },
+    {
+      "company": "BUET Robotics Society",
+      "position": "Vice President",
+      "location": "Dhaka, Bangladesh",
+      "period": "2023-06-2024-06",
+      "description": "Oversaw society activities and led the team."
+    },
+    {
+      "company": "BUET Robotics Society",
+      "position": "Publicity and Outreach Coordinator",
+      "location": "Dhaka, Bangladesh",
+      "period": "2022-06-2023-06",
+      "description": "Managed publicity and outreach programs."
+    },
+    {
+      "company": "Spectrum Engineering Consortium Ltd.",
+      "position": "Research And Development Engineer",
+      "location": "Dhaka, Bangladesh",
+      "period": "2023-06-2024-06",
+      "description": "Worked on cutting-edge robotics projects during a year-long internship."
+    },
+    {
+      "company": "Runner Automobiles PLC",
+      "position": "Manufacturing Process Engineer",
+      "location": "Mymensingh Division, Bangladesh",
+      "period": "2023-11-2023-11",
+      "description": "Acquired knowledge of three-wheeler manufacturing, automation, and process optimization."
+    },
+    {
+      "company": "Team Interplanetar",
+      "position": "Project Leader of Electrical and Communications sub-team",
+      "location": "Dhaka, Bangladesh",
+      "period": "2022-11-2023-08",
+      "description": "Led the electrical and communications sub-team in international space-robotics competitions."
+    },
+    {
+      "company": "Team Interplanetar",
+      "position": "Member of Electrical and Communications Sub-team",
+      "location": "Dhaka, Bangladesh",
+      "period": "2020-05-2022-11",
+      "description": "Contributed to electrical and communications tasks for team projects."
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "Bangladesh University of Engineering and Technology",
+      "degree": "Bachelor of Science - BS, Mechanical Engineering",
+      "period": "2019-04-2024-07"
+    },
+    {
+      "institution": "Notre Dame College",
+      "degree": "Higher Secondary Education",
+      "period": "2016-05-2018-12"
+    },
+    {
+      "institution": "Sylhet Government Pilot High School",
+      "degree": "Secondary School",
+      "period": "2008-01-2016-10"
+    }
+  ],
+
+  "certifications": [
+    "Certified SOLIDWORKS Professional (CSWP) Prep",
+    "Finite Element Analysis Convergence and Mesh Independence",
+    "SOLIDWORKS CAD Design Professional (CSWP)",
+    "SOLIDWORKS Advanced Assemblies",
+    "Topology Optimization Using Ansys Mechanical"
+  ],
+
+  "honors": [
+    "4th place, 2nd Kibo Robot Programming Challenge National Round",
+    "1st position, Sustainable Energy Innovation Challenge",
+    "Champion, National Stem Competition 2021",
+    "8th position, National Round of 6th Bangladesh Physics Olympiad 2016",
+    "Innovation Award, International Planetary Aerial Systems Challenge 2021"
+  ]
+}

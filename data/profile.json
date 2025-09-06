@@ -123,19 +123,18 @@
     }
   ],
 
-  "certifications": [
-    "Certified SOLIDWORKS Professional (CSWP) Prep",
-    "Finite Element Analysis Convergence and Mesh Independence",
-    "SOLIDWORKS CAD Design Professional (CSWP)",
-    "SOLIDWORKS Advanced Assemblies",
-    "Topology Optimization Using Ansys Mechanical"
-  ],
-
-  "honors": [
-    "4th place, 2nd Kibo Robot Programming Challenge National Round",
-    "1st position, Sustainable Energy Innovation Challenge",
-    "Champion, National Stem Competition 2021",
-    "8th position, National Round of 6th Bangladesh Physics Olympiad 2016",
-    "Innovation Award, International Planetary Aerial Systems Challenge 2021"
+  "achievements": [
+    {
+      "title": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "description": "Earned certification demonstrating knowledge of cloud concepts, security, and services.",
+      "link": "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+    },
+    {
+      "title": "Best Project Award",
+      "issuer": "Metropolitan University",
+      "description": "Awarded for developing the best software project in CSE 3rd Year.",
+      "link": "#"
+    }
   ]
 }

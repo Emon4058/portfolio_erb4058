@@ -83,6 +83,19 @@
         eduList.appendChild(div);
       });
 
+      // Achievements & Certifications
+      const achievementsList = document.getElementById("achievements-list");
+      profile.achievements.forEach((a) => {
+        const div = document.createElement("div");
+        div.className = "achievement-item";
+        div.innerHTML = `
+            <h4>${a.title}</h4>
+            <div class="issuer">${a.issuer}</div>
+            <p>${a.description}</p>
+            <a href="${a.link}" target="_blank">View Certificate</a>`;
+        achievementsList.appendChild(div);
+      });
+
       // Contact
       if (profile.email)
         document.querySelector(
@@ -94,9 +107,10 @@
       if (profile.linkedin)
         document.querySelector('[data-bind-href="linkedin"]').href =
           profile.linkedin;
-    })
-    .catch((err) => console.error(err));
+    });
+  // .catch((err) => console.error(err));
 })();
+
 // Reveal on scroll
 const revealEls = document.querySelectorAll("[data-reveal]");
 if ("IntersectionObserver" in window && revealEls.length) {

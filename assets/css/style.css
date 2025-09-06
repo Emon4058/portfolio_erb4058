@@ -299,6 +299,36 @@ a:hover {
     color: var(--text);
 }
 
+/* Achievements & Certifications */
+.achievement-item {
+    background: var(--card);
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.achievement-item h4 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.achievement-item .issuer {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 6px;
+}
+
+.achievement-item p {
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.achievement-item a {
+    color: var(--primary);
+    font-weight: 500;
+}
+
 /* Contact */
 #contact a {
     color: var(--primary);
@@ -335,6 +365,17 @@ a:hover {
 
 #to-top.show {
     display: block;
+}
+
+
+
+/* Footer  */
+
+#footer {
+    text-align: center;
+    color: #ffffff;
+    background-color: #475569;
+    padding: 10px 0;
 }
 
 /* Responsive hero */

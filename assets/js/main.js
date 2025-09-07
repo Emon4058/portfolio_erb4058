@@ -49,21 +49,77 @@
 
       // Projects
       const projectsGrid = document.getElementById("projects-grid");
-      profile.projects.forEach((p) => {
+      const modal = document.getElementById("project-modal");
+      const modalTitle = document.getElementById("modal-title");
+      const modalDesc = document.getElementById("modal-description");
+      const carouselImages = document.getElementById("carousel-images");
+      const closeModal = document.getElementById("modal-close");
+      let currentSlide = 0;
+
+      profile.projects.forEach((p, idx) => {
         const card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `
-          <img src="${p.image}" alt="${p.title}">
-          <div class="card-body">
-            <h3 class="card-title">${p.title}</h3>
-            <p class="card-text">${p.description}</p>
-            <div class="card-tags">${(p.tags || [])
-              .map((t) => `<span>${t}</span>`)
-              .join("")}</div>
-          </div>
-        `;
+    <img src="${p.image}" alt="${p.title}">
+    <div class="card-body">
+      <h3 class="card-title">${p.title}</h3>
+      <p class="card-text">${p.description}</p>
+      <a class="read-more a-link" data-index="${idx}">Read More</a>
+      <div class="card-tags">${(p.tags || [])
+        .map((t) => `<span>${t}</span>`)
+        .join("")}</div>
+    </div>
+  `;
         projectsGrid.appendChild(card);
       });
+
+      // Open Modal
+      document.querySelectorAll(".read-more").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          const index = e.target.getAttribute("data-index");
+          const project = profile.projects[index];
+
+          modalTitle.textContent = project.title;
+          modalDesc.textContent =
+            project.longDescription || project.description;
+
+          // Build carousel
+          carouselImages.innerHTML = "";
+          (project.gallery || [project.image]).forEach((img, i) => {
+            const imageEl = document.createElement("img");
+            imageEl.src = img;
+            if (i === 0) imageEl.classList.add("active");
+            carouselImages.appendChild(imageEl);
+          });
+          currentSlide = 0;
+
+          modal.style.display = "flex";
+        });
+      });
+
+      // Close modal
+      closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      // Next/Prev carousel
+      document
+        .querySelector(".carousel-btn.next")
+        .addEventListener("click", () => {
+          changeSlide(1);
+        });
+      document
+        .querySelector(".carousel-btn.prev")
+        .addEventListener("click", () => {
+          changeSlide(-1);
+        });
+
+      function changeSlide(step) {
+        const slides = carouselImages.querySelectorAll("img");
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + step + slides.length) % slides.length;
+        slides[currentSlide].classList.add("active");
+      }
 
       // Experience
       const expList = document.getElementById("experience-list");
@@ -92,7 +148,7 @@
             <h4>${a.title}</h4>
             <div class="issuer">${a.issuer}</div>
             <p>${a.description}</p>
-            <a href="${a.link}" target="_blank">View Certificate</a>`;
+            <a class="a-link" href="${a.link}" target="_blank">View Certificate</a>`;
         achievementsList.appendChild(div);
       });
 
@@ -140,3 +196,12 @@ window.addEventListener("scroll", () => {
 toTop.addEventListener("click", () =>
   window.scrollTo({ top: 0, behavior: "smooth" })
 );
+
+// click outside of popup to close
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+  }
+});

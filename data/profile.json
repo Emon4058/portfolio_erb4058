@@ -22,20 +22,88 @@
 
   "projects": [
     {
-      "title": "Military Robotics Optimization",
-      "description": "Contributed to the design and optimization of robust robotic structures for military applications using FEA and advanced materials.",
-      "tags": ["FEA", "Robotics", "Composite Structures"],
-      "liveUrl": "",
-      "codeUrl": "",
-      "image": "assets/img/project1.jpg"
+      "title": "Man portable ROV",
+      "description": "---",
+      "longDescription": "---",
+      "image": "assets/img/projects/portfolio1.png",
+      "gallery": [
+        "assets/img/projects/portfolio1.png",
+        "assets/img/projects/portfolio2.png",
+        "assets/img/projects/portfolio3.png"
+      ],
+      "tags": ["CAD", "---", "------"]
     },
     {
-      "title": "Bio-Inspired Soft Robotics",
-      "description": "Developed prototypes of soft robotic systems inspired by biological organisms for potential use in healthcare applications.",
-      "tags": ["Soft Robotics", "Healthcare", "3D Printing"],
-      "liveUrl": "",
-      "codeUrl": "",
-      "image": "assets/img/project2.jpg"
+      "title": "EOD (Explosive Ordinance Disposal) ROV",
+      "description": "---",
+      "longDescription": "---",
+      "image": "assets/img/projects/portfolio1.png",
+      "gallery": [
+        "assets/img/projects/portfolio1.png",
+        "assets/img/projects/portfolio2.png",
+        "assets/img/projects/portfolio3.png"
+      ],
+      "tags": ["CAD", "---", "------"]
+    },
+    {
+      "title": "FDM Printer Manufacturing",
+      "description": "Conventional FDM printers available in the market typically have a dimensional...",
+      "longDescription": " Conventional FDM printers available in the market typically have a dimensional range of 200 mm to 350 mm. Therefore, parts greater than the printer bed size must be sliced into multiple parts. However, after 3D printing, the surfaces often do not mate accurately. To address this issue, we developed a 3D printer with a build volume of 500 mm × 500 mm × 500 mm. The primary challenge of this project is maintaining accuracy and precision. Moreover, the higher print time increases the difficulty of producing an error-free model.",
+      "image": "assets/img/projects/portfolio1.png",
+      "gallery": [
+        "assets/img/projects/portfolio1.png",
+        "assets/img/projects/portfolio2.png",
+        "assets/img/projects/portfolio3.png"
+      ],
+      "tags": ["CAD", "---", "------"]
+    },
+    {
+      "title": "Finite Element Analysis",
+      "description": "The Finite Element Analysis (FEA) of a 6-Degree-of-Freedom (DOF) Robotic Arm...",
+      "longDescription": "The Finite Element Analysis (FEA) of a 6-Degree-of-Freedom (DOF) Robotic Arm was conducted to evaluate its structural integrity, stress distribution, and deformation under various load conditions. The arm, designed to carry a 20 kg payload in a retracted position and 9 kg when fully extended, is constructed from aluminum and stainless steel to optimize strength and weight efficiency. A key feature of this arm is its self-collision avoidance system, which prevents interference between components during operation. The FEA was performed using ANSYS Static Analysis Software, incorporating nonlinear constraints, and a minimum factor of safety of 5 was maintained throughout. The analysis led to 8 design iterations, with adjustments to material selection and dimensions based on the simulation results. This process helped identify stress concentrations, potential failure points, and areas for structural optimization, ensuring the arm meets the required performance standards. Challenges addressed included simulating real-world operational constraints and balancing strength with weight reduction.",
+      "image": "assets/img/projects/project4-1.jpg",
+      "gallery": [
+        "assets/img/projects/project4-1.jpg",
+        "assets/img/projects/project4-2.jpg",
+        "assets/img/projects/project4-3.jpg"
+      ],
+      "tags": ["CAD", "---", "------"]
+    },
+    {
+      "title": "FDM Printer Manufacturing",
+      "description": "Conventional FDM printers available in the market typically have a dimensional...",
+      "longDescription": " Conventional FDM printers available in the market typically have a dimensional range of 200 mm to 350 mm. Therefore, parts greater than the printer bed size must be sliced into multiple parts. However, after 3D printing, the surfaces often do not mate accurately. To address this issue, we developed a 3D printer with a build volume of 500 mm × 500 mm × 500 mm. The primary challenge of this project is maintaining accuracy and precision. Moreover, the higher print time increases the difficulty of producing an error-free model.",
+      "image": "assets/img/projects/portfolio1.png",
+      "gallery": [
+        "assets/img/projects/portfolio1.png",
+        "assets/img/projects/portfolio2.png",
+        "assets/img/projects/portfolio3.png"
+      ],
+      "tags": ["CAD", "---", "------"]
+    },
+    {
+      "title": "Topology Optimization",
+      "description": "Structural optimization helps to acquire an effective design minimizing material...",
+      "longDescription": "Structural optimization helps to acquire an effective design minimizing material usage and optimizing material distribution. As a team lead of  the suspension sub team a formula student vehicle project, I led the design and manufacturing process of suspension subsystem including Bell crack, Upright. We have utilized Ansys Structural Optimization tool to make an efficient bell crank and upright.",
+      "image": "assets/img/projects/portfolio1.png",
+      "gallery": [
+        "assets/img/projects/portfolio1.png",
+        "assets/img/projects/portfolio2.png",
+        "assets/img/projects/portfolio3.png"
+      ],
+      "tags": ["CAD", "---", "------"]
+    },
+    {
+      "title": "Height Adjustable Table",
+      "description": "The Height Adjustable Table is designed to provide ergonomic flexibility by allowing...",
+      "longDescription": "The Height Adjustable Table is designed to provide ergonomic flexibility by allowing users to switch between sitting and standing positions, reducing strain. It features a custom actuator based height adjustment mechanism with user-friendly control buttons. The table includes metal frames to ensure stability and supports various workspace setups. Unlike conventional tables, this design enhances comfort with customizable height presets, quiet operation, and improved weight distribution. Key challenges include maintaining structural stability at different heights, ensuring smooth and energy-efficient adjustments, and preventing wobbling under varying loads. By addressing these challenges, the table offers a more adaptable solution.",
+      "image": "assets/img/projects/portfolio1.png",
+      "gallery": [
+        "assets/img/projects/portfolio1.png",
+        "assets/img/projects/portfolio2.png",
+        "assets/img/projects/portfolio3.png"
+      ],
+      "tags": ["CAD", "---", "------"]
     }
   ],
 
@@ -128,11 +196,11 @@
       "title": "AWS Certified Cloud Practitioner",
       "issuer": "Amazon Web Services",
       "description": "Earned certification demonstrating knowledge of cloud concepts, security, and services.",
-      "link": "https://aws.amazon.com/certification/certified-cloud-practitioner/"
+      "link": "#"
     },
     {
       "title": "Best Project Award",
-      "issuer": "Metropolitan University",
+      "issuer": "AMAZON University",
       "description": "Awarded for developing the best software project in CSE 3rd Year.",
       "link": "#"
     }

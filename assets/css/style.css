@@ -418,7 +418,7 @@ a:hover {
     width: 90%;
     max-height: 90vh;
     overflow-y: auto;
-    text-align: center;
+    text-align: justify;
     position: relative;
 }
 

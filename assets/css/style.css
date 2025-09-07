@@ -390,6 +390,10 @@ a:hover {
         flex-direction: column;
         text-align: center;
     }
+
+    .hero-buttons {
+        justify-content: center;
+    }
 }
 
 /* Modal */

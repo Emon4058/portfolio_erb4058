@@ -51,118 +51,150 @@
         skillsList.appendChild(li);
       });
 
+      //       // Projects
+      //       const projectsGrid = document.getElementById("projects-grid");
+      //       const modal = document.getElementById("project-modal");
+      //       const modalTitle = document.getElementById("modal-title");
+      //       const modalDesc = document.getElementById("modal-description");
+      //       const carouselImages = document.getElementById("carousel-images");
+      //       const closeModal = document.getElementById("modal-close");
+      //       let currentSlide = 0;
+
+      //       let autoTimer = null;
+      //       function startAutoCarousel() {
+      //         stopAutoCarousel();
+      //         autoTimer = setInterval(() => changeSlide(1), 2000); // 2s per slide
+      //       }
+      //       function stopAutoCarousel() {
+      //         if (autoTimer) {
+      //           clearInterval(autoTimer);
+      //           autoTimer = null;
+      //         }
+      //       }
+
+      //       profile.projects.forEach((p, idx) => {
+      //         const card = document.createElement("div");
+      //         card.className = "card";
+      //         const linkHTML = p.url
+      //           ? `<a class="a-link" href="${p.url}">View case study</a>`
+      //           : `<a href="#" class="read-more a-link" role="button" data-index="${idx}">Read More</a>`;
+
+      //         card.innerHTML = `
+      //   <img src="${p.image}" alt="${
+      //           p.title || "Project"
+      //         }" loading="lazy" decoding="async">
+      //   <div class="card-body">
+      //     <h3 class="card-title">${p.title || ""}</h3>
+      //     <p class="card-text">${p.description || ""}</p>
+      //     ${linkHTML}
+      //     <div class="card-tags">${(p.tags || [])
+      //       .map((t) => `<span>${t}</span>`)
+      //       .join("")}</div>
+      //   </div>
+      // `;
+      //         projectsGrid.appendChild(card);
+      //       });
+
+      //       // Attach event listeners to dynamically created buttons
+      //       projectsGrid.querySelectorAll(".read-more").forEach((btn) => {
+      //         btn.addEventListener("click", (e) => {
+      //           e.preventDefault();
+      //           const index = Number(e.currentTarget.getAttribute("data-index"));
+      //           const project = profile.projects[index];
+      //           if (project) openModal(project);
+      //         });
+      //       });
+
+      //       // Open Modal
+      //       document.querySelectorAll(".read-more").forEach((btn) => {
+      //         btn.addEventListener("click", (e) => {
+      //           const index = e.target.getAttribute("data-index");
+      //           const project = profile.projects[index];
+
+      //           modalTitle.textContent = project.title;
+      //           modalDesc.textContent =
+      //             project.longDescription || project.description;
+
+      //           // Build carousel
+      //           carouselImages.innerHTML = "";
+      //           (project.gallery || [project.image]).forEach((img, i) => {
+      //             const imageEl = document.createElement("img");
+      //             imageEl.src = img;
+      //             if (i === 0) imageEl.classList.add("active");
+      //             carouselImages.appendChild(imageEl);
+      //           });
+      //           currentSlide = 0;
+
+      //           modal.style.display = "flex";
+      //           startAutoCarousel();
+      //         });
+      //       });
+
+      //       carouselImages.addEventListener("mouseenter", stopAutoCarousel);
+      //       carouselImages.addEventListener("mouseleave", startAutoCarousel);
+
+      //       modal.addEventListener("click", (e) => {
+      //         if (e.target === modal) {
+      //           modal.style.display = "none";
+      //           stopAutoCarousel();
+      //           document.body.classList.remove("modal-open");
+      //         }
+      //       });
+      //       // Close modal
+      //       closeModal.addEventListener("click", () => {
+      //         modal.style.display = "none";
+      //         stopAutoCarousel();
+      //       });
+
+      //       // Next/Prev carousel
+      //       document
+      //         .querySelector(".carousel-btn.next")
+      //         .addEventListener("click", () => {
+      //           changeSlide(1);
+      //         });
+      //       document
+      //         .querySelector(".carousel-btn.prev")
+      //         .addEventListener("click", () => {
+      //           changeSlide(-1);
+      //         });
+
+      //       function changeSlide(step) {
+      //         const slides = carouselImages.querySelectorAll("img");
+      //         slides[currentSlide].classList.remove("active");
+      //         currentSlide = (currentSlide + step + slides.length) % slides.length;
+      //         slides[currentSlide].classList.add("active");
+      //       }
+
       // Projects
       const projectsGrid = document.getElementById("projects-grid");
-      const modal = document.getElementById("project-modal");
-      const modalTitle = document.getElementById("modal-title");
-      const modalDesc = document.getElementById("modal-description");
-      const carouselImages = document.getElementById("carousel-images");
-      const closeModal = document.getElementById("modal-close");
-      let currentSlide = 0;
+      if (projectsGrid && Array.isArray(profile.projects)) {
+        projectsGrid.innerHTML = "";
 
-      let autoTimer = null;
-      function startAutoCarousel() {
-        stopAutoCarousel();
-        autoTimer = setInterval(() => changeSlide(1), 2000); // 2s per slide
-      }
-      function stopAutoCarousel() {
-        if (autoTimer) {
-          clearInterval(autoTimer);
-          autoTimer = null;
-        }
-      }
+        profile.projects.forEach((p, idx) => {
+          // Use custom page if provided, else dynamic page with index
+          const href = p.url
+            ? p.url
+            : `../assets/projects/project.html?i=${idx}`;
 
-      profile.projects.forEach((p, idx) => {
-        const card = document.createElement("div");
-        card.className = "card";
-        const linkHTML = p.url
-          ? `<a class="a-link" href="${p.url}">View case study</a>`
-          : `<a href="#" class="read-more a-link" role="button" data-index="${idx}">Read More</a>`;
+          const card = document.createElement("a");
+          card.className = "card";
+          card.href = href;
 
-        card.innerHTML = `
-  <img src="${p.image}" alt="${
-          p.title || "Project"
-        }" loading="lazy" decoding="async">
-  <div class="card-body">
-    <h3 class="card-title">${p.title || ""}</h3>
-    <p class="card-text">${p.description || ""}</p>
-    ${linkHTML}
-    <div class="card-tags">${(p.tags || [])
-      .map((t) => `<span>${t}</span>`)
-      .join("")}</div>
-  </div>
-`;
-        projectsGrid.appendChild(card);
-      });
-
-      // Attach event listeners to dynamically created buttons
-      projectsGrid.querySelectorAll(".read-more").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          const index = Number(e.currentTarget.getAttribute("data-index"));
-          const project = profile.projects[index];
-          if (project) openModal(project);
+          card.innerHTML = `
+      <img src="${p.image}" alt="${
+            p.title || "Project"
+          }" loading="lazy" decoding="async">
+      <div class="card-body">
+        <h3 class="card-title">${p.title || ""}</h3>
+        <p class="card-text">${p.description || ""}</p>
+        <div class="card-tags">${(p.tags || [])
+          .map((t) => `<span>${t}</span>`)
+          .join("")}</div>
+        <span class="a-link" style="display:inline-block;margin-top:6px">View details</span>
+      </div>
+    `;
+          projectsGrid.appendChild(card);
         });
-      });
-
-      // Open Modal
-      document.querySelectorAll(".read-more").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          const index = e.target.getAttribute("data-index");
-          const project = profile.projects[index];
-
-          modalTitle.textContent = project.title;
-          modalDesc.textContent =
-            project.longDescription || project.description;
-
-          // Build carousel
-          carouselImages.innerHTML = "";
-          (project.gallery || [project.image]).forEach((img, i) => {
-            const imageEl = document.createElement("img");
-            imageEl.src = img;
-            if (i === 0) imageEl.classList.add("active");
-            carouselImages.appendChild(imageEl);
-          });
-          currentSlide = 0;
-
-          modal.style.display = "flex";
-          startAutoCarousel();
-        });
-      });
-
-      carouselImages.addEventListener("mouseenter", stopAutoCarousel);
-      carouselImages.addEventListener("mouseleave", startAutoCarousel);
-
-      modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-          modal.style.display = "none";
-          stopAutoCarousel();
-          document.body.classList.remove("modal-open");
-        }
-      });
-      // Close modal
-      closeModal.addEventListener("click", () => {
-        modal.style.display = "none";
-        stopAutoCarousel();
-      });
-
-      // Next/Prev carousel
-      document
-        .querySelector(".carousel-btn.next")
-        .addEventListener("click", () => {
-          changeSlide(1);
-        });
-      document
-        .querySelector(".carousel-btn.prev")
-        .addEventListener("click", () => {
-          changeSlide(-1);
-        });
-
-      function changeSlide(step) {
-        const slides = carouselImages.querySelectorAll("img");
-        slides[currentSlide].classList.remove("active");
-        currentSlide = (currentSlide + step + slides.length) % slides.length;
-        slides[currentSlide].classList.add("active");
       }
 
       // Experience

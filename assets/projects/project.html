@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Project — Case Study | Emon Roy Bappy</title>
+    <meta name="description" content="Project case study — images, narrative, tags, and gallery." />
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --bg: #f8fafc;
+            --text: #0f172a;
+            --muted: #475569;
+            --card: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 8px 24px rgba(15, 23, 42, .08);
+            --radius: 14px;
+            --maxw: 1100px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            box-shadow: var(--shadow)
+        }
+
+        .topbar-inner {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px
+        }
+
+        .brand {
+            font-weight: 700;
+            color: var(--primary)
+        }
+
+        .back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 24px 16px
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 24px;
+            align-items: center;
+            margin-top: 10px;
+            margin-bottom: 24px
+        }
+
+        .hero h1 {
+            font-size: clamp(28px, 4vw, 40px);
+            line-height: 1.2;
+            margin: 0 0 8px
+        }
+
+        .sub {
+            color: var(--muted);
+            margin: 0 0 16px;
+            white-space: pre-wrap
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 16px
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 10px 0 0
+        }
+
+        .tag {
+            background: #e2e8f0;
+            color: #0f172a;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+            border: 1px solid #dbe3ef
+        }
+
+        .hero-figure {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 12px;
+            box-shadow: var(--shadow)
+        }
+
+        .hero-figure img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block
+        }
+
+        .hero-figure figcaption {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 8px
+        }
+
+        .section {
+            margin: 28px 0
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: start;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px;
+            box-shadow: var(--shadow)
+        }
+
+        .split-media img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block
+        }
+
+        .split h2 {
+            margin: 0 0 8px
+        }
+
+        .split p {
+            margin: 0 0 10px;
+            color: var(--text)
+        }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin-top: 10px
+        }
+
+        .thumb {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow)
+        }
+
+        .thumb img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block
+        }
+
+        .thumb figcaption {
+            font-size: 12px;
+            color: var(--muted);
+            padding: 8px
+        }
+
+        .callout {
+            border-left: 4px solid var(--primary);
+            background: linear-gradient(0deg, #f0f9ff, #f9fbfd);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px
+        }
+
+        .cta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 14px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--primary);
+            color: #fff;
+            text-decoration: none;
+            box-shadow: var(--shadow)
+        }
+
+        .btn.secondary {
+            background: #fff;
+            color: var(--text)
+        }
+
+        .footer {
+            text-align: center;
+            color: #64748b;
+            padding: 30px 16px;
+            margin-top: 20px
+        }
+
+        @media (max-width:900px) {
+            .hero {
+                grid-template-columns: 1fr
+            }
+        }
+
+        @media (max-width:640px) {
+            .split {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="topbar-inner"> <a class="brand" href="../../index.html">Emon Roy Bappy</a> <a class="back"
+                href="../../index.html#projects" aria-label="Back to projects">← Back to Projects</a> </div>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <div>
+                <h1 id="title">Project Title</h1>
+                <p id="summary" class="sub">Short description...</p>
+                <div id="meta" class="meta" aria-hidden="true"></div>
+                <div id="tags" class="tags"></div>
+                <div class="cta"> <a id="contactBtn" class="btn"
+                        href="mailto:emonroy4058@gmail.com?subject=Project%20Inquiry">Contact about this project</a> <a
+                        class="btn secondary" href="#gallerySec">Jump to gallery</a> </div>
+            </div>
+            <figure class="hero-figure"> <img id="heroImg" src="" alt="Project cover image" />
+                <figcaption id="heroCap">Cover image</figcaption>
+            </figure>
+        </section>
+        <section id="specsWrap" class="section" aria-hidden="true" style="display:none">
+            <div id="specs" class="specs"></div>
+        </section>
+
+        <!-- Dynamic sections will be injected here -->
+        <div id="dynamicSections"></div>
+
+        <section id="gallerySec" class="section">
+            <h2>Gallery</h2>
+            <div id="gallery" class="gallery"></div>
+        </section>
+
+        <section id="iterationsSec" class="section" style="display:none">
+            <h2>Design Iterations</h2>
+            <ul id="iterations"></ul>
+        </section>
+
+        <section id="outcomesSec" class="section" style="display:none">
+            <h2>Outcomes</h2>
+            <ul id="outcomes"></ul>
+        </section>
+
+        <section class="section">
+            <div class="callout">
+                Interested in deeper details or the workflow? I’m happy to walk through the model.
+                <div class="cta">
+                    <a id="contactBtn2" class="btn" href="mailto:emonroy4058@gmail.com?subject=Project%20Inquiry">Get in
+                        touch</a>
+                    <a class="btn secondary" href="../../index.html#projects">Back to Projects</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">© 2025 | Emon Roy Bappy</footer>
+    <script> (function () {
+            const params = new URLSearchParams(location.search);
+            const slugParam = params.get("slug");
+            const idxParam = parseInt(params.get("i"), 10);
+            const PROFILE_URL = "../../data/profile.json";
+            const slugify = (s) =>
+                (s || "")
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/g, "-")
+                    .replace(/(^-|-$)/g, "");
+            const resolveAsset = (src) => {
+                if (!src) return "";
+                if (/^https?:\/\//i.test(src) || src.startsWith("/")) return src;
+                if (src.startsWith("assets/")) return "../" + src;
+                if (src.startsWith("../")) return src;
+                "../" + src.replace(/^\.?\/*/, "");
+            };
+            fetch(PROFILE_URL)
+                .then((r) => r.json())
+                .then((profile) => {
+                    let project = null;
+                    if (slugParam) {
+                        project = profile.projects.find(
+                            (p) => slugify(p.slug || p.title) === slugParam
+                        );
+                    }
+                    if (!project) {
+                        project =
+                            Number.isInteger(idxParam) && profile.projects[idxParam]
+                                ? profile.projects[idxParam]
+                                : profile.projects[0];
+                    }
+                    if (!project) throw new Error("No project found");
+                    const title = project.title || "Project";
+                    document.title = `${title} — Case Study | Emon Roy Bappy`;
+                    document.getElementById("title").textContent = title;
+                    document.getElementById("summary").textContent =
+                        project.description || "";
+                    const subject = encodeURIComponent(`${title} — Inquiry`);
+                    document.getElementById(
+                        "contactBtn"
+                    ).href = `mailto:emonroy4058@gmail.com?subject=${subject}`;
+                    document.getElementById(
+                        "contactBtn2"
+                    ).href = `mailto:emonroy4058@gmail.com?subject=${subject}`;
+                    const meta = Array.isArray(project.meta) ? project.meta : [];
+                    const metaEl = document.getElementById("meta");
+                    if (meta.length) {
+                        metaEl.innerHTML = meta.map((m) => `<span>${m}</span>`).join("");
+                        metaEl.removeAttribute("aria-hidden");
+                    }
+                    const tagsEl = document.getElementById("tags");
+                    tagsEl.innerHTML = (project.tags || [])
+                        .map((t) => `<span class="tag">${t}</span>`)
+                        .join("");
+                    const heroImg = document.getElementById("heroImg");
+                    const galleryRaw = (
+                        project.gallery && project.gallery.length
+                            ? project.gallery
+                            : [project.image]
+                    ).filter(Boolean);
+                    const imgs = galleryRaw.map(resolveAsset);
+                    heroImg.src = imgs[0] || "";
+                    heroImg.alt = `${title} — cover image`;
+                    document.getElementById("heroCap").textContent = title + " — cover";
+                    const specs = Array.isArray(project.specs) ? project.specs : [];
+                    if (specs.length) {
+                        const wrap = document.getElementById("specsWrap");
+                        const specsEl = document.getElementById("specs");
+                        specsEl.innerHTML = specs
+                            .map(
+                                (s) =>
+                                    ` <div class="spec"><div class="k">${s.k}</div><div class="v">${s.v}</div></div> `
+                            )
+                            .join("");
+                        wrap.style.display = "";
+                        wrap.removeAttribute("aria-hidden");
+                    }
+                    const sections = Array.isArray(project.sections) ? project.sections : [];
+                    const dyn = document.getElementById("dynamicSections");
+                    const renderSplit = (s, i) => {
+                        const img = resolveAsset(s.image);
+                        const leftFirst = s.align
+                            ? s.align.toLowerCase() === "left"
+                            : i % 2 === 0;
+                        const mediaHTML = `<div class="split-media"><img src="${img}" alt="${s.heading || title
+                            } image"><div class="muted" style="margin-top:6px">${s.caption || ""
+                            }</div></div>`;
+                        const textHTML = `<div><h2>${s.heading || ""}</h2><p>${(
+                            s.text || ""
+                        ).trim()}</p></div>`;
+                        return ` <section class="section"> <div class="split"> ${leftFirst ? mediaHTML + textHTML : textHTML + mediaHTML
+                            } </div> </section> `;
+                    };
+                    if (sections.length) {
+                        dyn.innerHTML = sections.map((s, i) => renderSplit(s, i)).join("");
+                    } else {
+                        const fallback = {
+                            heading: "Overview",
+                            text: (project.longDescription || project.description || "").trim(),
+                            image: imgs[1] || imgs[0] || "",
+                            caption: "",
+                            align: "left",
+                        };
+                        dyn.innerHTML = renderSplit(fallback, 0);
+                    }
+                    const gallerySec = document.getElementById("gallerySec");
+                    const gallery = document.getElementById("gallery");
+                    if (imgs.length <= 1) {
+                        gallerySec.style.display = "none";
+                    } else {
+                        gallery.innerHTML = imgs
+                            .map(
+                                (src, i) =>
+                                    ` <figure class="thumb"> <img src="${src}" alt="${title} image ${i + 1
+                                    }"> <figcaption>${title} — image ${i + 1}</figcaption> </figure> `
+                            )
+                            .join("");
+                    }
+                    if (Array.isArray(project.iterations) && project.iterations.length) {
+                        const list = document.getElementById("iterations");
+                        list.innerHTML = project.iterations
+                            .map((it) => `<li>${it}</li>`)
+                            .join("");
+                        document.getElementById("iterationsSec").style.display = "";
+                    }
+                    if (Array.isArray(project.outcomes) && project.outcomes.length) {
+                        const list = document.getElementById("outcomes");
+                        list.innerHTML = project.outcomes.map((o) => `<li>${o}</li>`).join("");
+                        document.getElementById("outcomesSec").style.display = "";
+                    }
+                })
+                .catch((err) => {
+                    console.error("Failed to load project:", err);
+                    document.querySelector("main").innerHTML =
+                        '<p>Could not load this project. <a href="../../index.html#projects">Back to projects</a></p>';
+                });
+        })();
+    </script>
+</body>
+
+</html>

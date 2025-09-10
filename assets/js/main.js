@@ -5,8 +5,12 @@
   const navMenu = document.getElementById("nav-menu");
 
   // Theme toggle
-  const savedTheme = localStorage.getItem("theme") || "light";
-  root.setAttribute("data-theme", savedTheme);
+  const savedTheme = localStorage.getItem("theme");
+  const prefersDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
+  root.setAttribute("data-theme", initialTheme);
   updateThemeIcon();
 
   function updateThemeIcon() {
@@ -56,6 +60,18 @@
       const closeModal = document.getElementById("modal-close");
       let currentSlide = 0;
 
+      let autoTimer = null;
+      function startAutoCarousel() {
+        stopAutoCarousel();
+        autoTimer = setInterval(() => changeSlide(1), 2000); // 2s per slide
+      }
+      function stopAutoCarousel() {
+        if (autoTimer) {
+          clearInterval(autoTimer);
+          autoTimer = null;
+        }
+      }
+
       profile.projects.forEach((p, idx) => {
         const card = document.createElement("div");
         card.className = "card";
@@ -94,12 +110,24 @@
           currentSlide = 0;
 
           modal.style.display = "flex";
+          startAutoCarousel();
         });
       });
 
+      carouselImages.addEventListener("mouseenter", stopAutoCarousel);
+      carouselImages.addEventListener("mouseleave", startAutoCarousel);
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+          stopAutoCarousel();
+          document.body.classList.remove("modal-open");
+        }
+      });
       // Close modal
       closeModal.addEventListener("click", () => {
         modal.style.display = "none";
+        stopAutoCarousel();
       });
 
       // Next/Prev carousel
@@ -196,12 +224,3 @@ window.addEventListener("scroll", () => {
 toTop.addEventListener("click", () =>
   window.scrollTo({ top: 0, behavior: "smooth" })
 );
-
-// click outside of popup to close
-
-window.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
-    document.body.classList.remove("modal-open");
-  }
-});

@@ -15,6 +15,18 @@ html {
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+html[data-theme="dark"] {
+    --bg: #0b1220;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --card: #111827;
+    --border: #1f2937;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    /* Optional: tweak brand in dark */
+    --primary: #38bdf8;
+    --primary-hover: #0ea5e9;
+}
+
 /* Global reset */
 * {
     box-sizing: border-box;
@@ -85,18 +97,53 @@ a:hover {
 
 .nav-toggle {
     display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
+    /* default hidden on desktop */
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
     cursor: pointer;
+    font-size: 20px;
+    box-shadow: var(--shadow);
+    display: none;
+    /* keep hidden until mobile */
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-toggle i {
+    pointer-events: none;
+}
+
+.nav-toggle:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
 }
 
 .theme-btn {
     margin-left: 16px;
-    background: none;
-    border: none;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-btn:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
 }
 
 /* Mobile navbar */
@@ -119,9 +166,11 @@ a:hover {
     }
 
     .nav-toggle {
-        display: block;
+        display: inline-flex;
     }
 }
+
+
 
 /* Hero */
 .hero {
@@ -360,13 +409,20 @@ a:hover {
     background: var(--primary);
     color: #fff;
     border: none;
-    padding: 12px;
+    width: 48px;
+    /* fixed square for perfect circle */
+    height: 48px;
     border-radius: 50%;
     cursor: pointer;
     display: none;
     z-index: 100;
     font-size: 18px;
     box-shadow: var(--shadow);
+    display: none;
+}
+
+#to-top i {
+    pointer-events: none;
 }
 
 #to-top.show {

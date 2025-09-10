@@ -13,6 +13,11 @@ html {
     --border: #e2e8f0;
     --radius: 10px;
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --tag-bg: #e2e8f0;
+    /* light chip */
+    --tag-text: #0f172a;
+    /* dark text on light chip */
+    --tag-border: transparent;
 }
 
 html[data-theme="dark"] {
@@ -25,6 +30,11 @@ html[data-theme="dark"] {
     /* Optional: tweak brand in dark */
     --primary: #38bdf8;
     --primary-hover: #0ea5e9;
+    --tag-bg: rgba(255, 255, 255, 0.08);
+    /* subtle dark chip */
+    --tag-text: #e2e8f0;
+    /* light text */
+    --tag-border: rgba(255, 255, 255, 0.15);
 }
 
 /* Global reset */
@@ -307,12 +317,13 @@ a:hover {
 }
 
 .card-tags span {
-    background: #e2e8f0;
-    color: var(--text);
+    background: var(--tag-bg);
+    color: var(--tag-text);
     padding: 4px 8px;
     font-size: 12px;
     border-radius: 12px;
     margin-right: 4px;
+    border: 1px solid var(--tag-border);
 }
 
 .card:hover {
@@ -349,6 +360,12 @@ a:hover {
 }
 
 /* Achievements & Certifications */
+#achievements-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
 .achievement-item {
     background: var(--card);
     padding: 16px;
@@ -382,6 +399,12 @@ a:hover {
     color: var(--primary);
     font-weight: 500;
     cursor: pointer;
+}
+
+@media(max-width:768px) {
+    #achievements-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 /* Contact */
@@ -504,21 +527,58 @@ a:hover {
     display: block;
 }
 
+/* Carousel buttons — perfectly round */
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.6);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+    /* shape */
+    width: 48px;
+    height: 48px;
+    padding: 0;
     border-radius: 50%;
+    /* look */
+    background: rgba(255, 255, 255, 0.75);
+    color: var(--text);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    /* center the arrow */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-size: 20px;
 }
 
+.carousel-btn:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+/* Keep their positions */
 .carousel-btn.prev {
     left: 10px;
 }
 
 .carousel-btn.next {
     right: 10px;
+}
+
+/* Dark mode tweak for contrast */
+html[data-theme="dark"] .carousel-btn {
+    background: rgba(17, 24, 39, 0.7);
+    /* slate-ish */
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Optional: slightly smaller on very small screens */
+@media (max-width: 480px) {
+    .carousel-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
 }

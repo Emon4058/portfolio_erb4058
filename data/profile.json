@@ -67,7 +67,8 @@
         "assets/img/projects/project4-2.jpg",
         "assets/img/projects/project4-3.jpg"
       ],
-      "tags": ["CAD", "---", "------"]
+      "tags": ["FEA", "Solid Mechanics", "Robotics"],
+      "url": "../project-details/project1.html"
     },
     {
       "title": "FDM Printer Manufacturing",
@@ -193,16 +194,64 @@
 
   "achievements": [
     {
-      "title": "AWS Certified Cloud Practitioner",
-      "issuer": "Amazon Web Services",
-      "description": "Earned certification demonstrating knowledge of cloud concepts, security, and services.",
-      "link": "#"
+      "title": "Topology Optimization Using Ansys Mechanical",
+      "issuer": "Ansys",
+      "description": "Skills: Topology optimization · Ansys Mechanical",
+      "link": "https://innoverse.ansys.com/badges/badge/dG9wb2xvZ3ktb3B0aW1pemF0aW9uLXVzaW5nLWFuc3lzLW1lY2hhbmljYWwtMTU%3D"
     },
     {
-      "title": "Best Project Award",
-      "issuer": "AMAZON University",
-      "description": "Awarded for developing the best software project in CSE 3rd Year.",
-      "link": "#"
+      "title": "Ansys Tutorial",
+      "issuer": "Udemy",
+      "description": "Skills: Ansys ACP · Composite Material",
+      "link": "https://www.udemy.com/certificate/UC-be9d452f-5478-47c7-bc57-3f40a31a86d5/"
+    },
+    {
+      "title": "Stress Analysis in Solid Mechanics",
+      "issuer": "Ansys",
+      "description": "Skills: Solid Mechanics · Ansys Mechanical · Stress Analysis",
+      "link": "https://innoverse.ansys.com/badges/badge/c3RyZXNzLWFuYWx5c2lzLWluLXNvbGlkLW1lY2hhbmljcy0xMzA%3D"
+    },
+    {
+      "title": "SOLIDWORKS CAD Design Professional (CSWP)",
+      "issuer": "Dassault Systèmes",
+      "description": "Skills: Computer-Aided Design (CAD) · SOLIDWORKS · Design for Assembly",
+      "link": "https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-HM7QU4C6VD"
+    },
+    {
+      "title": "Finite Element Analysis Convergence and Mesh Independence",
+      "issuer": "Coursera",
+      "description": "Skills: Finite Element Analysis (FEA) · SimScale",
+      "link": "https://www.coursera.org/account/accomplishments/verify/DYGBZYKAQFL3"
+    },
+    {
+      "title": "FEM - Linear, Nonlinear Analysis & Post-Processing",
+      "issuer": "Coursera",
+      "description": "Skills: Non-linear Analysis · Finite Element Analysis (FEA) · SimScale",
+      "link": "https://www.coursera.org/account/accomplishments/verify/Y6PY4XWY5DKK"
+    },
+    {
+      "title": "Mechanical Design Solidworks Associate",
+      "issuer": "Dassault Systèmes",
+      "description": "Skills: Computer-Aided Design (CAD) · SOLIDWORKS",
+      "link": "https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-9G7EDFK4NZ"
+    },
+    {
+      "title": "MATLAB Onramp",
+      "issuer": "MathWorks",
+      "description": "Skills: MATLAB Onramp",
+      "link": "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=fb95d1c0-27ba-4a4f-8095-f971bcff5bf2&"
+    },
+    {
+      "title": "Ultimate Python Course - Learn from Scratch",
+      "issuer": "Udemy",
+      "description": "Skills: Python (Programming Language)",
+      "link": "https://www.udemy.com/certificate/UC-612cadcb-bc0b-4574-9ced-089ec62bbea4/"
+    },
+    {
+      "title": "Python 3 for ABSOLUTE beginners",
+      "issuer": "Udemy",
+      "description": "Skills: Python (Programming Language)",
+      "link": "https://www.udemy.com/certificate/UC-f20609c1-c94c-4c45-9df6-17e1a052faba/"
     }
   ]
 }

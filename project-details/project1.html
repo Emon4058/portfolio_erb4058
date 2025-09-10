@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Finite Element Analysis — Case Study | Emon Roy Bappy</title>
+    <meta name="description"
+        content="Finite Element Analysis (FEA) of a 6‑DOF robotic arm — objectives, loads, constraints, meshing, results, and design iterations." />
+    <!-- <link rel="icon" href="assets/img/favicon.ico" /> -->
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --bg: #f8fafc;
+            --text: #0f172a;
+            --muted: #475569;
+            --card: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 8px 24px rgba(15, 23, 42, .08);
+            --radius: 14px;
+            --maxw: 1100px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .topbar-inner {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .brand {
+            font-weight: 700;
+            color: var(--primary)
+        }
+
+        .back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 24px 16px
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 24px;
+            align-items: center;
+            margin-top: 10px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(28px, 4vw, 40px);
+            line-height: 1.2;
+            margin: 0 0 8px
+        }
+
+        .sub {
+            color: var(--muted);
+            margin: 0 0 16px
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 16px
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 10px 0 0
+        }
+
+        .tag {
+            background: #e2e8f0;
+            color: #0f172a;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+            border: 1px solid #dbe3ef
+        }
+
+        .hero-figure {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-figure img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block
+        }
+
+        .hero-figure figcaption {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 8px
+        }
+
+        /* Spec cards */
+        .specs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin: 24px 0 8px;
+        }
+
+        .spec {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px;
+            box-shadow: var(--shadow);
+        }
+
+        .spec .k {
+            font-size: 12px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: .08em
+        }
+
+        .spec .v {
+            font-weight: 700;
+            margin-top: 6px
+        }
+
+        /* Split sections: image + text side-by-side */
+        .section {
+            margin: 28px 0
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: start;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px;
+            box-shadow: var(--shadow);
+        }
+
+        .split:nth-child(even) .split-media {
+            order: 2
+        }
+
+        .split-media img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block
+        }
+
+        .split h2 {
+            margin: 0 0 8px
+        }
+
+        .split p {
+            margin: 0 0 10px;
+            color: var(--text)
+        }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin-top: 10px
+        }
+
+        .thumb {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow)
+        }
+
+        .thumb img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block
+        }
+
+        .thumb figcaption {
+            font-size: 12px;
+            color: var(--muted);
+            padding: 8px
+        }
+
+        /* Callout */
+        .callout {
+            border-left: 4px solid var(--primary);
+            background: linear-gradient(0deg, #f0f9ff, #f9fbfd);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .cta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 14px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--primary);
+            color: #fff;
+            text-decoration: none;
+            box-shadow: var(--shadow)
+        }
+
+        .btn.secondary {
+            background: #fff;
+            color: var(--text)
+        }
+
+        .footer {
+            text-align: center;
+            color: #64748b;
+            padding: 30px 16px;
+            margin-top: 20px
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr
+            }
+
+            .specs {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media (max-width: 640px) {
+            .split {
+                grid-template-columns: 1fr
+            }
+
+            .specs {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="../index.html">Emon Roy Bappy</a>
+            <a class="back" href="../index.html#projects" aria-label="Back to projects">← Back to Projects</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div>
+                <h1>Finite Element Analysis of a 6‑DOF Robotic Arm</h1>
+                <p class="sub">Evaluating structural integrity, stress distribution, and deformation under real‑world
+                    loads to achieve a factor of safety ≥ 5.</p>
+                <div class="meta">
+                    <span>Tool: ANSYS Static Structural</span>
+                    <span>Iterations: 8</span>
+                    <span>FoS: ≥ 5</span>
+                </div>
+                <div class="tags">
+                    <span class="tag">FEA</span>
+                    <span class="tag">Solid Mechanics</span>
+                    <span class="tag">Robotics</span>
+                    <span class="tag">Aluminum & Stainless Steel</span>
+                </div>
+                <div class="cta">
+                    <a class="btn" href="mailto:emonroy4058@gmail.com?subject=FEA%20Project%20Inquiry">Contact about
+                        this project</a>
+                    <a class="btn secondary" href="#gallery">Jump to gallery</a>
+                </div>
+            </div>
+            <figure class="hero-figure">
+                <img src="../assets/img/projects/project4-1.jpg" alt="Robotic arm structural model used for FEA" />
+                <figcaption>Structural model of the arm used for static analysis.</figcaption>
+            </figure>
+        </section>
+
+        <!-- Quick specs -->
+        <section class="section">
+            <div class="specs">
+                <div class="spec">
+                    <div class="k">Payload (retracted)</div>
+                    <div class="v">20 kg</div>
+                </div>
+                <div class="spec">
+                    <div class="k">Payload (extended)</div>
+                    <div class="v">9 kg</div>
+                </div>
+                <div class="spec">
+                    <div class="k">Materials</div>
+                    <div class="v">Aluminum + Stainless Steel</div>
+                </div>
+                <div class="spec">
+                    <div class="k">Objective</div>
+                    <div class="v">FoS ≥ 5</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview (image + description) -->
+        <section class="section">
+            <div class="split">
+                <div class="split-media">
+                    <img src="../assets/img/projects/project4-2.jpg"
+                        alt="FEA setup showing constraints and load application" />
+                </div>
+                <div>
+                    <h2>Overview</h2>
+                    <p>
+                        The Finite Element Analysis (FEA) of a 6‑Degree‑of‑Freedom (DOF) Robotic Arm was conducted to
+                        evaluate structural integrity,
+                        stress distribution, and deformation across critical poses. The arm can carry a 20 kg payload
+                        when retracted and 9 kg when fully extended.
+                        A self‑collision avoidance system is integrated at the kinematic level to prevent interference
+                        between links.
+                    </p>
+                    <p>
+                        We performed the analysis in ANSYS Static Structural, using realistic boundary conditions and
+                        nonlinear constraints.
+                        Throughout development, we maintained a minimum Factor of Safety (FoS) of 5, iterating the
+                        design 8 times to optimize mass and stiffness.
+                    </p>
+                    <div class="callout">
+                        Key focus areas: identifying stress concentrations at joints, validating link thicknesses, and
+                        ensuring acceptable tip deflection under worst‑case loading.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loads & BCs (description + image) -->
+        <section class="section">
+            <div class="split">
+                <div>
+                    <h2>Loads & Boundary Conditions</h2>
+                    <p>
+                        Boundary conditions were applied at the base mounting plate (fixed support), with payload forces
+                        applied at the end‑effector along
+                        gravity and off‑axis directions to simulate dynamic pick‑and‑place scenarios. Joint interfaces
+                        were modeled with appropriate contact
+                        and constraint assumptions, including nonlinearities where necessary.
+                    </p>
+                    <p class="muted">Assumptions: simplified fillets where appropriate, fastener preloads abstracted as
+                        constraints, and conservative material properties from datasheets.</p>
+                    <ul>
+                        <li>Fixed support at base; additional fixtures for mounting verification</li>
+                        <li>Payload: 20 kg (retracted), 9 kg (extended)</li>
+                        <li>Self‑collision clearance constraints respected in solved poses</li>
+                    </ul>
+                </div>
+                <div class="split-media">
+                    <img src="../assets/img/projects/project4-3.jpg"
+                        alt="Stress distribution post-processing visualization" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Meshing & results -->
+        <section class="section">
+            <div class="split">
+                <div class="split-media">
+                    <img src="../assets/img/projects/project4-1.jpg" alt="Meshing strategy for links and joints" />
+                </div>
+                <div>
+                    <h2>Meshing Strategy & Results</h2>
+                    <p>
+                        Mesh density was refined at fillets, bolt interfaces, and abrupt section transitions. A
+                        convergence study ensured that
+                        peak von Mises stresses stabilized within an acceptable tolerance.
+                    </p>
+                    <ul>
+                        <li>Element type: tetrahedral, with local refinement at stress risers</li>
+                        <li>Convergence: monitored peak stress and tip deflection</li>
+                        <li>Validation: FoS ≥ 5 across critical load cases; tip deflection within tolerance</li>
+                    </ul>
+                    <p class="muted">Result highlights: redistributed thickness, material changes for select brackets,
+                        and geometry smoothing to reduce stress concentration.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Iterations -->
+        <section class="section">
+            <h2>Design Iterations</h2>
+            <ul>
+                <li>Increased cross‑section at high‑stress links while reducing mass on low‑stress members</li>
+                <li>Material swap on brackets to stainless where fatigue margins were low</li>
+                <li>Fillet optimization and removal of sharp features to reduce stress concentrations</li>
+                <li>Reinforced mounting points and verified bolt patterns against shear and tension</li>
+            </ul>
+        </section>
+
+        <!-- Outcomes -->
+        <section class="section">
+            <h2>Outcomes</h2>
+            <p>
+                The analysis resulted in a robust, weight‑optimized design with comfortable margins. Stress
+                concentrations were addressed, tip
+                deflection met performance targets, and the structure demonstrated consistent FoS ≥ 5 in validated
+                scenarios.
+            </p>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="section">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <figure class="thumb">
+                    <img src="../assets/img/projects/project4-1.jpg" alt="Arm model for static analysis" />
+                    <figcaption>Arm model for static analysis</figcaption>
+                </figure>
+                <figure class="thumb">
+                    <img src="../assets/img/projects/project4-2.jpg" alt="Constraints and loads setup" />
+                    <figcaption>Constraints and loads setup</figcaption>
+                </figure>
+                <figure class="thumb">
+                    <img src="../assets/img/projects/project4-3.jpg" alt="Stress distribution visualization" />
+                    <figcaption>Stress distribution visualization</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section">
+            <div class="callout">
+                Interested in the FEA workflow, validation approach, or the CAD/mesh handoff? I’m happy to walk through
+                the model.
+                <div class="cta">
+                    <a class="btn" href="mailto:emonroy4058@gmail.com?subject=Discuss%20FEA%20Case%20Study">Get in
+                        touch</a>
+                    <a class="btn secondary" href="../index.html#projects">Back to Projects</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">© 2025 | Emon Roy Bappy</footer>
+</body>
+
+</html>

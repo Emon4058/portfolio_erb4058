@@ -75,18 +75,34 @@
       profile.projects.forEach((p, idx) => {
         const card = document.createElement("div");
         card.className = "card";
+        const linkHTML = p.url
+          ? `<a class="a-link" href="${p.url}">View case study</a>`
+          : `<a href="#" class="read-more a-link" role="button" data-index="${idx}">Read More</a>`;
+
         card.innerHTML = `
-    <img src="${p.image}" alt="${p.title}">
-    <div class="card-body">
-      <h3 class="card-title">${p.title}</h3>
-      <p class="card-text">${p.description}</p>
-      <a class="read-more a-link" data-index="${idx}">Read More</a>
-      <div class="card-tags">${(p.tags || [])
-        .map((t) => `<span>${t}</span>`)
-        .join("")}</div>
-    </div>
-  `;
+  <img src="${p.image}" alt="${
+          p.title || "Project"
+        }" loading="lazy" decoding="async">
+  <div class="card-body">
+    <h3 class="card-title">${p.title || ""}</h3>
+    <p class="card-text">${p.description || ""}</p>
+    ${linkHTML}
+    <div class="card-tags">${(p.tags || [])
+      .map((t) => `<span>${t}</span>`)
+      .join("")}</div>
+  </div>
+`;
         projectsGrid.appendChild(card);
+      });
+
+      // Attach event listeners to dynamically created buttons
+      projectsGrid.querySelectorAll(".read-more").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          const index = Number(e.currentTarget.getAttribute("data-index"));
+          const project = profile.projects[index];
+          if (project) openModal(project);
+        });
       });
 
       // Open Modal

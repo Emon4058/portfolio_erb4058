@@ -18,6 +18,7 @@ html {
     --tag-text: #0f172a;
     /* dark text on light chip */
     --tag-border: transparent;
+    --primary-hover: #0284c7;
 }
 
 html[data-theme="dark"] {
@@ -235,8 +236,8 @@ a:hover {
 }
 
 .hero-buttons .btn:hover {
-    background: darken(var(--primary), 60%);
-    color: var(--primary);
+    background: var(--primary-hover);
+    color: #fff;
 }
 
 .hero-buttons .btn.btn-primary {
@@ -309,6 +310,7 @@ a:hover {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 6px;
+    color: var(--primary);
 }
 
 .card-text {
@@ -324,6 +326,10 @@ a:hover {
     border-radius: 12px;
     margin-right: 4px;
     border: 1px solid var(--tag-border);
+}
+
+.a-link {
+    color: var(--primary);
 }
 
 a.card {
@@ -355,6 +361,7 @@ a.card:hover {
 .education-item h4 {
     margin-bottom: 6px;
     font-size: 18px;
+    color: var(--primary);
 }
 
 .experience-item .period,
@@ -369,47 +376,115 @@ a.card:hover {
     color: var(--text);
 }
 
-/* Achievements & Certifications */
-#achievements-list,
-#education-list {
+/* Certifications */
+#certifications-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-.achievement-item {
+.cert-item {
     background: var(--card);
-    padding: 16px;
-    margin-bottom: 16px;
+    border: 1px solid var(--border);
     border-radius: var(--radius);
+    padding: 14px;
     box-shadow: var(--shadow);
 }
 
-.achievement-item h4 {
+.cert-title {
     font-size: 18px;
-    margin-bottom: 6px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    color: var(--primary);
 }
 
-.achievement-item .issuer {
-    font-size: 14px;
+.cert-issuer {
     color: var(--muted);
+    font-size: 14px;
     margin-bottom: 6px;
 }
 
-.achievement-item p {
+.cert-desc {
     color: var(--text);
     margin-bottom: 8px;
 }
 
-#a-link {
-    color: var(--primary);
-    font-weight: 500;
+.cert-link {
+    display: inline-block;
 }
 
-.a-link {
+/* Achievements (Title, Position, Year) */
+#achievements-list {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.achievement-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px;
+    box-shadow: var(--shadow);
+}
+
+.achievement-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+
+.achievement-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
     color: var(--primary);
-    font-weight: 500;
-    cursor: pointer;
+}
+
+.achievement-meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Badges for position/year */
+.ach-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 999px;
+    background: #e2e8f0;
+    color: #0f172a;
+    border: 1px solid #dbe3ef;
+}
+
+html[data-theme="dark"] .ach-badge {
+    background: rgba(148, 163, 184, 0.16);
+    color: #e2e8f0;
+    border-color: rgba(148, 163, 184, 0.35);
+}
+
+.achievement-org {
+    color: var(--primary);
+    font-size: 14px;
+
+}
+
+.achievement-link {
+    margin-top: 8px;
+    display: inline-block;
+}
+
+@media(max-width:768px) {
+
+    #certifications-list,
+    #achievements-list {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media(max-width:768px) {
@@ -472,7 +547,7 @@ a.card:hover {
 #footer {
     text-align: center;
     color: #ffffff;
-    background-color: #475569;
+    background-color: var(--primary);
     padding: 10px 0;
 }
 
@@ -485,113 +560,5 @@ a.card:hover {
 
     .hero-buttons {
         justify-content: center;
-    }
-}
-
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: var(--bg);
-    padding: 20px;
-    border-radius: 12px;
-    max-width: 700px;
-    width: 90%;
-    max-height: 90vh;
-    overflow-y: auto;
-    text-align: justify;
-    position: relative;
-}
-
-.modal-close {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* Carousel */
-.carousel {
-    position: relative;
-    margin: 20px 0;
-    overflow: hidden;
-}
-
-.carousel-images img {
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
-    display: none;
-}
-
-.carousel-images img.active {
-    display: block;
-}
-
-/* Carousel buttons — perfectly round */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    /* shape */
-    width: 48px;
-    height: 48px;
-    padding: 0;
-    border-radius: 50%;
-    /* look */
-    background: rgba(255, 255, 255, 0.75);
-    color: var(--text);
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-    cursor: pointer;
-    /* center the arrow */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    font-size: 20px;
-}
-
-.carousel-btn:hover {
-    background: var(--primary);
-    color: #fff;
-    border-color: var(--primary);
-}
-
-/* Keep their positions */
-.carousel-btn.prev {
-    left: 10px;
-}
-
-.carousel-btn.next {
-    right: 10px;
-}
-
-/* Dark mode tweak for contrast */
-html[data-theme="dark"] .carousel-btn {
-    background: rgba(17, 24, 39, 0.7);
-    /* slate-ish */
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.15);
-}
-
-/* Optional: slightly smaller on very small screens */
-@media (max-width: 480px) {
-    .carousel-btn {
-        width: 44px;
-        height: 44px;
-        font-size: 18px;
     }
 }

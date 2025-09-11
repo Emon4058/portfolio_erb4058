@@ -431,7 +431,7 @@
     }
   ],
 
-  "achievements": [
+  "certifications": [
     {
       "title": "Topology Optimization Using Ansys Mechanical",
       "issuer": "Ansys",
@@ -491,6 +491,50 @@
       "issuer": "Udemy",
       "description": "Skills: Python (Programming Language)",
       "link": "https://www.udemy.com/certificate/UC-f20609c1-c94c-4c45-9df6-17e1a052faba/"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "University Rover Challenge",
+      "position": "Finalist",
+      "year": "2022",
+      "organizer": "The Mars Society"
+    },
+    {
+      "title": "BASIS National ICT Awards",
+      "position": "Merit Award",
+      "year": "2022",
+      "organizer": "BASIS"
+    },
+    {
+      "title": "Sustainable Energy Innovation Challenge",
+      "position": "Champion",
+      "year": "2021",
+      "organizer": "Bikiron"
+    },
+    {
+      "title": "National STEM Competition",
+      "position": "Champion",
+      "year": "2021",
+      "organizer": "bdSTEM"
+    },
+    {
+      "title": "2nd Kibo Robot Programming Challenge — National Round",
+      "position": "4th place",
+      "year": "2021",
+      "organizer": "JAXA"
+    },
+    {
+      "title": "International Planetary Aerial Systems Challenge",
+      "position": "Innovation Award",
+      "year": "2021",
+      "organizer": "Mars Society South Asia"
+    },
+    {
+      "title": "National Round of 6th Bangladesh Physics Olympiad",
+      "position": "8th position",
+      "year": "2016",
+      "organizer": "Bangladesh Physics Olympiad"
     }
   ]
 }

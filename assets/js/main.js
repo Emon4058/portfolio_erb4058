@@ -51,120 +51,6 @@
         skillsList.appendChild(li);
       });
 
-      //       // Projects
-      //       const projectsGrid = document.getElementById("projects-grid");
-      //       const modal = document.getElementById("project-modal");
-      //       const modalTitle = document.getElementById("modal-title");
-      //       const modalDesc = document.getElementById("modal-description");
-      //       const carouselImages = document.getElementById("carousel-images");
-      //       const closeModal = document.getElementById("modal-close");
-      //       let currentSlide = 0;
-
-      //       let autoTimer = null;
-      //       function startAutoCarousel() {
-      //         stopAutoCarousel();
-      //         autoTimer = setInterval(() => changeSlide(1), 2000); // 2s per slide
-      //       }
-      //       function stopAutoCarousel() {
-      //         if (autoTimer) {
-      //           clearInterval(autoTimer);
-      //           autoTimer = null;
-      //         }
-      //       }
-
-      //       profile.projects.forEach((p, idx) => {
-      //         const card = document.createElement("div");
-      //         card.className = "card";
-      //         const linkHTML = p.url
-      //           ? `<a class="a-link" href="${p.url}">View case study</a>`
-      //           : `<a href="#" class="read-more a-link" role="button" data-index="${idx}">Read More</a>`;
-
-      //         card.innerHTML = `
-      //   <img src="${p.image}" alt="${
-      //           p.title || "Project"
-      //         }" loading="lazy" decoding="async">
-      //   <div class="card-body">
-      //     <h3 class="card-title">${p.title || ""}</h3>
-      //     <p class="card-text">${p.description || ""}</p>
-      //     ${linkHTML}
-      //     <div class="card-tags">${(p.tags || [])
-      //       .map((t) => `<span>${t}</span>`)
-      //       .join("")}</div>
-      //   </div>
-      // `;
-      //         projectsGrid.appendChild(card);
-      //       });
-
-      //       // Attach event listeners to dynamically created buttons
-      //       projectsGrid.querySelectorAll(".read-more").forEach((btn) => {
-      //         btn.addEventListener("click", (e) => {
-      //           e.preventDefault();
-      //           const index = Number(e.currentTarget.getAttribute("data-index"));
-      //           const project = profile.projects[index];
-      //           if (project) openModal(project);
-      //         });
-      //       });
-
-      //       // Open Modal
-      //       document.querySelectorAll(".read-more").forEach((btn) => {
-      //         btn.addEventListener("click", (e) => {
-      //           const index = e.target.getAttribute("data-index");
-      //           const project = profile.projects[index];
-
-      //           modalTitle.textContent = project.title;
-      //           modalDesc.textContent =
-      //             project.longDescription || project.description;
-
-      //           // Build carousel
-      //           carouselImages.innerHTML = "";
-      //           (project.gallery || [project.image]).forEach((img, i) => {
-      //             const imageEl = document.createElement("img");
-      //             imageEl.src = img;
-      //             if (i === 0) imageEl.classList.add("active");
-      //             carouselImages.appendChild(imageEl);
-      //           });
-      //           currentSlide = 0;
-
-      //           modal.style.display = "flex";
-      //           startAutoCarousel();
-      //         });
-      //       });
-
-      //       carouselImages.addEventListener("mouseenter", stopAutoCarousel);
-      //       carouselImages.addEventListener("mouseleave", startAutoCarousel);
-
-      //       modal.addEventListener("click", (e) => {
-      //         if (e.target === modal) {
-      //           modal.style.display = "none";
-      //           stopAutoCarousel();
-      //           document.body.classList.remove("modal-open");
-      //         }
-      //       });
-      //       // Close modal
-      //       closeModal.addEventListener("click", () => {
-      //         modal.style.display = "none";
-      //         stopAutoCarousel();
-      //       });
-
-      //       // Next/Prev carousel
-      //       document
-      //         .querySelector(".carousel-btn.next")
-      //         .addEventListener("click", () => {
-      //           changeSlide(1);
-      //         });
-      //       document
-      //         .querySelector(".carousel-btn.prev")
-      //         .addEventListener("click", () => {
-      //           changeSlide(-1);
-      //         });
-
-      //       function changeSlide(step) {
-      //         const slides = carouselImages.querySelectorAll("img");
-      //         slides[currentSlide].classList.remove("active");
-      //         currentSlide = (currentSlide + step + slides.length) % slides.length;
-      //         slides[currentSlide].classList.add("active");
-      //       }
-
       // Projects
       const projectsGrid = document.getElementById("projects-grid");
       if (projectsGrid && Array.isArray(profile.projects)) {
@@ -213,30 +99,87 @@
         eduList.appendChild(div);
       });
 
-      // Achievements & Certifications
+      // Certifications
+      const certList = document.getElementById("certifications-list");
+      if (certList && Array.isArray(profile.certifications)) {
+        certList.innerHTML = "";
+        profile.certifications.forEach((c) => {
+          const div = document.createElement("div");
+          div.className = "cert-item";
+          div.innerHTML = `
+      <h4 class="cert-title">${c.title || ""}</h4>
+      ${c.issuer ? `<div class="cert-issuer">${c.issuer}</div>` : ""}
+      ${c.description ? `<p class="cert-desc">${c.description}</p>` : ""}
+      ${
+        c.link
+          ? `<a class="a-link cert-link" href="${c.link}" target="_blank" rel="noopener noreferrer">View Certificate</a>`
+          : ""
+      }
+    `;
+          certList.appendChild(div);
+        });
+      }
+
+      // Achievements (Title, Position, Year)
       const achievementsList = document.getElementById("achievements-list");
-      profile.achievements.forEach((a) => {
-        const div = document.createElement("div");
-        div.className = "achievement-item";
-        div.innerHTML = `
-            <h4>${a.title}</h4>
-            <div class="issuer">${a.issuer}</div>
-            <p>${a.description}</p>
-            <a class="a-link" href="${a.link}" target="_blank">View Certificate</a>`;
-        achievementsList.appendChild(div);
-      });
+      if (achievementsList && Array.isArray(profile.achievements)) {
+        achievementsList.innerHTML = "";
+
+        const sorted = [...profile.achievements].sort((a, b) => {
+          const ya = parseInt(
+            String(a.year || "").match(/\d{4}/)?.[0] || "0",
+            10
+          );
+          const yb = parseInt(
+            String(b.year || "").match(/\d{4}/)?.[0] || "0",
+            10
+          );
+          return yb - ya;
+        });
+
+        sorted.forEach((a) => {
+          const div = document.createElement("div");
+          div.className = "achievement-item";
+
+          const positionBadge = a.position
+            ? `<span class="ach-badge position">${a.position}</span>`
+            : "";
+          const yearBadge = a.year
+            ? `<span class="ach-badge year">${a.year}</span>`
+            : "";
+          const orgLine = a.organizer
+            ? `<div class="achievement-org">${a.organizer}</div>`
+            : "";
+          const linkLine = a.link
+            ? `<a class="a-link achievement-link" href="${a.link}" target="_blank" rel="noopener noreferrer">Details</a>`
+            : "";
+
+          div.innerHTML = `
+      <div class="achievement-top">
+        <h4 class="achievement-title">${a.title || ""}</h4>
+        <div class="achievement-meta">
+          ${positionBadge}${yearBadge}
+        </div>
+      </div>
+      ${orgLine}
+      ${linkLine}
+    `;
+          achievementsList.appendChild(div);
+        });
+      }
 
       // Contact
       if (profile.email)
         document.querySelector(
           "[data-bind-mailto]"
         ).href = `mailto:${profile.email}`;
-      if (profile.website)
-        document.querySelector('[data-bind-href="website"]').href =
-          profile.website;
       if (profile.linkedin)
         document.querySelector('[data-bind-href="linkedin"]').href =
           profile.linkedin;
+      if (profile.github) {
+        const g = document.querySelector('[data-bind-href="github"]');
+        if (g) g.href = profile.github;
+      }
     });
 })();
 

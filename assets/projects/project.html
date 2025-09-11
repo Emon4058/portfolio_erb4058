@@ -333,9 +333,10 @@
             const resolveAsset = (src) => {
                 if (!src) return "";
                 if (/^https?:\/\//i.test(src) || src.startsWith("/")) return src;
-                if (src.startsWith("assets/")) return "../" + src;
-                if (src.startsWith("../")) return src;
-                "../" + src.replace(/^\.?\/*/, "");
+                // JSON uses "assets/..." (root-relative string); from /assets/projects/ we need "../../"
+                if (src.startsWith("assets/")) return "../../" + src.replace(/^\.?\/*/, "");
+                if (src.startsWith("../")) return src; // already relative from here
+                return "../../" + src.replace(/^\.?\/*/, "");
             };
             fetch(PROFILE_URL)
                 .then((r) => r.json())

@@ -172,9 +172,7 @@
 
         profile.projects.forEach((p, idx) => {
           // Use custom page if provided, else dynamic page with index
-          const href = p.url
-            ? p.url
-            : `../assets/projects/project.html?i=${idx}`;
+          const href = p.url ? p.url : `assets/projects/project.html?i=${idx}`;
 
           const card = document.createElement("a");
           card.className = "card";

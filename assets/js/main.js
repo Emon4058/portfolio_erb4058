@@ -238,7 +238,6 @@
         document.querySelector('[data-bind-href="linkedin"]').href =
           profile.linkedin;
     });
-  // .catch((err) => console.error(err));
 })();
 
 // Reveal on scroll

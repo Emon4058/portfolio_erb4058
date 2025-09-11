@@ -26,7 +26,7 @@
       "title": "Finite Element Analysis",
       "description": "The Finite Element Analysis (FEA) of a 6-Degree-of-Freedom (DOF) Robotic Arm...",
       "longDescription": "The Finite Element Analysis (FEA) of a 6-Degree-of-Freedom (DOF) Robotic Arm was conducted to evaluate its structural integrity, stress distribution, and deformation under various load conditions. The arm, designed to carry a 20 kg payload in a retracted position and 9 kg when fully extended, is constructed from aluminum and stainless steel to optimize strength and weight efficiency. A key feature of this arm is its self-collision avoidance system, which prevents interference between components during operation. The FEA was performed using ANSYS Static Analysis Software, incorporating nonlinear constraints, and a minimum factor of safety of 5 was maintained throughout. The analysis led to 8 design iterations, with adjustments to material selection and dimensions based on the simulation results. This process helped identify stress concentrations, potential failure points, and areas for structural optimization, ensuring the arm meets the required performance standards. Challenges addressed included simulating real-world operational constraints and balancing strength with weight reduction.",
-      "image": "../assets/projects/project4-1.jpg",
+      "image": "assets/projects/project4-1.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -80,7 +80,7 @@
       "title": "Website Redesign",
       "description": "Webpage   ...",
       "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "image": "../assets/projects/project4-1.jpg",
+      "image": "assets/projects/project4-1.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -134,7 +134,7 @@
       "title": "Finite Element Analysis",
       "description": "The Finite Element Analysis (FEA) of a 6-Degree-of-Freedom (DOF) Robotic Arm...",
       "longDescription": "The Finite Element Analysis (FEA) of a 6-Degree-of-Freedom (DOF) Robotic Arm was conducted to evaluate its structural integrity, stress distribution, and deformation under various load conditions. The arm, designed to carry a 20 kg payload in a retracted position and 9 kg when fully extended, is constructed from aluminum and stainless steel to optimize strength and weight efficiency. A key feature of this arm is its self-collision avoidance system, which prevents interference between components during operation. The FEA was performed using ANSYS Static Analysis Software, incorporating nonlinear constraints, and a minimum factor of safety of 5 was maintained throughout. The analysis led to 8 design iterations, with adjustments to material selection and dimensions based on the simulation results. This process helped identify stress concentrations, potential failure points, and areas for structural optimization, ensuring the arm meets the required performance standards. Challenges addressed included simulating real-world operational constraints and balancing strength with weight reduction.",
-      "image": "../assets/projects/project4-1.jpg",
+      "image": "assets/projects/project4-1.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -188,7 +188,7 @@
       "title": "Website Redesign",
       "description": "Webpage   ...",
       "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "image": "../assets/projects/project4-1.jpg",
+      "image": "assets/projects/project4-1.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -242,7 +242,7 @@
       "title": "Finite Element Analysis",
       "description": "The Finite Element Analysis (FEA) of a 6-Degree-of-Freedom (DOF) Robotic Arm...",
       "longDescription": "The Finite Element Analysis (FEA) of a 6-Degree-of-Freedom (DOF) Robotic Arm was conducted to evaluate its structural integrity, stress distribution, and deformation under various load conditions. The arm, designed to carry a 20 kg payload in a retracted position and 9 kg when fully extended, is constructed from aluminum and stainless steel to optimize strength and weight efficiency. A key feature of this arm is its self-collision avoidance system, which prevents interference between components during operation. The FEA was performed using ANSYS Static Analysis Software, incorporating nonlinear constraints, and a minimum factor of safety of 5 was maintained throughout. The analysis led to 8 design iterations, with adjustments to material selection and dimensions based on the simulation results. This process helped identify stress concentrations, potential failure points, and areas for structural optimization, ensuring the arm meets the required performance standards. Challenges addressed included simulating real-world operational constraints and balancing strength with weight reduction.",
-      "image": "../assets/projects/project4-1.jpg",
+      "image": "assets/projects/project4-1.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -296,7 +296,7 @@
       "title": "Website Redesign",
       "description": "Webpage   ...",
       "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "image": "../assets/projects/project4-1.jpg",
+      "image": "assets/projects/project4-1.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",

@@ -223,6 +223,30 @@
             margin-top: 6px;
         }
 
+        /* Blog-style images block inside sections */
+        .images-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .images-list figure {
+            margin: 0;
+        }
+
+        .images-list img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            display: block;
+        }
+
+        .images-list figcaption {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 6px;
+        }
+
         /* Gallery */
         .gallery {
             display: grid;
@@ -304,13 +328,78 @@
             max-width: calc(var(--content-w) + var(--side-w) + 64px);
             margin: 32px auto 0;
         }
+
+        /* Toggle dropdowns + table */
+        .toggle {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--card);
+            box-shadow: var(--shadow);
+            margin: 12px 0;
+        }
+
+        .toggle-header {
+            width: 100%;
+            background: transparent;
+            border: 0;
+            padding: 10px 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .toggle-header .chev {
+            display: inline-flex;
+            transition: transform .2s ease;
+            font-size: 16px;
+        }
+
+        .toggle.open .toggle-header .chev {
+            transform: rotate(90deg);
+        }
+
+        .toggle-body {
+            display: none;
+            padding: 8px 12px 12px;
+            border-top: 1px solid var(--border);
+        }
+
+        .toggle.open .toggle-body {
+            display: block;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .spec-table th,
+        .spec-table td {
+            border: 1px solid var(--border);
+            padding: 8px 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .spec-table th {
+            background: #f8fafc;
+            font-weight: 600;
+        }
     </style>
 </head>
 
 <body>
     <header class="topbar">
         <div class="topbar-inner">
-            <a class="brand" href="../../index.html">Emon Roy Bappy</a>
+            <a class="brand" href="../../index.html">Project</a>
             <a class="back" href="../../index.html#projects">← Back to Projects</a>
         </div>
     </header>
@@ -331,8 +420,9 @@
 
             <div class="tags" id="tags"></div>
 
-            <!-- Properties/specs -->
             <div id="propsWrap" class="properties" style="display:none"></div>
+            <!-- Dynamic tables (from JSON) -->
+            <div id="tables"></div>
 
             <!-- Dynamic sections -->
             <div id="blocks"></div>
@@ -414,6 +504,7 @@
                     // Title
                     document.getElementById("title").textContent = title;
 
+
                     // Meta badges (free-form text from project.meta)
                     const meta = Array.isArray(project.meta) ? project.meta : [];
                     const metaEl = document.getElementById("meta");
@@ -433,45 +524,189 @@
             `).join("");
                     }
 
-                    // Dynamic sections
+                    // Normalize tables defined as object or array
+                    function normalizeTables(tables, order) {
+                        if (!tables) return [];
+                        let arr = [];
+
+                        // If object: convert to array, preserve order via tablesOrder if provided
+                        if (!Array.isArray(tables) && typeof tables === "object") {
+                            const keys = Array.isArray(order) && order.length ? order
+                                : Object.keys(tables); // insertion order fallback
+                            arr = keys.map((key) => {
+                                const t = tables[key] || {};
+                                return {
+                                    id: (t.id || key).toString(),
+                                    title: t.title || key,
+                                    collapsed: !!t.collapsed,
+                                    columns: Array.isArray(t.columns) && t.columns.length ? t.columns : ["Functionality", "Specification"],
+                                    rows: t.rows
+                                };
+                            });
+                        } else if (Array.isArray(tables)) {
+                            arr = tables.map((t, i) => ({
+                                id: (t.id || t.title || `table-${i}`).toString(),
+                                title: t.title || `Table ${i + 1}`,
+                                collapsed: !!t.collapsed,
+                                columns: Array.isArray(t.columns) && t.columns.length ? t.columns : ["Functionality", "Specification"],
+                                rows: t.rows
+                            }));
+                        }
+
+                        // Normalize rows: support array-of-arrays or object map
+                        arr.forEach(t => {
+                            if (t && t.rows && !Array.isArray(t.rows) && typeof t.rows === "object") {
+                                t.rows = Object.entries(t.rows);
+                            }
+                            if (!Array.isArray(t.rows)) t.rows = [];
+                        });
+
+                        return arr;
+                    }
+
+                    function fillSpecTable(tableEl, columns, rows) {
+                        const thead = tableEl.querySelector("thead");
+                        const tbody = tableEl.querySelector("tbody");
+                        thead.innerHTML = `<tr>${columns.map(c => `<th>${c}</th>`).join("")}</tr>`;
+                        tbody.innerHTML = rows.map(r => {
+                            const cells = Array.isArray(r) ? r : [r.k, r.v];
+                            return `<tr>${cells.slice(0, columns.length).map(c => `<td>${c ?? ""}</td>`).join("")}</tr>`;
+                        }).join("");
+                    }
+                    const tablesWrap = document.getElementById("tables");
+                    const tocExtras = []; // we'll merge into sectionIds later
+
+                    const tablesArr = normalizeTables(project.tables, project.tablesOrder);
+                    if (tablesWrap && tablesArr.length) {
+                        tablesWrap.innerHTML = tablesArr.map(t => {
+                            const secId = "table-" + slugify(t.id || t.title);
+                            // Add to TOC later
+                            tocExtras.push({ id: secId, label: t.title });
+                            return `
+      <section class="block toggle ${t.collapsed ? "" : "open"}" id="${secId}">
+        <button class="toggle-header" type="button" aria-expanded="${t.collapsed ? "false" : "true"}">
+          <span class="chev">▸</span> <span>${t.title}</span>
+        </button>
+        <div class="toggle-body">
+          <div class="table-wrap">
+            <table class="spec-table">
+              <thead></thead><tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    `;
+                        }).join("");
+
+                        // Fill table rows and wire toggles
+                        tablesArr.forEach((t, i) => {
+                            const secId = "table-" + slugify(t.id || t.title);
+                            const sec = document.getElementById(secId);
+                            const tbl = sec.querySelector("table.spec-table");
+                            fillSpecTable(tbl, t.columns, t.rows);
+
+                            const header = sec.querySelector(".toggle-header");
+                            header?.addEventListener("click", () => {
+                                const open = sec.classList.toggle("open");
+                                header.setAttribute("aria-expanded", open ? "true" : "false");
+                            });
+                        });
+                    }
                     const sections = Array.isArray(project.sections) ? project.sections : [];
                     const blocks = document.getElementById("blocks");
-
                     const makeId = (h) => "sec-" + slugify(h || ("section-" + Math.random().toString(36).slice(2, 7)));
-
                     const sectionIds = [];
+
+                    // Add dynamic tables to TOC
+                    tocExtras.forEach(t => sectionIds.push(t));
+
+                    // Helper: paragraphs from text (split by blank line)
+                    const renderParas = (txt) =>
+                        (txt || "").trim().split(/\n{1,2}\s*\n/).map(p => `<p>${p.trim()}</p>`).join("");
+
+                    // Helper: images block (supports s.image or s.images[])
+                    function renderImagesBlock(s, headingForAlt) {
+                        // s.images can be ["url", ...] or [{src, caption}, ...]
+                        const list = Array.isArray(s.images) && s.images.length
+                            ? s.images.map(item => (typeof item === "string" ? { src: item } : item))
+                            : (s.image ? [{ src: s.image, caption: s.caption }] : []);
+
+                        if (!list.length) return "";
+
+                        const figures = list.map((it, i) => {
+                            const src = resolveAsset(it.src || it.url || "");
+                            const cap = it.caption || "";
+                            const alt = `${headingForAlt || "Section"} image ${i + 1}`;
+                            return `
+      <figure>
+        <img src="${src}" alt="${alt}">
+        ${cap ? `<figcaption>${cap}</figcaption>` : ""}
+      </figure>
+    `;
+                        }).join("");
+
+                        return `<div class="images-list">${figures}</div>`;
+                    }
+
+                    let htmlParts = [];
+
+                    // 1) Description section (from longDescription or description)
+                    const descText = (project.longDescription || project.description || "").trim();
+                    if (descText) {
+                        const descId = "descSec";
+                        htmlParts.push(`
+    <section class="block" id="${descId}">
+      <h2>Description</h2>
+      <div class="split">
+        <div class="split-text">
+          ${renderParas(descText)}
+        </div>
+      </div>
+    </section>
+  `);
+                        sectionIds.push({ id: descId, label: "Description" });
+                    }
+
+                    // 2) Blog-style sections: images + text
                     if (sections.length) {
-                        blocks.innerHTML = sections.map((s, i) => {
+                        sections.forEach((s, i) => {
                             const id = makeId(s.heading || `Section ${i + 1}`);
                             sectionIds.push({ id, label: s.heading || `Section ${i + 1}` });
-                            const img = resolveAsset(s.image);
-                            const caption = s.caption ? `<div class="caption">${s.caption}</div>` : "";
-                            return `
-                <section class="block" id="${id}">
-                  <h2>${s.heading || ""}</h2>
-                  <div class="split">
-                    ${img ? `<div class="split-media"><img src="${img}" alt="${s.heading || title} image">${caption}</div>` : ""}
-                    <div class="split-text">
-                      ${(s.text || "").split(/\n{2,}/).map(p => `<p>${p.trim()}</p>`).join("")}
-                    </div>
-                  </div>
-                </section>
-              `;
-                        }).join("");
+                            htmlParts.push(`
+      <section class="block" id="${id}">
+        <h2>${s.heading || ""}</h2>
+        <div class="split">
+          ${renderImagesBlock(s, s.heading || title)}
+          <div class="split-text">
+            ${renderParas(s.text || "")}
+          </div>
+        </div>
+      </section>
+    `);
+                        });
                     } else {
-                        // Fallback: one overview block from longDescription
-                        const id = makeId("Overview");
-                        sectionIds.push({ id, label: "Overview" });
-                        blocks.innerHTML = `
-              <section class="block" id="${id}">
-                <h2>Overview</h2>
-                <div class="split">
-                  ${imgs[1] ? `<div class="split-media"><img src="${imgs[1]}" alt="${title} image"><div class="caption"></div></div>` : ""}
-                  <div class="split-text"><p>${(project.longDescription || project.description || "").trim()}</p></div>
-                </div>
-              </section>
-            `;
+                        // Fallback: one overview block from longDescription (already in Description),
+                        // so only add an image block if we have a second image
+                        if (imgs[1]) {
+                            const id = makeId("Overview");
+                            sectionIds.push({ id, label: "Overview" });
+                            htmlParts.push(`
+      <section class="block" id="${id}">
+        <h2>Overview</h2>
+        <div class="split">
+          <div class="images-list">
+            <figure>
+              <img src="${imgs[1]}" alt="${title} image 2">
+            </figure>
+          </div>
+          <div class="split-text"></div>
+        </div>
+      </section>
+    `);
+                        }
                     }
+
+                    blocks.innerHTML = htmlParts.join("");
 
                     // Gallery
                     const gallerySec = document.getElementById("gallerySec");

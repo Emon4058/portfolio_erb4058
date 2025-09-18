@@ -75,14 +75,16 @@ a:hover {
     box-shadow: var(--shadow);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 50;
 }
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 10px 16px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .brand span {
@@ -93,7 +95,7 @@ a:hover {
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 40px;
 }
 
 .nav-links a {
@@ -188,7 +190,9 @@ a:hover {
     padding: 30px 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .hero-inner {
@@ -209,8 +213,14 @@ a:hover {
 }
 
 .hero-text p {
-    max-width: 500px;
+    max-width: 775px;
     color: var(--muted);
+    text-align: justify;
+}
+
+.hero-img {
+    display: flex;
+    align-items: center;
 }
 
 .hero-img img {
@@ -249,6 +259,55 @@ a:hover {
     background: #333;
 }
 
+/* Clamp summary lines */
+.hero-text p.clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    /* adjust number of visible lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Simple modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    max-width: 800px;
+    width: min(90vw, 800px);
+    max-height: 85vh;
+    overflow: auto;
+    padding: 16px 18px;
+    box-shadow: var(--shadow);
+}
+
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: transparent;
+    border: 0;
+    font-size: 24px;
+    color: var(--text);
+    cursor: pointer;
+}
+
 /* Sections */
 .section {
     padding-bottom: 30px;
@@ -279,6 +338,35 @@ a:hover {
     color: #fff;
     border-radius: 50px;
     font-size: 14px;
+}
+
+/* Grouped skills layout */
+#skills-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+#skills-list .skills-group {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 12px;
+}
+
+.skills-group-title {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.skills-group .chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 /* Projects */
@@ -374,6 +462,43 @@ a.card:hover {
 .experience-item p,
 .education-item p {
     color: var(--text);
+}
+
+.experience-item h4,
+.education-item h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.role-line,
+.degree-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 8px;
+    color: var(--muted);
+}
+
+.position,
+.degree {
+    font-weight: 600;
+    color: var(--text);
+}
+
+.highlights {
+    margin: 6px 0 0 18px;
+}
+
+.highlights li {
+    margin-bottom: 4px;
+}
+
+.exp-tech strong {
+    color: var(--primary);
 }
 
 /* Certifications */

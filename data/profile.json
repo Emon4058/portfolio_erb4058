@@ -1,11 +1,12 @@
 {
   "name": "Emon Roy Bappy",
   "headline": "Research and Development Engineer at Cybernetics Hi-Tech Solutions",
-  "summary": "My background in Mechanical Engineering from Bangladesh University of Engineering and Technology has accelerated my passion for electromechanical systems. I have a strong foundation in Military Robotics and Bio‑Inspired Soft Robotics with extensive experience in computer‑aided design, printed circuit board design, finite element analysis, fused deposition modeling, molding, composite manufacturing, and CNC manufacturing processes. Currently, I am passionately pursuing opportunities to advance soft robotics in healthcare applications.",
+  "summary": "Currently, I am a Research and Development Engineer at Cybernetics Hi-Tech Solutions (Pvt.) Ltd. where I am focused on the development and analysis of military robots for Bangladesh Army. Our team has already delivered two Explosive Ordinance Disposal Remotely Operated Vehicles (EOD-ROVs), which have been deployed in United Nations Peacekeeping Missions. Currently, I am working on a Man-Portable EOD ROV project along with my teammates. My key responsibilities include Design for Manufacturing and Assembly (DfMA), stress analysis, structural topology optimization, additive manufacturing methods for prototyping like Fused Deposition Modeling (FDM), molding of soft materials like silicone, subtractive manufacturing like CNC milling and Electro Discharge Machining (EDM). Recently, we have started working on composite materials. For the first time in Bangladesh’s history, we successfully implemented the resin infusion method to manufacture structural components using carbon fiber, achieving an industrial-grade solution within our own composite fabrication lab. This milestone not only demonstrates our manufacturing capabilities and knowledge but also creates a precedent for the country’s manufacturing infrastructure. \n During my undergraduate studies in Mechanical Engineering at Bangladesh University of Engineering and Technology (BUET), I built a strong foundation in electromechanical systems, computer-aided design, PCB design, and finite element analysis, which naturally pushed me to explore the intersection of robotics and manufacturing. As a third-year student in the mechanical department, I collaborated with my team to develop a bio-inspired soft robotic fish and a mechanical solution for variable capacity cooling tower. During my undergraduate thesis, I designed and fabricated a soft robotic actuator to replace the conventional rigid actuator in the medical robots used for Minimally Invasive Surgery (MIS). The soft actuator has three degrees of freedom to reach any area at the time of surgery, minimizing the number of incisions and reducing patient’s recovery time. \n My goal is to pursue cutting-edge research that bridges the robotics field and manufacturing methods, ultimately contributing to the development of resilient and intelligent manufacturing solutions for humanitarian applications.",
   "avatar": "assets/img/profile.jpg",
   "themeColor": "#0ea5e9",
   "email": "emonroy4058@gmail.com",
   "website": "https://buetinterplanetar.com",
+  "companyLink": "https://cyberneticsbd.com/",
   "linkedin": "https://www.linkedin.com/in/erb4058",
   "github": "",
 
@@ -20,10 +21,51 @@
     "Healthcare"
   ],
 
+  "skillsGrouped": [
+    {
+      "category": "Computational Analysis",
+      "items": [
+        "Ansys Mechanical",
+        "Structural Optimization",
+        "Ansys Composite PrePost"
+      ]
+    },
+    {
+      "category": "Computer‑Aided Design",
+      "items": [
+        "SolidWorks",
+        "Ansys SpaceClaim",
+        "Ansys DesignModeler",
+        "AutoCAD",
+        "Blender"
+      ]
+    },
+    {
+      "category": "Circuit Board Design",
+      "items": ["Altium Designer", "Proteus", "EasyEDA"]
+    },
+    {
+      "category": "Programming",
+      "items": ["C", "Python", "MATLAB"]
+    },
+    {
+      "category": "Robotics",
+      "items": ["Arduino IDE", "Robot Operating System"]
+    },
+    {
+      "category": "Miscellaneous",
+      "items": ["Microsoft Office", "Ubuntu", "LaTeX", "Git"]
+    },
+    {
+      "category": "Soft Skills",
+      "items": ["Teamwork", "Problem‑solving", "Logical Thinking"]
+    }
+  ],
+
   "projects": [
     {
-      "slug": "finite-element-analysis",
-      "title": "Finite Element Analysis",
+      "slug": "Man-portable EOD-ROV",
+      "title": "Man-portable EOD-ROV",
       "description": "The Finite Element Analysis (FEA) of a 6-Degree-of-Freedom (DOF) Robotic Arm...",
       "longDescription": "The Finite Element Analysis (FEA) of a 6-Degree-of-Freedom (DOF) Robotic Arm was conducted to evaluate its structural integrity, stress distribution, and deformation under various load conditions. The arm, designed to carry a 20 kg payload in a retracted position and 9 kg when fully extended, is constructed from aluminum and stainless steel to optimize strength and weight efficiency. A key feature of this arm is its self-collision avoidance system, which prevents interference between components during operation. The FEA was performed using ANSYS Static Analysis Software, incorporating nonlinear constraints, and a minimum factor of safety of 5 was maintained throughout. The analysis led to 8 design iterations, with adjustments to material selection and dimensions based on the simulation results. This process helped identify stress concentrations, potential failure points, and areas for structural optimization, ensuring the arm meets the required performance standards. Challenges addressed included simulating real-world operational constraints and balancing strength with weight reduction.",
       "image": "assets/projects/project4-1.jpg",
@@ -353,7 +395,19 @@
       "position": "Research And Development Engineer",
       "location": "Dhaka, Bangladesh",
       "period": "2024-07-Present",
-      "description": "With my expertise in Finite Element Analysis, manufacturing processes, and Fused Deposition Modeling, I contribute significantly to the optimization of robotic structures. My competencies ensure that the robots are designed to be both robust and efficient, thereby enabling them to perform the rigorous tasks required in military applications."
+      "description": "With my expertise in Finite Element Analysis, manufacturing processes, and Fused Deposition Modeling, I contribute significantly to the optimization of robotic structures. My competencies ensure that the robots are designed to be both robust and efficient, thereby enabling them to perform the rigorous tasks required in military applications.",
+      "highlights": [
+        "Developing a man‑portable EOD ROV with 7 DoF robotic arm for military applications.",
+        "Analyzed the performance of fixed‑wing UAVs and multirotor drones designed to carry high payloads of up to 50 kg.",
+        "Acquired hands‑on experience in CNC machining, fused deposition modeling, composite manufacturing, and molding."
+      ],
+      "tech": [
+        "Composite Manufacturing",
+        "Additive Manufacturing",
+        "Finite Element Analysis",
+        "Soft Robotics",
+        "Structural Analysis"
+      ]
     },
     {
       "company": "Automaestro",
@@ -421,8 +475,13 @@
     },
     {
       "institution": "Notre Dame College",
-      "degree": "Higher Secondary Education",
-      "period": "2016-05-2018-12"
+      "location": "Dhaka, Bangladesh",
+      "degree": "Higher Secondary School Certificate",
+      "period": "2016-2018",
+      "highlights": [
+        "Group — Science, GPA 5.00/5.00",
+        "General grade scholarship, Dhaka Board"
+      ]
     },
     {
       "institution": "Sylhet Government Pilot High School",

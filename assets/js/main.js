@@ -38,18 +38,92 @@
       document.querySelector('[data-bind="name"]').textContent = profile.name;
       document.querySelector('[data-bind="headline"]').textContent =
         profile.headline;
-      document.querySelector('[data-bind="summary"]').textContent =
-        profile.summary;
+      const summaryEl = document.querySelector('[data-bind="summary"]');
+      const fullSummary = profile.summary || "";
+
+      summaryEl.classList.add("clamp");
+
+      function escapeHtml(s) {
+        const d = document.createElement("div");
+        d.textContent = s;
+        return d.innerHTML;
+      }
+      function linkifyCompany(htmlStr) {
+        const url = profile.companyLink || "https://cyberneticsbd.com/";
+        const re =
+          /Cybernetics\s+Hi[\-‑]Tech\s+Solutions\s+KATEX_INLINE_OPENPvt\.KATEX_INLINE_CLOSE\s+Ltd\./g;
+        return htmlStr.replace(
+          re,
+          `<a href="${url}" target="_blank" rel="noopener noreferrer">Cybernetics&nbsp;Hi‑Tech&nbsp;Solutions (Pvt.) Ltd.</a>`
+        );
+      }
+
+      // Inject linkified text into the clamped paragraph
+      summaryEl.innerHTML = linkifyCompany(escapeHtml(fullSummary));
+
+      // 3) Modal setup
+      const aboutReadMore = document.getElementById("about-readmore");
+      const aboutModal = document.getElementById("about-modal");
+      const aboutModalBody = document.getElementById("about-modal-body");
+      const aboutModalClose = document.getElementById("about-modal-close");
+
+      function openAboutModal() {
+        aboutModal.classList.add("open");
+        aboutModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        aboutModalClose?.focus();
+      }
+
+      function closeAboutModal() {
+        aboutModal.classList.remove("open");
+        aboutModal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      aboutReadMore?.addEventListener("click", (e) => {
+        e.preventDefault();
+        aboutModalBody.innerHTML = linkifyCompany(escapeHtml(fullSummary));
+        openAboutModal();
+      });
+      aboutModalClose?.addEventListener("click", closeAboutModal);
+      aboutModal?.addEventListener("click", (e) => {
+        if (e.target === aboutModal) closeAboutModal();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && aboutModal?.classList.contains("open"))
+          closeAboutModal();
+      });
       document.getElementById("avatar").src = profile.avatar;
 
       // Skills
+      // Skills (grouped if provided, else flat)
       const skillsList = document.getElementById("skills-list");
-      profile.skills.forEach((s) => {
-        const li = document.createElement("li");
-        li.className = "chip";
-        li.textContent = s;
-        skillsList.appendChild(li);
-      });
+      skillsList.innerHTML = "";
+
+      if (
+        Array.isArray(profile.skillsGrouped) &&
+        profile.skillsGrouped.length
+      ) {
+        profile.skillsGrouped.forEach((g) => {
+          const li = document.createElement("li");
+          li.className = "skills-group";
+          li.innerHTML = `
+      <h3 class="skills-group-title">${g.category}</h3>
+      <div class="chip-list">
+        ${(g.items || []).map((s) => `<span class="chip">${s}</span>`).join("")}
+      </div>
+    `;
+          skillsList.appendChild(li);
+        });
+      } else if (Array.isArray(profile.skills)) {
+        // fallback to flat chips
+        profile.skills.forEach((s) => {
+          const li = document.createElement("li");
+          li.className = "chip";
+          li.textContent = s;
+          skillsList.appendChild(li);
+        });
+      }
 
       // Projects
       const projectsGrid = document.getElementById("projects-grid");
@@ -81,21 +155,107 @@
         });
       }
 
-      // Experience
+      // Experience (with highlights and tech)
       const expList = document.getElementById("experience-list");
+
+      function formatPeriodPretty(period) {
+        if (!period) return "";
+        const parts = String(period).split("-");
+        if (
+          parts.length === 3 &&
+          String(parts[2]).toLowerCase() === "present"
+        ) {
+          const y = parseInt(parts[0], 10);
+          const m = parseInt(parts[1], 10) || 1;
+          const d = new Date(y, m - 1, 1);
+          // "01 July 2024 – Present"
+          return (
+            d.toLocaleDateString("en-GB", {
+              day: "2-digit",
+              month: "long",
+              year: "numeric",
+            }) + " – Present"
+          );
+        }
+        if (parts.length === 4) {
+          const sy = parseInt(parts[0], 10),
+            sm = parseInt(parts[1], 10) || 1;
+          const ey = parseInt(parts[2], 10),
+            em = parseInt(parts[3], 10) || 1;
+          const sd = new Date(sy, sm - 1, 1);
+          const ed = new Date(ey, em - 1, 1);
+          return (
+            sd.toLocaleDateString("en-GB", { month: "long", year: "numeric" }) +
+            " – " +
+            ed.toLocaleDateString("en-GB", { month: "long", year: "numeric" })
+          );
+        }
+        if (parts.length === 2) return `${parts[0]} – ${parts[1]}`;
+        return period;
+      }
+
       profile.experience.forEach((e) => {
         const div = document.createElement("div");
         div.className = "experience-item";
-        div.innerHTML = `<h4>${e.position} - ${e.company}</h4><div class="period">${e.period} | ${e.location}</div><p>${e.description}</p>`;
+
+        const highlightsHtml =
+          Array.isArray(e.highlights) && e.highlights.length
+            ? `<ul class="highlights">${e.highlights
+                .map((h) => `<li>${h}</li>`)
+                .join("")}</ul>`
+            : e.description
+            ? `<p>${e.description}</p>`
+            : "";
+
+        const techHtml =
+          Array.isArray(e.tech) && e.tech.length
+            ? `<p class="exp-tech"><strong>Technical Skills:</strong> ${e.tech.join(
+                ", "
+              )}</p>`
+            : "";
+
+        div.innerHTML = `
+    <h4><span class="company">${e.company}</span>${
+          e.location ? ` <span class="location">${e.location}</span>` : ""
+        }</h4>
+    <div class="role-line"><span class="position">${
+      e.position || ""
+    }</span> <span class="period">${formatPeriodPretty(e.period)}</span></div>
+    ${highlightsHtml}
+    ${techHtml}
+  `;
         expList.appendChild(div);
       });
-
-      // Education
+      // Education (with location and highlights)
       const eduList = document.getElementById("education-list");
+
+      function formatEduPeriod(period) {
+        const parts = String(period || "").split("-");
+        if (parts.length === 4) return `${parts[0]} – ${parts[2]}`; // YYYY-MM-YYYY2-MM2 -> YYYY – YYYY2
+        if (parts.length === 2) return `${parts[0]} – ${parts[1]}`;
+        return period || "";
+      }
+
       profile.education.forEach((e) => {
         const div = document.createElement("div");
         div.className = "education-item";
-        div.innerHTML = `<h4>${e.degree}</h4><div class="period">${e.period}</div><p>${e.institution}</p>`;
+
+        const highlightsHtml =
+          Array.isArray(e.highlights) && e.highlights.length
+            ? `<ul class="highlights">${e.highlights
+                .map((h) => `<li>${h}</li>`)
+                .join("")}</ul>`
+            : "";
+
+        div.innerHTML = `
+    <h4><span class="institution">${e.institution}</span>${
+          e.location ? ` <span class="location">${e.location}</span>` : ""
+        }</h4>
+    <div class="degree-line"><span class="degree">${
+      e.degree || ""
+    }</span> <span class="period">${formatEduPeriod(e.period)}</span></div>
+    ${highlightsHtml}
+  `;
         eduList.appendChild(div);
       });
 

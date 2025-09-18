@@ -7,13 +7,16 @@
     <title>Portfolio | Emon Roy Bappy</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/9e275c6f55.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- Navbar -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="#" class="brand"><span>Emon Roy Bappy</span></a>
+            <!-- <a href="#" class="brand"><span>Portfolio</span></a> -->
             <nav class="nav-links" id="nav-menu">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
@@ -24,8 +27,21 @@
                 <a href="#achievements">Achievements</a>
                 <a href="#contact">Contact</a>
             </nav>
-            <button id="theme-toggle" class="theme-btn"></button>
-            <button id="nav-toggle" class="nav-toggle"><i class="fa fa-bars"></i></button>
+
+            <!-- SOcial Links -->
+
+            <div class="">
+                <button id="theme-toggle" class="theme-btn"></button>
+                <button id="nav-toggle" class="nav-toggle"><i class="fa fa-bars"></i></button>
+                <a href="https://www.linkedin.com/in/erb4058/" target="_blank"><button id="theme-toggle"
+                        class="theme-btn"><i class="fa-brands fa-linkedin"></i></button></a>
+                <a href="https://github.com/Emon4058" target="_blank"><button id="theme-toggle" class="theme-btn"><i
+                            class="fa-brands fa-github"></i></button></a>
+                <a data-bind-mailto href="mailto:emonroy4058@gmail.com">
+                    <button id="theme-toggle" class="theme-btn"><i class="fa-solid fa-envelope"></i></button>
+                </a>
+            </div>
+
         </div>
     </header>
 
@@ -38,9 +54,10 @@
                 <h1 data-bind="name">Full Name</h1>
                 <h3 data-bind="headline">Job Title</h3>
                 <p data-bind="summary">Short summary here...</p>
+                <a id="about-readmore" class="a-link" href="#">Read more</a>
                 <div class="hero-buttons">
                     <a href="assets/files/EmonRoyBappy_CV.pdf" download class="btn">Download CV</a>
-                    <a data-bind-mailto href="mailto:emonroy4058@gmail.com" class="btn btn-primary">Contact Now</a>
+                    <!-- <a data-bind-mailto href="mailto:emonroy4058@gmail.com" class="btn btn-primary">Contact Now</a> -->
                 </div>
             </div>
             <div class="hero-img">
@@ -105,9 +122,11 @@
         <div class="container">
             <h2 class="section-title">Contact</h2>
             <p>Email: <a data-bind-mailto href="mailto:emonroy4058@gmail.com">emonroy4058@gmail.com</a></p>
-            <p>LinkedIn: <a data-bind-href="linkedin" target="_blank" href="#">https://www.linkedin.com/in/erb4058/</a>
+            <p>LinkedIn: <a data-bind-href="linkedin" target="_blank"
+                    href="https://www.linkedin.com/in/erb4058/">https://www.linkedin.com/in/erb4058/</a>
             </p>
-            <p>GitHub: <a data-bind-href="github" target="_blank" href="#">GitHub</a></p>
+            <p>GitHub: <a data-bind-href="github" target="_blank"
+                    href="https://github.com/Emon4058">https://github.com/Emon4058</a></p>
         </div>
     </section>
     <button id="to-top"><i class="fa fa-arrow-up"></i></button>
@@ -116,6 +135,14 @@
         <p id="footer">© 2025 | Emon Roy Bappy. All rights reserved.</p>
     </footer>
 
+    <!-- About Modal -->
+    <div id="about-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="about-modal-title">
+        <div class="modal-content">
+            <button id="about-modal-close" class="modal-close" aria-label="Close">&times;</button>
+            <h2 id="about-modal-title" style="margin-bottom:8px">About</h2>
+            <div id="about-modal-body"></div>
+        </div>
+    </div>
     <script src="assets/js/main.js"></script>
 </body>
 

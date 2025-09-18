@@ -383,7 +383,6 @@
       "position": "Research And Development Engineer",
       "location": "Dhaka, Bangladesh",
       "period": "2024-07-Present",
-      "description": "With my expertise in Finite Element Analysis, manufacturing processes, and Fused Deposition Modeling, I contribute significantly to the optimization of robotic structures. My competencies ensure that the robots are designed to be both robust and efficient, thereby enabling them to perform the rigorous tasks required in military applications.",
       "highlights": [
         "Developing a man‑portable EOD ROV with 7 DoF robotic arm for military applications.",
         "Analyzed the performance of fixed‑wing UAVs and multirotor drones designed to carry high payloads of up to 50 kg.",
@@ -398,18 +397,74 @@
       ]
     },
     {
-      "company": "Automaestro",
-      "position": "Lead of Suspension Sub-team",
+      "company": "Spectrum Engineering Consortium Ltd.",
+      "position": "Intern, Research And Development Engineer",
       "location": "Dhaka, Bangladesh",
-      "period": "2022-12-2024-07",
-      "description": "Managed suspension sub-team and led projects for 1 year 8 months."
+      "period": "2023-06-2024-06",
+      "highlights": [
+        "Engineered an ROV with a 6 DoF arm, meticulously designed to operate and sustain functionality in harsh and challenging environments, ensuring robustness and reliability",
+        "Verified the structural integrity of the mechanical designs of an ROV through finite element analysis (FEA), identifying potential stress points and weaknesses"
+      ],
+      "tech": [
+        "Computer Aided Design",
+        "3d Printing",
+        "Finite Element Analysis",
+        "Mechanical Assembly",
+        "Non‑Linear Analysis"
+      ]
+    },
+    {
+      "company": "Runner Automobiles PLC",
+      "position": "Intern, 3 Wheeler Manufacturing Section",
+      "location": "Mymensingh Division, Bangladesh",
+      "period": "2023-11-2023-11",
+      "highlights": [
+        "Acquired comprehensive knowledge of the three‑wheeler manufacturing process, encompassing welding, painting, and assembly sections",
+        "Developed a thorough understanding of industrial automation processes and the application of industrial robotic arms",
+        "Conducted a detailed analysis to identify and recommend improvements to make the manufacturing process more efficient"
+      ],
+      "tech": [
+        "Engine Assembly",
+        "Vehicle Assembly",
+        "Spot Welding",
+        "Robotic Welding",
+        "Welding Inspection",
+        "Painting"
+      ]
+    },
+    {
+      "company": "Team Interplanetar",
+      "position": "Member, Electrical and Communication Subteam",
+      "location": "Dhaka, Bangladesh",
+      "period": "2022-11-2023-08",
+      "highlights": [
+        "Built a Mars Rover capable of traversing through rocky terrain, collecting and processing specimens from the environment, and performingvarious tasks",
+        "Designed and implemented the PCB for the rover’s power distribution system, actuators, and sensors for onboard scientific experiment",
+        "Constructed a 6 DoF robotic arm from scratch, capable of holding a 5 kg payload in extended position"
+      ],
+      "tech": [
+        "PCB Design",
+        "Soldering",
+        "CAD Design",
+        "Robot Operating System"
+      ]
     },
     {
       "company": "Automaestro",
-      "position": "Member of Suspension Sub-team",
+      "position": "Member, Suspension Subteam",
       "location": "Dhaka, Bangladesh",
-      "period": "2021-12-2022-12",
-      "description": "Worked as a team member in suspension sub-team."
+      "period": "2022-12-2024-07",
+      "highlights": [
+        "Contributed to the development of a competitive Formula Student automobile, taking part in the design, manufacturing, and experiments",
+        "Led the suspension team successfully, guiding the design and fabrication of critical components such as the upright, control arm, and bell crank"
+      ],
+      "tech": [
+        "CAD Design",
+        "Stress Analysis",
+        "Arc Welding",
+        "CNC Machining",
+        "Design for Assembly"
+      ]
     },
     {
       "company": "BUET Robotics Society",
@@ -424,34 +479,6 @@
       "location": "Dhaka, Bangladesh",
       "period": "2022-06-2023-06",
       "description": "Managed publicity and outreach programs."
-    },
-    {
-      "company": "Spectrum Engineering Consortium Ltd.",
-      "position": "Research And Development Engineer",
-      "location": "Dhaka, Bangladesh",
-      "period": "2023-06-2024-06",
-      "description": "Worked on cutting-edge robotics projects during a year-long internship."
-    },
-    {
-      "company": "Runner Automobiles PLC",
-      "position": "Manufacturing Process Engineer",
-      "location": "Mymensingh Division, Bangladesh",
-      "period": "2023-11-2023-11",
-      "description": "Acquired knowledge of three-wheeler manufacturing, automation, and process optimization."
-    },
-    {
-      "company": "Team Interplanetar",
-      "position": "Project Leader of Electrical and Communications sub-team",
-      "location": "Dhaka, Bangladesh",
-      "period": "2022-11-2023-08",
-      "description": "Led the electrical and communications sub-team in international space-robotics competitions."
-    },
-    {
-      "company": "Team Interplanetar",
-      "position": "Member of Electrical and Communications Sub-team",
-      "location": "Dhaka, Bangladesh",
-      "period": "2020-05-2022-11",
-      "description": "Contributed to electrical and communications tasks for team projects."
     }
   ],
 
@@ -552,43 +579,50 @@
       "title": "University Rover Challenge",
       "position": "Finalist",
       "year": "2022",
-      "organizer": "The Mars Society"
+      "organizer": "The Mars Society",
+      "organizerUrl": "https://urc.marssociety.org/"
     },
     {
       "title": "BASIS National ICT Awards",
       "position": "Merit Award",
       "year": "2022",
-      "organizer": "BASIS"
+      "organizer": "BASIS",
+      "organizerUrl": "https://basis.org.bd/"
     },
     {
       "title": "Sustainable Energy Innovation Challenge",
       "position": "Champion",
       "year": "2021",
-      "organizer": "Bikiron"
+      "organizer": "Bikiron",
+      "organizerUrl": "https://www.google.com/search?q=Bikiron%20Sustainable%20Energy%20Innovation%20Challenge"
     },
     {
       "title": "National STEM Competition",
       "position": "Champion",
       "year": "2021",
-      "organizer": "bdSTEM"
+      "organizer": "bdSTEM",
+      "organizerUrl": "https://bdstem.org/"
     },
     {
       "title": "2nd Kibo Robot Programming Challenge — National Round",
       "position": "4th place",
       "year": "2021",
-      "organizer": "JAXA"
+      "organizer": "JAXA",
+      "organizerUrl": "https://global.jaxa.jp/"
     },
     {
       "title": "International Planetary Aerial Systems Challenge",
       "position": "Innovation Award",
       "year": "2021",
-      "organizer": "Mars Society South Asia"
+      "organizer": "Mars Society South Asia",
+      "organizerUrl": "https://www.google.com/search?q=Mars%20Society%20South%20Asia"
     },
     {
       "title": "National Round of 6th Bangladesh Physics Olympiad",
       "position": "8th position",
       "year": "2016",
-      "organizer": "Bangladesh Physics Olympiad"
+      "organizer": "Bangladesh Physics Olympiad",
+      "organizerUrl": "https://bdpho.org/"
     }
   ]
 }

@@ -96,8 +96,26 @@
 
       renderSummaryWithCompanyLink(summaryEl, fullSummary);
 
-      // Modal for full about
       const aboutReadMore = document.getElementById("about-readmore");
+
+      // Show the Read more link only when the paragraph is actually clamped
+      function updateReadMoreVisibility() {
+        if (!aboutReadMore) return;
+        // Wait a frame so styles/layout are applied
+        requestAnimationFrame(() => {
+          const clamped = summaryEl.scrollHeight > summaryEl.clientHeight + 1;
+          aboutReadMore.style.display = clamped ? "inline" : "none";
+        });
+      }
+
+      // Call once after rendering
+      updateReadMoreVisibility();
+
+      // Re-check on resize (line wrapping can change)
+      window.addEventListener("resize", updateReadMoreVisibility);
+
+      // Modal for full about
+      // const aboutReadMore = document.getElementById("about-readmore");
       const aboutModal = document.getElementById("about-modal");
       const aboutModalBody = document.getElementById("about-modal-body");
       const aboutModalClose = document.getElementById("about-modal-close");
@@ -349,8 +367,20 @@
           const yearBadge = a.year
             ? `<span class="ach-badge year">${a.year}</span>`
             : "";
+          const orgHref = a.organizerUrl
+            ? a.organizerUrl
+            : a.organizer
+            ? `https://www.google.com/search?q=${encodeURIComponent(
+                a.organizer
+              )}`
+            : null;
+
           const orgLine = a.organizer
-            ? `<div class="achievement-org">${a.organizer}</div>`
+            ? `<div class="achievement-org">${
+                orgHref
+                  ? `<a href="${orgHref}" target="_blank" rel="noopener noreferrer">${a.organizer}</a>`
+                  : a.organizer
+              }</div>`
             : "";
           const linkLine = a.link
             ? `<a class="a-link achievement-link" href="${a.link}" target="_blank" rel="noopener noreferrer">Details</a>`

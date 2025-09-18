@@ -5,21 +5,9 @@
   "avatar": "assets/img/profile.jpg",
   "themeColor": "#0ea5e9",
   "email": "emonroy4058@gmail.com",
-  "website": "https://buetinterplanetar.com",
   "companyLink": "https://cyberneticsbd.com/",
   "linkedin": "https://www.linkedin.com/in/erb4058",
   "github": "",
-
-  "skills": [
-    "Composite Structures",
-    "Topology Optimization",
-    "Solid Mechanics",
-    "FEA",
-    "Robotics",
-    "3D Printing",
-    "Soft Robotics",
-    "Healthcare"
-  ],
 
   "skillsGrouped": [
     {
@@ -470,8 +458,10 @@
   "education": [
     {
       "institution": "Bangladesh University of Engineering and Technology",
-      "degree": "Bachelor of Science - BS, Mechanical Engineering",
-      "period": "2019-04-2024-07"
+      "location": "Dhaka, Bangladesh",
+      "degree": "BSc in Mechanical Engineering",
+      "period": "2018-09-2024-07",
+      "highlights": ["CGPA 3.43/4.00"]
     },
     {
       "institution": "Notre Dame College",
@@ -485,8 +475,13 @@
     },
     {
       "institution": "Sylhet Government Pilot High School",
-      "degree": "Secondary School",
-      "period": "2008-01-2016-10"
+      "location": "Sylhet, Bangladesh",
+      "degree": "Secondary School Certificate",
+      "period": "2008-01-2016-10",
+      "highlights": [
+        "Group — Science, GPA 5.00/5.00",
+        "General grade scholarship, Sylhet Board"
+      ]
     }
   ],
 

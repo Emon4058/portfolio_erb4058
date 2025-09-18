@@ -38,30 +38,65 @@
       document.querySelector('[data-bind="name"]').textContent = profile.name;
       document.querySelector('[data-bind="headline"]').textContent =
         profile.headline;
+      // About summary: clamp + linkify company reliably
       const summaryEl = document.querySelector('[data-bind="summary"]');
       const fullSummary = profile.summary || "";
-
       summaryEl.classList.add("clamp");
 
-      function escapeHtml(s) {
-        const d = document.createElement("div");
-        d.textContent = s;
-        return d.innerHTML;
-      }
-      function linkifyCompany(htmlStr) {
-        const url = profile.companyLink || "https://cyberneticsbd.com/";
-        const re =
-          /Cybernetics\s+Hi[\-‑]Tech\s+Solutions\s+KATEX_INLINE_OPENPvt\.KATEX_INLINE_CLOSE\s+Ltd\./g;
-        return htmlStr.replace(
-          re,
-          `<a href="${url}" target="_blank" rel="noopener noreferrer">Cybernetics&nbsp;Hi‑Tech&nbsp;Solutions (Pvt.) Ltd.</a>`
-        );
+      const companyUrl = profile.companyLink || "https://cyberneticsbd.com/";
+      const variants = [
+        "Cybernetics Hi-Tech Solutions (Pvt.) Ltd.",
+        "Cybernetics Hi‑Tech Solutions (Pvt.) Ltd.",
+        "Cybernetics Hi–Tech Solutions (Pvt.) Ltd.",
+        "Cybernetics Hi—Tech Solutions (Pvt.) Ltd.",
+      ];
+
+      function renderSummaryWithCompanyLink(target, text) {
+        target.innerHTML = "";
+        let hit = null,
+          idx = -1;
+        for (const v of variants) {
+          idx = text.indexOf(v);
+          if (idx !== -1) {
+            hit = v;
+            break;
+          }
+        }
+
+        const appendTextWithBreaks = (parent, s) => {
+          const parts = s.split(/\r?\n/g);
+          parts.forEach((p, i) => {
+            parent.appendChild(document.createTextNode(p));
+            if (i < parts.length - 1) {
+              parent.appendChild(document.createElement("br"));
+              parent.appendChild(document.createElement("br"));
+            }
+          });
+        };
+
+        if (idx === -1) {
+          appendTextWithBreaks(target, text);
+          return;
+        }
+
+        // before
+        appendTextWithBreaks(target, text.slice(0, idx));
+
+        // anchor
+        const a = document.createElement("a");
+        a.href = companyUrl;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.textContent = "Cybernetics Hi‑Tech Solutions (Pvt.) Ltd.";
+        target.appendChild(a);
+
+        // after
+        appendTextWithBreaks(target, text.slice(idx + hit.length));
       }
 
-      // Inject linkified text into the clamped paragraph
-      summaryEl.innerHTML = linkifyCompany(escapeHtml(fullSummary));
+      renderSummaryWithCompanyLink(summaryEl, fullSummary);
 
-      // 3) Modal setup
+      // Modal for full about
       const aboutReadMore = document.getElementById("about-readmore");
       const aboutModal = document.getElementById("about-modal");
       const aboutModalBody = document.getElementById("about-modal-body");
@@ -73,7 +108,6 @@
         document.body.style.overflow = "hidden";
         aboutModalClose?.focus();
       }
-
       function closeAboutModal() {
         aboutModal.classList.remove("open");
         aboutModal.setAttribute("aria-hidden", "true");
@@ -82,8 +116,17 @@
 
       aboutReadMore?.addEventListener("click", (e) => {
         e.preventDefault();
-        aboutModalBody.innerHTML = linkifyCompany(escapeHtml(fullSummary));
+        aboutModalBody.innerHTML = "";
+        renderSummaryWithCompanyLink(aboutModalBody, fullSummary);
         openAboutModal();
+      });
+      aboutModalClose?.addEventListener("click", closeAboutModal);
+      aboutModal?.addEventListener("click", (e) => {
+        if (e.target === aboutModal) closeAboutModal();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && aboutModal?.classList.contains("open"))
+          closeAboutModal();
       });
       aboutModalClose?.addEventListener("click", closeAboutModal);
       aboutModal?.addEventListener("click", (e) => {
@@ -96,7 +139,6 @@
       document.getElementById("avatar").src = profile.avatar;
 
       // Skills
-      // Skills (grouped if provided, else flat)
       const skillsList = document.getElementById("skills-list");
       skillsList.innerHTML = "";
 

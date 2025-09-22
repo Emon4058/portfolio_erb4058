@@ -1,6 +1,6 @@
 {
   "name": "Emon Roy Bappy",
-  "headline": "Research and Development Engineer at Cybernetics Hi-Tech Solutions",
+  "headline": "Research and Development Engineer",
   "summary": "Currently, I am a Research and Development Engineer at Cybernetics Hi-Tech Solutions (Pvt.) Ltd. where I am focused on the development and analysis of military robots for Bangladesh Army. Our team has already delivered two Explosive Ordinance Disposal Remotely Operated Vehicles (EOD-ROVs), which have been deployed in United Nations Peacekeeping Missions. Currently, I am working on a Man-Portable EOD ROV project along with my teammates. My key responsibilities include Design for Manufacturing and Assembly (DfMA), stress analysis, structural topology optimization, additive manufacturing methods for prototyping like Fused Deposition Modeling (FDM), molding of soft materials like silicone, subtractive manufacturing like CNC milling and Electro Discharge Machining (EDM). Recently, we have started working on composite materials. For the first time in Bangladesh’s history, we successfully implemented the resin infusion method to manufacture structural components using carbon fiber, achieving an industrial-grade solution within our own composite fabrication lab. This milestone not only demonstrates our manufacturing capabilities and knowledge but also creates a precedent for the country’s manufacturing infrastructure. \n During my undergraduate studies in Mechanical Engineering at Bangladesh University of Engineering and Technology (BUET), I built a strong foundation in electromechanical systems, computer-aided design, PCB design, and finite element analysis, which naturally pushed me to explore the intersection of robotics and manufacturing. As a third-year student in the mechanical department, I collaborated with my team to develop a bio-inspired soft robotic fish and a mechanical solution for variable capacity cooling tower. During my undergraduate thesis, I designed and fabricated a soft robotic actuator to replace the conventional rigid actuator in the medical robots used for Minimally Invasive Surgery (MIS). The soft actuator has three degrees of freedom to reach any area at the time of surgery, minimizing the number of incisions and reducing patient’s recovery time. \n My goal is to pursue cutting-edge research that bridges the robotics field and manufacturing methods, ultimately contributing to the development of resilient and intelligent manufacturing solutions for humanitarian applications.",
   "avatar": "assets/img/profile.jpg",
   "themeColor": "#0ea5e9",
@@ -494,9 +494,9 @@
     },
     {
       "company": "BUET Robotics Society",
-      "position": "Vice President",
+      "position": ["Vice President", "Publicity and Outreach Coordinator"],
       "location": "Dhaka, Bangladesh",
-      "period": "2023-06-2024-06",
+      "period": ["2023-06-2024-06", "2022-06-2023-06"],
       "description": "Oversaw society activities and led the team."
     },
     {
@@ -530,7 +530,7 @@
       "institution": "Sylhet Government Pilot High School",
       "location": "Sylhet, Bangladesh",
       "degree": "Secondary School Certificate",
-      "period": "2008-01-2016-10",
+      "period": "2014-01-2016-10",
       "highlights": [
         "Group — Science, GPA 5.00/5.00",
         "General grade scholarship, Sylhet Board"
@@ -620,7 +620,7 @@
       "position": "Champion",
       "year": "2021",
       "organizer": "Bikiron",
-      "organizerUrl": "https://www.google.com/search?q=Bikiron%20Sustainable%20Energy%20Innovation%20Challenge"
+      "organizerUrl": "https://bikiron2021.sreda.gov.bd/"
     },
     {
       "title": "National STEM Competition",
@@ -641,7 +641,7 @@
       "position": "Innovation Award",
       "year": "2021",
       "organizer": "Mars Society South Asia",
-      "organizerUrl": "https://www.google.com/search?q=Mars%20Society%20South%20Asia"
+      "organizerUrl": "https://marssocietysouthasia.org/"
     },
     {
       "title": "National Round of 6th Bangladesh Physics Olympiad",

@@ -273,6 +273,13 @@ a:hover {
     overflow: hidden;
 }
 
+.about-actions {
+    margin-top: 8px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
 /* Read more is hidden by default; JS will show it if needed */
 #about-readmore {
     display: none;
@@ -280,44 +287,9 @@ a:hover {
     font-weight: 500;
 }
 
-/* Simple modal */
-.modal {
-    position: fixed;
-    inset: 0;
+#about-readless {
     display: none;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 1000;
-}
-
-.modal.open {
-    display: flex;
-}
-
-.modal-content {
-    position: relative;
-    background: var(--card);
-    color: var(--text);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    max-width: 800px;
-    width: min(90vw, 800px);
-    max-height: 85vh;
-    overflow: auto;
-    padding: 16px 18px;
-    box-shadow: var(--shadow);
-}
-
-.modal-close {
-    position: absolute;
-    top: 8px;
-    right: 10px;
-    background: transparent;
-    border: 0;
-    font-size: 24px;
-    color: var(--text);
-    cursor: pointer;
+    font-weight: 500;
 }
 
 /* Sections */
@@ -335,21 +307,6 @@ a:hover {
     font-size: 28px;
     margin-bottom: 20px;
     font-weight: 700;
-}
-
-/* Skills chips */
-.chip-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.chip {
-    padding: 6px 12px;
-    background: var(--primary1);
-    color: #fff;
-    border-radius: 50px;
-    font-size: 14px;
 }
 
 /* Grouped skills layout */
@@ -375,10 +332,48 @@ a:hover {
     margin-bottom: 8px;
 }
 
-.skills-group .chip-list {
+.skills-group {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+}
+
+/* Grouped Skills (Notion-like) */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 16px;
+}
+
+.skill-cat {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-cat::before {
+    content: "#";
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.skill-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skill-items li {
+    margin: 4px 0;
+    color: var(--text);
 }
 
 /* Projects */

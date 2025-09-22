@@ -38,21 +38,24 @@
       document.querySelector('[data-bind="name"]').textContent = profile.name;
       document.querySelector('[data-bind="headline"]').textContent =
         profile.headline;
-      // About summary: clamp + linkify company reliably
+      // About summary: clamp + linkify company + Read more / Read less toggle
       const summaryEl = document.querySelector('[data-bind="summary"]');
+      const readMore = document.getElementById("about-readmore");
+      const readLess = document.getElementById("about-readless");
       const fullSummary = profile.summary || "";
-      summaryEl.classList.add("clamp");
-
       const companyUrl = profile.companyLink || "https://cyberneticsbd.com/";
+      let isExpanded = false;
+
+      // Render text with a hyperlink for "Cybernetics Hi‑Tech Solutions (Pvt.) Ltd."
       const variants = [
         "Cybernetics Hi-Tech Solutions (Pvt.) Ltd.",
-        "Cybernetics Hi‑Tech Solutions (Pvt.) Ltd.",
-        "Cybernetics Hi–Tech Solutions (Pvt.) Ltd.",
-        "Cybernetics Hi—Tech Solutions (Pvt.) Ltd.",
+        "Cybernetics Hi‑Tech Solutions (Pvt.) Ltd.", // NB hyphen
+        "Cybernetics Hi–Tech Solutions (Pvt.) Ltd.", // en dash
+        "Cybernetics Hi—Tech Solutions (Pvt.) Ltd.", // em dash
       ];
 
       function renderSummaryWithCompanyLink(target, text) {
-        target.innerHTML = "";
+        target.innerHTML = ""; // clear
         let hit = null,
           idx = -1;
         for (const v of variants) {
@@ -63,8 +66,9 @@
           }
         }
 
+        // append text preserving line breaks
         const appendTextWithBreaks = (parent, s) => {
-          const parts = s.split(/\r?\n/g);
+          const parts = String(s || "").split(/\r?\n/g);
           parts.forEach((p, i) => {
             parent.appendChild(document.createTextNode(p));
             if (i < parts.length - 1) {
@@ -79,10 +83,8 @@
           return;
         }
 
-        // before
         appendTextWithBreaks(target, text.slice(0, idx));
 
-        // anchor
         const a = document.createElement("a");
         a.href = companyUrl;
         a.target = "_blank";
@@ -90,98 +92,80 @@
         a.textContent = "Cybernetics Hi‑Tech Solutions (Pvt.) Ltd.";
         target.appendChild(a);
 
-        // after
         appendTextWithBreaks(target, text.slice(idx + hit.length));
       }
 
+      // Initial render (clamped)
       renderSummaryWithCompanyLink(summaryEl, fullSummary);
+      summaryEl.classList.add("clamp");
 
-      const aboutReadMore = document.getElementById("about-readmore");
+      // Show Read more only if text is actually clamped and not expanded
+      function updateToggleVisibility() {
+        const isClamped = summaryEl.scrollHeight > summaryEl.clientHeight + 1;
+        if (!isExpanded && isClamped) {
+          if (readMore) readMore.style.display = "inline";
+          if (readLess) readLess.style.display = "none";
+        } else if (isExpanded) {
+          if (readMore) readMore.style.display = "none";
+          if (readLess) readLess.style.display = "inline";
+        } else {
+          if (readMore) readMore.style.display = "none";
+          if (readLess) readLess.style.display = "none";
+        }
+      }
+      updateToggleVisibility();
+      window.addEventListener("resize", updateToggleVisibility);
 
-      // Show the Read more link only when the paragraph is actually clamped
-      function updateReadMoreVisibility() {
-        if (!aboutReadMore) return;
-        // Wait a frame so styles/layout are applied
-        requestAnimationFrame(() => {
-          const clamped = summaryEl.scrollHeight > summaryEl.clientHeight + 1;
-          aboutReadMore.style.display = clamped ? "inline" : "none";
-        });
+      // Expand/collapse handlers
+      function expandSummary() {
+        isExpanded = true;
+        summaryEl.classList.remove("clamp");
+        updateToggleVisibility();
+      }
+      function collapseSummary() {
+        isExpanded = false;
+        summaryEl.classList.add("clamp");
+        updateToggleVisibility();
       }
 
-      // Call once after rendering
-      updateReadMoreVisibility();
-
-      // Re-check on resize (line wrapping can change)
-      window.addEventListener("resize", updateReadMoreVisibility);
-
-      // Modal for full about
-      // const aboutReadMore = document.getElementById("about-readmore");
-      const aboutModal = document.getElementById("about-modal");
-      const aboutModalBody = document.getElementById("about-modal-body");
-      const aboutModalClose = document.getElementById("about-modal-close");
-
-      function openAboutModal() {
-        aboutModal.classList.add("open");
-        aboutModal.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-        aboutModalClose?.focus();
-      }
-      function closeAboutModal() {
-        aboutModal.classList.remove("open");
-        aboutModal.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-      }
-
-      aboutReadMore?.addEventListener("click", (e) => {
+      readMore?.addEventListener("click", (e) => {
         e.preventDefault();
-        aboutModalBody.innerHTML = "";
-        renderSummaryWithCompanyLink(aboutModalBody, fullSummary);
-        openAboutModal();
+        expandSummary();
       });
-      aboutModalClose?.addEventListener("click", closeAboutModal);
-      aboutModal?.addEventListener("click", (e) => {
-        if (e.target === aboutModal) closeAboutModal();
-      });
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && aboutModal?.classList.contains("open"))
-          closeAboutModal();
-      });
-      aboutModalClose?.addEventListener("click", closeAboutModal);
-      aboutModal?.addEventListener("click", (e) => {
-        if (e.target === aboutModal) closeAboutModal();
-      });
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && aboutModal?.classList.contains("open"))
-          closeAboutModal();
+      readLess?.addEventListener("click", (e) => {
+        e.preventDefault();
+        collapseSummary();
       });
       document.getElementById("avatar").src = profile.avatar;
 
       // Skills
-      const skillsList = document.getElementById("skills-list");
-      skillsList.innerHTML = "";
+      // Skills — grouped, Notion-like columns (fallback to flat)
+      const skillsGrid =
+        document.getElementById("skills-grid") ||
+        document.getElementById("skills-list");
+      if (skillsGrid) {
+        skillsGrid.innerHTML = "";
 
-      if (
-        Array.isArray(profile.skillsGrouped) &&
-        profile.skillsGrouped.length
-      ) {
-        profile.skillsGrouped.forEach((g) => {
-          const li = document.createElement("li");
-          li.className = "skills-group";
-          li.innerHTML = `
-      <h3 class="skills-group-title">${g.category}</h3>
-      <div class="chip-list">
-        ${(g.items || []).map((s) => `<span class="chip">${s}</span>`).join("")}
-      </div>
+        let groups = [];
+        if (
+          Array.isArray(profile.skillsGrouped) &&
+          profile.skillsGrouped.length
+        ) {
+          groups = profile.skillsGrouped;
+        } else if (Array.isArray(profile.skills) && profile.skills.length) {
+          groups = [{ category: "Skills", items: profile.skills }];
+        }
+
+        groups.forEach((g) => {
+          const col = document.createElement("div");
+          col.className = "skill-group";
+          col.innerHTML = `
+      <h3 class="skill-cat">${g.category}</h3>
+      <ul class="skill-items">
+        ${(g.items || []).map((item) => `<li>${item}</li>`).join("")}
+      </ul>
     `;
-          skillsList.appendChild(li);
-        });
-      } else if (Array.isArray(profile.skills)) {
-        // fallback to flat chips
-        profile.skills.forEach((s) => {
-          const li = document.createElement("li");
-          li.className = "chip";
-          li.textContent = s;
-          skillsList.appendChild(li);
+          skillsGrid.appendChild(col);
         });
       }
 

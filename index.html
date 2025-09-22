@@ -54,7 +54,10 @@
                 <h1 data-bind="name">Full Name</h1>
                 <h3 data-bind="headline">Job Title</h3>
                 <p data-bind="summary">Short summary here...</p>
-                <a id="about-readmore" class="a-link" href="#">Read more</a>
+                <div class="about-actions">
+                    <a id="about-readmore" class="a-link" href="#">Read more</a>
+                    <a id="about-readless" class="a-link" href="#" style="display:none">Read less</a>
+                </div>
                 <div class="hero-buttons">
                     <a href="assets/files/EmonRoyBappy_CV.pdf" download class="btn">Download CV</a>
                     <!-- <a data-bind-mailto href="mailto:emonroy4058@gmail.com" class="btn btn-primary">Contact Now</a> -->
@@ -71,7 +74,7 @@
     <section id="skills" class="section">
         <div class="container">
             <h2 class="section-title">Skills</h2>
-            <ul id="skills-list" class="chip-list"></ul>
+            <div id="skills-grid" class="skills-grid"></div>
         </div>
     </section>
 

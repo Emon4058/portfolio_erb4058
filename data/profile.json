@@ -240,10 +240,10 @@
       }
     },
     {
-      "slug": "finite-element-analysis",
-      "title": "Finite Element Analysis",
-      "description": "The Finite Element Analysis (FEA) of a 6-Degree-of-Freedom (DOF) Robotic Arm...",
-      "longDescription": "The Finite Element Analysis (FEA) of a 6-Degree-of-Freedom (DOF) Robotic Arm was conducted to evaluate its structural integrity, stress distribution, and deformation under various load conditions. The arm, designed to carry a 20 kg payload in a retracted position and 9 kg when fully extended, is constructed from aluminum and stainless steel to optimize strength and weight efficiency. A key feature of this arm is its self-collision avoidance system, which prevents interference between components during operation. The FEA was performed using ANSYS Static Analysis Software, incorporating nonlinear constraints, and a minimum factor of safety of 5 was maintained throughout. The analysis led to 8 design iterations, with adjustments to material selection and dimensions based on the simulation results. This process helped identify stress concentrations, potential failure points, and areas for structural optimization, ensuring the arm meets the required performance standards. Challenges addressed included simulating real-world operational constraints and balancing strength with weight reduction.",
+      "slug": "Bio-Inspired Soft Robotic Fish",
+      "title": "Bio-Inspired Soft Robotic Fish",
+      "description": "...",
+      "longDescription": "",
       "image": "assets/projects/project4-1.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
@@ -294,64 +294,10 @@
       ]
     },
     {
-      "slug": "Website Redesign",
-      "title": "Website Redesign",
-      "description": "Webpage   ...",
-      "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "image": "assets/projects/project4-1.jpg",
-      "gallery": [
-        "../projects/project4-1.jpg",
-        "../projects/project4-2.jpg",
-        "../projects/project4-3.jpg"
-      ],
-      "tags": ["FEA", "Solid Mechanics", "Robotics"],
-      "meta": ["Tool: ANSYS Static Structural", "Iterations: 8", "FoS: ≥ 5"],
-      "specs": [
-        { "k": "Payload (retracted)", "v": "20 kg" },
-        { "k": "Payload (extended)", "v": "9 kg" },
-        { "k": "Materials", "v": "Aluminum + Stainless Steel" },
-        { "k": "Objective", "v": "FoS ≥ 5" }
-      ],
-      "sections": [
-        {
-          "heading": "Overview",
-          "text": "Refined mesh at fillets, bolt interfaces, and section transitions. Convergence study ensured peak von Mises stress stability and tip deflection within tolerance.",
-          "image": "../projects/project4-2.jpg",
-          "caption": "FEA setup — constraints and load application",
-          "align": "left"
-        },
-        {
-          "heading": "Loads & Boundary Conditions",
-          "text": "Lorwem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          "image": "../projects/project4-3.jpg",
-          "caption": "Post‑processing — stress distribution",
-          "align": "right"
-        },
-        {
-          "heading": "Meshing Strategy & Results",
-          "text": "Refined mesh at fillets, bolt interfaces, and section transitions. Convergence study ensured peak von Mises stress stability and tip deflection within tolerance.",
-          "image": "../projects/project4-1.jpg",
-          "caption": "Model and mesh refinement",
-          "align": "left"
-        }
-      ],
-      "iterations": [
-        "Thickened high‑stress links and reduced mass on low‑stress members",
-        "Material change to stainless on select brackets with low fatigue margins",
-        "Fillet optimization to reduce stress concentrations",
-        "Reinforced mounting points; verified bolt patterns"
-      ],
-      "outcomes": [
-        "FoS ≥ 5 achieved across critical load cases",
-        "Tip deflection within target tolerance",
-        "Improved robustness with minimized mass"
-      ]
-    },
-    {
-      "slug": "finite-element-analysis",
-      "title": "Finite Element Analysis",
-      "description": "The Finite Element Analysis (FEA) of a 6-Degree-of-Freedom (DOF) Robotic Arm...",
-      "longDescription": "The Finite Element Analysis (FEA) of a 6-Degree-of-Freedom (DOF) Robotic Arm was conducted to evaluate its structural integrity, stress distribution, and deformation under various load conditions. The arm, designed to carry a 20 kg payload in a retracted position and 9 kg when fully extended, is constructed from aluminum and stainless steel to optimize strength and weight efficiency. A key feature of this arm is its self-collision avoidance system, which prevents interference between components during operation. The FEA was performed using ANSYS Static Analysis Software, incorporating nonlinear constraints, and a minimum factor of safety of 5 was maintained throughout. The analysis led to 8 design iterations, with adjustments to material selection and dimensions based on the simulation results. This process helped identify stress concentrations, potential failure points, and areas for structural optimization, ensuring the arm meets the required performance standards. Challenges addressed included simulating real-world operational constraints and balancing strength with weight reduction.",
+      "slug": "Soft Robotic Actuator",
+      "title": "Soft Robotic Actuator",
+      "description": "...",
+      "longDescription": "",
       "image": "assets/projects/project4-1.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
@@ -399,7 +345,987 @@
         "FoS ≥ 5 achieved across critical load cases",
         "Tip deflection within target tolerance",
         "Improved robustness with minimized mass"
-      ]
+      ],
+      "tablesOrder": ["Mechanical Specification", "Electrical Specification"],
+      "tables": {
+        "Mechanical Specification": {
+          "collapsed": false,
+          "columns": ["Functionality", "Specification"],
+          "rows": {
+            "Water Ingress Protection": "IP55",
+            "Stair Climbing Ability": "8 inch (min)",
+            "Slopes": "40 Deg (min)",
+            "Vertical Obstacle": "30 cm (min)",
+            "Horizontal Obstacle/ Ditch": "35 cm (min)",
+            "Slide Tilt": "30 deg (min)",
+            "Speed": "5 km/h",
+            "Turning Radios": "80 cm (min)",
+            "Turret": "200 Deg (min)",
+            "Shoulder": "100 Deg (min)",
+            "Elbow": "150 Deg (min)",
+            "Wrist": "270 Deg (min)",
+            "Claw Joint": "360 Deg",
+            "Gripper Opening": "18 cm (min)",
+            "Grip Force": "40 Kg (min)",
+            "Lift Capacity (Retracted)": "20 Kg (min)",
+            "Lift Capacity (Extended)": "8 kg (min)",
+            "Lift Capacity (Side)": "5 kg (min)",
+            "Vertical Reach": "150 cm (min)",
+            "Horizontal Reach": "100 cm (min)",
+            "Vertical Reach Beneath": "25 cm (min)"
+          }
+        },
+        "Electrical Specification": {
+          "collapsed": true,
+          "columns": ["Item", "Specification"],
+          "rows": [
+            ["Battery", "48V Li‑ion"],
+            ["Run Time", "3 hours"],
+            ["Drive Motors", "BLDC, IP55"],
+            ["Control", "2.4 GHz FHSS + Encrypted Wi‑Fi backhaul"]
+          ]
+        }
+      }
+    },
+    {
+      "slug": "Large Scale FDM Printer",
+      "title": "Large Scale FDM Printer",
+      "description": "...",
+      "longDescription": "",
+      "image": "assets/projects/project4-1.jpg",
+      "gallery": [
+        "../projects/project4-1.jpg",
+        "../projects/project4-2.jpg",
+        "../projects/project4-3.jpg"
+      ],
+      "tags": ["FEA", "Solid Mechanics", "Robotics"],
+      "meta": ["Tool: ANSYS Static Structural", "Iterations: 8", "FoS: ≥ 5"],
+      "specs": [
+        { "k": "Payload (retracted)", "v": "20 kg" },
+        { "k": "Payload (extended)", "v": "9 kg" },
+        { "k": "Materials", "v": "Aluminum + Stainless Steel" },
+        { "k": "Objective", "v": "FoS ≥ 5" }
+      ],
+      "sections": [
+        {
+          "heading": "Overview",
+          "text": "We evaluated structural integrity, stress distribution, and deflection across critical poses. A self‑collision avoidance system was integrated at the kinematic level to prevent interference between links. Nonlinear constraints were included where necessary.",
+          "image": "../projects/project4-2.jpg",
+          "caption": "FEA setup — constraints and load application",
+          "align": "left"
+        },
+        {
+          "heading": "Loads & Boundary Conditions",
+          "text": "Base mounting plate fixed, payload forces at the end‑effector along gravity and off‑axis directions to simulate dynamic scenarios. Joint interfaces modeled with contact and constraints.",
+          "image": "../projects/project4-3.jpg",
+          "caption": "Post‑processing — stress distribution",
+          "align": "right"
+        },
+        {
+          "heading": "Meshing Strategy & Results",
+          "text": "Refined mesh at fillets, bolt interfaces, and section transitions. Convergence study ensured peak von Mises stress stability and tip deflection within tolerance.",
+          "image": "../projects/project4-1.jpg",
+          "caption": "Model and mesh refinement",
+          "align": "left"
+        }
+      ],
+      "iterations": [
+        "Thickened high‑stress links and reduced mass on low‑stress members",
+        "Material change to stainless on select brackets with low fatigue margins",
+        "Fillet optimization to reduce stress concentrations",
+        "Reinforced mounting points; verified bolt patterns"
+      ],
+      "outcomes": [
+        "FoS ≥ 5 achieved across critical load cases",
+        "Tip deflection within target tolerance",
+        "Improved robustness with minimized mass"
+      ],
+      "tablesOrder": ["Mechanical Specification", "Electrical Specification"],
+      "tables": {
+        "Mechanical Specification": {
+          "collapsed": false,
+          "columns": ["Functionality", "Specification"],
+          "rows": {
+            "Water Ingress Protection": "IP55",
+            "Stair Climbing Ability": "8 inch (min)",
+            "Slopes": "40 Deg (min)",
+            "Vertical Obstacle": "30 cm (min)",
+            "Horizontal Obstacle/ Ditch": "35 cm (min)",
+            "Slide Tilt": "30 deg (min)",
+            "Speed": "5 km/h",
+            "Turning Radios": "80 cm (min)",
+            "Turret": "200 Deg (min)",
+            "Shoulder": "100 Deg (min)",
+            "Elbow": "150 Deg (min)",
+            "Wrist": "270 Deg (min)",
+            "Claw Joint": "360 Deg",
+            "Gripper Opening": "18 cm (min)",
+            "Grip Force": "40 Kg (min)",
+            "Lift Capacity (Retracted)": "20 Kg (min)",
+            "Lift Capacity (Extended)": "8 kg (min)",
+            "Lift Capacity (Side)": "5 kg (min)",
+            "Vertical Reach": "150 cm (min)",
+            "Horizontal Reach": "100 cm (min)",
+            "Vertical Reach Beneath": "25 cm (min)"
+          }
+        },
+        "Electrical Specification": {
+          "collapsed": true,
+          "columns": ["Item", "Specification"],
+          "rows": [
+            ["Battery", "48V Li‑ion"],
+            ["Run Time", "3 hours"],
+            ["Drive Motors", "BLDC, IP55"],
+            ["Control", "2.4 GHz FHSS + Encrypted Wi‑Fi backhaul"]
+          ]
+        }
+      }
+    },
+    {
+      "slug": "Fixed Wing UAV",
+      "title": "Fixed Wing UAV",
+      "description": "...",
+      "longDescription": "",
+      "image": "assets/projects/project4-1.jpg",
+      "gallery": [
+        "../projects/project4-1.jpg",
+        "../projects/project4-2.jpg",
+        "../projects/project4-3.jpg"
+      ],
+      "tags": ["FEA", "Solid Mechanics", "Robotics"],
+      "meta": ["Tool: ANSYS Static Structural", "Iterations: 8", "FoS: ≥ 5"],
+      "specs": [
+        { "k": "Payload (retracted)", "v": "20 kg" },
+        { "k": "Payload (extended)", "v": "9 kg" },
+        { "k": "Materials", "v": "Aluminum + Stainless Steel" },
+        { "k": "Objective", "v": "FoS ≥ 5" }
+      ],
+      "sections": [
+        {
+          "heading": "Overview",
+          "text": "We evaluated structural integrity, stress distribution, and deflection across critical poses. A self‑collision avoidance system was integrated at the kinematic level to prevent interference between links. Nonlinear constraints were included where necessary.",
+          "image": "../projects/project4-2.jpg",
+          "caption": "FEA setup — constraints and load application",
+          "align": "left"
+        },
+        {
+          "heading": "Loads & Boundary Conditions",
+          "text": "Base mounting plate fixed, payload forces at the end‑effector along gravity and off‑axis directions to simulate dynamic scenarios. Joint interfaces modeled with contact and constraints.",
+          "image": "../projects/project4-3.jpg",
+          "caption": "Post‑processing — stress distribution",
+          "align": "right"
+        },
+        {
+          "heading": "Meshing Strategy & Results",
+          "text": "Refined mesh at fillets, bolt interfaces, and section transitions. Convergence study ensured peak von Mises stress stability and tip deflection within tolerance.",
+          "image": "../projects/project4-1.jpg",
+          "caption": "Model and mesh refinement",
+          "align": "left"
+        }
+      ],
+      "iterations": [
+        "Thickened high‑stress links and reduced mass on low‑stress members",
+        "Material change to stainless on select brackets with low fatigue margins",
+        "Fillet optimization to reduce stress concentrations",
+        "Reinforced mounting points; verified bolt patterns"
+      ],
+      "outcomes": [
+        "FoS ≥ 5 achieved across critical load cases",
+        "Tip deflection within target tolerance",
+        "Improved robustness with minimized mass"
+      ],
+      "tablesOrder": ["Mechanical Specification", "Electrical Specification"],
+      "tables": {
+        "Mechanical Specification": {
+          "collapsed": false,
+          "columns": ["Functionality", "Specification"],
+          "rows": {
+            "Water Ingress Protection": "IP55",
+            "Stair Climbing Ability": "8 inch (min)",
+            "Slopes": "40 Deg (min)",
+            "Vertical Obstacle": "30 cm (min)",
+            "Horizontal Obstacle/ Ditch": "35 cm (min)",
+            "Slide Tilt": "30 deg (min)",
+            "Speed": "5 km/h",
+            "Turning Radios": "80 cm (min)",
+            "Turret": "200 Deg (min)",
+            "Shoulder": "100 Deg (min)",
+            "Elbow": "150 Deg (min)",
+            "Wrist": "270 Deg (min)",
+            "Claw Joint": "360 Deg",
+            "Gripper Opening": "18 cm (min)",
+            "Grip Force": "40 Kg (min)",
+            "Lift Capacity (Retracted)": "20 Kg (min)",
+            "Lift Capacity (Extended)": "8 kg (min)",
+            "Lift Capacity (Side)": "5 kg (min)",
+            "Vertical Reach": "150 cm (min)",
+            "Horizontal Reach": "100 cm (min)",
+            "Vertical Reach Beneath": "25 cm (min)"
+          }
+        },
+        "Electrical Specification": {
+          "collapsed": true,
+          "columns": ["Item", "Specification"],
+          "rows": [
+            ["Battery", "48V Li‑ion"],
+            ["Run Time", "3 hours"],
+            ["Drive Motors", "BLDC, IP55"],
+            ["Control", "2.4 GHz FHSS + Encrypted Wi‑Fi backhaul"]
+          ]
+        }
+      }
+    },
+    {
+      "slug": "Mars Rover- Anweshan, Renaissance",
+      "title": "Mars Rover- Anweshan, Renaissance",
+      "description": "...",
+      "longDescription": "",
+      "image": "assets/projects/project4-1.jpg",
+      "gallery": [
+        "../projects/project4-1.jpg",
+        "../projects/project4-2.jpg",
+        "../projects/project4-3.jpg"
+      ],
+      "tags": ["FEA", "Solid Mechanics", "Robotics"],
+      "meta": ["Tool: ANSYS Static Structural", "Iterations: 8", "FoS: ≥ 5"],
+      "specs": [
+        { "k": "Payload (retracted)", "v": "20 kg" },
+        { "k": "Payload (extended)", "v": "9 kg" },
+        { "k": "Materials", "v": "Aluminum + Stainless Steel" },
+        { "k": "Objective", "v": "FoS ≥ 5" }
+      ],
+      "sections": [
+        {
+          "heading": "Overview",
+          "text": "We evaluated structural integrity, stress distribution, and deflection across critical poses. A self‑collision avoidance system was integrated at the kinematic level to prevent interference between links. Nonlinear constraints were included where necessary.",
+          "image": "../projects/project4-2.jpg",
+          "caption": "FEA setup — constraints and load application",
+          "align": "left"
+        },
+        {
+          "heading": "Loads & Boundary Conditions",
+          "text": "Base mounting plate fixed, payload forces at the end‑effector along gravity and off‑axis directions to simulate dynamic scenarios. Joint interfaces modeled with contact and constraints.",
+          "image": "../projects/project4-3.jpg",
+          "caption": "Post‑processing — stress distribution",
+          "align": "right"
+        },
+        {
+          "heading": "Meshing Strategy & Results",
+          "text": "Refined mesh at fillets, bolt interfaces, and section transitions. Convergence study ensured peak von Mises stress stability and tip deflection within tolerance.",
+          "image": "../projects/project4-1.jpg",
+          "caption": "Model and mesh refinement",
+          "align": "left"
+        }
+      ],
+      "iterations": [
+        "Thickened high‑stress links and reduced mass on low‑stress members",
+        "Material change to stainless on select brackets with low fatigue margins",
+        "Fillet optimization to reduce stress concentrations",
+        "Reinforced mounting points; verified bolt patterns"
+      ],
+      "outcomes": [
+        "FoS ≥ 5 achieved across critical load cases",
+        "Tip deflection within target tolerance",
+        "Improved robustness with minimized mass"
+      ],
+      "tablesOrder": ["Mechanical Specification", "Electrical Specification"],
+      "tables": {
+        "Mechanical Specification": {
+          "collapsed": false,
+          "columns": ["Functionality", "Specification"],
+          "rows": {
+            "Water Ingress Protection": "IP55",
+            "Stair Climbing Ability": "8 inch (min)",
+            "Slopes": "40 Deg (min)",
+            "Vertical Obstacle": "30 cm (min)",
+            "Horizontal Obstacle/ Ditch": "35 cm (min)",
+            "Slide Tilt": "30 deg (min)",
+            "Speed": "5 km/h",
+            "Turning Radios": "80 cm (min)",
+            "Turret": "200 Deg (min)",
+            "Shoulder": "100 Deg (min)",
+            "Elbow": "150 Deg (min)",
+            "Wrist": "270 Deg (min)",
+            "Claw Joint": "360 Deg",
+            "Gripper Opening": "18 cm (min)",
+            "Grip Force": "40 Kg (min)",
+            "Lift Capacity (Retracted)": "20 Kg (min)",
+            "Lift Capacity (Extended)": "8 kg (min)",
+            "Lift Capacity (Side)": "5 kg (min)",
+            "Vertical Reach": "150 cm (min)",
+            "Horizontal Reach": "100 cm (min)",
+            "Vertical Reach Beneath": "25 cm (min)"
+          }
+        },
+        "Electrical Specification": {
+          "collapsed": true,
+          "columns": ["Item", "Specification"],
+          "rows": [
+            ["Battery", "48V Li‑ion"],
+            ["Run Time", "3 hours"],
+            ["Drive Motors", "BLDC, IP55"],
+            ["Control", "2.4 GHz FHSS + Encrypted Wi‑Fi backhaul"]
+          ]
+        }
+      }
+    },
+    {
+      "slug": "Formula Student Car",
+      "title": "Formula Student Car",
+      "description": "...",
+      "longDescription": "",
+      "image": "assets/projects/project4-1.jpg",
+      "gallery": [
+        "../projects/project4-1.jpg",
+        "../projects/project4-2.jpg",
+        "../projects/project4-3.jpg"
+      ],
+      "tags": ["FEA", "Solid Mechanics", "Robotics"],
+      "meta": ["Tool: ANSYS Static Structural", "Iterations: 8", "FoS: ≥ 5"],
+      "specs": [
+        { "k": "Payload (retracted)", "v": "20 kg" },
+        { "k": "Payload (extended)", "v": "9 kg" },
+        { "k": "Materials", "v": "Aluminum + Stainless Steel" },
+        { "k": "Objective", "v": "FoS ≥ 5" }
+      ],
+      "sections": [
+        {
+          "heading": "Overview",
+          "text": "We evaluated structural integrity, stress distribution, and deflection across critical poses. A self‑collision avoidance system was integrated at the kinematic level to prevent interference between links. Nonlinear constraints were included where necessary.",
+          "image": "../projects/project4-2.jpg",
+          "caption": "FEA setup — constraints and load application",
+          "align": "left"
+        },
+        {
+          "heading": "Loads & Boundary Conditions",
+          "text": "",
+          "image": "../projects/project4-3.jpg",
+          "caption": "Post‑processing — stress distribution",
+          "align": "right"
+        },
+        {
+          "heading": "Meshing Strategy & Results",
+          "text": "",
+          "image": "../projects/project4-1.jpg",
+          "caption": "Model and mesh refinement",
+          "align": "left"
+        }
+      ],
+      "iterations": [
+        "Thickened high‑stress links and reduced mass on low‑stress members",
+        "Material change to stainless on select brackets with low fatigue margins",
+        "Fillet optimization to reduce stress concentrations",
+        "Reinforced mounting points; verified bolt patterns"
+      ],
+      "outcomes": [
+        "FoS ≥ 5 achieved across critical load cases",
+        "Tip deflection within target tolerance",
+        "Improved robustness with minimized mass"
+      ],
+      "tablesOrder": ["Mechanical Specification", "Electrical Specification"],
+      "tables": {
+        "Mechanical Specification": {
+          "collapsed": false,
+          "columns": ["Functionality", "Specification"],
+          "rows": {
+            "Water Ingress Protection": "IP55",
+            "Stair Climbing Ability": "8 inch (min)",
+            "Slopes": "40 Deg (min)",
+            "Vertical Obstacle": "30 cm (min)",
+            "Horizontal Obstacle/ Ditch": "35 cm (min)",
+            "Slide Tilt": "30 deg (min)",
+            "Speed": "5 km/h",
+            "Turning Radios": "80 cm (min)",
+            "Turret": "200 Deg (min)",
+            "Shoulder": "100 Deg (min)",
+            "Elbow": "150 Deg (min)",
+            "Wrist": "270 Deg (min)",
+            "Claw Joint": "360 Deg",
+            "Gripper Opening": "18 cm (min)",
+            "Grip Force": "40 Kg (min)",
+            "Lift Capacity (Retracted)": "20 Kg (min)",
+            "Lift Capacity (Extended)": "8 kg (min)",
+            "Lift Capacity (Side)": "5 kg (min)",
+            "Vertical Reach": "150 cm (min)",
+            "Horizontal Reach": "100 cm (min)",
+            "Vertical Reach Beneath": "25 cm (min)"
+          }
+        },
+        "Electrical Specification": {
+          "collapsed": true,
+          "columns": ["Item", "Specification"],
+          "rows": [
+            ["Battery", "48V Li‑ion"],
+            ["Run Time", "3 hours"],
+            ["Drive Motors", "BLDC, IP55"],
+            ["Control", "2.4 GHz FHSS + Encrypted Wi‑Fi backhaul"]
+          ]
+        }
+      }
+    },
+    {
+      "slug": "IPAS- Nirveek v1.0",
+      "title": "IPAS- Nirveek v1.0",
+      "description": "...",
+      "longDescription": "",
+      "image": "assets/projects/project4-1.jpg",
+      "gallery": [
+        "../projects/project4-1.jpg",
+        "../projects/project4-2.jpg",
+        "../projects/project4-3.jpg"
+      ],
+      "tags": ["FEA", "Solid Mechanics", "Robotics"],
+      "meta": ["Tool: ANSYS Static Structural", "Iterations: 8", "FoS: ≥ 5"],
+      "specs": [
+        { "k": "Payload (retracted)", "v": "20 kg" },
+        { "k": "Payload (extended)", "v": "9 kg" },
+        { "k": "Materials", "v": "Aluminum + Stainless Steel" },
+        { "k": "Objective", "v": "FoS ≥ 5" }
+      ],
+      "sections": [
+        {
+          "heading": "Overview",
+          "text": "We evaluated structural integrity, stress distribution, and deflection across critical poses. A self‑collision avoidance system was integrated at the kinematic level to prevent interference between links. Nonlinear constraints were included where necessary.",
+          "image": "../projects/project4-2.jpg",
+          "caption": "FEA setup — constraints and load application",
+          "align": "left"
+        },
+        {
+          "heading": "Loads & Boundary Conditions",
+          "text": "Base mounting plate fixed, payload forces at the end‑effector along gravity and off‑axis directions to simulate dynamic scenarios. Joint interfaces modeled with contact and constraints.",
+          "image": "../projects/project4-3.jpg",
+          "caption": "Post‑processing — stress distribution",
+          "align": "right"
+        },
+        {
+          "heading": "Meshing Strategy & Results",
+          "text": "Refined mesh at fillets, bolt interfaces, and section transitions. Convergence study ensured peak von Mises stress stability and tip deflection within tolerance.",
+          "image": "../projects/project4-1.jpg",
+          "caption": "Model and mesh refinement",
+          "align": "left"
+        }
+      ],
+      "iterations": [
+        "Thickened high‑stress links and reduced mass on low‑stress members",
+        "Material change to stainless on select brackets with low fatigue margins",
+        "Fillet optimization to reduce stress concentrations",
+        "Reinforced mounting points; verified bolt patterns"
+      ],
+      "outcomes": [
+        "FoS ≥ 5 achieved across critical load cases",
+        "Tip deflection within target tolerance",
+        "Improved robustness with minimized mass"
+      ],
+      "tablesOrder": ["Mechanical Specification", "Electrical Specification"],
+      "tables": {
+        "Mechanical Specification": {
+          "collapsed": false,
+          "columns": ["Functionality", "Specification"],
+          "rows": {
+            "Water Ingress Protection": "IP55",
+            "Stair Climbing Ability": "8 inch (min)",
+            "Slopes": "40 Deg (min)",
+            "Vertical Obstacle": "30 cm (min)",
+            "Horizontal Obstacle/ Ditch": "35 cm (min)",
+            "Slide Tilt": "30 deg (min)",
+            "Speed": "5 km/h",
+            "Turning Radios": "80 cm (min)",
+            "Turret": "200 Deg (min)",
+            "Shoulder": "100 Deg (min)",
+            "Elbow": "150 Deg (min)",
+            "Wrist": "270 Deg (min)",
+            "Claw Joint": "360 Deg",
+            "Gripper Opening": "18 cm (min)",
+            "Grip Force": "40 Kg (min)",
+            "Lift Capacity (Retracted)": "20 Kg (min)",
+            "Lift Capacity (Extended)": "8 kg (min)",
+            "Lift Capacity (Side)": "5 kg (min)",
+            "Vertical Reach": "150 cm (min)",
+            "Horizontal Reach": "100 cm (min)",
+            "Vertical Reach Beneath": "25 cm (min)"
+          }
+        },
+        "Electrical Specification": {
+          "collapsed": true,
+          "columns": ["Item", "Specification"],
+          "rows": [
+            ["Battery", "48V Li‑ion"],
+            ["Run Time", "3 hours"],
+            ["Drive Motors", "BLDC, IP55"],
+            ["Control", "2.4 GHz FHSS + Encrypted Wi‑Fi backhaul"]
+          ]
+        }
+      }
+    },
+    {
+      "slug": "Cooling tower",
+      "title": "Cooling tower",
+      "description": "...",
+      "longDescription": "",
+      "image": "assets/projects/project4-1.jpg",
+      "gallery": [
+        "../projects/project4-1.jpg",
+        "../projects/project4-2.jpg",
+        "../projects/project4-3.jpg"
+      ],
+      "tags": ["FEA", "Solid Mechanics", "Robotics"],
+      "meta": ["Tool: ANSYS Static Structural", "Iterations: 8", "FoS: ≥ 5"],
+      "specs": [
+        { "k": "Payload (retracted)", "v": "20 kg" },
+        { "k": "Payload (extended)", "v": "9 kg" },
+        { "k": "Materials", "v": "Aluminum + Stainless Steel" },
+        { "k": "Objective", "v": "FoS ≥ 5" }
+      ],
+      "sections": [
+        {
+          "heading": "Overview",
+          "text": "We evaluated structural integrity, stress distribution, and deflection across critical poses. A self‑collision avoidance system was integrated at the kinematic level to prevent interference between links. Nonlinear constraints were included where necessary.",
+          "image": "../projects/project4-2.jpg",
+          "caption": "FEA setup — constraints and load application",
+          "align": "left"
+        },
+        {
+          "heading": "Loads & Boundary Conditions",
+          "text": "Base mounting plate fixed, payload forces at the end‑effector along gravity and off‑axis directions to simulate dynamic scenarios. Joint interfaces modeled with contact and constraints.",
+          "image": "../projects/project4-3.jpg",
+          "caption": "Post‑processing — stress distribution",
+          "align": "right"
+        },
+        {
+          "heading": "Meshing Strategy & Results",
+          "text": "Refined mesh at fillets, bolt interfaces, and section transitions. Convergence study ensured peak von Mises stress stability and tip deflection within tolerance.",
+          "image": "../projects/project4-1.jpg",
+          "caption": "Model and mesh refinement",
+          "align": "left"
+        }
+      ],
+      "iterations": [
+        "Thickened high‑stress links and reduced mass on low‑stress members",
+        "Material change to stainless on select brackets with low fatigue margins",
+        "Fillet optimization to reduce stress concentrations",
+        "Reinforced mounting points; verified bolt patterns"
+      ],
+      "outcomes": [
+        "FoS ≥ 5 achieved across critical load cases",
+        "Tip deflection within target tolerance",
+        "Improved robustness with minimized mass"
+      ],
+      "tablesOrder": ["Mechanical Specification", "Electrical Specification"],
+      "tables": {
+        "Mechanical Specification": {
+          "collapsed": false,
+          "columns": ["Functionality", "Specification"],
+          "rows": {
+            "Water Ingress Protection": "IP55",
+            "Stair Climbing Ability": "8 inch (min)",
+            "Slopes": "40 Deg (min)",
+            "Vertical Obstacle": "30 cm (min)",
+            "Horizontal Obstacle/ Ditch": "35 cm (min)",
+            "Slide Tilt": "30 deg (min)",
+            "Speed": "5 km/h",
+            "Turning Radios": "80 cm (min)",
+            "Turret": "200 Deg (min)",
+            "Shoulder": "100 Deg (min)",
+            "Elbow": "150 Deg (min)",
+            "Wrist": "270 Deg (min)",
+            "Claw Joint": "360 Deg",
+            "Gripper Opening": "18 cm (min)",
+            "Grip Force": "40 Kg (min)",
+            "Lift Capacity (Retracted)": "20 Kg (min)",
+            "Lift Capacity (Extended)": "8 kg (min)",
+            "Lift Capacity (Side)": "5 kg (min)",
+            "Vertical Reach": "150 cm (min)",
+            "Horizontal Reach": "100 cm (min)",
+            "Vertical Reach Beneath": "25 cm (min)"
+          }
+        },
+        "Electrical Specification": {
+          "collapsed": true,
+          "columns": ["Item", "Specification"],
+          "rows": [
+            ["Battery", "48V Li‑ion"],
+            ["Run Time", "3 hours"],
+            ["Drive Motors", "BLDC, IP55"],
+            ["Control", "2.4 GHz FHSS + Encrypted Wi‑Fi backhaul"]
+          ]
+        }
+      }
+    },
+    {
+      "slug": "Water quality and usage monitoring system",
+      "title": "Water quality and usage monitoring system",
+      "description": "...",
+      "longDescription": "",
+      "image": "assets/projects/project4-1.jpg",
+      "gallery": [
+        "../projects/project4-1.jpg",
+        "../projects/project4-2.jpg",
+        "../projects/project4-3.jpg"
+      ],
+      "tags": ["FEA", "Solid Mechanics", "Robotics"],
+      "meta": ["Tool: ANSYS Static Structural", "Iterations: 8", "FoS: ≥ 5"],
+      "specs": [
+        { "k": "Payload (retracted)", "v": "20 kg" },
+        { "k": "Payload (extended)", "v": "9 kg" },
+        { "k": "Materials", "v": "Aluminum + Stainless Steel" },
+        { "k": "Objective", "v": "FoS ≥ 5" }
+      ],
+      "sections": [
+        {
+          "heading": "Overview",
+          "text": "We evaluated structural integrity, stress distribution, and deflection across critical poses. A self‑collision avoidance system was integrated at the kinematic level to prevent interference between links. Nonlinear constraints were included where necessary.",
+          "image": "../projects/project4-2.jpg",
+          "caption": "FEA setup — constraints and load application",
+          "align": "left"
+        },
+        {
+          "heading": "Loads & Boundary Conditions",
+          "text": "Base mounting plate fixed, payload forces at the end‑effector along gravity and off‑axis directions to simulate dynamic scenarios. Joint interfaces modeled with contact and constraints.",
+          "image": "../projects/project4-3.jpg",
+          "caption": "Post‑processing — stress distribution",
+          "align": "right"
+        },
+        {
+          "heading": "Meshing Strategy & Results",
+          "text": "Refined mesh at fillets, bolt interfaces, and section transitions. Convergence study ensured peak von Mises stress stability and tip deflection within tolerance.",
+          "image": "../projects/project4-1.jpg",
+          "caption": "Model and mesh refinement",
+          "align": "left"
+        }
+      ],
+      "iterations": [
+        "Thickened high‑stress links and reduced mass on low‑stress members",
+        "Material change to stainless on select brackets with low fatigue margins",
+        "Fillet optimization to reduce stress concentrations",
+        "Reinforced mounting points; verified bolt patterns"
+      ],
+      "outcomes": [
+        "FoS ≥ 5 achieved across critical load cases",
+        "Tip deflection within target tolerance",
+        "Improved robustness with minimized mass"
+      ],
+      "tablesOrder": ["Mechanical Specification", "Electrical Specification"],
+      "tables": {
+        "Mechanical Specification": {
+          "collapsed": false,
+          "columns": ["Functionality", "Specification"],
+          "rows": {
+            "Water Ingress Protection": "IP55",
+            "Stair Climbing Ability": "8 inch (min)",
+            "Slopes": "40 Deg (min)",
+            "Vertical Obstacle": "30 cm (min)",
+            "Horizontal Obstacle/ Ditch": "35 cm (min)",
+            "Slide Tilt": "30 deg (min)",
+            "Speed": "5 km/h",
+            "Turning Radios": "80 cm (min)",
+            "Turret": "200 Deg (min)",
+            "Shoulder": "100 Deg (min)",
+            "Elbow": "150 Deg (min)",
+            "Wrist": "270 Deg (min)",
+            "Claw Joint": "360 Deg",
+            "Gripper Opening": "18 cm (min)",
+            "Grip Force": "40 Kg (min)",
+            "Lift Capacity (Retracted)": "20 Kg (min)",
+            "Lift Capacity (Extended)": "8 kg (min)",
+            "Lift Capacity (Side)": "5 kg (min)",
+            "Vertical Reach": "150 cm (min)",
+            "Horizontal Reach": "100 cm (min)",
+            "Vertical Reach Beneath": "25 cm (min)"
+          }
+        },
+        "Electrical Specification": {
+          "collapsed": true,
+          "columns": ["Item", "Specification"],
+          "rows": [
+            ["Battery", "48V Li‑ion"],
+            ["Run Time", "3 hours"],
+            ["Drive Motors", "BLDC, IP55"],
+            ["Control", "2.4 GHz FHSS + Encrypted Wi‑Fi backhaul"]
+          ]
+        }
+      }
+    },
+    {
+      "slug": "Line Follower Robot",
+      "title": "Line Follower Robot",
+      "description": "...",
+      "longDescription": "",
+      "image": "assets/projects/project4-1.jpg",
+      "gallery": [
+        "../projects/project4-1.jpg",
+        "../projects/project4-2.jpg",
+        "../projects/project4-3.jpg"
+      ],
+      "tags": ["FEA", "Solid Mechanics", "Robotics"],
+      "meta": ["Tool: ANSYS Static Structural", "Iterations: 8", "FoS: ≥ 5"],
+      "specs": [
+        { "k": "Payload (retracted)", "v": "20 kg" },
+        { "k": "Payload (extended)", "v": "9 kg" },
+        { "k": "Materials", "v": "Aluminum + Stainless Steel" },
+        { "k": "Objective", "v": "FoS ≥ 5" }
+      ],
+      "sections": [
+        {
+          "heading": "Overview",
+          "text": "We evaluated structural integrity, stress distribution, and deflection across critical poses. A self‑collision avoidance system was integrated at the kinematic level to prevent interference between links. Nonlinear constraints were included where necessary.",
+          "image": "../projects/project4-2.jpg",
+          "caption": "FEA setup — constraints and load application",
+          "align": "left"
+        },
+        {
+          "heading": "Loads & Boundary Conditions",
+          "text": "Base mounting plate fixed, payload forces at the end‑effector along gravity and off‑axis directions to simulate dynamic scenarios. Joint interfaces modeled with contact and constraints.",
+          "image": "../projects/project4-3.jpg",
+          "caption": "Post‑processing — stress distribution",
+          "align": "right"
+        },
+        {
+          "heading": "Meshing Strategy & Results",
+          "text": "Refined mesh at fillets, bolt interfaces, and section transitions. Convergence study ensured peak von Mises stress stability and tip deflection within tolerance.",
+          "image": "../projects/project4-1.jpg",
+          "caption": "Model and mesh refinement",
+          "align": "left"
+        }
+      ],
+      "iterations": [
+        "Thickened high‑stress links and reduced mass on low‑stress members",
+        "Material change to stainless on select brackets with low fatigue margins",
+        "Fillet optimization to reduce stress concentrations",
+        "Reinforced mounting points; verified bolt patterns"
+      ],
+      "outcomes": [
+        "FoS ≥ 5 achieved across critical load cases",
+        "Tip deflection within target tolerance",
+        "Improved robustness with minimized mass"
+      ],
+      "tablesOrder": ["Mechanical Specification", "Electrical Specification"],
+      "tables": {
+        "Mechanical Specification": {
+          "collapsed": false,
+          "columns": ["Functionality", "Specification"],
+          "rows": {
+            "Water Ingress Protection": "IP55",
+            "Stair Climbing Ability": "8 inch (min)",
+            "Slopes": "40 Deg (min)",
+            "Vertical Obstacle": "30 cm (min)",
+            "Horizontal Obstacle/ Ditch": "35 cm (min)",
+            "Slide Tilt": "30 deg (min)",
+            "Speed": "5 km/h",
+            "Turning Radios": "80 cm (min)",
+            "Turret": "200 Deg (min)",
+            "Shoulder": "100 Deg (min)",
+            "Elbow": "150 Deg (min)",
+            "Wrist": "270 Deg (min)",
+            "Claw Joint": "360 Deg",
+            "Gripper Opening": "18 cm (min)",
+            "Grip Force": "40 Kg (min)",
+            "Lift Capacity (Retracted)": "20 Kg (min)",
+            "Lift Capacity (Extended)": "8 kg (min)",
+            "Lift Capacity (Side)": "5 kg (min)",
+            "Vertical Reach": "150 cm (min)",
+            "Horizontal Reach": "100 cm (min)",
+            "Vertical Reach Beneath": "25 cm (min)"
+          }
+        },
+        "Electrical Specification": {
+          "collapsed": true,
+          "columns": ["Item", "Specification"],
+          "rows": [
+            ["Battery", "48V Li‑ion"],
+            ["Run Time", "3 hours"],
+            ["Drive Motors", "BLDC, IP55"],
+            ["Control", "2.4 GHz FHSS + Encrypted Wi‑Fi backhaul"]
+          ]
+        }
+      }
+    },
+    {
+      "slug": "Height Adjustable Table",
+      "title": "Height Adjustable Table",
+      "description": "...",
+      "longDescription": "",
+      "image": "assets/projects/project4-1.jpg",
+      "gallery": [
+        "../projects/project4-1.jpg",
+        "../projects/project4-2.jpg",
+        "../projects/project4-3.jpg"
+      ],
+      "tags": ["FEA", "Solid Mechanics", "Robotics"],
+      "meta": ["Tool: ANSYS Static Structural", "Iterations: 8", "FoS: ≥ 5"],
+      "specs": [
+        { "k": "Payload (retracted)", "v": "20 kg" },
+        { "k": "Payload (extended)", "v": "9 kg" },
+        { "k": "Materials", "v": "Aluminum + Stainless Steel" },
+        { "k": "Objective", "v": "FoS ≥ 5" }
+      ],
+      "sections": [
+        {
+          "heading": "Overview",
+          "text": "We evaluated structural integrity, stress distribution, and deflection across critical poses. A self‑collision avoidance system was integrated at the kinematic level to prevent interference between links. Nonlinear constraints were included where necessary.",
+          "image": "../projects/project4-2.jpg",
+          "caption": "FEA setup — constraints and load application",
+          "align": "left"
+        },
+        {
+          "heading": "Loads & Boundary Conditions",
+          "text": "Base mounting plate fixed, payload forces at the end‑effector along gravity and off‑axis directions to simulate dynamic scenarios. Joint interfaces modeled with contact and constraints.",
+          "image": "../projects/project4-3.jpg",
+          "caption": "Post‑processing — stress distribution",
+          "align": "right"
+        },
+        {
+          "heading": "Meshing Strategy & Results",
+          "text": "Refined mesh at fillets, bolt interfaces, and section transitions. Convergence study ensured peak von Mises stress stability and tip deflection within tolerance.",
+          "image": "../projects/project4-1.jpg",
+          "caption": "Model and mesh refinement",
+          "align": "left"
+        }
+      ],
+      "iterations": [
+        "Thickened high‑stress links and reduced mass on low‑stress members",
+        "Material change to stainless on select brackets with low fatigue margins",
+        "Fillet optimization to reduce stress concentrations",
+        "Reinforced mounting points; verified bolt patterns"
+      ],
+      "outcomes": [
+        "FoS ≥ 5 achieved across critical load cases",
+        "Tip deflection within target tolerance",
+        "Improved robustness with minimized mass"
+      ],
+      "tablesOrder": ["Mechanical Specification", "Electrical Specification"],
+      "tables": {
+        "Mechanical Specification": {
+          "collapsed": false,
+          "columns": ["Functionality", "Specification"],
+          "rows": {
+            "Water Ingress Protection": "IP55",
+            "Stair Climbing Ability": "8 inch (min)",
+            "Slopes": "40 Deg (min)",
+            "Vertical Obstacle": "30 cm (min)",
+            "Horizontal Obstacle/ Ditch": "35 cm (min)",
+            "Slide Tilt": "30 deg (min)",
+            "Speed": "5 km/h",
+            "Turning Radios": "80 cm (min)",
+            "Turret": "200 Deg (min)",
+            "Shoulder": "100 Deg (min)",
+            "Elbow": "150 Deg (min)",
+            "Wrist": "270 Deg (min)",
+            "Claw Joint": "360 Deg",
+            "Gripper Opening": "18 cm (min)",
+            "Grip Force": "40 Kg (min)",
+            "Lift Capacity (Retracted)": "20 Kg (min)",
+            "Lift Capacity (Extended)": "8 kg (min)",
+            "Lift Capacity (Side)": "5 kg (min)",
+            "Vertical Reach": "150 cm (min)",
+            "Horizontal Reach": "100 cm (min)",
+            "Vertical Reach Beneath": "25 cm (min)"
+          }
+        },
+        "Electrical Specification": {
+          "collapsed": true,
+          "columns": ["Item", "Specification"],
+          "rows": [
+            ["Battery", "48V Li‑ion"],
+            ["Run Time", "3 hours"],
+            ["Drive Motors", "BLDC, IP55"],
+            ["Control", "2.4 GHz FHSS + Encrypted Wi‑Fi backhaul"]
+          ]
+        }
+      }
+    },
+    {
+      "slug": "Automated Quiz Buzzer System",
+      "title": "Automated Quiz Buzzer System",
+      "description": "...",
+      "longDescription": "",
+      "image": "assets/projects/project4-1.jpg",
+      "gallery": [
+        "../projects/project4-1.jpg",
+        "../projects/project4-2.jpg",
+        "../projects/project4-3.jpg"
+      ],
+      "tags": ["FEA", "Solid Mechanics", "Robotics"],
+      "meta": ["Tool: ANSYS Static Structural", "Iterations: 8", "FoS: ≥ 5"],
+      "specs": [
+        { "k": "Payload (retracted)", "v": "20 kg" },
+        { "k": "Payload (extended)", "v": "9 kg" },
+        { "k": "Materials", "v": "Aluminum + Stainless Steel" },
+        { "k": "Objective", "v": "FoS ≥ 5" }
+      ],
+      "sections": [
+        {
+          "heading": "Overview",
+          "text": "We evaluated structural integrity, stress distribution, and deflection across critical poses. A self‑collision avoidance system was integrated at the kinematic level to prevent interference between links. Nonlinear constraints were included where necessary.",
+          "image": "../projects/project4-2.jpg",
+          "caption": "FEA setup — constraints and load application",
+          "align": "left"
+        },
+        {
+          "heading": "Loads & Boundary Conditions",
+          "text": "Base mounting plate fixed, payload forces at the end‑effector along gravity and off‑axis directions to simulate dynamic scenarios. Joint interfaces modeled with contact and constraints.",
+          "image": "../projects/project4-3.jpg",
+          "caption": "Post‑processing — stress distribution",
+          "align": "right"
+        },
+        {
+          "heading": "Meshing Strategy & Results",
+          "text": "Refined mesh at fillets, bolt interfaces, and section transitions. Convergence study ensured peak von Mises stress stability and tip deflection within tolerance.",
+          "image": "../projects/project4-1.jpg",
+          "caption": "Model and mesh refinement",
+          "align": "left"
+        }
+      ],
+      "iterations": [
+        "Thickened high‑stress links and reduced mass on low‑stress members",
+        "Material change to stainless on select brackets with low fatigue margins",
+        "Fillet optimization to reduce stress concentrations",
+        "Reinforced mounting points; verified bolt patterns"
+      ],
+      "outcomes": [
+        "FoS ≥ 5 achieved across critical load cases",
+        "Tip deflection within target tolerance",
+        "Improved robustness with minimized mass"
+      ],
+      "tablesOrder": ["Mechanical Specification", "Electrical Specification"],
+      "tables": {
+        "Mechanical Specification": {
+          "collapsed": false,
+          "columns": ["Functionality", "Specification"],
+          "rows": {
+            "Water Ingress Protection": "IP55",
+            "Stair Climbing Ability": "8 inch (min)",
+            "Slopes": "40 Deg (min)",
+            "Vertical Obstacle": "30 cm (min)",
+            "Horizontal Obstacle/ Ditch": "35 cm (min)",
+            "Slide Tilt": "30 deg (min)",
+            "Speed": "5 km/h",
+            "Turning Radios": "80 cm (min)",
+            "Turret": "200 Deg (min)",
+            "Shoulder": "100 Deg (min)",
+            "Elbow": "150 Deg (min)",
+            "Wrist": "270 Deg (min)",
+            "Claw Joint": "360 Deg",
+            "Gripper Opening": "18 cm (min)",
+            "Grip Force": "40 Kg (min)",
+            "Lift Capacity (Retracted)": "20 Kg (min)",
+            "Lift Capacity (Extended)": "8 kg (min)",
+            "Lift Capacity (Side)": "5 kg (min)",
+            "Vertical Reach": "150 cm (min)",
+            "Horizontal Reach": "100 cm (min)",
+            "Vertical Reach Beneath": "25 cm (min)"
+          }
+        },
+        "Electrical Specification": {
+          "collapsed": true,
+          "columns": ["Item", "Specification"],
+          "rows": [
+            ["Battery", "48V Li‑ion"],
+            ["Run Time", "3 hours"],
+            ["Drive Motors", "BLDC, IP55"],
+            ["Control", "2.4 GHz FHSS + Encrypted Wi‑Fi backhaul"]
+          ]
+        }
+      }
     }
   ],
 

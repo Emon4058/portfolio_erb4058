@@ -136,10 +136,37 @@
         e.preventDefault();
         collapseSummary();
       });
+      // Force collapsed on load/reload and when navigating away from About
+      function ensureCollapsedOnInit() {
+        collapseSummary(); // enforce collapsed state
+      }
+      window.addEventListener("pageshow", ensureCollapsedOnInit);
+      ensureCollapsedOnInit();
+
+      window.addEventListener("hashchange", () => {
+        if (location.hash && location.hash.toLowerCase() !== "#about") {
+          collapseSummary();
+        }
+      });
+
+      navMenu?.addEventListener("click", (e) => {
+        const a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        const hash = (a.getAttribute("href") || "").toLowerCase();
+        if (hash && hash !== "#about") {
+          collapseSummary();
+        }
+      });
+      document.addEventListener("click", (e) => {
+        if (!isExpanded) return;
+        const sec = e.target.closest("section");
+        if (sec && sec.id && sec.id !== "about") {
+          collapseSummary();
+        }
+      });
       document.getElementById("avatar").src = profile.avatar;
 
       // Skills
-      // Skills — grouped, Notion-like columns (fallback to flat)
       const skillsGrid =
         document.getElementById("skills-grid") ||
         document.getElementById("skills-list");
@@ -199,49 +226,103 @@
         });
       }
 
-      // Experience (with highlights and tech)
+      // Experience — group by company and collapse roles with periods
       const expList = document.getElementById("experience-list");
 
-      function formatPeriodPretty(period) {
+      function formatPeriodCompact(period) {
         if (!period) return "";
         const parts = String(period).split("-");
+        // YYYY-MM-Present
         if (
           parts.length === 3 &&
           String(parts[2]).toLowerCase() === "present"
         ) {
-          const y = parseInt(parts[0], 10);
-          const m = parseInt(parts[1], 10) || 1;
-          const d = new Date(y, m - 1, 1);
-          // "01 July 2024 – Present"
-          return (
-            d.toLocaleDateString("en-GB", {
-              day: "2-digit",
-              month: "long",
-              year: "numeric",
-            }) + " – Present"
-          );
+          return `${parts[0]}-${parts[1]} – Present`;
         }
+        // YYYY-MM-YYYY2-MM2
         if (parts.length === 4) {
-          const sy = parseInt(parts[0], 10),
-            sm = parseInt(parts[1], 10) || 1;
-          const ey = parseInt(parts[2], 10),
-            em = parseInt(parts[3], 10) || 1;
-          const sd = new Date(sy, sm - 1, 1);
-          const ed = new Date(ey, em - 1, 1);
-          return (
-            sd.toLocaleDateString("en-GB", { month: "long", year: "numeric" }) +
-            " – " +
-            ed.toLocaleDateString("en-GB", { month: "long", year: "numeric" })
-          );
+          return `${parts[0]}-${parts[1]} – ${parts[2]}-${parts[3]}`;
         }
-        if (parts.length === 2) return `${parts[0]} – ${parts[1]}`;
+        // Fallback
         return period;
       }
 
-      profile.experience.forEach((e) => {
+      // Merge entries by company + location; support arrays for position/period
+      function normalizeExperience(list) {
+        const map = new Map();
+        (list || []).forEach((item) => {
+          const key = `${item.company || ""}|${
+            item.location || ""
+          }`.toLowerCase();
+          const entry = map.get(key) || {
+            company: item.company || "",
+            location: item.location || "",
+            roles: [],
+            highlights: item.highlights || [],
+            tech: item.tech || [],
+            description: item.description || "",
+          };
+
+          const posArr = Array.isArray(item.position)
+            ? item.position
+            : [item.position];
+          const perArr = Array.isArray(item.period)
+            ? item.period
+            : [item.period];
+          const len = Math.max(posArr.length, perArr.length);
+
+          for (let i = 0; i < len; i++) {
+            const pos = (posArr[i] ?? posArr[0] ?? "").trim();
+            const per = (perArr[i] ?? perArr[0] ?? "").trim();
+            if (pos || per) entry.roles.push({ position: pos, period: per });
+          }
+
+          // Prefer keeping any existing highlights/tech/description already captured
+          if (!entry.highlights?.length && item.highlights?.length)
+            entry.highlights = item.highlights;
+          if (!entry.tech?.length && item.tech?.length) entry.tech = item.tech;
+          if (!entry.description && item.description)
+            entry.description = item.description;
+
+          map.set(key, entry);
+        });
+
+        // Deduplicate identical role lines
+        map.forEach((e) => {
+          const seen = new Set();
+          e.roles = e.roles.filter((r) => {
+            const k = `${r.position}|${r.period}`;
+            if (seen.has(k)) return false;
+            seen.add(k);
+            return true;
+          });
+        });
+
+        return Array.from(map.values());
+      }
+
+      const grouped = normalizeExperience(profile.experience);
+
+      // Render
+      expList.innerHTML = "";
+      grouped.forEach((e) => {
         const div = document.createElement("div");
         div.className = "experience-item";
 
+        // Role lines (Position ..... Period)
+        const rolesHtml = e.roles
+          .map(
+            (r) => `
+    <div class="role-line">
+      <span class="position">${r.position || ""}</span>
+      <span class="dotline"></span>
+      <span class="period">${formatPeriodCompact(r.period)}</span>
+    </div>
+  `
+          )
+          .join("");
+
+        // Optional extras
         const highlightsHtml =
           Array.isArray(e.highlights) && e.highlights.length
             ? `<ul class="highlights">${e.highlights
@@ -262,15 +343,15 @@
     <h4><span class="company">${e.company}</span>${
           e.location ? ` <span class="location">${e.location}</span>` : ""
         }</h4>
-    <div class="role-line"><span class="position">${
-      e.position || ""
-    }</span> <span class="period">${formatPeriodPretty(e.period)}</span></div>
+    ${rolesHtml}
     ${highlightsHtml}
     ${techHtml}
   `;
         expList.appendChild(div);
       });
+
       // Education (with location and highlights)
+
       const eduList = document.getElementById("education-list");
 
       function formatEduPeriod(period) {

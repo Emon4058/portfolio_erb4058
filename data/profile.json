@@ -54,7 +54,7 @@
     {
       "slug": "Man-portable EOD-ROV",
       "title": "Man-portable EOD-ROV",
-      "description": "Currently, we are developing a man-portable EOD ROV based on our experience of previously developed...",
+      "description": "Currently, we are developing a man-portable EOD ROV based on our experience of previously developed medium platform EOD ROV, Jontro Soinik v2.0. Initially, we analyzed the limitations of previous robot and new challenges to develop a small platform robot. In the first phase, we worked...",
       "longDescription": "Currently, we are developing a man-portable EOD ROV based on our experience of previously developed medium platform EOD ROV, Jontro Soinik v2.0. Initially, we analyzed the limitations of previous robot and new challenges to develop a small platform robot. In the first phase, we worked on building a lightweight structure keeping the strength of the structure maximum, maintaining a lower height of center of gravity, a new degree of freedom in arm- screw based telescopic beam. We are also implementing carbon fiber parts into the robot. These parts are made through resin infusion method, compression mold, hand layup within our composite fabrication lab.\n Based on our previous experience gained from developing a medium-platform EOD ROV, Jontro Soinik v2.0, our team is currently working on the design and fabrication of a man-portable EOD ROV. This initiative addresses the evolving operational requirements of field deployment, particularly in a constrained and high-risk environment like explosive materials. We started with a comprehensive analysis of the limitations observed in the previous platform and the alternative solution to overcome the limitations, alongside the unique challenges posed by miniaturizing the system without compromising functionality or durability. In the initial phase, our focus has been on engineering a lightweight yet structurally robust chassis, optimizing the center of gravity for enhanced stability, and introducing a novel degree of freedom in the manipulator arm through a screw-based telescopic beam mechanism. To further reduce weight and improve mechanical performance, we are integrating carbon fiber components into the robot’s architecture. These parts are fabricated in-house using advanced composite manufacturing techniques, including resin infusion, compression molding, and hand layup, within our dedicated composite fabrication laboratory. This approach not only enhances the robot’s operational efficiency but also reflects our commitment to pioneering indigenous solutions in high-performance robotics and materials engineering.",
       "image": "assets/projects/project4-1.jpg",
       "gallery": [
@@ -497,14 +497,16 @@
       "position": ["Vice President", "Publicity and Outreach Coordinator"],
       "location": "Dhaka, Bangladesh",
       "period": ["2023-06-2024-06", "2022-06-2023-06"],
-      "description": "Oversaw society activities and led the team."
-    },
-    {
-      "company": "BUET Robotics Society",
-      "position": "Publicity and Outreach Coordinator",
-      "location": "Dhaka, Bangladesh",
-      "period": "2022-06-2023-06",
-      "description": "Managed publicity and outreach programs."
+      "description": "Oversaw society activities and led the team.",
+      "tech": [
+        "CAD Design",
+        "Stress Analysis",
+        "Arc Welding",
+        "CNC Machining",
+        "Design for Assembly",
+        "PCB Design",
+        "Soldering"
+      ]
     }
   ],
 
@@ -544,6 +546,12 @@
       "issuer": "Ansys",
       "description": "Skills: Topology optimization · Ansys Mechanical",
       "link": "https://innoverse.ansys.com/badges/badge/dG9wb2xvZ3ktb3B0aW1pemF0aW9uLXVzaW5nLWFuc3lzLW1lY2hhbmljYWwtMTU%3D"
+    },
+    {
+      "title": "BAJA SAE Chassis Dynamic Analysis Using Ansys Mechanical",
+      "issuer": "Ansys",
+      "description": "Skills:  Ansys Mechanical · ANSYS Workbench",
+      "link": "https://innoverse.ansys.com/badges/badge/YmFqYS1zYWUtY2hhc3Npcy1keW5hbWljLWFuYWx5c2lzLXVzaW5nLWFuc3lzLW1lY2hhbmljYWwtMjY="
     },
     {
       "title": "Ansys Tutorial",
@@ -607,6 +615,13 @@
       "year": "2022",
       "organizer": "The Mars Society",
       "organizerUrl": "https://urc.marssociety.org/"
+    },
+    {
+      "title": "ERC Onsite",
+      "position": "8th Position",
+      "year": "2022",
+      "organizer": "European Rover Challenge",
+      "organizerUrl": ""
     },
     {
       "title": "BASIS National ICT Awards",

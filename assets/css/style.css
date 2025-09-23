@@ -268,6 +268,7 @@ a:hover {
 /* Clamp summary lines */
 .hero-text p.clamp {
     display: -webkit-box;
+    line-clamp: 0;
     -webkit-line-clamp: var(--summary-lines, 7);
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -380,7 +381,7 @@ a:hover {
 .grid.cards {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(720px, 1fr));
 }
 
 .card {
@@ -440,6 +441,93 @@ a.card:hover {
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Make the entire card clickable and horizontal */
+a.card {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    min-height: 180px;
+    background: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.card:hover {
+    text-decoration: none;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image fills the left column */
+.card img {
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+    max-height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Right column content */
+.card-body {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--primary);
+}
+
+.card-text {
+    color: var(--muted);
+    margin: 0;
+}
+
+/* Tags + details */
+.card-tags {
+    margin-top: 4px;
+}
+
+.card-tags span {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 12px;
+    margin-right: 4px;
+    border: 1px solid var(--tag-border);
+}
+
+.card-body .a-link {
+    margin-top: auto;
+    /* pushes “View details” to bottom */
+    color: var(--primary);
+}
+
+/* Responsive: stack image above content on small screens */
+@media (max-width: 640px) {
+    .grid.cards {
+        grid-template-columns: 1fr;
+    }
+
+    a.card {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 220px;
+        min-height: 220px;
+    }
 }
 
 /* Experience & Education */
@@ -508,6 +596,31 @@ a.card:hover {
     color: var(--primary);
 }
 
+/* Collapsed multi-role lines */
+.role-line {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin: 4px 0;
+}
+
+.role-line .position {
+    font-weight: 600;
+    color: var(--text);
+}
+
+.role-line .dotline {
+    flex: 1;
+    border-bottom: 1px dashed var(--border);
+    opacity: 0.6;
+    transform: translateY(-2px);
+}
+
+.role-line .period {
+    color: var(--muted);
+    white-space: nowrap;
+}
+
 /* Certifications */
 #certifications-list {
     display: grid;
@@ -562,8 +675,9 @@ a.card:hover {
 
 .achievement-top {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
     gap: 12px;
     flex-wrap: wrap;
     margin-bottom: 6px;

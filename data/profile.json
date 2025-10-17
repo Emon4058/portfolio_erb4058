@@ -24,9 +24,13 @@
         "SolidWorks",
         "Ansys SpaceClaim",
         "Ansys DesignModeler",
-        "AutoCAD",
-        "Blender"
+        "AutoCAD"
       ]
+    },
+    {
+      "category": "Manufacturing Process", 
+      "items": ["Fused Deposition Modeling","Composite Manufacturing", "Molding", "CNC Machining"]
+
     },
     {
       "category": "PCB Design",

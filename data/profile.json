@@ -29,7 +29,7 @@
       ]
     },
     {
-      "category": "Circuit Board Design",
+      "category": "PCB Design",
       "items": ["Altium Designer", "Proteus", "EasyEDA"]
     },
     {
@@ -1540,56 +1540,72 @@
       "position": "Finalist",
       "year": "2022",
       "organizer": "The Mars Society",
-      "organizerUrl": "https://urc.marssociety.org/"
+      "organizerUrl": "https://www.marssociety.org/",
+      "link": "https://urc.marssociety.org/home/about-urc/history/urc2022/urc2022-teams",
+      "note": "Team Name: Team Interplanetar"
     },
     {
       "title": "ERC Onsite",
       "position": "8th Position",
       "year": "2022",
       "organizer": "European Rover Challenge",
-      "organizerUrl": ""
+      "organizerUrl": "https://roverchallenge.eu/",
+      "link": "https://roverchallenge.eu/teams/#2022",
+      "note": "Team Name: Team Interplanetar"
     },
     {
       "title": "BASIS National ICT Awards",
       "position": "Merit Award",
       "year": "2022",
       "organizer": "BASIS",
-      "organizerUrl": "https://basis.org.bd/"
+      "organizerUrl": "https://basis.org.bd/",
+      "link": "https://bnia.basis.org.bd/win/winner-2022",
+      "note": "Solution: Aqua Monitor<br>Category: Tertiary Student Project (Undergraduate)"
     },
     {
       "title": "Sustainable Energy Innovation Challenge",
       "position": "Champion",
       "year": "2021",
       "organizer": "Bikiron",
-      "organizerUrl": "https://bikiron2021.sreda.gov.bd/"
+      "organizerUrl": "https://bikiron2021.sreda.gov.bd/",
+      "link": "https://bikiron2021.sreda.gov.bd/",
+      "note": "Team Name: Team Krishi-Bondhu<br>Category: Energy Smart Village"
     },
     {
       "title": "National STEM Competition",
       "position": "Champion",
       "year": "2021",
       "organizer": "bdSTEM",
-      "organizerUrl": "https://bdstem.org/"
+      "organizerUrl": "https://bdstem.org/",
+      "link": "https://www.dhakatribune.com/bangladesh/318910/bangladesh-stem-foundation-holds-closing-ceremony",
+      "note": "Team Name: BUET_IDRICO<br>Project: Aqua Monitor"
     },
     {
-      "title": "2nd Kibo Robot Programming Challenge — National Round",
+      "title": "2nd Kibo Robot Programming Challenge — Preliminary Round",
       "position": "4th place",
       "year": "2021",
       "organizer": "JAXA",
-      "organizerUrl": "https://global.jaxa.jp/"
+      "organizerUrl": "https://global.jaxa.jp/",
+      "link": "https://stemx365.org/rect/mwiki/2KRPC",
+      "note": "Team Name: L_KITT"
     },
     {
       "title": "International Planetary Aerial Systems Challenge",
       "position": "Innovation Award",
       "year": "2021",
       "organizer": "Mars Society South Asia",
-      "organizerUrl": "https://marssocietysouthasia.org/"
+      "organizerUrl": "https://southasia.marssociety.org/",
+      "link": "https://southasia.marssociety.org/ipas/",
+      "note": "Team Name: Team Interplanetar"
     },
     {
       "title": "National Round of 6th Bangladesh Physics Olympiad",
       "position": "8th position",
       "year": "2016",
       "organizer": "Bangladesh Physics Olympiad",
-      "organizerUrl": "https://bdpho.org/"
+      "organizerUrl": "https://bdpho.org/",
+      "link": "https://bdpho.org/",
+      "note": "Individual<br>Category: B"
     }
   ]
 }

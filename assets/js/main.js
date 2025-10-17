@@ -447,20 +447,29 @@
                   : a.organizer
               }</div>`
             : "";
-          const linkLine = a.link
-            ? `<a class="a-link achievement-link" href="${a.link}" target="_blank" rel="noopener noreferrer">Details</a>`
-            : "";
+          const linkLine = ""; // disables the extra hyperlink
+
+          const blockLink = a.link || "#"; // fallback if no link
+          
+          const extraInfoLine = a.note
+          ? `<div class="achievement-extra">${a.note}</div>`
+          : "";
+
 
           div.innerHTML = `
-      <div class="achievement-top">
-        <h4 class="achievement-title">${a.title || ""}</h4>
-        <div class="achievement-meta">
+          <a href="${blockLink}" target="_blank" rel="noopener noreferrer" class="achievement-wrapper">
+          <div class="achievement-top">
+          <h4 class="achievement-title">${a.title || ""}</h4>
+          <div class="achievement-meta">
           ${positionBadge}${yearBadge}
-        </div>
-      </div>
-      ${orgLine}
-      ${linkLine}
-    `;
+          </div>
+          </div>
+          ${orgLine}
+          </a>
+          ${linkLine}
+          ${extraInfoLine}
+          `;
+          
           achievementsList.appendChild(div);
         });
       }

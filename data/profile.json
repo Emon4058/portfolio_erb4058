@@ -56,11 +56,11 @@
 
   "projects": [
     {
-      "slug": "Man-portable EOD-ROV",
-      "title": "Man-portable EOD-ROV",
+      "slug": "Man-Portable EOD ROV",
+      "title": "Man-Portable EOD ROV",
       "description": "Currently, we are developing a man-portable EOD ROV based on our experience of previously developed medium platform EOD ROV, Jontro Soinik v2.0. Initially, we analyzed the limitations of previous robot and new challenges to develop a small platform robot. In the first phase, we worked...",
       "longDescription": "Currently, we are developing a man-portable EOD ROV based on our experience of previously developed medium platform EOD ROV, Jontro Soinik v2.0. Initially, we analyzed the limitations of previous robot and new challenges to develop a small platform robot. In the first phase, we worked on building a lightweight structure keeping the strength of the structure maximum, maintaining a lower height of center of gravity, a new degree of freedom in arm- screw based telescopic beam. We are also implementing carbon fiber parts into the robot. These parts are made through resin infusion method, compression mold, hand layup within our composite fabrication lab.\n Based on our previous experience gained from developing a medium-platform EOD ROV, Jontro Soinik v2.0, our team is currently working on the design and fabrication of a man-portable EOD ROV. This initiative addresses the evolving operational requirements of field deployment, particularly in a constrained and high-risk environment like explosive materials. We started with a comprehensive analysis of the limitations observed in the previous platform and the alternative solution to overcome the limitations, alongside the unique challenges posed by miniaturizing the system without compromising functionality or durability. In the initial phase, our focus has been on engineering a lightweight yet structurally robust chassis, optimizing the center of gravity for enhanced stability, and introducing a novel degree of freedom in the manipulator arm through a screw-based telescopic beam mechanism. To further reduce weight and improve mechanical performance, we are integrating carbon fiber components into the robot’s architecture. These parts are fabricated in-house using advanced composite manufacturing techniques, including resin infusion, compression molding, and hand layup, within our dedicated composite fabrication laboratory. This approach not only enhances the robot’s operational efficiency but also reflects our commitment to pioneering indigenous solutions in high-performance robotics and materials engineering.",
-      "image": "assets/projects/project4-1.jpg",
+      "image": "assets/img/MP_1.jpeg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -154,7 +154,7 @@
       "title": "Jontro Soinik",
       "description": "Jontro Soinik 1.0 (JS1.0) is Bangladesh’s third generation and most advanced indigenously developed Explosive Ordnance Disposal (EOD) ...",
       "longDescription": "**Jontro Soinik 1.0** (JS1.0) is Bangladesh’s third generation and most advanced indigenously developed Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV) with environmental adaptability and disrupter firing capacity, which is first of it’s kind, engineered for rapid deployment and rugged performance in high-risk environments. Successfully tested by the Bangladesh Army, including live disrupter firing and IP55 water protection trials, it proves its readiness for real-world missions. Equipped with advanced electronics like GPS, thermal imaging, IR night vision, 4x optical zoom, and a 2MP camera system, it supports precision surveillance and remote neutralization of threats. With robust mechanical capabilities—stair climbing, slope handling (up to 40°), 360° claw rotation, 40kg grip force, and a lifting capacity of up to 20kg—the ROV is built for maneuverability and strength. Its 16Ah battery enables extended operations with active/passive overload protection, self-diagnostics, and fast recharging. Designed for battlefield reliability, **Jontro Soinik 1.0** embodies innovation, adaptability, and national pride in defense technology. \n Jontro Soinik 1.0 is set for deployment in 2025 under the UN Peacekeeping Mission in the Republic of the Congo.",
-      "image": "assets/projects/project4-1.jpg",
+      "image": "assets/img/JS_9.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -248,7 +248,7 @@
       "title": "Bio-Inspired Soft Robotic Fish",
       "description": "...",
       "longDescription": "",
-      "image": "assets/projects/project4-1.jpg",
+      "image": "assets/img/RF_11.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -302,7 +302,7 @@
       "title": "Soft Robotic Actuator",
       "description": "...",
       "longDescription": "",
-      "image": "assets/projects/project4-1.jpg",
+      "image": "assets/img/SRA_8.jpeg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -396,7 +396,7 @@
       "title": "Large Scale FDM Printer",
       "description": "...",
       "longDescription": "",
-      "image": "assets/projects/project4-1.jpg",
+      "image": "assets/img/TP_3.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -490,7 +490,7 @@
       "title": "Fixed Wing UAV",
       "description": "...",
       "longDescription": "",
-      "image": "assets/projects/project4-1.jpg",
+      "image": "assets/img/FW_1.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -584,7 +584,7 @@
       "title": "Mars Rover- Anweshan, Renaissance",
       "description": "...",
       "longDescription": "",
-      "image": "assets/projects/project4-1.jpg",
+      "image": "assets/img/RN_4.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -678,7 +678,7 @@
       "title": "Formula Student Car",
       "description": "...",
       "longDescription": "",
-      "image": "assets/projects/project4-1.jpg",
+      "image": "assets/img/FS_6.png",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -772,7 +772,7 @@
       "title": "IPAS- Nirveek v1.0",
       "description": "...",
       "longDescription": "",
-      "image": "assets/projects/project4-1.jpg",
+      "image": "assets/img/NR_1.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -866,7 +866,7 @@
       "title": "Cooling tower",
       "description": "...",
       "longDescription": "",
-      "image": "assets/projects/project4-1.jpg",
+      "image": "assets/img/CT_1.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -960,7 +960,7 @@
       "title": "Water quality and usage monitoring system",
       "description": "...",
       "longDescription": "",
-      "image": "assets/projects/project4-1.jpg",
+      "image": "assets/img/WF_6.png",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -1054,7 +1054,7 @@
       "title": "Line Follower Robot",
       "description": "...",
       "longDescription": "",
-      "image": "assets/projects/project4-1.jpg",
+      "image": "assets/img/LFR_1.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -1148,7 +1148,7 @@
       "title": "Height Adjustable Table",
       "description": "...",
       "longDescription": "",
-      "image": "assets/projects/project4-1.jpg",
+      "image": "assets/img/HAT_1.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
@@ -1242,7 +1242,7 @@
       "title": "Automated Quiz Buzzer System",
       "description": "...",
       "longDescription": "",
-      "image": "assets/projects/project4-1.jpg",
+      "image": "assets/img/BZ_1.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",

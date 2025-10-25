@@ -15,15 +15,16 @@
     {
       "slug": "Man-Portable EOD ROV",
       "title": "Man-Portable EOD ROV",
+      "subtitle": "Lightweight, field-ready explosive disposal robot",
       "description": "Currently, we are developing a man-portable EOD ROV based on our experience of previously developed medium platform EOD ROV, Jontro Soinik v2.0. Initially, we analyzed the limitations of previous robot and new challenges to develop a small platform robot. In the first phase, we worked...",
       "longDescription": "Currently, we are developing a man-portable EOD ROV based on our experience of previously developed medium platform EOD ROV, Jontro Soinik v2.0. Initially, we analyzed the limitations of previous robot and new challenges to develop a small platform robot. In the first phase, we worked on building a lightweight structure keeping the strength of the structure maximum, maintaining a lower height of center of gravity, a new degree of freedom in arm- screw based telescopic beam. We are also implementing carbon fiber parts into the robot. These parts are made through resin infusion method, compression mold, hand layup within our composite fabrication lab.\n Based on our previous experience gained from developing a medium-platform EOD ROV, Jontro Soinik v2.0, our team is currently working on the design and fabrication of a man-portable EOD ROV. This initiative addresses the evolving operational requirements of field deployment, particularly in a constrained and high-risk environment like explosive materials. We started with a comprehensive analysis of the limitations observed in the previous platform and the alternative solution to overcome the limitations, alongside the unique challenges posed by miniaturizing the system without compromising functionality or durability. In the initial phase, our focus has been on engineering a lightweight yet structurally robust chassis, optimizing the center of gravity for enhanced stability, and introducing a novel degree of freedom in the manipulator arm through a screw-based telescopic beam mechanism. To further reduce weight and improve mechanical performance, we are integrating carbon fiber components into the robot’s architecture. These parts are fabricated in-house using advanced composite manufacturing techniques, including resin infusion, compression molding, and hand layup, within our dedicated composite fabrication laboratory. This approach not only enhances the robot’s operational efficiency but also reflects our commitment to pioneering indigenous solutions in high-performance robotics and materials engineering.",
-      "image": "assets/img/MP_1.jpeg",
+      "image": "assets/img/MP_7.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
         "../projects/project4-2.jpg",
         "../projects/project4-3.jpg"
       ],
-      "tags": ["FEA", "Solid Mechanics", "Robotics"],
+      "tags": ["In progress"],
       "meta": ["Tool: ANSYS Static Structural", "Iterations: 8", "FoS: ≥ 5"],
       "specs": [
         { "k": "Payload (retracted)", "v": "20 kg" },

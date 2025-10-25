@@ -403,10 +403,21 @@ a:hover {
 }
 
 .card-title {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 6px;
-    color: var(--primary);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0px; /* reduced from 6px */
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.card-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--primary); /* corrected from var(--text-muted) */
+  margin-top: 0px;     /* reduced from 4px */
+  margin-bottom: 4px;
+  font-family: inherit;
+  line-height: 1.2;
 }
 
 .card-text {

@@ -215,6 +215,7 @@
           }" loading="lazy" decoding="async">
       <div class="card-body">
         <h3 class="card-title">${p.title || ""}</h3>
+        ${p.subtitle ? `<p class="card-subtitle">${p.subtitle}</p>` : ""}
         <p class="card-text">${p.description || ""}</p>
         <div class="card-tags">${(p.tags || [])
           .map((t) => `<span>${t}</span>`)

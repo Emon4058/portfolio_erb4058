@@ -13,8 +13,8 @@
 
    "projects": [
     {
-      "slug": "Man-Transportable EOD ROV, Jontro Soinik 2.0",
-      "title": "Man-Transportable EOD ROV, Jontro Soinik 2.0",
+      "slug": "Man-Transportable EOD ROV",
+      "title": "Man-Transportable EOD ROV",
       "subtitle": "An Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV) designed to be carried and deployed by a soldier",
       "description": "Currently, we are developing a man-portable EOD ROV based on our experience of previously developed medium platform EOD ROV, Jontro Soinik v1.0. Initially, we analyzed the limitations of previous robot and new challenges to develop a small platform robot. In the next phase, we worked...",
       "longDescription": "Currently, we are developing a man-portable EOD ROV, building on our experience with the previously developed medium-platform EOD ROV, Jontro Soinik v1.0. We began by analyzing the limitations of the earlier robot and identifying new challenges associated with designing a smaller platform. In the next phase, our focus was on constructing a lightweight structure that maximizes strength, maintains a low center of gravity, and introduces a new degree of freedom in the arm through a screw-based telescopic beam. To further reduce weight and enhance mechanical performance, we are integrating carbon fiber components into the robot. These parts are fabricated in-house using resin infusion, compression molding, and hand layup techniques within our composite fabrication laboratory.",
@@ -118,7 +118,7 @@
       "slug": "Jontro Soinik",
       "title": "Jontro Soinik",
       "description": "Jontro Soinik 1.0 (JS1.0) is Bangladesh’s third generation and most advanced indigenously developed Explosive Ordnance Disposal (EOD) ...",
-      "longDescription": "**Jontro Soinik 1.0** (JS1.0) is Bangladesh’s third generation and most advanced indigenously developed Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV) with environmental adaptability and disrupter firing capacity, which is first of it’s kind, engineered for rapid deployment and rugged performance in high-risk environments. Successfully tested by the Bangladesh Army, including live disrupter firing and IP55 water protection trials, it proves its readiness for real-world missions. Equipped with advanced electronics like GPS, thermal imaging, IR night vision, 4x optical zoom, and a 2MP camera system, it supports precision surveillance and remote neutralization of threats. With robust mechanical capabilities—stair climbing, slope handling (up to 40°), 360° claw rotation, 40kg grip force, and a lifting capacity of up to 20kg—the ROV is built for maneuverability and strength. Its 16Ah battery enables extended operations with active/passive overload protection, self-diagnostics, and fast recharging. Designed for battlefield reliability, **Jontro Soinik 1.0** embodies innovation, adaptability, and national pride in defense technology. \n Jontro Soinik 1.0 is set for deployment in 2025 under the UN Peacekeeping Mission in the Republic of the Congo.",
+      "longDescription": "Jontro Soinik 1.0 (JS1.0) is Bangladesh’s third generation and most advanced indigenously developed Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV) with environmental adaptability and disrupter firing capacity, which is first of it’s kind, engineered for rapid deployment and rugged performance in high-risk environments. Successfully tested by the Bangladesh Army, including live disrupter firing and IP55 water protection trials, it proves its readiness for real-world missions. Equipped with advanced electronics like GPS, thermal imaging, IR night vision, 4x optical zoom, and a 2MP camera system, it supports precision surveillance and remote neutralization of threats. With robust mechanical capabilities—stair climbing, slope handling (up to 40°), 360° claw rotation, 40kg grip force, and a lifting capacity of up to 20kg—the ROV is built for maneuverability and strength. Its 16Ah battery enables extended operations with active/passive overload protection, self-diagnostics, and fast recharging. Designed for battlefield reliability, Jontro Soinik 1.0 embodies innovation, adaptability, and national pride in defense technology. \n Jontro Soinik 1.0 is set for deployment in 2025 under the UN Peacekeeping Mission in the Republic of the Congo.",
       "image": "assets/img/JS_9.jpg",
       "gallery": [
         "../projects/project4-1.jpg",
@@ -226,46 +226,13 @@
         "assets/img/SS_9.jpg"
       ],
       "tags": ["Delivered", "Deployed at UN Peacekeeping Mission"],
-      "meta": ["Tools: Solidworks, ANSYS Static Structural"],
       "specs": [
-        { "k": "Payload (Arm Retracted)", "v": "20 kg" },
-        { "k": "Payload (Arm Extended)", "v": "8 kg" },
+        { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
+        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb" },
+        { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
         { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
-        { "k": "Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" }
-      ],
-      "sections": [
-        {
-          "heading": "Overview",
-          "text": "We evaluated structural integrity, stress distribution, and deflection across critical poses. A self‑collision avoidance system was integrated at the kinematic level to prevent interference between links. Nonlinear constraints were included where necessary.",
-          "image": "../projects/project4-2.jpg",
-          "caption": "FEA setup — constraints and load application",
-          "align": "left"
-        },
-        {
-          "heading": "Loads & Boundary Conditions",
-          "text": "Base mounting plate fixed, payload forces at the end‑effector along gravity and off‑axis directions to simulate dynamic scenarios. Joint interfaces modeled with contact and constraints.",
-          "image": "../projects/project4-3.jpg",
-          "caption": "Post‑processing — stress distribution",
-          "align": "right"
-        },
-        {
-          "heading": "Meshing Strategy & Results",
-          "text": "Refined mesh at fillets, bolt interfaces, and section transitions. Convergence study ensured peak von Mises stress stability and tip deflection within tolerance.",
-          "image": "../projects/project4-1.jpg",
-          "caption": "Model and mesh refinement",
-          "align": "left"
-        }
-      ],
-      "iterations": [
-        "Thickened high‑stress links and reduced mass on low‑stress members",
-        "Material change to stainless on select brackets with low fatigue margins",
-        "Fillet optimization to reduce stress concentrations",
-        "Reinforced mounting points; verified bolt patterns"
-      ],
-      "outcomes": [
-        "FoS ≥ 5 achieved across critical load cases",
-        "Tip deflection within target tolerance",
-        "Improved robustness with minimized mass"
+        { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, PrusaSlicer" },
+        { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
       ],
       "tablesOrder": ["Mechanical Specification", "Electrical Specification"],
       "tables": {

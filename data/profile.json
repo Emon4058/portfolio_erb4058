@@ -16,62 +16,29 @@
       "slug": "Man-Transportable EOD ROV",
       "title": "Man-Transportable EOD ROV",
       "subtitle": "An Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV) designed to be carried and deployed by a soldier",
-      "description": "Currently, we are developing a man-portable EOD ROV based on our experience of previously developed medium platform EOD ROV, Jontro Soinik v1.0. Initially, we analyzed the limitations of previous robot and new challenges to develop a small platform robot. In the next phase, we worked...",
-      "longDescription": "Currently, we are developing a man-portable EOD ROV, building on our experience with the previously developed medium-platform EOD ROV, Jontro Soinik v1.0. We began by analyzing the limitations of the earlier robot and identifying new challenges associated with designing a smaller platform. In the next phase, our focus was on constructing a lightweight structure that maximizes strength, maintains a low center of gravity, and introduces a new degree of freedom in the arm through a screw-based telescopic beam. To further reduce weight and enhance mechanical performance, we are integrating carbon fiber components into the robot. These parts are fabricated in-house using resin infusion, compression molding, and hand layup techniques within our composite fabrication laboratory.",
+      "description": "Currently, we are developing a man-transportable EOD ROV based on our experience of previously developed medium platform EOD ROV, Jontro Soinik v1.0. Initially, we analyzed the limitations of previous robot and new challenges to develop a small platform robot. In the next phase, we worked...",
+      "longDescription": "Currently, we are developing a man-transportable EOD ROV, building on our experience with the previously developed medium-platform EOD ROV, Jontro Soinik v1.0. We began by analyzing the limitations of the earlier robot and identifying new challenges associated with designing a smaller platform. In the next phase, our focus was on constructing a lightweight structure that maximizes strength, maintains a low center of gravity, and introduces a new degree of freedom in the arm through a screw-based telescopic beam. To further reduce weight and enhance mechanical performance, we are integrating carbon fiber components into the robot. These parts are fabricated in-house using resin infusion, compression molding, and hand layup techniques within our composite fabrication laboratory.",
       "image": "assets/img/MP_7.jpg",
       "gallery": [
-        "assets/img/MP_8.jpg",
-        "assets/img/MP_2.jpeg",
-        "assets/img/MP_3.jpeg",
-        "assets/img/MP_4.jpg",
-        "assets/img/MP_5.jpg",
-        "assets/img/MP_6.jpg",
-        "assets/img/MP_1.jpeg",
-        "assets/img/MP_9.png",
-        "assets/img/MP_10.png",
-        "assets/img/MP_11.png"
+        { "src": "assets/img/MP_8.jpg", "caption": "CAD model — isometric view" },
+        { "src": "assets/img/MP_2.jpeg", "caption": "Arm extended — deployment configuration" },
+        { "src": "assets/img/MP_3.jpeg", "caption": "Arm retracted — standby configuration" },
+        { "src": "assets/img/MP_4.jpg", "caption": "Robot carrier — carbon fiber, iteration 1" },
+        { "src": "assets/img/MP_5.jpg", "caption": "Vacuum infusion process — manufacturing phase" },
+        { "src": "assets/img/MP_6.jpg", "caption": "Vacuum infusion process — alternate angle" },
+        { "src": "assets/img/MP_1.jpeg", "caption": "CAD model — pre-rendered version" },
+        { "src": "assets/img/MP_9.png", "caption": "CAD model — isometric rear view" },
+        { "src": "assets/img/MP_11.png", "caption": "CAD model — front view of robot" }
       ],
+
       "tags": ["In progress"],
-      "meta": ["Tools: Solidworks, ANSYS Static Structural, Ansys Explicit Dynamics;  ", "Current Iteration: 4"],
       "specs": [
-        { "k": "Payload (retracted)", "v": "20 kg" },
-        { "k": "Payload (extended)", "v": "9 kg" },
-        { "k": "Materials", "v": "Carbon Fiber + Aluminum Alloy + Stainless Steel" },
-        { "k": "Objective", "v": "FoS ≥ 5" }
-      ],
-      "sections": [
-        {
-          "heading": "Overview",
-          "text": "We evaluated structural integrity, stress distribution, and deflection across critical poses. A self‑collision avoidance system was integrated at the kinematic level to prevent interference between links. Nonlinear constraints were included where necessary.",
-          "image": "../projects/project4-2.jpg",
-          "caption": "FEA setup — constraints and load application",
-          "align": "left"
-        },
-        {
-          "heading": "Loads & Boundary Conditions",
-          "text": "Base mounting plate fixed, payload forces at the end‑effector along gravity and off‑axis directions to simulate dynamic scenarios. Joint interfaces modeled with contact and constraints.",
-          "image": "../projects/project4-3.jpg",
-          "caption": "Post‑processing — stress distribution",
-          "align": "right"
-        },
-        {
-          "heading": "Meshing Strategy & Results",
-          "text": "Refined mesh at fillets, bolt interfaces, and section transitions. Convergence study ensured peak von Mises stress stability and tip deflection within tolerance.",
-          "image": "../projects/project4-1.jpg",
-          "caption": "Model and mesh refinement",
-          "align": "left"
-        }
-      ],
-      "iterations": [
-        "Thickened high‑stress links and reduced mass on low‑stress members",
-        "Material change to stainless on select brackets with low fatigue margins",
-        "Fillet optimization to reduce stress concentrations",
-        "Reinforced mounting points; verified bolt patterns"
-      ],
-      "outcomes": [
-        "FoS ≥ 5 achieved across critical load cases",
-        "Tip deflection within target tolerance",
-        "Improved robustness with minimized mass"
+        { "k": "My Role", "v": "Research and Development Engineer (Mechanical)" },
+        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, telescopic beam. <br> required specifications of actuator. <br> CAD Design <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb" },
+        { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
+        { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
+        { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, PrusaSlicer" },
+        { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
       ],
       "tablesOrder": ["Mechanical Specification", "Electrical Specification"],
       "tables": {
@@ -216,13 +183,13 @@
       "longDescription": "Smart Soinik 1.0 (SS1.0) is the second-generation, indigenously developed Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV) from Bangladesh, designed for rapid deployment and unmatched performance in high-risk operational environments. Rigorously tested and validated by the Bangladesh Army, SS1.0 combines cutting-edge electronics — such as thermal imaging, IR night vision, 4× optical zoom, and high-resolution video capture — with rugged mechanical strength, including stair-climbing ability, 30° slope handling, 360° claw rotation, and a powerful 40 kg grip force. Powered by a 16 Ah battery system with overload protection, self-diagnostics, and fast recharge capability, it ensures extended field endurance and operational reliability. On May 5, 2024, Smart Soinik 1.0 was officially gifted to the Peruvian Armed Forces by the Bangladesh Army and is now proudly deployed under the United Nations Peacekeeping Mission in the Republic of Mali, showcasing Bangladesh's growing footprint in global defense innovation and humanitarian operations.",
       "image": "assets/img/SS_1.jpg",
       "gallery": [
-        { "src": "assets/img/SS_2.jpg", "caption": "Front view during deployment" },
-        { "src": "assets/img/SS_3.png", "caption": "Manipulator arm showcasing 360° claw rotation" },
-        { "src": "assets/img/SS_4.png", "caption": "Thermal imaging interface in operation" },
-        { "src": "assets/img/SS_5.png", "caption": "Stair-climbing test on 6-inch steps" },
-        { "src": "assets/img/SS_6.jpg", "caption": "Side profile with carbon fiber panels" },
-        { "src": "assets/img/SS_7.jpg", "caption": "Rear view showing battery compartment and overload protection system" },
-        { "src": "assets/img/SS_8.JPG", "caption": "Control unit interface with daylight-readable screen" },
+        { "src": "assets/img/SS_2.jpg", "caption": "EOD ROV after manufacturing and assembly" },
+        { "src": "assets/img/SS_3.png", "caption": "Cad Model of the robot" },
+        { "src": "assets/img/SS_4.png", "caption": "Cad Model of the robot" },
+        { "src": "assets/img/SS_5.png", "caption": "Cad Model of the robot" },
+        { "src": "assets/img/SS_6.jpg", "caption": "EOD ROV during testing at night light" },
+        { "src": "assets/img/SS_7.jpg", "caption": "Delivery ceremony of Smart Soinik" },
+        { "src": "assets/img/SS_8.JPG", "caption": "Robot with some of team members and Peruvian Armed Forces" },
         { "src": "assets/img/SS_9.jpg", "caption": "Official handover ceremony to Peruvian Armed Forces" }
     ],
       "tags": ["Delivered", "Deployed at UN Peacekeeping Mission"],
@@ -1559,7 +1526,10 @@
       "location": "Dhaka, Bangladesh",
       "degree": "BSc in Mechanical Engineering",
       "period": "2018-09-2024-07",
-      "highlights": ["CGPA 3.43/4.00"]
+      "highlights": [
+        "CGPA 3.43/4.00",
+        "Relevant Courses: Machine Design, Electro-Mechanical System Design, Mechatronics, Composite Materials, Automobile Engineering, Bio-Engineering, Instrumentation and Measurement, Heat Transfer Equipment Design, Fluid Machinery"
+      ]
     },
     {
       "institution": "Notre Dame College",

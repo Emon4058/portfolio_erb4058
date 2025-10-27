@@ -216,15 +216,15 @@
       "longDescription": "Smart Soinik 1.0 (SS1.0) is the second-generation, indigenously developed Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV) from Bangladesh, designed for rapid deployment and unmatched performance in high-risk operational environments. Rigorously tested and validated by the Bangladesh Army, SS1.0 combines cutting-edge electronics — such as thermal imaging, IR night vision, 4× optical zoom, and high-resolution video capture — with rugged mechanical strength, including stair-climbing ability, 30° slope handling, 360° claw rotation, and a powerful 40 kg grip force. Powered by a 16 Ah battery system with overload protection, self-diagnostics, and fast recharge capability, it ensures extended field endurance and operational reliability. On May 5, 2024, Smart Soinik 1.0 was officially gifted to the Peruvian Armed Forces by the Bangladesh Army and is now proudly deployed under the United Nations Peacekeeping Mission in the Republic of Mali, showcasing Bangladesh's growing footprint in global defense innovation and humanitarian operations.",
       "image": "assets/img/SS_1.jpg",
       "gallery": [
-        "assets/img/SS_2.jpg",
-        "assets/img/SS_3.png",
-        "assets/img/SS_4.png",
-        "assets/img/SS_5.png",
-        "assets/img/SS_6.jpg",
-        "assets/img/SS_7.jpg",
-        "assets/img/SS_8.JPG",
-        "assets/img/SS_9.jpg"
-      ],
+        { "src": "assets/img/SS_2.jpg", "caption": "Front view during deployment" },
+        { "src": "assets/img/SS_3.png", "caption": "Manipulator arm showcasing 360° claw rotation" },
+        { "src": "assets/img/SS_4.png", "caption": "Thermal imaging interface in operation" },
+        { "src": "assets/img/SS_5.png", "caption": "Stair-climbing test on 6-inch steps" },
+        { "src": "assets/img/SS_6.jpg", "caption": "Side profile with carbon fiber panels" },
+        { "src": "assets/img/SS_7.jpg", "caption": "Rear view showing battery compartment and overload protection system" },
+        { "src": "assets/img/SS_8.JPG", "caption": "Control unit interface with daylight-readable screen" },
+        { "src": "assets/img/SS_9.jpg", "caption": "Official handover ceremony to Peruvian Armed Forces" }
+    ],
       "tags": ["Delivered", "Deployed at UN Peacekeeping Mission"],
       "specs": [
         { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },

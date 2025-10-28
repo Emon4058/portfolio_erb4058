@@ -17,7 +17,7 @@
       "title": "Man-Transportable EOD ROV",
       "subtitle": "An Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV) designed to be carried and deployed by a soldier",
       "description": "Currently, we are developing a man-transportable EOD ROV based on our experience of previously developed medium platform EOD ROV, Jontro Soinik v1.0. Initially, we analyzed the limitations of previous robot and new challenges to develop a small platform robot. In the next phase, we worked...",
-      "longDescription": "Currently, we are developing a man-transportable EOD ROV, building on our experience with the previously developed medium-platform EOD ROV, Jontro Soinik v1.0. We began by analyzing the limitations of the earlier robot and identifying new challenges associated with designing a smaller platform. In the next phase, our focus was on constructing a lightweight structure that maximizes strength, maintains a low center of gravity, and introduces a new degree of freedom in the arm through a screw-based telescopic beam. To further reduce weight and enhance mechanical performance, we are integrating carbon fiber components into the robot. These parts are fabricated in-house using resin infusion, compression molding, and hand layup techniques within our composite fabrication laboratory.",
+      "longDescription": "Currently, we are developing a man-transportable EOD ROV, building on our experience with the previously developed medium-platform EOD ROV, Jontro Soinik v1.0. We began by analyzing the limitations of the earlier robot and identifying new challenges associated with designing a smaller platform. In the next phase, our focus was on constructing a lightweight structure that maximizes strength, maintains a low center of gravity, and introduces a new degree of freedom in the arm through a screw-based telescopic beam. To further reduce weight and enhance mechanical performance, we are integrating carbon fiber components into the robot. These parts are fabricated in-house using resin infusion, compression molding, and hand layup techniques within our composite fabrication laboratory. <br> The Man-Transportable EOD ROV is a compact bomb disposal robot built for high-stakes counter-IED operations. It navigates complex terrain with ease, using a dual-mode drive system and adaptive flipper mechanisms. The detachable manipulator arm offers precise control and tool-mounting flexibility, making it ideal for handling hazardous materials. Operators benefit from real-time situational awareness through a multi-camera setup, including a PTZ unit and wrist-mounted views. The robot’s control unit features a daylight-readable display and supports both wired and wireless communication for uninterrupted mission execution. Its rugged build and shock-absorbing design ensure durability in harsh environments. Integrated overload protection and intelligent motion control enhance operational safety and reliability. Designed for tactical deployment, the Man-Transportable EOD ROV combines mobility, modularity, and mission-ready resilience in a compact form.",
       "image": "assets/img/MP_7.jpg",
       "gallery": [
         { "src": "assets/img/MP_8.jpg", "caption": "CAD model — isometric view" },
@@ -28,13 +28,98 @@
         { "src": "assets/img/MP_6.jpg", "caption": "Vacuum infusion process — alternate angle" },
         { "src": "assets/img/MP_1.jpeg", "caption": "CAD model — pre-rendered version" },
         { "src": "assets/img/MP_9.png", "caption": "CAD model — isometric rear view" },
-        { "src": "assets/img/MP_11.png", "caption": "CAD model — front view of robot" }
+        { "src": "assets/img/MP_11.png", "caption": "CAD model — isometric front view" }
       ],
 
       "tags": ["In progress"],
       "specs": [
         { "k": "My Role", "v": "Research and Development Engineer (Mechanical)" },
-        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, telescopic beam. <br> required specifications of actuator. <br> CAD Design <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb" },
+        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, telescopic beam. <br> Estimation of required torque at each robot joint and drive. <br> CAD Design of Robotic Arm and gearboxes. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis. <br> Manufacturing of the parts which will be made of carbon fiber. " },
+        { "k": "Project's Objective", "v": "To develop an EOD ROV which is capable of precise manipulation, terrain adaptability, and reliable operation in critical tactical missions including CIED, surveillance, and bomb disposal." },
+        { "k": "Materials", "v": "Aluminum Alloy + Carbon Fiber + Stainless Steel + High Carbon Steel" },
+        { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, PrusaSlicer" },
+        { "k": "Manufacturing Tools", "v": "Resin Infusion Method, Moulding, Comporession Moulding, CNC Miling, Wire EDM, CNC Lathe, FDM" }
+      ],
+       "tablesOrder": ["Mechanical Specification", "Electrical Specification"],
+        "tables": {
+          "Mechanical Specification": {
+            "collapsed": false,
+            "columns": ["Functionality", "Specification"],
+            "rows": {
+              "Water Ingress Protection": "IP54 (ROV), IP55 (CCU)",
+              "Stair Climbing Ability": "≥ 40°",
+              "Slopes": "≥ 40°",
+              "Vertical Obstacle": "≥ 30 cm",
+              "Horizontal Obstacle / Ditch": "≥ 35 cm",
+              "Ground Clearance": "Approx. 2 inches",
+              "Dimensions": "L: ~750 mm, W: ~450 mm, H: ~300 mm",
+              "Weight": "Max 20–25 kg",
+              "Tow Capability": "≥ 30 kg",
+              "Payload Capacity": "≥ 5 kg",
+              "Drive Modes": "Standard and stair climbing",
+              "Drive System": "Belt-driven with independent flipper control",
+              "Manipulator Arm": "Detachable, telescopic, tool-mountable",
+              "Arm Reach": "Telescopic Beam Retracted: 120 cm, Extended: ~175 cm",
+              "Arm Payload": "5 kg (retracted), 4 kg (extended)",
+              "Degrees of Freedom": "Minimum 6 axes",
+              "Joint Movements": "Turret: ±100°, Shoulder: ≥180°, Elbow: ≥180°, Wrist Pitch: ≥300°, Roll: 360°",
+              "Gripper Extension": "≥ 100 mm",
+              "Claw Rotation": "360° continuous",
+              "Telescopic Extension": "~550 mm via cascading threaded shafts",
+              "Horizontal Reach Beneath": "≥ 100 cm",
+              "Vertical Reach": "≥ 100 cm (camera height for car window inspection)",
+              "Build Materials": "Steel, aluminum alloys, composite, PLA+"
+            }
+          },
+          "Electrical Specification": {
+            "collapsed": false,
+            "columns": ["Functionality", "Specification"],
+            "rows": {
+              "Battery Type": "Li-ion, 2 pcs, 48V nominal, 5000 mAh minimum",
+              "Battery Life": "≥ 2 hours under full load",
+              "Recharge Time": "ROV: ≥ 2 hrs, CCU: ≥ 5 hrs",
+              "Charger": "Provided for both ROV and CCU",
+              "Communication": "Wired: 200 m, Wireless: 100 m, 225 bps",
+              "Control Unit": "Handheld, rechargeable, wired/wireless modes",
+              "Display": "7\" LCD, daylight-readable, ≥ 400 nits brightness",
+              "Audio/Video Ports": "Available for auxiliary monitor and headphones",
+              "Audio System": "Digital 2-way audio, MP3 input/output",
+              "RF System": "Provided",
+              "Camera System": "4 cameras: 2 body, 1 claw, 1 PTZ with LED lights",
+              "Camera Features": "PTZ rotates with arm; drive and claw cameras tilt and rotate",
+              "Overload Protection": "Passive (fuse) + Active (software-based)",
+              "Environmental Tolerance": "-5°C to +55°C",
+              "CCU Material": "Weather-resistant, IP55 minimum",
+              "Deployment Case": "Provided for controller, spare battery, accessories"
+            }
+          }
+        }
+      },
+    
+    {
+      "slug": "Jontro Soinik 1.0",
+      "title": "Jontro Soinik 1.0",
+      "subtitle": "A Medium Platfom EOD ROV (Updated Version of Smart Soinik 1.0)",
+      "description": "Jontro Soinik 1.0 (JS1.0) is Bangladesh’s third generation and most advanced indigenously developed Explosive Ordnance Disposal (EOD) ...",
+      "longDescription": "Jontro Soinik 1.0 (JS1.0) is Bangladesh’s third generation and most advanced indigenously developed Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV) with environmental adaptability and disrupter firing capacity, which is first of it’s kind, engineered for rapid deployment and rugged performance in high-risk environments. Successfully tested by the Bangladesh Army, including live disrupter firing and IP55 water protection trials, it proves its readiness for real-world missions. Equipped with advanced electronics like GPS, thermal imaging, IR night vision, 4x optical zoom, and a 2MP camera system, it supports precision surveillance and remote neutralization of threats. With robust mechanical capabilities—stair climbing, slope handling (up to 40°), 360° claw rotation, 40kg grip force, and a lifting capacity of up to 20kg—the ROV is built for maneuverability and strength. Its 16Ah battery enables extended operations with active/passive overload protection, self-diagnostics, and fast recharging. Designed for battlefield reliability, Jontro Soinik 1.0 embodies innovation, adaptability, and national pride in defense technology. \n Jontro Soinik 1.0 is set for deployment in 2025 under the UN Peacekeeping Mission in the Republic of the Congo.",
+      "image": "assets/img/JS_9.jpg",
+      "gallery": [
+        { "src": "assets/img/JS_1.jpg", "caption": "Field-ready robot alongside development team" },
+        { "src": "assets/img/JS_11.jpg", "caption": "Side view of the robot with arm extended" },
+        { "src": "assets/img/JS_3.jpg", "caption": "Side view of the robot" },
+        { "src": "assets/img/JS_2.jpg", "caption": "Robot displayed at gallery" },
+        { "src": "assets/img/JS_4.jpg", "caption": "CAD assembly model featuring arm integration" },
+        { "src": "assets/img/JS_5.jpg", "caption": "Live testing of core functionalities — 1" },
+        { "src": "assets/img/JS_6.jpg", "caption": "Live testing of core functionalities — 2" },
+        { "src": "assets/img/JS_7.jpg", "caption": "During development at Assembly Lab" },
+        { "src": "assets/img/JS_8.jpg", "caption": "Fully assembled unit undergoing in-house validation" },
+        { "src": "assets/img/JS_9.jpg", "caption": "Manipulator performance test during final QA" },
+        { "src": "assets/img/JS_10.png", "caption": "Isometric CAD visualization of complete system" }
+      ],
+      "tags": ["Delivered", "Operational under Bangladesh Army"],
+      "specs": [
+        { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
+        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper. <br> Finite Element Analysis of Robotic Arm. <br> Determining the required torque and speed of actuators at joints. <br> CAD Design of attachments. <br> Track belt's traction analysis during stair climb." },
         { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
         { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
         { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, PrusaSlicer" },
@@ -49,129 +134,70 @@
             "Water Ingress Protection": "IP55",
             "Stair Climbing Ability": "8 inch (min)",
             "Slopes": "40 Deg (min)",
-            "Vertical Obstacle": "30 cm (min)",
+            "Vertical Obstacle": "20 cm (min)",
             "Horizontal Obstacle/ Ditch": "35 cm (min)",
-            "Slide Tilt": "30 deg (min)",
+            "Slide Tilt": "30 Deg (min)",
             "Speed": "5 km/h",
-            "Turning Radios": "80 cm (min)",
+            "Turning Radius": "0",
             "Turret": "200 Deg (min)",
-            "Shoulder": "100 Deg (min)",
-            "Elbow": "150 Deg (min)",
-            "Wrist": "270 Deg (min)",
+            "Shoulder": "200 Deg (min)",
+            "Elbow": "270 Deg (min)",
             "Claw Joint": "360 Deg",
-            "Gripper Opening": "18 cm (min)",
+            "Gripper Opening": "10 cm (min)",
             "Grip Force": "40 Kg (min)",
-            "Lift Capacity (Retracted)": "20 Kg (min)",
-            "Lift Capacity (Extended)": "8 kg (min)",
-            "Lift Capacity (Side)": "5 kg (min)",
+            "Lift Capacity (Retracted)": "40 Kg (min)",
+            "Lift Capacity (Extended)": "20 Kg (min)",
+            "Lift Capacity (Side)": "8 Kg (min)",
             "Vertical Reach": "150 cm (min)",
             "Horizontal Reach": "100 cm (min)",
             "Vertical Reach Beneath": "25 cm (min)"
           }
         },
         "Electrical Specification": {
-          "collapsed": true,
-          "columns": ["Item", "Specification"],
-          "rows": [
-            ["Battery", "48V Li‑ion"],
-            ["Run Time", "3 hours"],
-            ["Drive Motors", "BLDC, IP55"],
-            ["Control", "2.4 GHz FHSS + Encrypted Wi‑Fi backhaul"]
-          ]
-        }
-      }
-    },
-    {
-      "slug": "Jontro Soinik",
-      "title": "Jontro Soinik",
-      "description": "Jontro Soinik 1.0 (JS1.0) is Bangladesh’s third generation and most advanced indigenously developed Explosive Ordnance Disposal (EOD) ...",
-      "longDescription": "Jontro Soinik 1.0 (JS1.0) is Bangladesh’s third generation and most advanced indigenously developed Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV) with environmental adaptability and disrupter firing capacity, which is first of it’s kind, engineered for rapid deployment and rugged performance in high-risk environments. Successfully tested by the Bangladesh Army, including live disrupter firing and IP55 water protection trials, it proves its readiness for real-world missions. Equipped with advanced electronics like GPS, thermal imaging, IR night vision, 4x optical zoom, and a 2MP camera system, it supports precision surveillance and remote neutralization of threats. With robust mechanical capabilities—stair climbing, slope handling (up to 40°), 360° claw rotation, 40kg grip force, and a lifting capacity of up to 20kg—the ROV is built for maneuverability and strength. Its 16Ah battery enables extended operations with active/passive overload protection, self-diagnostics, and fast recharging. Designed for battlefield reliability, Jontro Soinik 1.0 embodies innovation, adaptability, and national pride in defense technology. \n Jontro Soinik 1.0 is set for deployment in 2025 under the UN Peacekeeping Mission in the Republic of the Congo.",
-      "image": "assets/img/JS_9.jpg",
-      "gallery": [
-        "../projects/project4-1.jpg",
-        "../projects/project4-2.jpg",
-        "../projects/project4-3.jpg"
-      ],
-      "tags": ["FEA", "Solid Mechanics", "Robotics"],
-      "meta": ["Tool: ANSYS Static Structural", "Iterations: 8", "FoS: ≥ 5"],
-      "specs": [
-        { "k": "Payload (retracted)", "v": "20 kg" },
-        { "k": "Payload (extended)", "v": "9 kg" },
-        { "k": "Materials", "v": "Aluminum + Stainless Steel" },
-        { "k": "Objective", "v": "FoS ≥ 5" }
-      ],
-      "sections": [
-        {
-          "heading": "Overview",
-          "text": "Refined mesh at fillets, bolt interfaces, and section transitions. Convergence study ensured peak von Mises stress stability and tip deflection within tolerance.",
-          "image": "../projects/project4-2.jpg",
-          "caption": "FEA setup — constraints and load application",
-          "align": "left"
-        },
-        {
-          "heading": "Loads & Boundary Conditions",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          "image": "../projects/project4-3.jpg",
-          "caption": "Post‑processing — stress distribution",
-          "align": "right"
-        },
-        {
-          "heading": "Meshing Strategy & Results",
-          "text": "Refined mesh at fillets, bolt interfaces, and section transitions. Convergence study ensured peak von Mises stress stability and tip deflection within tolerance.",
-          "image": "../projects/project4-1.jpg",
-          "caption": "Model and mesh refinement",
-          "align": "left"
-        }
-      ],
-      "iterations": [
-        "Thickened high‑stress links and reduced mass on low‑stress members",
-        "Material change to stainless on select brackets with low fatigue margins",
-        "Fillet optimization to reduce stress concentrations",
-        "Reinforced mounting points; verified bolt patterns"
-      ],
-      "outcomes": [
-        "FoS ≥ 5 achieved across critical load cases",
-        "Tip deflection within target tolerance",
-        "Improved robustness with minimized mass"
-      ],
-      "tablesOrder": ["Mechanical Specification", "Electrical Specification"],
-      "tables": {
-        "Mechanical Specification": {
           "collapsed": false,
           "columns": ["Functionality", "Specification"],
           "rows": {
-            "Water Ingress Protection": "IP55",
-            "Stair Climbing Ability": "8 inch (min)",
-            "Slopes": "40 Deg (min)",
-            "Vertical Obstacle": "30 cm (min)",
-            "Horizontal Obstacle/ Ditch": "35 cm (min)",
-            "Slide Tilt": "30 deg (min)",
-            "Speed": "5 km/h",
-            "Turning Radios": "80 cm (min)",
-            "Turret": "200 Deg (min)",
-            "Shoulder": "100 Deg (min)",
-            "Elbow": "150 Deg (min)",
-            "Wrist": "270 Deg (min)",
-            "Claw Joint": "360 Deg",
-            "Gripper Opening": "18 cm (min)",
-            "Grip Force": "40 Kg (min)",
-            "Lift Capacity (Retracted)": "20 Kg (min)",
-            "Lift Capacity (Extended)": "8 kg (min)",
-            "Lift Capacity (Side)": "5 kg (min)",
-            "Vertical Reach": "150 cm (min)",
-            "Horizontal Reach": "100 cm (min)",
-            "Vertical Reach Beneath": "25 cm (min)"
+            "GPS Locator": "Available",
+            "Wireless HCU": "Available",
+            "Claw Camera": "IR night vision capability",
+            "Laser Range Finder": "Minimum 1, Range: 10 cm to 40 m",
+            "Proximity Sensor": "Available",
+            "Shock Tube Initiator": "2 channel shock tube initiator",
+            "Calibration": "Self-calibration and display calibration status",
+            "OCU": "Available",
+            "ROV Battery": "Maintaining 16Ah battery capacity",
+            "Main PTZ": "Available",
+            "Camera Zoom": "4X Optical Zoom",
+            "Front and Rear Camera": "Viewing heat map",
+            "Under Vehicle Kit": "Image inspection under vehicles",
+            "Thermal Camera": "Viewing heat map",
+            "Self Collision Avoider": "Use of short sensors or pulse encoders",
+            "Battery Weight": "10 kg is optimum",
+            "Battery Type (48 Volt)": "48 Volt",
+            "Active Communication Port": "Minimum 1 and indication in OCU",
+            "Passive Communication Port": "Passive use mechanism",
+            "Communication Port": "Minimum 1",
+            "Self Recovery": "Self recover from typical errors",
+            "Self-diagnostic": "Display warning, scan logs",
+            "Minimum Battery Capacity": "Minimum 10Ah capacity",
+            "Operational Temperature Range": "Up to 50°C",
+            "Deployment Time": "Maximum 5 mins",
+            "Temperature Sensor": "Will be installed",
+            "RF Extender": "Video/data transmission up to 1.5 km",
+            "Firing Circuit": "LOS 4Z firing circuit set in each ROV",
+            "Range": "LOS 1000 ft (min), NLOS 300 ft (min)",
+            "Screen": "Daylight readable screen",
+            "Battery Indicator": "Status indicator",
+            "Lights": "High luminosity 12V 5W lights (front and back)",
+            "Camera Tilt": "0–84 degree angle",
+            "Video Storage": "High-definition recording, ≥ 320 GB",
+            "Battery Recharge Time": "2 hours",
+            "AC Power and Charging Facility": "220V ±10%, 50Hz standard",
+            "Additional Rechargeable Battery": "More than 5 hours beyond 3–5 hours",
+            "Humidity During Operation": "95% at operating temperature",
+            "Storage Temperature": "Up to 50°C",
+            "Camera Resolution": "≥ 2 megapixel"
           }
-        },
-        "Electrical Specification": {
-          "collapsed": true,
-          "columns": ["Item", "Specification"],
-          "rows": [
-            ["Battery", "48V Li‑ion"],
-            ["Run Time", "3 hours"],
-            ["Drive Motors", "BLDC, IP55"],
-            ["Control", "2.4 GHz FHSS + Encrypted Wi‑Fi backhaul"]
-          ]
         }
       }
     },
@@ -195,7 +221,7 @@
       "tags": ["Delivered", "Deployed at UN Peacekeeping Mission"],
       "specs": [
         { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
-        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb" },
+        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
         { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
         { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
         { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, PrusaSlicer" },

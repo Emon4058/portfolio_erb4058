@@ -684,135 +684,194 @@ a.card:hover {
   color: var(--text);
 }
 
-/* Certifications */
 #certifications-list {
-    display: grid;
-    gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.cert-item {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 14px;
-    box-shadow: var(--shadow);
+.cert-card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }
 
 .cert-title {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0 0 6px;
-    color: var(--primary);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: var(--primary);
 }
 
 .cert-issuer {
-    color: var(--muted);
-    font-size: 14px;
-    margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 6px;
 }
 
 .cert-desc {
-    color: var(--text);
-    margin-bottom: 8px;
+  color: var(--text);
+  font-size: 14px;
+  margin-bottom: 8px;
 }
 
-.cert-link {
-    display: inline-block;
-}
 
 /* Achievements (Title, Position, Year) */
 #achievements-list {
-    display: grid;
-    gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .achievement-item {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 14px;
-    box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* reduced gap between blocks */
 }
 
-.achievement-top {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-bottom: 6px;
+.achievement-topblock,
+.achievement-bottomblock {
+  display: block;
+  background: var(--card);
+  padding: 14px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--border);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
+
+.achievement-topblock {
+  min-height: calc(1.6em * 8); /* approx 6 lines */
+  max-height: calc(1.6em * 8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.achievement-bottomblock {
+  min-height: calc(1.6em * 2); /* approx 1 line */
+  max-height: calc(1.6em * 2);
+  display: flex;
+  align-items: center;
+}
+
+.achievement-topblock:hover,
+.achievement-bottomblock:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.achievement-bottomblock .achievement-org {
+  font-weight: 600;
+  color: var(--primary);
+  text-align: left;
+  font-size: 14px;
+  width: 100%;
+}
+
+.achievement-bottomblock .achievement-org::before {
+  content: "Organizer: ";
+  font-weight: 500;
+  color: var(--muted);
+}
+
+/* Top content layout */
+.achievement-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.achievement-title,
+.achievement-extra,
+.achievement-org {
+  white-space: normal;
+  word-break: break-word;      /* ✅ break long words if needed */
+}
+
 
 .achievement-title {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0;
-    color: var(--primary);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--primary);
 }
 
 .achievement-meta {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 /* Badges for position/year */
 .ach-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 4px 10px;
-    font-size: 12px;
-    border-radius: 999px;
-    background: #e2e8f0;
-    color: #0f172a;
-    border: 1px solid #dbe3ef;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #0f172a;
+  border: 1px solid #dbe3ef;
 }
 
 html[data-theme="dark"] .ach-badge {
-    background: rgba(148, 163, 184, 0.16);
-    color: #e2e8f0;
-    border-color: rgba(148, 163, 184, 0.35);
+  background: rgba(148, 163, 184, 0.16);
+  color: #e2e8f0;
+  border-color: rgba(148, 163, 184, 0.35);
 }
 
-.achievement-org {
-    color: var(--primary);
-    font-size: 14px;
-
-}
-
+/* Legacy styles (optional cleanup) */
 .achievement-link {
-    margin-top: 8px;
-    display: inline-block;
+  margin-top: 8px;
+  display: inline-block;
 }
 
 .achievement-org a {
-    color: var(--primary);
-    font-weight: 500;
-    text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .achievement-org a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
+/* Responsive layout */
 @media(max-width:768px) {
+  #certifications-list,
+  #achievements-list {
+    grid-template-columns: 1fr;
+  }
 
-    #certifications-list,
-    #achievements-list {
-        grid-template-columns: 1fr;
-    }
+  #achievements-list,
+  #education-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
-@media(max-width:768px) {
-
-    #achievements-list,
-    #education-list {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
 
 /* Contact */
 #contact a {

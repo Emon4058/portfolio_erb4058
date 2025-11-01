@@ -381,93 +381,94 @@
 
       // Certifications
       const certList = document.getElementById("certifications-list");
-      if (certList && Array.isArray(profile.certifications)) {
-        certList.innerHTML = "";
-        profile.certifications.forEach((c) => {
-          const div = document.createElement("div");
-          div.className = "cert-item";
-          div.innerHTML = `
-      <h4 class="cert-title">${c.title || ""}</h4>
-      ${c.issuer ? `<div class="cert-issuer">${c.issuer}</div>` : ""}
-      ${c.description ? `<p class="cert-desc">${c.description}</p>` : ""}
-      ${
-        c.link
-          ? `<a class="a-link cert-link" href="${c.link}" target="_blank" rel="noopener noreferrer">View Certificate</a>`
-          : ""
-      }
-    `;
-          certList.appendChild(div);
-        });
-      }
+        if (certList && Array.isArray(profile.certifications)) {
+          certList.innerHTML = "";
+
+          profile.certifications.forEach((c) => {
+            const wrapper = c.link ? document.createElement("a") : document.createElement("div");
+            wrapper.className = "cert-card";
+            if (c.link) {
+              wrapper.href = c.link;
+              wrapper.target = "_blank";
+              wrapper.rel = "noopener noreferrer";
+            }
+
+            wrapper.innerHTML = `
+              <h4 class="cert-title">${c.title || ""}</h4>
+              ${c.issuer ? `<div class="cert-issuer">${c.issuer}</div>` : ""}
+              ${c.description ? `<p class="cert-desc">${c.description}</p>` : ""}
+            `;
+
+            certList.appendChild(wrapper);
+          });
+        }
+
 
       // Achievements (Title, Position, Year)
       const achievementsList = document.getElementById("achievements-list");
-      if (achievementsList && Array.isArray(profile.achievements)) {
-        achievementsList.innerHTML = "";
+        if (achievementsList && Array.isArray(profile.achievements)) {
+          achievementsList.innerHTML = "";
 
-        const sorted = [...profile.achievements].sort((a, b) => {
-          const ya = parseInt(
-            String(a.year || "").match(/\d{4}/)?.[0] || "0",
-            10
-          );
-          const yb = parseInt(
-            String(b.year || "").match(/\d{4}/)?.[0] || "0",
-            10
-          );
-          return yb - ya;
-        });
+          const sorted = [...profile.achievements].sort((a, b) => {
+            const ya = parseInt(String(a.year || "").match(/\d{4}/)?.[0] || "0", 10);
+            const yb = parseInt(String(b.year || "").match(/\d{4}/)?.[0] || "0", 10);
+            return yb - ya;
+          });
 
-        sorted.forEach((a) => {
-          const div = document.createElement("div");
-          div.className = "achievement-item";
+          sorted.forEach((a) => {
+            const wrapper = document.createElement("div");
+            wrapper.className = "achievement-item";
 
-          const positionBadge = a.position
-            ? `<span class="ach-badge position">${a.position}</span>`
-            : "";
-          const yearBadge = a.year
-            ? `<span class="ach-badge year">${a.year}</span>`
-            : "";
-          const orgHref = a.organizerUrl
-            ? a.organizerUrl
-            : a.organizer
-            ? `https://www.google.com/search?q=${encodeURIComponent(
-                a.organizer
-              )}`
-            : null;
+            const positionBadge = a.position
+              ? `<span class="ach-badge position">${a.position}</span>`
+              : "";
+            const yearBadge = a.year
+              ? `<span class="ach-badge year">${a.year}</span>`
+              : "";
 
-          const orgLine = a.organizer
-            ? `<div class="achievement-org">${
-                orgHref
-                  ? `<a href="${orgHref}" target="_blank" rel="noopener noreferrer">${a.organizer}</a>`
-                  : a.organizer
-              }</div>`
-            : "";
-          const linkLine = ""; // disables the extra hyperlink
+            const extraInfoLine = a.note
+              ? `<div class="achievement-extra">${a.note}</div>`
+              : "";
 
-          const blockLink = a.link || "#"; // fallback if no link
-          
-          const extraInfoLine = a.note
-          ? `<div class="achievement-extra">${a.note}</div>`
-          : "";
+            const certHref = a.link || "#";
+            const orgHref = a.organizerUrl
+              ? a.organizerUrl
+              : a.organizer
+              ? `https://www.google.com/search?q=${encodeURIComponent(a.organizer)}`
+              : "#";
 
+            // Top block: achievement details
+            const top = document.createElement("a");
+            top.className = "achievement-topblock";
+            top.href = certHref;
+            top.target = "_blank";
+            top.rel = "noopener noreferrer";
+            top.innerHTML = `
+              <div class="achievement-top">
+                <h4 class="achievement-title">${a.title || ""}</h4>
+                <div class="achievement-meta">
+                  ${positionBadge}${yearBadge}
+                </div>
+                ${extraInfoLine}
+              </div>
+            `;
 
-          div.innerHTML = `
-          <a href="${blockLink}" target="_blank" rel="noopener noreferrer" class="achievement-wrapper">
-          <div class="achievement-top">
-          <h4 class="achievement-title">${a.title || ""}</h4>
-          <div class="achievement-meta">
-          ${positionBadge}${yearBadge}
-          </div>
-          </div>
-          ${orgLine}
-          </a>
-          ${linkLine}
-          ${extraInfoLine}
-          `;
-          
-          achievementsList.appendChild(div);
-        });
-      }
+            // Bottom block: organizer link
+            const bottom = document.createElement("a");
+            bottom.className = "achievement-bottomblock";
+            bottom.href = orgHref;
+            bottom.target = "_blank";
+            bottom.rel = "noopener noreferrer";
+            bottom.innerHTML = `
+              <div class="achievement-org">${a.organizer || "Organizer"}</div>
+            `;
+
+            wrapper.appendChild(top);
+            wrapper.appendChild(bottom);
+            achievementsList.appendChild(wrapper);
+          });
+        }
+
 
       // Contact
       if (profile.email)

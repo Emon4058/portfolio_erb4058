@@ -233,18 +233,12 @@
       function formatPeriodCompact(period) {
         if (!period) return "";
         const parts = String(period).split("-");
-        // YYYY-MM-Present
-        if (
-          parts.length === 3 &&
-          String(parts[2]).toLowerCase() === "present"
-        ) {
+        if (parts.length === 3 && String(parts[2]).toLowerCase() === "present") {
           return `${parts[0]}-${parts[1]} – Present`;
         }
-        // YYYY-MM-YYYY2-MM2
         if (parts.length === 4) {
           return `${parts[0]}-${parts[1]} – ${parts[2]}-${parts[3]}`;
         }
-        // Fallback
         return period;
       }
 
@@ -252,9 +246,7 @@
       function normalizeExperience(list) {
         const map = new Map();
         (list || []).forEach((item) => {
-          const key = `${item.company || ""}|${
-            item.location || ""
-          }`.toLowerCase();
+          const key = `${item.company || ""}|${item.location || ""}`.toLowerCase();
           const entry = map.get(key) || {
             company: item.company || "",
             location: item.location || "",
@@ -262,14 +254,11 @@
             highlights: item.highlights || [],
             tech: item.tech || [],
             description: item.description || "",
+            url: item.url || "" // ✅ Preserve URL
           };
 
-          const posArr = Array.isArray(item.position)
-            ? item.position
-            : [item.position];
-          const perArr = Array.isArray(item.period)
-            ? item.period
-            : [item.period];
+          const posArr = Array.isArray(item.position) ? item.position : [item.position];
+          const perArr = Array.isArray(item.period) ? item.period : [item.period];
           const len = Math.max(posArr.length, perArr.length);
 
           for (let i = 0; i < len; i++) {
@@ -278,17 +267,18 @@
             if (pos || per) entry.roles.push({ position: pos, period: per });
           }
 
-          // Prefer keeping any existing highlights/tech/description already captured
           if (!entry.highlights?.length && item.highlights?.length)
             entry.highlights = item.highlights;
-          if (!entry.tech?.length && item.tech?.length) entry.tech = item.tech;
+          if (!entry.tech?.length && item.tech?.length)
+            entry.tech = item.tech;
           if (!entry.description && item.description)
             entry.description = item.description;
+          if (!entry.url && item.url)
+            entry.url = item.url;
 
           map.set(key, entry);
         });
 
-        // Deduplicate identical role lines
         map.forEach((e) => {
           const seen = new Set();
           e.roles = e.roles.filter((r) => {
@@ -307,49 +297,50 @@
       // Render
       expList.innerHTML = "";
       grouped.forEach((e) => {
-        const div = document.createElement("div");
-        div.className = "experience-item";
+        const wrapper = e.url ? document.createElement("a") : document.createElement("div");
+        wrapper.className = "experience-card";
+        if (e.url) {
+          wrapper.href = e.url;
+          wrapper.target = "_blank";
+          wrapper.rel = "noopener noreferrer";
+        }
 
-        // Role lines (Position ..... Period)
         const rolesHtml = e.roles
           .map(
             (r) => `
-    <div class="role-line">
-      <span class="position">${r.position || ""}</span>
-      <span class="dotline"></span>
-      <span class="period">${formatPeriodCompact(r.period)}</span>
-    </div>
-  `
+            <div class="role-line">
+              <span class="position">${r.position || ""}</span>
+              <span class="dotline"></span>
+              <span class="period">${formatPeriodCompact(r.period)}</span>
+            </div>
+          `
           )
           .join("");
 
-        // Optional extras
         const highlightsHtml =
           Array.isArray(e.highlights) && e.highlights.length
-            ? `<ul class="highlights">${e.highlights
-                .map((h) => `<li>${h}</li>`)
-                .join("")}</ul>`
+            ? `<ul class="highlights">${e.highlights.map((h) => `<li>${h}</li>`).join("")}</ul>`
             : e.description
             ? `<p>${e.description}</p>`
             : "";
 
         const techHtml =
           Array.isArray(e.tech) && e.tech.length
-            ? `<p class="exp-tech"><strong>Technical Skills:</strong> ${e.tech.join(
-                ", "
-              )}</p>`
+            ? `<p class="exp-tech"><strong>Technical Skills:</strong> ${e.tech.join(", ")}</p>`
             : "";
 
-        div.innerHTML = `
-    <h4><span class="company">${e.company}</span>${
+        wrapper.innerHTML = `
+          <h4><span class="company">${e.company}</span>${
           e.location ? ` <span class="location">${e.location}</span>` : ""
         }</h4>
-    ${rolesHtml}
-    ${highlightsHtml}
-    ${techHtml}
-  `;
-        expList.appendChild(div);
+          ${rolesHtml}
+          ${highlightsHtml}
+          ${techHtml}
+        `;
+
+        expList.appendChild(wrapper);
       });
+
 
       // Education (with location and highlights)
 
@@ -363,8 +354,11 @@
       }
 
       profile.education.forEach((e) => {
-        const div = document.createElement("div");
-        div.className = "education-item";
+        const card = document.createElement("a");
+        card.className = "education-item";
+        card.href = e.url || "#"; // Replace with actual link field if available
+        card.target = "_blank";
+        card.rel = "noopener noreferrer";
 
         const highlightsHtml =
           Array.isArray(e.highlights) && e.highlights.length
@@ -373,7 +367,7 @@
                 .join("")}</ul>`
             : "";
 
-        div.innerHTML = `
+        card.innerHTML = `
     <h4><span class="institution">${e.institution}</span>${
           e.location ? ` <span class="location">${e.location}</span>` : ""
         }</h4>
@@ -382,7 +376,7 @@
     }</span> <span class="period">${formatEduPeriod(e.period)}</span></div>
     ${highlightsHtml}
   `;
-        eduList.appendChild(div);
+        eduList.appendChild(card);
       });
 
       // Certifications

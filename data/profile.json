@@ -374,7 +374,7 @@
     {
       "slug": "Soft Robotic Actuator",
       "title": "Soft Robotic Actuator",
-      "subtitle": "A Bio-Inspired Soft Robotic Fish",
+      "subtitle": "A Tendon-Driven Soft Actuator for Surgical Operation",
       "description": "...",
       "longDescription": "",
       "image": "assets/img/SRA_8.jpeg",
@@ -391,9 +391,11 @@
         { "k": "Manufacturing Tools", "v": "FDM, Molding, Laser Cutting Machine" }
       ]
     },
+
     {
       "slug": "Large Scale FDM Printer",
       "title": "Large Scale FDM Printer",
+      "subtitle": "A Custom 3D Printer with a Bed Volume of 500mm×500mm×500mm",
       "description": "...",
       "longDescription": "",
       "image": "assets/img/TP_3.jpg",
@@ -412,9 +414,11 @@
         { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
       ]
     },
+
     {
       "slug": "Fixed Wing UAV",
       "title": "Fixed Wing UAV",
+      "subtitle": "A Handmade Prototype Of Fixed Wing Unmanned Aerial Vehicle",
       "description": "...",
       "longDescription": "",
       "image": "assets/img/FW_1.jpg",
@@ -433,9 +437,11 @@
         { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
       ]
     },
+
     {
       "slug": "Mars Rover- Anweshan, Renaissance",
       "title": "Mars Rover- Anweshan, Renaissance",
+      "subtitle": "",
       "description": "...",
       "longDescription": "",
       "image": "assets/img/RN_4.jpg",
@@ -623,7 +629,6 @@
     }
   ],
 
-  
   "skillsGrouped": [
     {
       "category": "Computational Analysis",
@@ -675,6 +680,7 @@
       "position": "Research And Development Engineer",
       "location": "Dhaka, Bangladesh",
       "period": "01 July 2024 - Present",
+      "url": "https://cyberneticsbd.com/",
       "highlights": [
         "Developing a man‑portable EOD ROV with 7 DoF robotic arm for military applications.",
         "Analyzed the structural performance of fixed‑wing UAVs and multirotor drones designed to carry high payloads of up to 50 kg.",
@@ -694,6 +700,7 @@
       "position": "Intern, Research And Development Team",
       "location": "Dhaka, Bangladesh",
       "period": "01 June 2023 - 30 June 2024",
+      "url": "https://www.spectrum-bd.com/",
       "highlights": [
         "Engineered an ROV equipped with a 6 DoF arm, meticulously designed to operate and sustain functionality in harsh and challenging environments, ensuring robustness and reliability",
         "Verified the structural integrity of the mechanical designs of an ROV through finite element analysis (FEA), identifying potential stress points and weaknesses"
@@ -711,6 +718,7 @@
       "position": "Intern, 3 Wheeler Manufacturing Section",
       "location": "Mymensingh, Bangladesh",
       "period": "01 Nov 2023 - 20 Nov 2023",
+      "url": "https://runnerautomobiles.com/",
       "highlights": [
         "Acquired comprehensive knowledge of the three‑wheeler manufacturing process, encompassing welding, painting, and assembly sections",
         "Developed a thorough understanding of industrial automation processes and the application of industrial robotic arms",
@@ -730,6 +738,7 @@
       "position": "Member, Electrical and Communication Subteam",
       "location": "Dhaka, Bangladesh",
       "period": "May 2020 - August 2023",
+      "url": "https://buetinterplanetar.com/",
       "highlights": [
         "Built a Mars Rover capable of traversing through rocky terrain, collecting and processing specimens from the environment, and performing various tasks",
         "Designed and implemented the PCB for the rover’s power distribution system, actuators, and sensors for onboard scientific experiment",
@@ -747,6 +756,7 @@
       "position": ["Lead, Suspension Subteam", "Member, Suspension Subteam"],
       "location": "Dhaka, Bangladesh",
       "period": ["Dec 2022- July 2024", "Dec 2021 -Dec 2022"],
+      "url": "https://automaestro.org/",
       "highlights": [
         "Contributed to the development of a competitive Formula Student automobile, taking part in the design, manufacturing, and experiments",
         "Led the suspension team successfully, guiding the design and fabrication of critical components such as the upright, control arm, and bell crank"
@@ -764,6 +774,7 @@
       "position": ["Vice President", "Publicity and Outreach Coordinator"],
       "location": "Dhaka, Bangladesh",
       "period": ["June 2023 - June 2024", "June 2022 - June 2023"],
+      "url": "https://brs-buet.com/",
       "highlights": [
         "Supervised and coordinated the work of subcommittees to ensure alignment with club goals",
         "Oversaw society activities like workshops, or campaigns. Ensured logistics, communication, and execution run smoothly."   
@@ -782,6 +793,7 @@
       "location": "Dhaka, Bangladesh",
       "degree": "BSc in Mechanical Engineering",
       "period": "2018-09-2024-07",
+      "url": "https://www.buet.ac.bd/",
       "highlights": [
         "CGPA 3.43/4.00",
         "Relevant Courses: Machine Design, Electro-Mechanical System Design, Mechatronics, Composite Materials, Automobile Engineering, Bio-Engineering, Instrumentation and Measurement, Heat Transfer Equipment Design, Fluid Machinery"
@@ -792,6 +804,7 @@
       "location": "Dhaka, Bangladesh",
       "degree": "Higher Secondary School Certificate",
       "period": "2016-2018",
+      "url": "https://ndc.edu.bd/",
       "highlights": [
         "Group — Science, GPA 5.00/5.00",
         "General grade scholarship, Dhaka Board"
@@ -802,6 +815,7 @@
       "location": "Sylhet, Bangladesh",
       "degree": "Secondary School Certificate",
       "period": "2014-01-2016-10",
+      "url": "https://www.sylgovpilothss.edu.bd/",
       "highlights": [
         "Group — Science, GPA 5.00/5.00",
         "General grade scholarship, Sylhet Board"
@@ -877,6 +891,7 @@
       "link": "https://www.udemy.com/certificate/UC-f20609c1-c94c-4c45-9df6-17e1a052faba/"
     }
   ],
+
   "achievements": [
     {
       "title": "University Rover Challenge",
@@ -888,7 +903,7 @@
       "note": "Team Name: Team Interplanetar"
     },
     {
-      "title": "ERC Onsite",
+      "title": "European Rover Challenge Onsite",
       "position": "8th Position",
       "year": "2022",
       "organizer": "European Rover Challenge",

@@ -542,94 +542,146 @@ a.card:hover {
 }
 
 /* Experience & Education */
-.experience-item,
-.education-item {
-    background: var(--card);
-    padding: 16px;
-    margin-bottom: 16px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
+.experience-card {
+  display: block;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: var(--radius);
+  background-color: var(--card);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.experience-item h4,
-.education-item h4 {
-    margin-bottom: 6px;
-    font-size: 18px;
-    color: var(--primary);
+.experience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }
 
-.experience-item .period,
-.education-item .period {
-    font-size: 14px;
-    color: var(--muted);
-    margin-bottom: 6px;
+
+.experience-card h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+  font-size: 18px;
 }
 
-.experience-item p,
-.education-item p {
-    color: var(--text);
+.experience-card h4 .company {
+  color: var(--primary);
+  font-weight: 650;
 }
 
-.experience-item h4,
-.education-item h4 {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 8px;
-    flex-wrap: wrap;
+.experience-card h4 .location {
+  color: var(--primary);
+  font-weight: 650;
+  margin-left: auto;
 }
 
-.role-line,
-.degree-line {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 8px;
-    margin-bottom: 8px;
-    color: var(--muted);
+.experience-card .period {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 6px;
 }
 
-.position,
-.degree {
-    font-weight: 600;
-    color: var(--text);
+.experience-card p {
+  color: var(--text);
 }
 
-.highlights {
-    margin: 6px 0 0 18px;
-}
-
-.highlights li {
-    margin-bottom: 4px;
-}
-
-.exp-tech strong {
-    color: var(--primary);
-}
-
-/* Collapsed multi-role lines */
 .role-line {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    margin: 4px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 4px 0;
+  color: var(--muted);
 }
 
 .role-line .position {
-    font-weight: 600;
-    color: var(--text);
+  font-weight: 600;
+  color: var(--text);
 }
 
 .role-line .dotline {
-    flex: 1;
-    border-bottom: 1px dashed var(--border);
-    opacity: 0.6;
-    transform: translateY(-2px);
+  flex: 1;
+  border-bottom: 1px dashed var(--border);
+  opacity: 0.6;
+  transform: translateY(-2px);
 }
 
 .role-line .period {
-    color: var(--muted);
-    white-space: nowrap;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.highlights {
+  margin: 6px 0 0 18px;
+}
+
+.highlights li {
+  margin-bottom: 4px;
+}
+
+.exp-tech strong {
+  color: var(--primary);
+}
+
+/* Education */
+.education-item {
+  display: block;
+  background: var(--card);
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: inherit;
+  text-decoration: none;
+}
+
+.education-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+
+.education-item h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+  font-size: 18px;
+  color: var(--primary);
+}
+
+.education-item .period {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.education-item p {
+  color: var(--text);
+}
+
+.degree-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+.degree {
+  font-weight: 600;
+  color: var(--text);
 }
 
 /* Certifications */

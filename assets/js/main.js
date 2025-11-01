@@ -397,6 +397,7 @@
               <h4 class="cert-title">${c.title || ""}</h4>
               ${c.issuer ? `<div class="cert-issuer">${c.issuer}</div>` : ""}
               ${c.description ? `<p class="cert-desc">${c.description}</p>` : ""}
+              ${c.link ? `<div class="cert-link">View Certificate</div>` : ""}
             `;
 
             certList.appendChild(wrapper);

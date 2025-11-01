@@ -15,7 +15,7 @@
     {
       "slug": "Man-Transportable EOD ROV",
       "title": "Man-Transportable EOD ROV",
-      "subtitle": "An Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV) designed to be carried and deployed by a soldier",
+      "subtitle": "An Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV) Designed to Be Carried and Deployed by a Soldier",
       "description": "Currently, we are developing a man-transportable EOD ROV based on our experience of previously developed medium platform EOD ROV, Jontro Soinik v1.0. Initially, we analyzed the limitations of previous robot and new challenges to develop a small platform robot. In the next phase, we worked...",
       "longDescription": "Currently, we are developing a man-transportable EOD ROV, building on our experience with the previously developed medium-platform EOD ROV, Jontro Soinik v1.0. We began by analyzing the limitations of the earlier robot and identifying new challenges associated with designing a smaller platform. In the next phase, our focus was on constructing a lightweight structure that maximizes strength, maintains a low center of gravity, and introduces a new degree of freedom in the arm through a screw-based telescopic beam. To further reduce weight and enhance mechanical performance, we are integrating carbon fiber components into the robot. These parts are fabricated in-house using resin infusion, compression molding, and hand layup techniques within our composite fabrication laboratory. <br> The Man-Transportable EOD ROV is a compact bomb disposal robot built for high-stakes counter-IED operations. It navigates complex terrain with ease, using a dual-mode drive system and adaptive flipper mechanisms. The detachable manipulator arm offers precise control and tool-mounting flexibility, making it ideal for handling hazardous materials. Operators benefit from real-time situational awareness through a multi-camera setup, including a PTZ unit and wrist-mounted views. The robot’s control unit features a daylight-readable display and supports both wired and wireless communication for uninterrupted mission execution. Its rugged build and shock-absorbing design ensure durability in harsh environments. Integrated overload protection and intelligent motion control enhance operational safety and reliability. Designed for tactical deployment, the Man-Transportable EOD ROV combines mobility, modularity, and mission-ready resilience in a compact form.",
       "image": "assets/img/MP_7.jpg",
@@ -375,18 +375,26 @@
       "slug": "Soft Robotic Actuator",
       "title": "Soft Robotic Actuator",
       "subtitle": "A Tendon-Driven Soft Actuator for Surgical Operation",
-      "description": "...",
-      "longDescription": "",
+      "description": "The soft actuator is a tendon-driven soft continuum robot designed for minimally invasive surgery. It is fabricated primarily from inert and biocompatible silicone rubber, utilizing a process that includes Fused Deposition Modelling for creating molds and subsequent liquid silicone rubber...",
+      "longDescription": "The soft actuator is a tendon-driven soft continuum robot designed for minimally invasive surgery. It is fabricated primarily from inert and biocompatible silicone rubber, utilizing a process that includes Fused Deposition Modelling for creating molds and subsequent liquid silicone rubber moulding. The actuator achieves a minimum of three degrees of freedom, including bending along two axes and rotation around its central axis. The structure is based on repeating single units, with a typical diameter of 15 mm. These units are assembled by routing tension cables, which can be made of material like unfilled Nylon 6.6, through their multiple circular channels. The system operates by applying tension to these cables to induce bending or rotation.The finalized design (Version 2.1) features separate units dedicated to bending and rotation functionalities, enhancing efficiency, and includes an additional internal hole to accommodate a tool grabbing mechanism and power cable routing. A thin rigid layer is used between adjacent units to help minimize frictional loss. Control is managed through a sophisticated closed-loop system incorporating four DC motors connected to the tendons, an Arduino development board, and a custom PCB, using motor current as real-time feedback. Finite element analysis was utilized during development to predict the structure’s deformation and stress behavior under load",
       "image": "assets/img/SRA_8.jpeg",
       "gallery": [
-        
-      ],
+          { "src": "assets/img/SRA_2.jpeg", "caption": "Assembled silicone structure—iteration 1.5" },
+          { "src": "assets/img/SRA_3.jpg", "caption": "Structural configuration and component layout" },
+          { "src": "assets/img/SRA_1.jpeg", "caption": "Silicone rubber molding process using drag and cope part" },
+          
+          { "src": "assets/img/SRA_4.jpeg", "caption": "Evaluation of bending and rotational response - 1" },
+          { "src": "assets/img/SRA_5.jpeg", "caption": "Evaluation of bending and rotational response - 2" },
+          { "src": "assets/img/SRA_6.jpeg", "caption": "Evaluation of bending and rotational response - 3" },
+          { "src": "assets/img/SRA_7.jpeg", "caption": "Evaluation of bending and rotational response - 4" },
+          { "src": "assets/img/SRA_8.jpeg", "caption": "Evaluation of bending and rotational response with a needle" }
+        ],
       "tags": ["Undergraduate Thesis"],
       "specs": [
         { "k": "My Role", "v": "Team Lead" },
-        { "k": "My Responsibilities", "v": "CAD design of the robotic fish. <br> Manufacturing and Assembly. <br> Circuit Design and prototyping. <br> Writing code and debugging." },
-        { "k": "Project's Objective", "v": "To develop new kinds of robotic fish which manoeuvres based on a curved single shaft driving mechanism and to control buoyancy utilizing a piston cylinder mechanism" },
-        { "k": "Materials", "v": "Silicone Rubber, PLA, Acrylic" },
+        { "k": "My Responsibilities", "v": "CAD design of the soft actuator. <br>Finite Element Analysis. <br> Manufacturing and Assembly. <br> Circuit Design and prototyping. <br> Writing code and debugging." },
+        { "k": "Project's Objective", "v": "To introduce a design methodology and fabrication process for a soft robotic actuator for minimally invasive surgery (MIS), employing a tendon-driven mechanism" },
+        { "k": "Materials", "v": "Silicone Rubber, PLA" },
         { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, Arduino IDE, Altium" },
         { "k": "Manufacturing Tools", "v": "FDM, Molding, Laser Cutting Machine" }
       ]
@@ -395,7 +403,7 @@
     {
       "slug": "Large Scale FDM Printer",
       "title": "Large Scale FDM Printer",
-      "subtitle": "A Custom 3D Printer with a Bed Volume of 500mm×500mm×500mm",
+      "subtitle": "A FDM 3D Printer with a Bed Volume of 500mm×500mm×500mm",
       "description": "...",
       "longDescription": "",
       "image": "assets/img/TP_3.jpg",
@@ -404,7 +412,7 @@
         "../projects/project4-2.jpg",
         "../projects/project4-3.jpg"
       ],
-      "tags": ["Undergraduate Project"],
+      "tags": ["Delivered to an Architecture Farm"],
       "specs": [
         { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
         { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
@@ -427,7 +435,7 @@
         "../projects/project4-2.jpg",
         "../projects/project4-3.jpg"
       ],
-      "tags": ["Undergraduate Project"],
+      "tags": ["Completed"],
       "specs": [
         { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
         { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
@@ -441,7 +449,7 @@
     {
       "slug": "Mars Rover- Anweshan, Renaissance",
       "title": "Mars Rover- Anweshan, Renaissance",
-      "subtitle": "",
+      "subtitle": "A Rover for University Mars Rover Competition",
       "description": "...",
       "longDescription": "",
       "image": "assets/img/RN_4.jpg",
@@ -450,7 +458,7 @@
         "../projects/project4-2.jpg",
         "../projects/project4-3.jpg"
       ],
-      "tags": ["Undergraduate Project"],
+      "tags": ["Undergraduate Team Project"],
       "specs": [
         { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
         { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
@@ -460,9 +468,11 @@
         { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
       ]
     },
+
     {
-      "slug": "Formula Student Car",
-      "title": "Formula Student Car",
+      "slug": "Formula Student Vehicle",
+      "title": "Formula Student Vehicle",
+      "subtitle": "A Combustion Vehicle for Formula Student Competition",
       "description": "...",
       "longDescription": "",
       "image": "assets/img/FS_6.png",
@@ -471,7 +481,7 @@
         "../projects/project4-2.jpg",
         "../projects/project4-3.jpg"
       ],
-      "tags": ["Undergraduate Project"],
+      "tags": ["Undergraduate Team Project"],
       "specs": [
         { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
         { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
@@ -481,9 +491,11 @@
         { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
       ]
     },
+
     {
       "slug": "IPAS- Nirveek v1.0",
       "title": "IPAS- Nirveek v1.0",
+      "subtitle": "Design Concept for a Drone in the Martian Environment",
       "description": "...",
       "longDescription": "",
       "image": "assets/img/NR_1.jpg",
@@ -492,7 +504,7 @@
         "../projects/project4-2.jpg",
         "../projects/project4-3.jpg"
       ],
-      "tags": ["Undergraduate Project"],
+      "tags": ["Undergraduate Team Project"],
       "specs": [
         { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
         { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
@@ -502,9 +514,11 @@
         { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
       ]
     },
+
     {
-      "slug": "Cooling tower",
-      "title": "Cooling tower",
+      "slug": "Cooling Tower",
+      "title": "Cooling Tower",
+      "subtitle": "Mechanically Driven Variable-Flow Nozzle Integrated Cooling Tower",
       "description": "...",
       "longDescription": "",
       "image": "assets/img/CT_1.jpg",
@@ -523,9 +537,11 @@
         { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
       ]
     },
+
     {
-      "slug": "Water quality and usage monitoring system",
-      "title": "Water quality and usage monitoring system",
+      "slug": "Aqua Monitor",
+      "title": "Aqua Monitor",
+      "subtitle": "A Digital Water Quality & Flow Monitoring Device with a Proper Billing System",
       "description": "...",
       "longDescription": "",
       "image": "assets/img/WF_6.png",
@@ -544,9 +560,11 @@
         { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
       ]
     },
+
     {
       "slug": "Line Follower Robot",
       "title": "Line Follower Robot",
+      "subtitle": "Autonomous Ground Robot for Line-Based Navigation",
       "description": "...",
       "longDescription": "",
       "image": "assets/img/LFR_1.jpg",
@@ -555,7 +573,7 @@
         "../projects/project4-2.jpg",
         "../projects/project4-3.jpg"
       ],
-      "tags": ["Undergraduate Project"],
+      "tags": ["Undergraduate Project, Completed"],
       "specs": [
         { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
         { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
@@ -565,9 +583,11 @@
         { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
       ]
     },
+
     {
       "slug": "Height Adjustable Table",
       "title": "Height Adjustable Table",
+      "subtitle": "Ergonomic Table with Adjustable Height from 600 mm to 1300 mm",
       "description": "...",
       "longDescription": "",
       "image": "assets/img/HAT_1.jpg",
@@ -576,7 +596,7 @@
         "../projects/project4-2.jpg",
         "../projects/project4-3.jpg"
       ],
-      "tags": ["Undergraduate Project"],
+      "tags": ["Self-Initiated Project, Ongoing"],
       "specs": [
         { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
         { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
@@ -586,9 +606,11 @@
         { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
       ]
     },
+
     {
       "slug": "Automated Quiz Buzzer System",
       "title": "Automated Quiz Buzzer System",
+      "subtitle": "Arduino-Based Buzzer System for Competitive Quiz Events Supporting up to 8 Teams",
       "description": "...",
       "longDescription": "",
       "image": "assets/img/BZ_1.jpg",
@@ -597,7 +619,7 @@
         "../projects/project4-2.jpg",
         "../projects/project4-3.jpg"
       ],
-      "tags": ["Undergraduate Project"],
+      "tags": ["Self-Initiated Project, Delivered, Operational under a university club"],
       "specs": [
         { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
         { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
@@ -609,22 +631,19 @@
       "sections": [
         {
           "heading": "Overview",
-          "text": "We evaluated structural integrity, stress distribution, and deflection across critical poses. A self‑collision avoidance system was integrated at the kinematic level to prevent interference between links. Nonlinear constraints were included where necessary.",
-          "image": "../projects/project4-2.jpg",
-          "caption": "FEA setup — constraints and load application",
+          "text": "",
+          "image": "",
+          "caption": "",
           "align": "left"
         }
       ],
       "iterations": [
-        "Thickened high‑stress links and reduced mass on low‑stress members",
-        "Material change to stainless on select brackets with low fatigue margins",
-        "Fillet optimization to reduce stress concentrations",
-        "Reinforced mounting points; verified bolt patterns"
+        "",
+        ""
       ],
       "outcomes": [
-        "FoS ≥ 5 achieved across critical load cases",
-        "Tip deflection within target tolerance",
-        "Improved robustness with minimized mass"
+        "",
+        ""
       ]
     }
   ],

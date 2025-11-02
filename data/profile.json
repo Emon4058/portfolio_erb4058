@@ -382,7 +382,6 @@
           { "src": "assets/img/SRA_2.jpeg", "caption": "Assembled silicone structure—iteration 1.5" },
           { "src": "assets/img/SRA_3.jpg", "caption": "Structural configuration and component layout" },
           { "src": "assets/img/SRA_1.jpeg", "caption": "Silicone rubber molding process using drag and cope part" },
-          
           { "src": "assets/img/SRA_4.jpeg", "caption": "Evaluation of bending and rotational response - 1" },
           { "src": "assets/img/SRA_5.jpeg", "caption": "Evaluation of bending and rotational response - 2" },
           { "src": "assets/img/SRA_6.jpeg", "caption": "Evaluation of bending and rotational response - 3" },
@@ -401,25 +400,26 @@
     },
 
     {
-      "slug": "Large Scale FDM Printer",
-      "title": "Large Scale FDM Printer",
-      "subtitle": "A FDM 3D Printer with a Bed Volume of 500mm×500mm×500mm",
-      "description": "...",
-      "longDescription": "",
+      "slug": "Titan, A Large Scale FDM Printer",
+      "title": "Titan, A Large Scale FDM Printer",
+      "subtitle": "A FDM 3D Printer with a Bed Volume of 510mm×510mm×550mm",
+      "description": "Titan is a large-format FDM printer designed for high-speed, precision additive manufacturing with a 510 × 510 × 550 mm build volume, ±0.1 mm accuracy, and 0.02 mm repeatability; it features CoreXY motion with GT2 belts, a direct-drive dual-gear extruder (MK8), a 0.8 mm swappable nozzle, and a heated...",
+      "longDescription": "Titan is a large-format FDM printer designed for high-speed, precision additive manufacturing with a 510 × 510 × 550 mm build volume, ±0.1 mm accuracy, and 0.02 mm repeatability; it features CoreXY motion with GT2 belts, a direct-drive dual-gear extruder (MK8), a 0.8 mm swappable nozzle, and a heated glass bed up to 120°C. The hotend reaches 300°C for engineering-grade thermoplastics, powered by a Bigtreetech controller with TMC2209 drivers running Marlin 2.0 firmware. Titan includes a 4.3 inch touchscreen with jog wheel, Wi-Fi, Ethernet, and USB-C connectivity. Safety features comprise thermal-runaway protection, power-loss resume, and door interlock. The MeanWell 24V / 30A PFC power supply ensures stable operation. Titan supports rapid prototyping and functional part fabrication with silent actuation and high-flow extrusion. Its optimized motion system enables smooth, vibration-free performance. The printer achieves up to 200 mm/s print speed, with a recommended range of 60–120 mm/s. Layer resolution spans 50–400 µm for fine detail and robust builds. Titan is ideal for research, industrial prototyping, and large-scale fabrication workflows.",
       "image": "assets/img/TP_3.jpg",
       "gallery": [
-        "../projects/project4-1.jpg",
-        "../projects/project4-2.jpg",
-        "../projects/project4-3.jpg"
+        { "src": "assets/img/TP_1.jpeg", "caption": "Fully assembled FDM printer—iteration 2 configuration" },
+        { "src": "assets/img/TP_2.jpg", "caption": "FDM printer assembly—iteration 2 build overview" },
+        { "src": "assets/img/TP_3.jpg", "caption": "CAD representation of iteration 1 design" },
+        { "src": "assets/img/TP_4.jpg", "caption": "Operational snapshot during active printing phase" }
       ],
       "tags": ["Delivered to an Architecture Farm"],
       "specs": [
-        { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
-        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
-        { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
-        { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
-        { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, PrusaSlicer" },
-        { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
+        { "k": "My Role", "v": "Research and Development Team (Mechanical)" },
+        { "k": "My Responsibilities", "v": "Design for manufacturing and assembly. <br> Manufacturing the parts and assembly." },
+        { "k": "Project's Objective", "v": "To enable large-scale additive manufacturing through heated bed stabilization, high-flow extrusion, and silent actuation." },
+        { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + PLA + ABS" },
+        { "k": "Software Tools", "v": "Solidworks, Marlin 2.0, Ultimaker Cura, PrusaSlicer" },
+        { "k": "Manufacturing Tools", "v": "Laser Cut, FDM, Bending Machine, Arc Welding Machine" }
       ]
     },
 

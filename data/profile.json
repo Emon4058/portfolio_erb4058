@@ -428,7 +428,7 @@
       "title": "Fixed Wing VTOL UAV",
       "subtitle": "A Handmade Prototype Of Fixed Wing Unmanned Aerial Vehicle",
       "description": "This project involves the development, construction, and outdoor manual testing of a small-scale fixed-wing VTOL UAV prototype featuring a 2-meter rectangular wingspan, brushless motor-driven propulsion, and four aerodynamic control surfaces (two wing ailerons and two V-tail ruddervators). The UAV structure...",
-      "longDescription": "This project involves the development, construction, and outdoor manual testing of a small-scale fixed-wing VTOL UAV prototype featuring a 2-meter rectangular wingspan, brushless motor-driven propulsion, and four aerodynamic control surfaces (two wing ailerons and two V-tail ruddervators). The UAV structure employs a hybrid of polystyrene foam for core bulk, 3D-printed PLA for precision parts and reinforcements, and polyurethane foam for added resilience, balancing low-weight and manufacturability with sufficient mechanical strength and crash tolerance. Designed without a payload, the prototype serves as a dedicated empirical platform to analyze aerodynamic stability, control response, and transition dynamics between VTOL and fixed-wing flight regimes, all critical precursors to heavy-payload UAV validation. Aerodynamically, the project emphasizes the hazardous yet essential transition corridor, where careful control allocation and mixing strategies across the wing and V-tail surfaces mitigate the risks of stall, loss of control, or structural overload. Brushless motor sizing and integration is optimized for rapid thrust response and efficient power consumption, with cooling and reliability characterized empirically to support scaling toward higher-power, payload-carrying platforms. Structural design studies focus on low-density, foam-based airframes with PLA and polyurethane reinforcement, utilizing iterative flight testing and post-flight inspection to validate modeling and optimize joint assemblies and impact resistance. The experimental flight program applies standardized pre-flight checks and manual piloting to instrumented free-flight testing, allowing direct measurement of handling qualities, stability margins, pilot workload, and failure behaviors in a real-world context. Rich data acquisition and telemetry systems—integrating IMUs, GPS, servo feedback, and power sensors—enable high-resolution analysis of aerodynamic coefficients, control effectiveness, and transition behavior, with all results feeding into multi-criteria performance evaluation, model validation, and future controller/autopilot development. The project's outcomes provide critical empirical data and validated methodologies that directly inform scaling for a 50 kg-payload VTOL UAV, establishing confidence in the aerodynamic design, control strategy, and structural philosophy underpinning robust, certifiable heavy-lift UAV platforms. Overall, this prototype serves as a pivotal technological bridge, accelerating the transition from experimental concept to operational, heavy-payload-capable VTOL UAVs in a scalable, cost-effective, and risk-limited manner.",
+      "longDescription": "This project involves the development, construction, and outdoor manual testing of a small-scale fixed-wing VTOL UAV prototype featuring a 2-meter rectangular wingspan, brushless motor-driven propulsion, and four aerodynamic control surfaces (two wing ailerons and two V-tail ruddervators). The UAV structure employs polystyrene foam for core bulk, 3D-printed PLA and laser cut PVC sheet for precision parts and skeleton, and polyurethane foam for added resilience, balancing low-weight and manufacturability with sufficient mechanical strength and crash tolerance. The prototype serves as a dedicated empirical platform to analyze aerodynamic stability, control response, and transition dynamics between VTOL and fixed-wing flight regimes, all critical precursors to heavy-payload UAV validation. Aerodynamically, the project emphasizes the hazardous yet essential transition corridor, where careful control allocation and mixing strategies across the wing and V-tail surfaces mitigate the risks of stall, loss of control, or structural overload. Brushless motor sizing and integration is optimized for rapid thrust response and efficient power consumption, with cooling and reliability characterized empirically to support scaling toward higher-power, payload-carrying platforms. Structural design studies focus on low-density, foam-based airframes with PLA and PVC reinforcement, utilizing iterative flight testing and post-flight inspection to validate modeling and optimize joint assemblies and impact resistance. The experimental flight program applies standardized pre-flight checks and manual piloting to instrumented free-flight testing, allowing direct measurement of handling qualities, stability margins, and failure behaviors in a real-world context. Rich data acquisition and telemetry systems—integrating IMUs, GPS, servo feedback, and power sensors—enable high-resolution analysis of aerodynamic coefficients, control effectiveness, and transition behavior, with all results feeding into multi-criteria performance evaluation, model validation, and future controller/autopilot development. The project's outcomes provide critical empirical data and validated methodologies that directly inform scaling for a 50 kg-payload VTOL UAV, establishing confidence in the aerodynamic design, control strategy, and structural philosophy underpinning robust, certifiable heavy-lift UAV platforms. Overall, this prototype serves as a pivotal technological bridge, accelerating the transition from experimental concept to operational, heavy-payload-capable VTOL UAVs in a scalable, cost-effective, and risk-limited manner.",
       "image": "assets/img/FW_1.jpg",
       "gallery": [
         { "src": "assets/img/FW_1.jpg", "caption": "VTOL test run of fixed-wing UAV" },
@@ -441,7 +441,7 @@
         { "k": "My Role", "v": "Research and Development Team (Mechanical)" },
         { "k": "My Responsibilities", "v": "Analytical calculations of required thrust, lift, drag forces, aspect ratio, wing area, stall speed, airspeed and others. <br> Design for manufacturing and assembly. <br> In-house manufacturing and assembly with hand tools." },
         { "k": "Project's Objective", "v": "To develop and test a small-scale fixed-wing VTOL UAV prototype for evaluating aerodynamic stability, control response, and transition dynamics as a precursor to a heavy-payload platform." },
-        { "k": "Materials", "v": "Polystyrene foam + PLA + Polyurethane foam" },
+        { "k": "Materials", "v": "Polystyrene foam + PLA + PVC board + Polyurethane foam" },
         { "k": "Software Tools", "v": "Solidworks, PrusaSlicer" },
         { "k": "Manufacturing Tools", "v": "Laser Cutting Machine, FDM" }
       ]
@@ -461,7 +461,7 @@
       ],
       "tags": ["Undergraduate Team Project"],
       "specs": [
-        { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
+        { "k": "My Role", "v": "Project Leader, Electrical Subteam" },
         { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
         { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
         { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
@@ -484,7 +484,7 @@
       ],
       "tags": ["Undergraduate Team Project"],
       "specs": [
-        { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
+        { "k": "My Role", "v": "Subteam Lead, Vehicle Suspension Section" },
         { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
         { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
         { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
@@ -507,7 +507,7 @@
       ],
       "tags": ["Undergraduate Team Project"],
       "specs": [
-        { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
+        { "k": "My Role", "v": "Project Leader, Electrical Subteam" },
         { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
         { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
         { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
@@ -530,7 +530,7 @@
       ],
       "tags": ["Undergraduate Project"],
       "specs": [
-        { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
+        { "k": "My Role", "v": "Team Lead" },
         { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
         { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
         { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
@@ -553,7 +553,7 @@
       ],
       "tags": ["Undergraduate Project"],
       "specs": [
-        { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
+        { "k": "My Role", "v": "Team Member, Electrical Subsection" },
         { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
         { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
         { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
@@ -576,7 +576,7 @@
       ],
       "tags": ["Undergraduate Project, Completed"],
       "specs": [
-        { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
+        { "k": "My Role", "v": "Team Lead" },
         { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
         { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
         { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
@@ -599,7 +599,7 @@
       ],
       "tags": ["Self-Initiated Project, Ongoing"],
       "specs": [
-        { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
+        { "k": "My Role", "v": "Sole Developer" },
         { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
         { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
         { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
@@ -612,39 +612,29 @@
       "slug": "Automated Quiz Buzzer System",
       "title": "Automated Quiz Buzzer System",
       "subtitle": "Arduino-Based Buzzer System for Competitive Quiz Events Supporting up to 8 Teams",
-      "description": "...",
-      "longDescription": "",
+      "description": "This project centers on the design and deployment of an automated quiz buzzer system tailored for competitive quiz events involving up to eight teams. The system integrates a custom-manufactured PCB that consolidates signal routing, input handling, and relay control for indicator lights. After initial prototyping...",
+      "longDescription": "This project centers on the design and deployment of an automated quiz buzzer system tailored for competitive quiz events involving up to eight teams. The system integrates a custom-manufactured PCB that consolidates signal routing, input handling, and relay control for indicator lights. After initial prototyping, the finalized board supports reliable team input detection and visual feedback through relay-switched outputs. The buzzer logic is built to ensure lockout functionality, preventing simultaneous responses and preserving fairness during high-speed rounds. The system architecture emphasizes modularity and maintainability, with clearly defined input channels and output control paths. The use of relays enables safe switching of external indicators, while the PCB layout minimizes noise and cross-talk between channels. Designed for real-time responsiveness, the system supports rapid identification of the first responder and immediate visual signaling. Its compact footprint and robust signal isolation make it suitable for deployment in academic, corporate, or televised quiz formats. The project demonstrates practical integration of embedded control, digital logic, and hardware interfacing. Overall, it serves as a scalable foundation for future enhancements such as wireless input modules or score-tracking integration.",
       "image": "assets/img/BZ_1.jpg",
       "gallery": [
-        "../projects/project4-1.jpg",
-        "../projects/project4-2.jpg",
-        "../projects/project4-3.jpg"
+        { "src": "assets/img/BZ_1.jpg", "caption": "Overview of quiz buzzer system with prototype, schematic, PCB layout, and manufactured PCB" }
       ],
       "tags": ["Self-Initiated Project, Delivered, Operational under a university club"],
       "specs": [
-        { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
-        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
-        { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
-        { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
-        { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, PrusaSlicer" },
-        { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
+        { "k": "My Role", "v": "Sole Developer" },
+        { "k": "My Responsibilities", "v": "Schematic and PCB Design.<br>Prototyping on a breadboard.<br>Components soldering and assembly.<br>Test run." },
+        { "k": "Project's Objective", "v": "To design and implement an automated quiz buzzer system supporting up to 8 teams, featuring a custom-manufactured PCB and relay-controlled indicator lights for competitive event." },
+        { "k": "Components", "v": "Arduino Nano, Magnetic Relay" },
+        { "k": "Software Tools", "v": "Altium" },
+        { "k": "Manufacturing Tools", "v": "Homemade PCB setup, Soldering iron" }
       ],
       "sections": [
         {
-          "heading": "Overview",
+          "heading": "",
           "text": "",
           "image": "",
           "caption": "",
-          "align": "left"
+          "align": ""
         }
-      ],
-      "iterations": [
-        "",
-        ""
-      ],
-      "outcomes": [
-        "",
-        ""
       ]
     }
   ],

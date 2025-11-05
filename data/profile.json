@@ -222,7 +222,7 @@
       "tags": ["Delivered", "Deployed at UN Peacekeeping Mission"],
       "specs": [
         { "k": "My Role", "v": "Intern, Research and Development Team (Mechanical)" },
-        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
+        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
         { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
         { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
         { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, PrusaSlicer" },
@@ -574,7 +574,7 @@
         "../projects/project4-2.jpg",
         "../projects/project4-3.jpg"
       ],
-      "tags": ["Undergraduate Project, Completed"],
+      "tags": ["Undergraduate Project", "Completed"],
       "specs": [
         { "k": "My Role", "v": "Team Lead" },
         { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
@@ -589,21 +589,21 @@
       "slug": "Height Adjustable Table",
       "title": "Height Adjustable Table",
       "subtitle": "Ergonomic Table with Adjustable Height from 600 mm to 1300 mm",
-      "description": "...",
-      "longDescription": "",
-      "image": "assets/img/HAT_1.jpg",
+      "description": "This ergonomic height-adjustable table is designed to support a wide range of user postures, offering a smooth vertical adjustment from 600 mm to 1300 mm using a screw-based telescopic mechanism. Each leg consists of three key components: an internal screw shaft, an external screw...",
+      "longDescription": "This ergonomic height-adjustable table is designed to support a wide range of user postures, offering a smooth vertical adjustment from 600 mm to 1300 mm using a screw-based telescopic mechanism. Each leg consists of three key components: an internal screw shaft, an external screw with a small nut, and a square beam housing a larger nut, all working together to ensure stable and precise motion. Two DC motors independently drive the legs, requiring careful synchronization to maintain level alignment during movement. The system includes a preset height memory feature for user convenience, and the substantial adjustment range accommodates diverse ergonomic needs. Supporting components such as motor mounts, control circuitry, and structural reinforcements complete the design, making it both functional and adaptable for modern workspaces.",
+      "image": "assets/img/HAT_3.jpg",
       "gallery": [
-        "../projects/project4-1.jpg",
-        "../projects/project4-2.jpg",
-        "../projects/project4-3.jpg"
+        {"src": "assets/img/HAT_1.jpg", "caption": "Isometric view of the CAD model"},
+        {"src": "assets/img/HAT_2.jpg", "caption": "Rendered CAD model in standing position with telescopic beam fully extended"},
+        {"src": "assets/img/HAT_3.jpg", "caption": "Rendered CAD model in sitting position with telescopic beam fully retracted"}
       ],
-      "tags": ["Self-Initiated Project, Ongoing"],
+      "tags": ["Self-Initiated Project", "Ongoing"],
       "specs": [
         { "k": "My Role", "v": "Sole Developer" },
-        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
-        { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
-        { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
-        { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, PrusaSlicer" },
+        { "k": "My Responsibilities", "v": "Design for manufacturing and assembly. <br> Telescopic beam mechanism. <br> Analytical calculation." },
+        { "k": "Project's Objective", "v": "To design and develop a height-adjustable ergonomic table that accommodates both sitting and standing postures, promoting user comfort, flexibility, and long-term well-being." },
+        { "k": "Materials", "v": "Wood, Stainless steel, Nylon" },
+        { "k": "Software Tools", "v": "Solidworks" },
         { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
       ]
     },
@@ -618,7 +618,7 @@
       "gallery": [
         { "src": "assets/img/BZ_1.jpg", "caption": "Overview of quiz buzzer system with prototype, schematic, PCB layout, and manufactured PCB" }
       ],
-      "tags": ["Self-Initiated Project, Delivered, Operational under a university club"],
+      "tags": ["Self-Initiated Project", "Delivered", "Operational under a university club"],
       "specs": [
         { "k": "My Role", "v": "Sole Developer" },
         { "k": "My Responsibilities", "v": "Schematic and PCB Design.<br>Prototyping on a breadboard.<br>Components soldering and assembly.<br>Test run." },

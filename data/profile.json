@@ -547,41 +547,59 @@
       "longDescription": "",
       "image": "assets/img/WF_6.png",
       "gallery": [
-        "../projects/project4-1.jpg",
-        "../projects/project4-2.jpg",
-        "../projects/project4-3.jpg"
+        {
+          "src": "assets/img/WF_1.png",
+          "caption": "Initial setup of the system architecture, showing the base configuration and component layout."
+        },
+        {
+          "src": "assets/img/WF_2.png",
+          "caption": "Detailed view of the control module integration, highlighting microcontroller placement and wiring."
+        },
+        {
+          "src": "assets/img/WF_3.png",
+          "caption": "Sensor calibration phase, illustrating the alignment and testing of input channels."
+        },
+        {
+          "src": "assets/img/WF_4.png",
+          "caption": "Actuator response mapping, with annotated feedback loops and performance metrics."
+        },
+        {
+          "src": "assets/img/WF_5.png",
+          "caption": "Final assembly of the electromechanical system, emphasizing enclosure design and cable routing."
+        },
+        {
+          "src": "assets/img/WF_6.png",
+          "caption": "System validation and output monitoring, showcasing real-time data visualization and diagnostics."
+        }
       ],
       "tags": ["Undergraduate Project"],
       "specs": [
         { "k": "My Role", "v": "Team Member, Electrical Subsection" },
-        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
-        { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
-        { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
-        { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, PrusaSlicer" },
-        { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
+        {  "k": "My Responsibilities", "v": "Designing the schematic and PCB layout for the system. <br> Selecting appropriate electrical components and a suitable development board to ensure compatibility and performance. <br> Identifing and integrating robust sensors capable of withstanding environmental conditions relevant to the project." },
+        { "k": "Project's Objective", "v": "To develop an integrated water monitoring system that accurately tracks daily water usage and flow rates across residential and commercial zones, enabling precise billing, promoting accountability for excessive consumption, and providing real-time water quality diagnostics to ensure public health and resource sustainability." },
+        { "k": "Software Tools", "v": "Altium, EasyEDA, Arduino IDE" }
       ]
     },
 
     {
       "slug": "Line Follower Robot",
       "title": "Line Follower Robot",
-      "subtitle": "Autonomous Ground Robot for Line-Based Navigation",
-      "description": "...",
-      "longDescription": "",
+      "subtitle": "Autonomous Ground Robot for Line-Based Navigation and Obstacle Avoidance",
+      "description": "This project involves the design and development of an autonomous ground robot capable of line-based navigation and obstacle avoidance, using IR sensors for path detection and a sonar sensor for real-time environmental awareness. Built with a combination...",
+      "longDescription": "This project involves the design and development of an autonomous ground robot capable of line-based navigation and obstacle avoidance, using IR sensors for path detection and a sonar sensor for real-time environmental awareness. Built with a combination of plastic wood and nylon for structural durability, the robot is powered by an Arduino Nano and driven by an L298n motor driver. A PID control algorithm was implemented to enhance line-tracking precision, and after extensive tuning, the proportional and derivative gains were optimized for stable performance. The robot successfully solved complex line mazes and was able to identify the shortest path after completing a full scan of the environment. Key responsibilities included schematic and PCB design, breadboard prototyping, programming and debugging, component soldering and final assembly, followed by test runs using Altium, EasyEDA, and Arduino IDE.",
       "image": "assets/img/LFR_1.jpg",
       "gallery": [
-        "../projects/project4-1.jpg",
-        "../projects/project4-2.jpg",
-        "../projects/project4-3.jpg"
+          {"src": "assets/img/LFR_1.jpg", "caption": "Isometric view of LFR iteration 2"},
+          {"src": "assets/img/LFR_2.jpg", "caption": "Isometric view of LFR iteration 1"}
       ],
       "tags": ["Undergraduate Project", "Completed"],
       "specs": [
         { "k": "My Role", "v": "Team Lead" },
-        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
-        { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
-        { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
-        { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, PrusaSlicer" },
-        { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
+        { "k": "My Responsibilities", "v": "Schematic and PCB design.<br>Prototyping on a breadboard.<br>Programming and debugging.<br>Components soldering and assembly.<br>Test run." },
+        { "k": "Project's Objective", "v": "To develop an autonomous IR sensor–based line follower robot capable of detecting and following a predefined path with high accuracy, while integrating a sonar sensor to detect and avoid obstacles in real time." },
+        { "k": "Materials", "v": "Plastic wood + Nylon" },
+        { "k": "Software Tools", "v": "Altium, EasyEDA, Arduino IDE" },
+        { "k": "Components", "v": "Arduino Nano, IR sensor, Sonar sensor, L298n motor driver" }
       ]
     },
 
@@ -621,10 +639,10 @@
       "tags": ["Self-Initiated Project", "Delivered", "Operational under a university club"],
       "specs": [
         { "k": "My Role", "v": "Sole Developer" },
-        { "k": "My Responsibilities", "v": "Schematic and PCB Design.<br>Prototyping on a breadboard.<br>Components soldering and assembly.<br>Test run." },
+        { "k": "My Responsibilities", "v": "Schematic and PCB design.<br>Prototyping on a breadboard.<br>Components soldering and assembly.<br>Test run." },
         { "k": "Project's Objective", "v": "To design and implement an automated quiz buzzer system supporting up to 8 teams, featuring a custom-manufactured PCB and relay-controlled indicator lights for competitive event." },
         { "k": "Components", "v": "Arduino Nano, Magnetic Relay" },
-        { "k": "Software Tools", "v": "Altium" },
+        { "k": "Software Tools", "v": "Altium, Arduino IDE" },
         { "k": "Manufacturing Tools", "v": "Homemade PCB setup, Soldering iron" }
       ],
       "sections": [

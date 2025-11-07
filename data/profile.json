@@ -497,45 +497,82 @@
       "slug": "IPAS- Nirveek v1.0",
       "title": "IPAS- Nirveek v1.0",
       "subtitle": "Design Concept for a Drone in the Martian Environment",
-      "description": "...",
-      "longDescription": "",
+      "description": "This project presents the development of Nirveek V1.0, an autonomous UAV designed for Martian exploration under the International Planetary Aerial Systems 2021. Engineered to navigate harsh Martian terrain, Nirveek features a lightweight...",
+      "longDescription": "This project presents the development of Nirveek V1.0, an autonomous UAV designed for Martian exploration under the International Planetary Aerial Systems 2021. Engineered to navigate harsh Martian terrain, Nirveek features a lightweight quadcopter frame (128×128×35 cm, 5.1 kg) capable of sustained 10-minute flights at altitudes up to 45 meters. It integrates a 360° vision system powered by a customized GoPro Max and Lidar, and relies on visual-inertial odometry (VIO) for GPS-independent navigation. Built on ROS for mission planning, the UAV includes a modular design for ease of repair, a 10000mAh LiPo battery, and a thermal management system to maintain operability in extreme temperatures. A custom gas compression system enables accurate sensor readings by heating and pressurizing Martian air, while a 2.4GHz radio link ensures communication up to 6.5 km. Designed with serviceability and adaptability in mind, Nirveek is equipped to perform autonomous missions, detect environmental hazards, and support future planetary research.",
       "image": "assets/img/NR_1.jpg",
       "gallery": [
-        "../projects/project4-1.jpg",
-        "../projects/project4-2.jpg",
-        "../projects/project4-3.jpg"
+        {
+          "src": "assets/img/NR_1.jpg",
+          "caption": "Rendered CAD model of Nirveek V1.0 in isometric view"
+        },
+        {
+          "src": "assets/img/NR_2.jpg",
+          "caption": "System architecture of the electrical subsystem for Mars UAV operations"
+        },
+        {
+          "src": "assets/img/NR_3.jpg",
+          "caption": "CAD model showcasing structural layout and aerodynamic design of the drone"
+        },
+        {
+          "src": "assets/img/NR_4.jpg",
+          "caption": "Rendered CAD model highlighting integrated subsystems and mission-critical modules"
+        },
+        {
+          "src": "assets/img/NR_5.jpg",
+          "caption": "3D view of the flight controller PCB design"
+        }
       ],
       "tags": ["Undergraduate Team Project"],
       "specs": [
-        { "k": "My Role", "v": "Project Leader, Electrical Subteam" },
-        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
-        { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
-        { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
-        { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, PrusaSlicer" },
-        { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
+        { "k": "My Role", "v": "Member, Electrical Subteam" },
+        { "k": "My Responsibilities", "v": "Designing the schematic and PCB layout for the system. <br> Analytical calculation of required thrust, battery consumption and drone mass <br> Selecting appropriate electrical components and a suitable development board to ensure compatibility and performance. <br> Identifing and integrating robust sensors capable of withstanding environmental conditions relevant to the project." },
+        { "k": "Project's Objective", "v": "To design and deploy a modular, autonomous UAV capable of navigating Martian terrain, performing environmental sensing, and maintaining operational stability under extreme atmospheric conditions." },
+        { "k": "Materials", "v": "Carbon fiber + Silicone rubber" },
+        { "k": "Software Tools", "v": "Altium, Microsoft Excel" }
       ]
     },
 
     {
       "slug": "Cooling Tower",
       "title": "Cooling Tower",
-      "subtitle": "Mechanically Driven Variable-Flow Nozzle Integrated Cooling Tower",
-      "description": "...",
-      "longDescription": "",
+      "subtitle": "Miniature Prototype of a Mechanically Driven Variable-Flow Nozzle Integrated Cooling Tower",
+      "description": "This project focuses on the design, fabrication, and performance evaluation of a cooling tower equipped with a variable nozzle mechanism to adapt to changing operational demands. The system integrates a feedback control strategy to regulate water...",
+      "longDescription": "This project focuses on the design, fabrication, and performance evaluation of a cooling tower equipped with a variable nozzle mechanism to adapt to changing operational demands. The system integrates a feedback control strategy to regulate water flow and airflow, with a key innovation in dynamically adjusting the number of active nozzles based on flow rate. Three nozzle configurations were explored—double pipe, double disk, and double sheet mechanisms—with the double sheet design selected for its superior manufacturability and surface finish. The cooling tower body is constructed from 5 mm acrylic sheets, reinforced with wood to support the belt pulley system, while plastic film fills are used to maximize heat transfer efficiency. This modular and responsive design aims to improve cooling performance, reduce energy consumption, and offer scalable solutions for industrial applications.",
       "image": "assets/img/CT_1.jpg",
       "gallery": [
-        "../projects/project4-1.jpg",
-        "../projects/project4-2.jpg",
-        "../projects/project4-3.jpg"
+        {
+          "src": "assets/img/CT_1.jpg",
+          "caption": "Rendered isometric view of the cooling tower CAD model"
+        },
+        {
+          "src": "assets/img/CT_5.jpg",
+          "caption": "Isometric CAD model showcasing structural layout and nozzle configuration"
+        },
+        {
+          "src": "assets/img/CT_2.jpeg",
+          "caption": "Top-down view of the miniature cooling tower after fabrication"
+        },
+        {
+          "src": "assets/img/CT_3.jpeg",
+          "caption": "Isometric view of the fabricated cooling tower with integrated fill material"
+        },
+        {
+          "src": "assets/img/CT_4.jpg",
+          "caption": "Detailed view of the nozzle driving mechanism and actuation setup"
+        },
+        {
+          "src": "assets/img/CT_6.jpg",
+          "caption": "Third iteration of the nozzle assembly highlighting modular improvements"
+        }
       ],
       "tags": ["Undergraduate Project"],
       "specs": [
         { "k": "My Role", "v": "Team Lead" },
-        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
-        { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
-        { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
-        { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, PrusaSlicer" },
-        { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
+        { "k": "My Responsibilities", "v": "Analytical calculations of mass flow rate, effectiveness, cooling capacity, evaporation loss, NTU. <br> CAD Design. <br> Manufacturing the parts and assembly with available local parts." },
+        { "k": "Project's Objective", "v": "To design, fabricate, and evaluate a cooling tower with a variable nozzle, including performance analysis of a miniature prototype and investigation of flow-dependent efficiency variations." },
+        { "k": "Materials", "v": "Acrylic + Polypropylene + Aluminum Alloy + Stainless Steel" },
+        { "k": "Software Tools", "v": "Solidworks, Microsoft Excel" },
+        { "k": "Manufacturing Tools", "v": "CNC Miling, Laser cutting machine, FDM" }
       ]
     },
 
@@ -543,36 +580,45 @@
       "slug": "Aqua Monitor",
       "title": "Aqua Monitor",
       "subtitle": "A Digital Water Quality & Flow Monitoring Device with a Proper Billing System",
-      "description": "...",
-      "longDescription": "",
+      "description": "This project introduces a smart water monitoring system composed of two integrated units: one for assessing water quality and another for tracking water usage. The water quality monitoring unit features a cylindrical flow-through design to minimize...",
+      "longDescription": "This project introduces a smart water monitoring system composed of two integrated units: one for assessing water quality and another for tracking water usage. The water quality monitoring unit features a cylindrical flow-through design to minimize impedance and houses four key sensors—TDS, pH, turbidity, and dissolved oxygen—managed by an ESP32 microcontroller with built-in Wi-Fi and Bluetooth for seamless data transmission. A UV light module is incorporated to neutralize microbial contaminants, ensuring safe drinking water. The water usage monitoring unit includes a flow sensor to measure consumption and an automated solenoid valve that can shut off supply in response to anomalies. Together, these modules enable both users and service providers to monitor real-time water metrics, promoting transparency and accountability. The circuit powering this system includes essential features such as ESD protection, a manual reset via push-button switch, USB debugging support, dual power compatibility (12V adapter or rechargeable battery), a built-in display for live data visualization, and an LED indicator for system status. By digitizing water quality and usage data, the system supports fair billing practices—addressing the current issue of uniform charges despite varying consumption—and enables personalized access through customer ID via web and mobile platforms. Targeting over 15 million WASA users, this solution not only enhances public health and resource management but also lays the foundation for scalable, economic water treatment and equitable service delivery.",
       "image": "assets/img/WF_6.png",
-      "gallery": [
+      "gallery": 
+        [
         {
-          "src": "assets/img/WF_1.png",
-          "caption": "Initial setup of the system architecture, showing the base configuration and component layout."
+          "src": "assets/img/WF_6.png",
+          "caption": "CAD model of the water quality monitoring system, highlighting sensor placement and structural layout"
         },
         {
-          "src": "assets/img/WF_2.png",
-          "caption": "Detailed view of the control module integration, highlighting microcontroller placement and wiring."
+          "src": "assets/img/WF_1.png",
+          "caption": "System architecture showcasing the development board and integrated electrical components"
+        },
+        {
+          "src": "assets/img/WF_7.png",
+          "caption": "PCB layout of the water usage monitoring system, illustrating circuit paths and component positioning"
+        },
+        {
+          "src": "assets/img/WF_8.png",
+          "caption": "PCB layout of the water quality monitoring system, detailing sensor interfaces and signal routing"
         },
         {
           "src": "assets/img/WF_3.png",
-          "caption": "Sensor calibration phase, illustrating the alignment and testing of input channels."
+          "caption": "3D view of the water usage monitoring PCB highlighting layout"
+        },
+        {
+          "src": "assets/img/WF_2.png",
+          "caption": "3D view of the water quality monitoring PCB, showing component placement and board structure"
         },
         {
           "src": "assets/img/WF_4.png",
-          "caption": "Actuator response mapping, with annotated feedback loops and performance metrics."
+          "caption": "Exploded CAD view of the water usage monitoring system, illustrating layered assembly and component alignment"
         },
         {
           "src": "assets/img/WF_5.png",
-          "caption": "Final assembly of the electromechanical system, emphasizing enclosure design and cable routing."
-        },
-        {
-          "src": "assets/img/WF_6.png",
-          "caption": "System validation and output monitoring, showcasing real-time data visualization and diagnostics."
+          "caption": "Exploded CAD view of the water quality monitoring system, showing internal structure and sensor positioning"
         }
       ],
-      "tags": ["Undergraduate Project"],
+      "tags": ["Undergraduate Project", "Winning Project of National STEM Competition"],
       "specs": [
         { "k": "My Role", "v": "Team Member, Electrical Subsection" },
         {  "k": "My Responsibilities", "v": "Designing the schematic and PCB layout for the system. <br> Selecting appropriate electrical components and a suitable development board to ensure compatibility and performance. <br> Identifing and integrating robust sensors capable of withstanding environmental conditions relevant to the project." },

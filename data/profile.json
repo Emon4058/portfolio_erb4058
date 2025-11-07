@@ -451,22 +451,47 @@
       "slug": "Mars Rover- Anweshan, Renaissance",
       "title": "Mars Rover- Anweshan, Renaissance",
       "subtitle": "A Rover for University Mars Rover Competition",
-      "description": "...",
-      "longDescription": "",
+      "description": "This ROV is a multifunctional Mars rover developed for the Rover Challenges, designed to perform autonomous navigation, scientific exploration, and precision manipulation tasks on simulated Martian terrain...",
+      "longDescription": "This ROV is a multifunctional Mars rover developed for the Rover Challenges, designed to perform autonomous navigation, scientific exploration, and precision manipulation tasks on simulated Martian terrain. Mechanically, it features a four-wheel rocker suspension system with large-diameter aluminum wheels and grousers for enhanced traction on rocky and sandy surfaces. The chassis provides ample internal space for housing scientific tools and electronics, while a 6-DOF robotic arm with a two-claw gripper enables tasks such as probe placement, sample collection, and switch manipulation. The arm’s joints are powered by a combination of stepper motors, geared DC motors, and high-torque servos, allowing for fine control and adaptability across maintenance and probing tasks. <br> Electrically, the rover integrates two compute units—Raspberry Pi 4B for teleoperation and Jetson Xavier NX for autonomous functions like navigation and image processing. STM32 microcontrollers interface with motor drivers, encoders, and sensors, enabling real-time control and feedback. The power distribution system includes four Li-Po batteries, buck converters, and safety features such as fuses and emergency stop buttons. Perception is achieved through a RealSense D435i stereo camera, multiple Raspberry Pi cameras, and a BNO055 IMU for localization and mapping. Communication between the rover and base station is maintained via Ubiquiti Rocket M5 modules over a ROS network. The software stack includes RTAB-Map for SLAM, MoveIt for motion planning, and custom Python interfaces for operator control, ensuring robust performance across all mission phases.",
       "image": "assets/img/RN_4.jpg",
       "gallery": [
-        "../projects/project4-1.jpg",
-        "../projects/project4-2.jpg",
-        "../projects/project4-3.jpg"
+        {
+          "src": "assets/img/RN_1.jpg",
+          "caption": "Rover during test run after manufacturing — iteration 2"
+        },
+        {
+          "src": "assets/img/RN_4.jpg",
+          "caption": "Rover during test run after manufacturing — iteration 1"
+        },
+        {
+          "src": "assets/img/RN_2.jpg",
+          "caption": "Rover assembly in progress at our ROV lab"
+        },
+        {
+          "src": "assets/img/RN_3.jpg",
+          "caption": "Robotic arm during assembly and debugging phase"
+        },
+        {
+          "src": "assets/img/RN_5.jpg",
+          "caption": "3D view of the PCB for the science module controller"
+        },
+        {
+          "src": "assets/img/RN_6.jpg",
+          "caption": "3D view of the PCB for the wheel motor controller"
+        },
+        {
+          "src": "assets/img/RN_7.jpg",
+          "caption": "3D view of the power distribution board with connector layout"
+        }
       ],
       "tags": ["Undergraduate Team Project"],
       "specs": [
         { "k": "My Role", "v": "Project Leader, Electrical Subteam" },
-        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
-        { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
-        { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
-        { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, PrusaSlicer" },
-        { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
+        { "k": "My Responsibilities", "v": "Designing the schematic and PCB layout for the system. <br> Analytical calculation of required battery consumption <br> Selecting appropriate electrical components and a suitable development board to ensure compatibility and performance. <br> Identifing and integrating robust sensors capable of withstanding environmental conditions relevant to the project." },
+        { "k": "Project's Objective", "v": "To design and develop a multifunctional Mars rover capable of autonomous navigation, scientific exploration, and precision manipulation, with robust electrical systems enabling real-time control, perception, and task execution in simulated extraterrestrial environments." },
+        { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel + Low Carbon Steel" },
+        { "k": "Software Tools", "v": "Altium, Solidworks, Ansys Mechanical" },
+        { "k": "Manufacturing Tools", "v": "PCB Manufacturing setup, CNC Miling, Wire EDM, CNC Lathe, FDM" }
       ]
     },
 
@@ -474,22 +499,51 @@
       "slug": "Formula Student Vehicle",
       "title": "Formula Student Vehicle",
       "subtitle": "A Combustion Vehicle for Formula Student Competition",
-      "description": "...",
-      "longDescription": "",
+      "description": "This project centers on the design and development of a student-built Formula Student race car, engineered for performance, reliability, and manufacturability. A steel tube space frame chassis was chosen to meet weight and strength requirements, with iterative analysis...",
+      "longDescription": "This project centers on the design and development of a student-built Formula Student race car, engineered for performance, reliability, and manufacturability. A steel tube space frame chassis was chosen to meet weight and strength requirements, with iterative analysis optimizing torsional rigidity and impact resistance. The suspension system employs unequal-length double wishbones with push-rod actuation, ensuring minimal camber gain and stable roll center behavior during cornering, bump, and rebound. Steering geometry is based on Ackermann principles to prevent outer wheel skidding, and the braking system uses CNC-machined aluminum calipers with locally fabricated discs for effective heat dissipation and structural integrity. Aerodynamic components such as undertray, diffuser, and sidepods were designed to enhance downforce and cooling efficiency while minimizing drag and manufacturing complexity. <br> The powertrain system features a KTM Duke 390 engine, selected for its lightweight, liquid-cooled configuration and compatibility with event regulations. The intake system includes a 20mm restrictor optimized to reduce flow separation, while the exhaust length and diameter were calculated using Smith and Bell equations to match target RPM ranges. The fuel tank, fabricated from AISI 1100 aluminum alloy, is positioned behind the driver for optimal packaging. The differential bracket, CNC-machined from aluminum, ensures precise alignment and structural integrity under chain tension. Throughout the project, simulation tools like SolidWorks, Ansys, and CFD analysis were used to validate mechanical, thermal, and fluid performance, ensuring that each subsystem meets the demands of competitive motorsport.",
       "image": "assets/img/FS_6.png",
       "gallery": [
-        "../projects/project4-1.jpg",
-        "../projects/project4-2.jpg",
-        "../projects/project4-3.jpg"
+        {
+          "src": "assets/img/FS_1.jpg",
+          "caption": "Side view of the chassis after manufacturing, showcasing structural integrity"
+        },
+        {
+          "src": "assets/img/FS_2.jpg",
+          "caption": "Isometric view of the manufactured chassis highlighting tube layout and mounting points"
+        },
+        {
+          "src": "assets/img/FS_3.jpeg",
+          "caption": "CNC milling process of the bell crank component for suspension actuation"
+        },
+        {
+          "src": "assets/img/FS_4.jpg",
+          "caption": "Bell crank after manufacturing with machined surfaces and mounting holes"
+        },
+        {
+          "src": "assets/img/FS_5.jpeg",
+          "caption": "Finished bell crank component post-machining, ready for assembly"
+        },
+        {
+          "src": "assets/img/FS_7.jpeg",
+          "caption": "CNC milling of the upright component for steering and suspension interface"
+        },
+        {
+          "src": "assets/img/FS_8.jpeg",
+          "caption": "Finite element analysis of the suspension system under predetermined loading conditions"
+        },
+        {
+          "src": "assets/img/FS_9.jpeg",
+          "caption": "Upright component after manufacturing, prepared for integration with wheel assembly"
+        }
       ],
       "tags": ["Undergraduate Team Project"],
       "specs": [
         { "k": "My Role", "v": "Subteam Lead, Vehicle Suspension Section" },
-        { "k": "My Responsibilities", "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> CAD Design. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb." },
-        { "k": "Project's Objective", "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger" },
-        { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel" },
-        { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, PrusaSlicer" },
-        { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM" }
+        { "k": "My Responsibilities", "v": "Analytical calculation of spring rate, roll center, length and angle of control arm, upright, bell crank. <br> Design for manufacturing and assembly of the suspension parts. <br> Stress analysis of control arm, upright, bell crank. <br> Manufacturing the control arm, tab joint, bell crank and upright. <br> Experimental test of the control arm in a Universal Testing Machine" },
+        { "k": "Project's Objective", "v": "To design a lightweight, reliable, and cost-effective vehicle system with simplified subsystems—powertrain, steering, suspension, braking, and aerodynamics—prioritizing drivability and manufacturability." },
+        { "k": "Materials", "v": "Aluminum Alloy + Stainless Steel + Low Carbon Steel" },
+        { "k": "Software Tools", "v": "Solidworks, Ansys Mechanical, OptimumKinematics" },
+        { "k": "Manufacturing Tools", "v": "CNC Miling, Wire EDM, CNC Lathe, FDM, welding machine, bending machine" }
       ]
     },
 

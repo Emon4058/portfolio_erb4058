@@ -953,6 +953,24 @@
 
   "certifications": [
     {
+      "title": "SOLIDWORKS Drawing Tools Professional",
+      "issuer": "Dassault Systèmes",
+      "description": "Skills: Computer-Aided Design (CAD) · SOLIDWORKS Drawing",
+      "link": "https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-FEHLYCJ693"
+    },
+    {
+      "title": "SOLIDWORKS Sheet Metal Professional",
+      "issuer": "Dassault Systèmes",
+      "description": "Skills: Computer-Aided Design (CAD) · SOLIDWORKS Sheetmetal",
+      "link": "https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-A4PRGC5T6H"
+    },
+    {
+      "title": "SOLIDWORKS Weldments Professional",
+      "issuer": "Dassault Systèmes",
+      "description": "Skills: Computer-Aided Design (CAD) · SOLIDWORKS Weldments",
+      "link": "https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-3PZKNAEXC7"
+    },
+    {
       "title": "Topology Optimization Using Ansys Mechanical",
       "issuer": "Ansys",
       "description": "Skills: Topology optimization · Ansys Mechanical",

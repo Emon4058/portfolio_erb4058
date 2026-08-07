@@ -10,6 +10,9 @@
 
     <!-- font-awesome -->
     <script src="https://kit.fontawesome.com/9e275c6f55.js" crossorigin="anonymous"></script>
+
+    <!-- Theme init (applies data-theme before first paint) -->
+    <script src="assets/js/theme.js"></script>
 </head>
 
 <body>
@@ -31,13 +34,20 @@
             <!-- SOcial Links -->
 
             <div class="">
-                <button id="theme-toggle" class="theme-btn"></button>
-                <a href="https://www.linkedin.com/in/erb4058/" target="_blank"><button id="theme-toggle"
-                        class="theme-btn"><i class="fa-brands fa-linkedin"></i></button></a>
-                <a href="https://github.com/Emon4058" target="_blank"><button id="theme-toggle" class="theme-btn"><i
+                <div class="theme-switch" id="theme-toggle" role="group" aria-label="Theme">
+                    <button type="button" class="theme-btn theme-opt" data-theme-option="light" aria-pressed="false"
+                        title="Light"><i class="fa-regular fa-sun"></i></button>
+                    <button type="button" class="theme-btn theme-opt" data-theme-option="dark" aria-pressed="false"
+                        title="Dark"><i class="fa-regular fa-moon"></i></button>
+                    <button type="button" class="theme-btn theme-opt" data-theme-option="system" aria-pressed="false"
+                        title="System default"><i class="fa-solid fa-circle-half-stroke"></i></button>
+                </div>
+                <a href="https://www.linkedin.com/in/erb4058/" target="_blank"><button class="theme-btn"><i
+                            class="fa-brands fa-linkedin"></i></button></a>
+                <a href="https://github.com/Emon4058" target="_blank"><button class="theme-btn"><i
                             class="fa-brands fa-github"></i></button></a>
                 <a data-bind-mailto href="mailto:emonroy4058@gmail.com">
-                    <button id="theme-toggle" class="theme-btn"><i class="fa-solid fa-envelope"></i></button>
+                    <button class="theme-btn"><i class="fa-solid fa-envelope"></i></button>
                 </a>
                 <button id="nav-toggle" class="nav-toggle"><i class="fa fa-bars"></i></button>
             </div>
@@ -64,7 +74,9 @@
                 </div>
             </div>
             <div class="hero-img">
-                <img id="avatar" src="assets/img/profile.jpg" alt="Avatar">
+                <div class="avatar-frame">
+                    <img id="avatar" src="assets/img/Profile_3.jpg" alt="Avatar">
+                </div>
             </div>
         </div>
     </section>

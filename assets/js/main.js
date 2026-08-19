@@ -2,6 +2,14 @@
   const navToggle = document.getElementById("nav-toggle");
   const navMenu = document.getElementById("nav-menu");
 
+  // Truncate text to a fixed word count, appending "…" if truncated
+  function truncateWords(text, limit) {
+    if (!text) return "";
+    const words = text.trim().split(/\s+/);
+    if (words.length <= limit) return text.trim();
+    return words.slice(0, limit).join(" ") + "…";
+  }
+
   // Mobile nav
   navToggle.addEventListener("click", () => navMenu.classList.toggle("show"));
 
@@ -12,6 +20,17 @@
       document.querySelector('[data-bind="name"]').textContent = profile.name;
       document.querySelector('[data-bind="headline"]').textContent =
         profile.headline;
+      const keyAreasEl = document.querySelector('[data-bind="keyAreas"]');
+      if (keyAreasEl && Array.isArray(profile.keyAreas)) {
+        keyAreasEl.innerHTML = "";
+        profile.keyAreas.forEach((area, idx) => {
+          const span = document.createElement("span");
+          span.className = "key-area-tag";
+          span.textContent = area;
+          span.style.animationDelay = `${idx * 80}ms`;
+          keyAreasEl.appendChild(span);
+        });
+      }
       // About summary: clamp + linkify company + Read more / Read less toggle
       const summaryEl = document.querySelector('[data-bind="summary"]');
       const readMore = document.getElementById("about-readmore");
@@ -190,7 +209,7 @@
       <div class="card-body">
         <h3 class="card-title">${p.title || ""}</h3>
         ${p.subtitle ? `<p class="card-subtitle">${p.subtitle}</p>` : ""}
-        <p class="card-text">${p.description || ""}</p>
+        <p class="card-text">${truncateWords(p.description, 30)}</p>
         <div class="card-tags">${(p.tags || [])
           .map((t) => `<span>${t}</span>`)
           .join("")}</div>

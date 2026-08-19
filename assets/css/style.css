@@ -228,6 +228,11 @@ a:hover {
     flex-wrap: wrap;
 }
 
+.hero-text {
+    flex: 1 1 0%;
+    min-width: 0;
+}
+
 .hero-text h1 {
     font-size: 36px;
     margin-bottom: 8px;
@@ -245,9 +250,38 @@ a:hover {
     text-align: justify;
 }
 
+.key-areas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.key-area-tag {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 6px 14px;
+    font-size: 13.5px;
+    font-weight: 600;
+    border-radius: 999px;
+    border: 1px solid var(--tag-border);
+    border-left: 3px solid var(--primary);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: keyAreaFadeUp 0.6s ease-out forwards;
+}
+
+@keyframes keyAreaFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-img {
     display: flex;
     align-items: center;
+    flex: 0 0 auto;
 }
 
 .avatar-frame {
@@ -988,6 +1022,10 @@ html[data-theme="dark"] .ach-badge {
     }
 
     .hero-buttons {
+        justify-content: center;
+    }
+
+    .key-areas {
         justify-content: center;
     }
 }

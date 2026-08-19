@@ -364,6 +364,7 @@
             width: 100%;
             background: transparent;
             border: 0;
+            color: var(--text);
             padding: 10px 12px;
             display: flex;
             align-items: center;
@@ -721,8 +722,8 @@
 
                     let htmlParts = [];
 
-                    // 1) Description section (from longDescription or description)
-                    const descText = (project.longDescription || project.description || "").trim();
+                    // 1) Description section
+                    const descText = (project.description || "").trim();
                     if (descText) {
                         const descId = "descSec";
                         htmlParts.push(`

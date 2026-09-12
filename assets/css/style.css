@@ -4,7 +4,7 @@ html {
 }
 
 /* Root variables */
-:root {
+:root { 
     --primary: #0ea5e9;
     --primary1: #0d84bbd8;
     --bg: #f9f9f9;
@@ -239,9 +239,9 @@ a:hover {
 }
 
 .hero-text h3 {
-    font-size: 20px;
+    font-size: 15px;
     color: var(--muted);
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 }
 
 .hero-text p {

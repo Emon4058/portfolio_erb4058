@@ -1,0 +1,69 @@
+{
+  "skillsGrouped": [
+    {
+      "category": "Computational Analysis",
+      "items": [
+        "Ansys Mechanical",
+        "Structural Optimization",
+        "Ansys Composite PrePost"
+      ]
+    },
+    {
+      "category": "Computer‑Aided Design",
+      "items": [
+        "SolidWorks",
+        "Ansys SpaceClaim",
+        "Ansys DesignModeler",
+        "AutoCAD"
+      ]
+    },
+    {
+      "category": "Manufacturing Process",
+      "items": [
+        "Fused Deposition Modeling",
+        "Composite Manufacturing",
+        "Molding",
+        "CNC Machining"
+      ]
+    },
+    {
+      "category": "PCB Design",
+      "items": [
+        "Altium Designer",
+        "Proteus",
+        "EasyEDA"
+      ]
+    },
+    {
+      "category": "Programming",
+      "items": [
+        "C",
+        "Python",
+        "MATLAB"
+      ]
+    },
+    {
+      "category": "Robotics",
+      "items": [
+        "Arduino IDE",
+        "Robot Operating System"
+      ]
+    },
+    {
+      "category": "Miscellaneous",
+      "items": [
+        "Ubuntu",
+        "LaTeX",
+        "Git"
+      ]
+    },
+    {
+      "category": "Soft Skills",
+      "items": [
+        "Teamwork",
+        "Problem‑solving",
+        "Logical Thinking"
+      ]
+    }
+  ]
+}

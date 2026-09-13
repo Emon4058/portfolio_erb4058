@@ -13,9 +13,38 @@
   // Mobile nav
   navToggle.addEventListener("click", () => navMenu.classList.toggle("show"));
 
-  // Load profile.json
-  fetch("data/profile.json")
-    .then((r) => r.json())
+  // Load profile data (split across multiple files under data/)
+  Promise.all([
+    fetch("data/profile.json").then((r) => r.json()),
+    fetch("data/projects.json").then((r) => r.json()),
+    fetch("data/skills.json").then((r) => r.json()),
+    fetch("data/experience.json").then((r) => r.json()),
+    fetch("data/education.json").then((r) => r.json()),
+    fetch("data/certifications.json").then((r) => r.json()),
+    fetch("data/achievements.json").then((r) => r.json()),
+  ])
+    .then(
+      ([
+        profile,
+        projects,
+        skills,
+        experience,
+        education,
+        certifications,
+        achievements,
+      ]) => {
+        Object.assign(
+          profile,
+          projects,
+          skills,
+          experience,
+          education,
+          certifications,
+          achievements
+        );
+        return profile;
+      }
+    )
     .then((profile) => {
       document.querySelector('[data-bind="name"]').textContent = profile.name;
       document.querySelector('[data-bind="headline"]').textContent =

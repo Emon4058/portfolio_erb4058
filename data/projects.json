@@ -1,0 +1,1229 @@
+{
+  "projects": [
+    {
+      "slug": "Man-Transportable ROV",
+      "title": "Man-Transportable ROV",
+      "subtitle": "A Compact, Man-Portable Remotely Operated Vehicle for Hazardous-Environment Inspection and Manipulation",
+      "description": "The Man-Portable Field Manipulation Robot is a compact ROV built for operation in confined, high-risk industrial environments. It navigates complex terrain with ease, using a dual-mode drive system and adaptive flipper mechanisms. The detachable manipulator arm offers precise control and tool-mounting flexibility, making it well-suited for handling hazardous or unstable materials. Operators benefit from real-time situational awareness through a multi-camera setup, including a PTZ unit and wrist-mounted views. The control unit features a daylight-readable display and supports both wired and wireless communication for uninterrupted remote operation. Its rugged, shock-absorbing design ensures durability in harsh environments, while integrated overload protection and intelligent motion control enhance operational safety and reliability. Combining mobility, modularity, and field-ready resilience in a compact form, the robot is designed for reliable performance in demanding, unstructured environments.",
+      "image": "assets/img/man-transportable-rov/MP_7.jpg",
+      "gallery": [
+        {
+          "src": "assets/img/man-transportable-rov/MP_8.jpg",
+          "caption": "CAD model — isometric view"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_2.jpeg",
+          "caption": "Arm extended — deployment configuration"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_3.jpeg",
+          "caption": "Arm retracted — standby configuration"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_4.jpg",
+          "caption": "Robot carrier — carbon fiber, iteration 1"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_5.jpg",
+          "caption": "Vacuum infusion process — manufacturing phase"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_6.jpg",
+          "caption": "Vacuum infusion process — alternate angle"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_1.jpeg",
+          "caption": "CAD model — pre-rendered version"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_9.png",
+          "caption": "CAD model — isometric rear view"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_11.png",
+          "caption": "CAD model — isometric front view"
+        }
+      ],
+      "tags": [
+        "In progress"
+      ],
+      "specs": [
+        {
+          "k": "My Role",
+          "v": "Research and Development Engineer (Mechanical)"
+        },
+        {
+          "k": "My Responsibilities",
+          "v": "Analytical calculations of robotic arm, gripper, telescopic beam. <br> Estimation of required torque at each robot joint and drive. <br> CAD Design of Robotic Arm and gearboxes. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis. <br> Manufacturing of the parts which will be made of carbon fiber. "
+        },
+        {
+          "k": "Project's Objective",
+          "v": "To develop an EOD ROV which is capable of precise manipulation, terrain adaptability, and reliable operation in critical tactical missions including CIED, surveillance, and bomb disposal."
+        },
+        {
+          "k": "Materials",
+          "v": "Aluminum Alloy + Carbon Fiber + Stainless Steel + High Carbon Steel"
+        },
+        {
+          "k": "Software Tools",
+          "v": "Solidworks, Ansys Mechanical, PrusaSlicer"
+        },
+        {
+          "k": "Manufacturing Tools",
+          "v": "Resin Infusion Method, Moulding, Compression Moulding, CNC Milling, Wire EDM, CNC Lathe, FDM"
+        }
+      ],
+      "tablesOrder": [
+        "Mechanical Specification",
+        "Electrical Specification"
+      ],
+      "tables": {
+        "Mechanical Specification": {
+          "collapsed": true,
+          "columns": [
+            "Functionality",
+            "Specification"
+          ],
+          "rows": {
+            "Water Ingress Protection": "IP54 (ROV), IP55 (CCU)",
+            "Stair Climbing Ability": "≤ 40°",
+            "Slopes": "≤ 40°",
+            "Vertical Obstacle": "≤ 30 cm",
+            "Horizontal Obstacle / Ditch": "≤ 35 cm",
+            "Ground Clearance": "Approx. 2 inches",
+            "Dimensions": "L: 750 mm, W: 300 mm, H: 300 mm",
+            "Weight": "Max 50 kg",
+            "Tow Capability": "≤ 30 kg",
+            "Payload Capacity": "≤ 5 kg",
+            "Drive Modes": "Standard and stair climbing",
+            "Drive System": "Belt-driven with independent flipper control",
+            "Manipulator Arm": "Detachable, telescopic, tool-mountable",
+            "Arm Reach": "Telescopic Beam Retracted: 120 cm, Extended: 175 cm",
+            "Arm Payload": "5 kg (retracted), 4 kg (extended)",
+            "Degrees of Freedom": "Minimum 6 axes",
+            "Joint Movements": "Turret: ±100°, Shoulder: ≥180°, Elbow: ≥180°, Wrist Pitch: ≥300°, Roll: 360°",
+            "Gripper Extension": "≤ 100 mm",
+            "Claw Rotation": "360° continuous",
+            "Telescopic Extension": "~550 mm via cascading threaded shafts",
+            "Horizontal Reach Beneath": "≤ 100 cm",
+            "Vertical Reach": "≤ 100 cm (camera height for car window inspection)",
+            "Build Materials": "Carbon Fiber, Steel, Aluminum alloys, Silicone, PLA+"
+          }
+        },
+        "Electrical Specification": {
+          "collapsed": true,
+          "columns": [
+            "Functionality",
+            "Specification"
+          ],
+          "rows": {
+            "Battery Type": "Li-ion, 2 pcs, 48V nominal, 5000 mAh minimum",
+            "Battery Life": "≥ 2 hours under full load",
+            "Recharge Time": "ROV: ≥ 2 hrs, CCU: ≥ 5 hrs",
+            "Charger": "Provided for both ROV and CCU",
+            "Communication": "Wired: 200 m, Wireless: 100 m, 225 bps",
+            "Control Unit": "Handheld, rechargeable, wired/wireless modes",
+            "Display": "7\" LCD, daylight-readable, ≥ 400 nits brightness",
+            "Audio/Video Ports": "Available for auxiliary monitor and headphones",
+            "Audio System": "Digital 2-way audio, MP3 input/output",
+            "RF System": "Provided",
+            "Camera System": "4 cameras: 2 body, 1 claw, 1 PTZ with LED lights",
+            "Camera Features": "PTZ rotates with arm; drive and claw cameras tilt and rotate",
+            "Overload Protection": "Passive (fuse) + Active (software-based)",
+            "Environmental Tolerance": "-5°C to +55°C",
+            "CCU Material": "Weather-resistant, IP55 minimum",
+            "Deployment Case": "Provided for controller, spare battery, accessories"
+          }
+        }
+      }
+    },
+    {
+      "slug": "Jontro Soinik 1.0",
+      "title": "Jontro Soinik 1.0",
+      "subtitle": "A Medium Platform EOD ROV (Updated Version of Smart Soinik 1.0)",
+      "description": "Jontro Soinik 1.0 (JS1.0) is Bangladesh’s third generation and most advanced indigenously developed Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV) with environmental adaptability and disrupter firing capacity, which is first of its kind, engineered for rapid deployment and rugged performance in high-risk environments. Successfully tested by the Bangladesh Army, including live disrupter firing and IP55 water protection trials, it proves its readiness for real-world missions. Equipped with advanced electronics like GPS, thermal imaging, IR night vision, 4x optical zoom, and a 2MP camera system, it supports precision surveillance and remote neutralization of threats. With robust mechanical capabilities—stair climbing, slope handling (up to 40°), 360° claw rotation, 40kg grip force, and a lifting capacity of up to 20kg—the ROV is built for maneuverability and strength. Its 16Ah battery enables extended operations with active/passive overload protection, self-diagnostics, and fast recharging. Designed for battlefield reliability, Jontro Soinik 1.0 embodies innovation, adaptability, and national pride in defense technology. \n Jontro Soinik 1.0 is set for deployment in 2025 under the UN Peacekeeping Mission in the Republic of the Congo.",
+      "image": "assets/img/jontro-soinik-1-0/JS_9.jpg",
+      "gallery": [
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_1.jpg",
+          "caption": "Field-ready robot alongside development team"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_11.jpg",
+          "caption": "Side view of the robot with arm extended"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_3.jpg",
+          "caption": "Side view of the robot"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_2.jpg",
+          "caption": "Robot displayed at gallery"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_4.jpg",
+          "caption": "CAD assembly model featuring arm integration"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_5.jpg",
+          "caption": "Live testing of core functionalities — 1"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_6.jpg",
+          "caption": "Live testing of core functionalities — 2"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_7.jpg",
+          "caption": "During development at Assembly Lab"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_8.jpg",
+          "caption": "Fully assembled unit undergoing in-house validation"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_9.jpg",
+          "caption": "Manipulator performance test during final QA"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_10.png",
+          "caption": "Isometric CAD visualization of complete system"
+        }
+      ],
+      "tags": [
+        "Delivered",
+        "Operational under Bangladesh Army"
+      ],
+      "specs": [
+        {
+          "k": "My Role",
+          "v": "Intern, Research and Development Team (Mechanical)"
+        },
+        {
+          "k": "My Responsibilities",
+          "v": "Analytical calculations of robotic arm, gripper. <br> Finite Element Analysis of Robotic Arm. <br> Determining the required torque and speed of actuators at joints. <br> CAD Design of attachments. <br> Track belt's traction analysis during stair climb."
+        },
+        {
+          "k": "Project's Objective",
+          "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger"
+        },
+        {
+          "k": "Materials",
+          "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel"
+        },
+        {
+          "k": "Software Tools",
+          "v": "Solidworks, Ansys Mechanical, PrusaSlicer"
+        },
+        {
+          "k": "Manufacturing Tools",
+          "v": "CNC Milling, Wire EDM, CNC Lathe, FDM"
+        }
+      ],
+      "tablesOrder": [
+        "Mechanical Specification",
+        "Electrical Specification"
+      ],
+      "tables": {
+        "Mechanical Specification": {
+          "collapsed": true,
+          "columns": [
+            "Functionality",
+            "Specification"
+          ],
+          "rows": {
+            "Water Ingress Protection": "IP55",
+            "Stair Climbing Ability": "8 inch (min)",
+            "Slopes": "40 Deg (min)",
+            "Vertical Obstacle": "20 cm (min)",
+            "Horizontal Obstacle/ Ditch": "35 cm (min)",
+            "Slide Tilt": "30 Deg (min)",
+            "Speed": "5 km/h",
+            "Turning Radius": "0",
+            "Turret": "200 Deg (min)",
+            "Shoulder": "200 Deg (min)",
+            "Elbow": "270 Deg (min)",
+            "Claw Joint": "360 Deg",
+            "Gripper Opening": "10 cm (min)",
+            "Grip Force": "40 Kg (min)",
+            "Lift Capacity (Retracted)": "20 Kg (min)",
+            "Lift Capacity (Extended)": "8 Kg (min)",
+            "Lift Capacity (Side)": "8 Kg (min)",
+            "Vertical Reach": "150 cm (min)",
+            "Horizontal Reach": "100 cm (min)",
+            "Vertical Reach Beneath": "25 cm (min)"
+          }
+        },
+        "Electrical Specification": {
+          "collapsed": true,
+          "columns": [
+            "Functionality",
+            "Specification"
+          ],
+          "rows": {
+            "GPS Locator": "Available",
+            "Wireless HCU": "Available",
+            "Claw Camera": "IR night vision capability",
+            "Laser Range Finder": "Minimum 1, Range: 10 cm to 40 m",
+            "Proximity Sensor": "Available",
+            "Shock Tube Initiator": "2 channel shock tube initiator",
+            "Calibration": "Self-calibration and display calibration status",
+            "OCU": "Available",
+            "ROV Battery": "Maintaining 16Ah battery capacity",
+            "Main PTZ": "Available",
+            "Camera Zoom": "4X Optical Zoom",
+            "Front and Rear Camera": "Viewing heat map",
+            "Under Vehicle Kit": "Image inspection under vehicles",
+            "Thermal Camera": "Viewing heat map",
+            "Self Collision Avoider": "Use of short sensors or pulse encoders",
+            "Battery Weight": "10 kg is optimum",
+            "Battery Type (48 Volt)": "48 Volt",
+            "Active Communication Port": "Minimum 1 and indication in OCU",
+            "Passive Communication Port": "Passive use mechanism",
+            "Communication Port": "Minimum 1",
+            "Self Recovery": "Self recover from typical errors",
+            "Self-diagnostic": "Display warning, scan logs",
+            "Minimum Battery Capacity": "Minimum 10Ah capacity",
+            "Operational Temperature Range": "Up to 50°C",
+            "Deployment Time": "Maximum 5 mins",
+            "Temperature Sensor": "Will be installed",
+            "RF Extender": "Video/data transmission up to 1.5 km",
+            "Firing Circuit": "LOS 4Z firing circuit set in each ROV",
+            "Range": "LOS 1000 ft (min), NLOS 300 ft (min)",
+            "Screen": "Daylight readable screen",
+            "Battery Indicator": "Status indicator",
+            "Lights": "High luminosity 12V 5W lights (front and back)",
+            "Camera Tilt": "0–84 degree angle",
+            "Video Storage": "High-definition recording, ≥ 320 GB",
+            "Battery Recharge Time": "2 hours",
+            "AC Power and Charging Facility": "220V ±10%, 50Hz standard",
+            "Additional Rechargeable Battery": "More than 5 hours beyond 3–5 hours",
+            "Humidity During Operation": "95% at operating temperature",
+            "Storage Temperature": "Up to 50°C",
+            "Camera Resolution": "≥ 2 megapixel"
+          }
+        }
+      }
+    },
+    {
+      "slug": "Smart Soinik 1.0",
+      "title": "Smart Soinik 1.0",
+      "subtitle": "A Medium Platform Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV)",
+      "description": "Smart Soinik 1.0 (SS1.0) is the second-generation, indigenously developed Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV) from Bangladesh, designed for rapid deployment and unmatched performance in high-risk operational environments. Rigorously tested and validated by the Bangladesh Army, SS1.0 combines cutting-edge electronics — such as thermal imaging, IR night vision, 4× optical zoom, and high-resolution video capture — with rugged mechanical strength, including stair-climbing ability, 30° slope handling, 360° claw rotation, and a powerful 40 kg grip force. Powered by a 16 Ah battery system with overload protection, self-diagnostics, and fast recharge capability, it ensures extended field endurance and operational reliability. On May 5, 2024, Smart Soinik 1.0 was officially gifted to the Peruvian Armed Forces by the Bangladesh Army and is now proudly deployed under the United Nations Peacekeeping Mission in the Republic of Mali, showcasing Bangladesh's growing footprint in global defense innovation and humanitarian operations.",
+      "image": "assets/img/smart-soinik-1-0/SS_1.jpg",
+      "gallery": [
+        {
+          "src": "assets/img/smart-soinik-1-0/SS_2.jpg",
+          "caption": "EOD ROV after manufacturing and assembly"
+        },
+        {
+          "src": "assets/img/smart-soinik-1-0/SS_3.png",
+          "caption": "Cad Model of the robot"
+        },
+        {
+          "src": "assets/img/smart-soinik-1-0/SS_4.png",
+          "caption": "Cad Model of the robot"
+        },
+        {
+          "src": "assets/img/smart-soinik-1-0/SS_5.png",
+          "caption": "Cad Model of the robot"
+        },
+        {
+          "src": "assets/img/smart-soinik-1-0/SS_6.jpg",
+          "caption": "EOD ROV during testing at night light"
+        },
+        {
+          "src": "assets/img/smart-soinik-1-0/SS_7.jpg",
+          "caption": "Delivery ceremony of Smart Soinik"
+        },
+        {
+          "src": "assets/img/smart-soinik-1-0/SS_8.JPG",
+          "caption": "Robot with some of team members and Peruvian Armed Forces"
+        },
+        {
+          "src": "assets/img/smart-soinik-1-0/SS_9.jpg",
+          "caption": "Official handover ceremony to Peruvian Armed Forces"
+        }
+      ],
+      "tags": [
+        "Delivered",
+        "Deployed at UN Peacekeeping Mission"
+      ],
+      "specs": [
+        {
+          "k": "My Role",
+          "v": "Intern, Research and Development Team (Mechanical)"
+        },
+        {
+          "k": "My Responsibilities",
+          "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb."
+        },
+        {
+          "k": "Project's Objective",
+          "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger"
+        },
+        {
+          "k": "Materials",
+          "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel"
+        },
+        {
+          "k": "Software Tools",
+          "v": "Solidworks, Ansys Mechanical, PrusaSlicer"
+        },
+        {
+          "k": "Manufacturing Tools",
+          "v": "CNC Milling, Wire EDM, CNC Lathe, FDM"
+        }
+      ],
+      "tablesOrder": [
+        "Mechanical Specification",
+        "Electrical Specification"
+      ],
+      "tables": {
+        "Mechanical Specification": {
+          "collapsed": true,
+          "columns": [
+            "Functionality",
+            "Specification"
+          ],
+          "rows": {
+            "Stair Climbing Ability": "6 inch",
+            "Slopes": "30 Deg",
+            "Vertical Obstacle": "20 cm",
+            "Horizontal Obstacle/ Ditch": "30 cm",
+            "Slide Tilt": "25 deg",
+            "Speed": "4 km/h",
+            "Turning Radios": "80 cm",
+            "Turret": "200 Deg",
+            "Shoulder": "80 Deg",
+            "Elbow": "150 Deg",
+            "Wrist": "270 Deg",
+            "Claw Joint": "360 Deg (continuous)",
+            "Gripper Opening": "18 cm",
+            "Grip Force": "40 Kg",
+            "Lift Capacity (Retracted)": "20 Kg",
+            "Lift Capacity (Extended)": "8 kg",
+            "Lift Capacity (Side)": "5 kg",
+            "Vertical Reach": "150 cm",
+            "Horizontal Reach": "100 cm",
+            "Vertical Reach Beneath": "25 cm"
+          }
+        },
+        "Electrical Specification": {
+          "collapsed": true,
+          "columns": [
+            "Item",
+            "Specification"
+          ],
+          "rows": {
+            "Claw Camera": "IR night vision capability",
+            "Laser Range Finder": "Minimum 1, Range: 10cm to 40m",
+            "Proximity Sensor": "Minimum 2",
+            "Shock Tube Initiator": "2 channel shock tube initiator",
+            "Calibration": "Self-calibration and display calibration status",
+            "OCU": "Video feed, command system",
+            "ROV Battery": "Maintaining 16Ah battery capacity",
+            "Main PTZ": "Surveillance",
+            "Camera Zoom": "4X Optical Zoom",
+            "Front and Rear camera": "Viewing obstacle",
+            "Under vehicle kit": "For inspecting under vehicles",
+            "Thermal camera": "Viewing heat map",
+            "Self collision avoider": "Use of hall sensors or position encoders",
+            "Battery Weight": "10kg is optimum",
+            "Battery Type (48 Volt)": "48 Volt",
+            "Active Overload protection": "Trigger and indication in OCU",
+            "Passive Overload protection": "Fuse mechanism",
+            "Communication Port": "Minimum 1",
+            "Self Recovery": "Self recover from typical errors",
+            "Self-diagnostic": "Display warning, data loss",
+            "Minimum Battery Capacity": "Minimum 10Ah capacity",
+            "Operational Temperature range": "Up to 50 degree Celsius",
+            "Deployment time": "Maximum 5 mins",
+            "Temperature sensor": "Will be available",
+            "RF Extender": "To increase video/data transmission up to 152m",
+            "Firing Circuit": "4× 24V firing circuit set in each ROV",
+            "Range": "LOS 1000ft minimum, NLOS 300ft minimum",
+            "Screen": "Daylight readable screen",
+            "Battery indicator": "Status indicator",
+            "Lights": "High luminosity 12 Volt 5 W lights in front and back",
+            "Camera tilt": "80 degree angle minimum",
+            "Video recording": "Minimum video recording range of 320 GB or more",
+            "Battery Recharge Time": "2–4 hours",
+            "AC Power and charging facility": "220V ±10%, 50Hz standard",
+            "Additional rechargeable battery": "More operation time beyond 3–5 hours",
+            "Humidity during operation": "95% at operating temperature",
+            "Storage temperature test": "0 to 50 degree Celsius",
+            "Camera resolution": "2 megapixel at least",
+            "Wireless HCU": "To be provided"
+          }
+        }
+      }
+    },
+    {
+      "slug": "Hilsha-Bot",
+      "title": "Hilsha-Bot",
+      "subtitle": "A Bio-Inspired Soft Robotic Fish",
+      "description": "This bio-inspired soft robotic fish intended for concealment during tasks like underwater wildlife monitoring or reconnaissance. Its construction utilizes a soft silicone material covering a continuum structure, essential for replicating the natural, flexible undulatory movement of aquatic species. Propulsion is achieved using a soft tail actuator that executes a fish-like undulating motion, classified specifically as carangiform swimming. This natural method of locomotion is crucial because it allows the robot to integrate into the aquatic environment without disturbing other underwater entities. The tail movement is driven by a curved single-shaft mechanism which reciprocates the tail's sheets left and right to generate the required thrust. Depth control is managed by an innovative buoyancy control unit housed within the body. This unit operates through a piston-cylinder mechanism that creates a vacuum to adjust the overall specific weight of the robot. This vacuum piston-based approach offers the significant benefit of a longer operational period compared to traditional systems constrained by gas depletion. The robot is equipped with artificial pectoral and dorsal fins that collaboratively manage movement direction and stability. The pectoral fins control steering by generating lift forces, while the dorsal fin enhances overall stability, and an enclosure protects the sensitive electronics housed in the head section",
+      "image": "assets/img/hilsha-bot/RF_11.jpg",
+      "gallery": [
+        {
+          "src": "assets/img/hilsha-bot/RF_3.png",
+          "caption": "Final assembly following manufacturing completion"
+        },
+        {
+          "src": "assets/img/hilsha-bot/RF_10.jpg",
+          "caption": "Sectional view of CAD model illustrating internal configuration"
+        },
+        {
+          "src": "assets/img/hilsha-bot/RF_9.jpg",
+          "caption": "Isometric CAD model view from rear perspective"
+        },
+        {
+          "src": "assets/img/hilsha-bot/RF_4.jpeg",
+          "caption": "Soft silicone body structure after molding process"
+        },
+        {
+          "src": "assets/img/hilsha-bot/RF_2.png",
+          "caption": "External gear pump from first iteration prototype"
+        },
+        {
+          "src": "assets/img/hilsha-bot/RF_6.jpg",
+          "caption": "CAD model of buoyancy control unit"
+        },
+        {
+          "src": "assets/img/hilsha-bot/RF_7.jpeg",
+          "caption": "Manufactured buoyancy control unit post-fabrication"
+        },
+        {
+          "src": "assets/img/hilsha-bot/RF_1.jpg",
+          "caption": "Tail actuator rib structure in CAD representation"
+        },
+        {
+          "src": "assets/img/hilsha-bot/RF_12.jpg",
+          "caption": "Tail actuator following manufacturing completion"
+        },
+        {
+          "src": "assets/img/hilsha-bot/RF_8.png",
+          "caption": "Control unit with actuator driver"
+        }
+      ],
+      "tags": [
+        "Undergraduate Project"
+      ],
+      "specs": [
+        {
+          "k": "My Role",
+          "v": "Team Lead"
+        },
+        {
+          "k": "My Responsibilities",
+          "v": "CAD design of the robotic fish. <br> Manufacturing and Assembly. <br> Circuit Design and prototyping. <br> Writing code and debugging."
+        },
+        {
+          "k": "Project's Objective",
+          "v": "To develop new kinds of robotic fish which manoeuvres based on a curved single shaft driving mechanism and to control buoyancy utilizing a piston cylinder mechanism"
+        },
+        {
+          "k": "Materials",
+          "v": "Silicone Rubber, PLA, Acrylic"
+        },
+        {
+          "k": "Software Tools",
+          "v": "Solidworks, Ansys Mechanical, Arduino IDE, Altium"
+        },
+        {
+          "k": "Manufacturing Tools",
+          "v": "FDM, Molding, Laser Cutting Machine"
+        }
+      ],
+      "tablesOrder": [
+        "Mechanical Specification",
+        "Electrical Specification"
+      ],
+      "tables": {
+        "Mechanical Specification": {
+          "collapsed": true,
+          "columns": [
+            "Component/Parameter",
+            "Specification"
+          ],
+          "rows": {
+            "Construction Material (Covering)": "Soft silicone material",
+            "Locomotion Type": "Carangiform swimming",
+            "Maximum Swimming Speed Achieved": "0.2 body length per second (BL/s)",
+            "Tail Actuator Mechanism": "Curved single-shaft driving mechanism",
+            "Tail Actuator Operating Frequency": "0.5 Hz (used for generating vacuum)",
+            "Buoyancy Control System Type": "Piston-cylinder mechanism (vacuum-based)",
+            "Buoyancy Control Unit Operation": "10 mm stroke (used for generating vacuum)",
+            "Maximum Depth Control": "Up to 3 meters",
+            "Steering Fins": "Two Pectoral fins (made of acrylic sheet)",
+            "Stability Fin": "One Dorsal fin (made of acrylic sheet)",
+            "Soft Fluidic Actuator Material": "Silicone rubber",
+            "Wall Thickness (Fluidic Actuator)": "2 mm (about 0.08 in) or 3 mm (about 0.12 in)"
+          }
+        },
+        "Electrical Specification": {
+          "collapsed": true,
+          "columns": [
+            "Specification Category",
+            "Detail/Value"
+          ],
+          "rows": {
+            "Main Processing Unit Version": "Arduino Nano Version 3",
+            "Servo Motor Model": "SG90",
+            "DC Gear Motor Rating": "12 V and 2 Amp",
+            "Motor Driver Model": "L298n",
+            "IR Sensor Model": "TCRT 5000",
+            "Bluetooth Module Model": "HC 05",
+            "Power Source Rating (LiPo Battery)": "12 V, 1100 mAh",
+            "IMU Sensor Model": "MPU6050",
+            "Prototype Board Type": "FR-4"
+          }
+        }
+      }
+    },
+    {
+      "slug": "Soft Robotic Actuator",
+      "title": "Soft Robotic Actuator",
+      "subtitle": "A Tendon-Driven Soft Actuator for Surgical Operation",
+      "description": "The soft actuator is a tendon-driven soft continuum robot designed for minimally invasive surgery. It is fabricated primarily from inert and biocompatible silicone rubber, utilizing a process that includes Fused Deposition Modelling for creating molds and subsequent liquid silicone rubber moulding. The actuator achieves a minimum of three degrees of freedom, including bending along two axes and rotation around its central axis. The structure is based on repeating single units, with a typical diameter of 15 mm. These units are assembled by routing tension cables, which can be made of material like unfilled Nylon 6.6, through their multiple circular channels. The system operates by applying tension to these cables to induce bending or rotation.The finalized design (Version 2.1) features separate units dedicated to bending and rotation functionalities, enhancing efficiency, and includes an additional internal hole to accommodate a tool grabbing mechanism and power cable routing. A thin rigid layer is used between adjacent units to help minimize frictional loss. Control is managed through a sophisticated closed-loop system incorporating four DC motors connected to the tendons, an Arduino development board, and a custom PCB, using motor current as real-time feedback. Finite element analysis was utilized during development to predict the structure’s deformation and stress behavior under load",
+      "image": "assets/img/soft-robotic-actuator/SRA_8.jpeg",
+      "gallery": [
+        {
+          "src": "assets/img/soft-robotic-actuator/SRA_2.jpeg",
+          "caption": "Assembled silicone structure—iteration 1.5"
+        },
+        {
+          "src": "assets/img/soft-robotic-actuator/SRA_3.jpg",
+          "caption": "Structural configuration and component layout"
+        },
+        {
+          "src": "assets/img/soft-robotic-actuator/SRA_1.jpeg",
+          "caption": "Silicone rubber molding process using drag and cope part"
+        },
+        {
+          "src": "assets/img/soft-robotic-actuator/SRA_4.jpeg",
+          "caption": "Evaluation of bending and rotational response - 1"
+        },
+        {
+          "src": "assets/img/soft-robotic-actuator/SRA_5.jpeg",
+          "caption": "Evaluation of bending and rotational response - 2"
+        },
+        {
+          "src": "assets/img/soft-robotic-actuator/SRA_6.jpeg",
+          "caption": "Evaluation of bending and rotational response - 3"
+        },
+        {
+          "src": "assets/img/soft-robotic-actuator/SRA_7.jpeg",
+          "caption": "Evaluation of bending and rotational response - 4"
+        },
+        {
+          "src": "assets/img/soft-robotic-actuator/SRA_8.jpeg",
+          "caption": "Evaluation of bending and rotational response with a needle"
+        }
+      ],
+      "tags": [
+        "Undergraduate Thesis"
+      ],
+      "specs": [
+        {
+          "k": "My Role",
+          "v": "Team Lead"
+        },
+        {
+          "k": "My Responsibilities",
+          "v": "CAD design of the soft actuator. <br>Finite Element Analysis. <br> Manufacturing and Assembly. <br> Circuit Design and prototyping. <br> Writing code and debugging."
+        },
+        {
+          "k": "Project's Objective",
+          "v": "To introduce a design methodology and fabrication process for a soft robotic actuator for minimally invasive surgery (MIS), employing a tendon-driven mechanism"
+        },
+        {
+          "k": "Materials",
+          "v": "Silicone Rubber, PLA"
+        },
+        {
+          "k": "Software Tools",
+          "v": "Solidworks, Ansys Mechanical, Arduino IDE, Altium"
+        },
+        {
+          "k": "Manufacturing Tools",
+          "v": "FDM, Molding, Laser Cutting Machine"
+        }
+      ]
+    },
+    {
+      "slug": "Titan, A Large Scale FDM Printer",
+      "title": "Titan, A Large Scale FDM Printer",
+      "subtitle": "A FDM 3D Printer with a Bed Volume of 510mm×510mm×550mm",
+      "description": "Titan is a large-format FDM printer designed for high-speed, precision additive manufacturing with a 510 × 510 × 550 mm build volume, ±0.1 mm accuracy, and 0.02 mm repeatability; it features CoreXY motion with GT2 belts, a direct-drive dual-gear extruder (MK8), a 0.8 mm swappable nozzle, and a heated glass bed up to 120°C. The hotend reaches 300°C for engineering-grade thermoplastics, powered by a Bigtreetech controller with TMC2209 drivers running Marlin 2.0 firmware. Titan includes a 4.3 inch touchscreen with jog wheel, Wi-Fi, Ethernet, and USB-C connectivity. Safety features comprise thermal-runaway protection, power-loss resume, and door interlock. The MeanWell 24V / 30A PFC power supply ensures stable operation. Titan supports rapid prototyping and functional part fabrication with silent actuation and high-flow extrusion. Its optimized motion system enables smooth, vibration-free performance. The printer achieves up to 200 mm/s print speed, with a recommended range of 60–120 mm/s. Layer resolution spans 50–400 µm for fine detail and robust builds. Titan is ideal for research, industrial prototyping, and large-scale fabrication workflows.",
+      "image": "assets/img/titan-a-large-scale-fdm-printer/TP_3.jpg",
+      "gallery": [
+        {
+          "src": "assets/img/titan-a-large-scale-fdm-printer/TP_1.jpeg",
+          "caption": "Fully assembled FDM printer—iteration 2 configuration"
+        },
+        {
+          "src": "assets/img/titan-a-large-scale-fdm-printer/TP_2.jpg",
+          "caption": "FDM printer assembly—iteration 1 build overview"
+        },
+        {
+          "src": "assets/img/titan-a-large-scale-fdm-printer/TP_3.jpg",
+          "caption": "CAD representation of iteration 1 design"
+        },
+        {
+          "src": "assets/img/titan-a-large-scale-fdm-printer/TP_4.jpg",
+          "caption": "Operational snapshot during active printing phase"
+        }
+      ],
+      "tags": [
+        "Delivered to an Architecture Farm"
+      ],
+      "specs": [
+        {
+          "k": "My Role",
+          "v": "Research and Development Team (Mechanical)"
+        },
+        {
+          "k": "My Responsibilities",
+          "v": "Design for manufacturing and assembly. <br> Manufacturing the parts and assembly."
+        },
+        {
+          "k": "Project's Objective",
+          "v": "To enable large-scale additive manufacturing through heated bed stabilization, high-flow extrusion, and silent actuation."
+        },
+        {
+          "k": "Materials",
+          "v": "Aluminum Alloy + Stainless Steel + PLA + ABS"
+        },
+        {
+          "k": "Software Tools",
+          "v": "Solidworks, Marlin 2.0, Ultimaker Cura, PrusaSlicer"
+        },
+        {
+          "k": "Manufacturing Tools",
+          "v": "Laser Cut, FDM, Bending Machine, Arc Welding Machine"
+        }
+      ]
+    },
+    {
+      "slug": "Fixed Wing VTOL UAV",
+      "title": "Fixed Wing VTOL UAV",
+      "subtitle": "A Handmade Prototype Of Fixed Wing Unmanned Aerial Vehicle",
+      "description": "This project involves the development, construction, and outdoor manual testing of a small-scale fixed-wing VTOL UAV prototype featuring a 2-meter rectangular wingspan, brushless motor-driven propulsion, and four aerodynamic control surfaces (two wing ailerons and two V-tail ruddervators). The UAV structure employs polystyrene foam for core bulk, 3D-printed PLA and laser cut PVC sheet for precision parts and skeleton, and polyurethane foam for added resilience, balancing low-weight and manufacturability with sufficient mechanical strength and crash tolerance. The prototype serves as a dedicated empirical platform to analyze aerodynamic stability, control response, and transition dynamics between VTOL and fixed-wing flight regimes, all critical precursors to heavy-payload UAV validation. Aerodynamically, the project emphasizes the hazardous yet essential transition corridor, where careful control allocation and mixing strategies across the wing and V-tail surfaces mitigate the risks of stall, loss of control, or structural overload. Brushless motor sizing and integration is optimized for rapid thrust response and efficient power consumption, with cooling and reliability characterized empirically to support scaling toward higher-power, payload-carrying platforms. Structural design studies focus on low-density, foam-based airframes with PLA and PVC reinforcement, utilizing iterative flight testing and post-flight inspection to validate modeling and optimize joint assemblies and impact resistance. The experimental flight program applies standardized pre-flight checks and manual piloting to instrumented free-flight testing, allowing direct measurement of handling qualities, stability margins, and failure behaviors in a real-world context. Rich data acquisition and telemetry systems—integrating IMUs, GPS, servo feedback, and power sensors—enable high-resolution analysis of aerodynamic coefficients, control effectiveness, and transition behavior, with all results feeding into multi-criteria performance evaluation, model validation, and future controller/autopilot development. The project's outcomes provide critical empirical data and validated methodologies that directly inform scaling for a 50 kg-payload VTOL UAV, establishing confidence in the aerodynamic design, control strategy, and structural philosophy underpinning robust, certifiable heavy-lift UAV platforms. Overall, this prototype serves as a pivotal technological bridge, accelerating the transition from experimental concept to operational, heavy-payload-capable VTOL UAVs in a scalable, cost-effective, and risk-limited manner.",
+      "image": "assets/img/fixed-wing-vtol-uav/FW_1.jpg",
+      "gallery": [
+        {
+          "src": "assets/img/fixed-wing-vtol-uav/FW_1.jpg",
+          "caption": "VTOL test run of fixed-wing UAV"
+        },
+        {
+          "src": "assets/img/fixed-wing-vtol-uav/FW_3.jpg",
+          "caption": "Post-assembly configuration—ready for test flight (view 1)"
+        },
+        {
+          "src": "assets/img/fixed-wing-vtol-uav/FW_2.jpg",
+          "caption": "Team preparing UAV system for flight trial"
+        },
+        {
+          "src": "assets/img/fixed-wing-vtol-uav/FW_4.jpg",
+          "caption": "Post-assembly configuration—ready for test flight (view 2)"
+        }
+      ],
+      "tags": [
+        "Completed"
+      ],
+      "specs": [
+        {
+          "k": "My Role",
+          "v": "Research and Development Team (Mechanical)"
+        },
+        {
+          "k": "My Responsibilities",
+          "v": "Analytical calculations of required thrust, lift, drag forces, aspect ratio, wing area, stall speed, airspeed and others. <br> Design for manufacturing and assembly. <br> In-house manufacturing and assembly with hand tools."
+        },
+        {
+          "k": "Project's Objective",
+          "v": "To develop and test a small-scale fixed-wing VTOL UAV prototype for evaluating aerodynamic stability, control response, and transition dynamics as a precursor to a heavy-payload platform."
+        },
+        {
+          "k": "Materials",
+          "v": "Polystyrene foam + PLA + PVC board + Polyurethane foam"
+        },
+        {
+          "k": "Software Tools",
+          "v": "Solidworks, PrusaSlicer"
+        },
+        {
+          "k": "Manufacturing Tools",
+          "v": "Laser Cutting Machine, FDM"
+        }
+      ]
+    },
+    {
+      "slug": "Mars Rover- Anweshan, Renaissance",
+      "title": "Mars Rover- Anweshan, Renaissance",
+      "subtitle": "A Rover for University Mars Rover Competition",
+      "description": "This ROV is a multifunctional Mars rover developed for the Rover Challenges, designed to perform autonomous navigation, scientific exploration, and precision manipulation tasks on simulated Martian terrain. Mechanically, it features a four-wheel rocker suspension system with large-diameter aluminum wheels and grousers for enhanced traction on rocky and sandy surfaces. The chassis provides ample internal space for housing scientific tools and electronics, while a 6-DOF robotic arm with a two-claw gripper enables tasks such as probe placement, sample collection, and switch manipulation. The arm’s joints are powered by a combination of stepper motors, geared DC motors, and high-torque servos, allowing for fine control and adaptability across maintenance and probing tasks. <br> Electrically, the rover integrates two compute units—Raspberry Pi 4B for teleoperation and Jetson Xavier NX for autonomous functions like navigation and image processing. STM32 microcontrollers interface with motor drivers, encoders, and sensors, enabling real-time control and feedback. The power distribution system includes four Li-Po batteries, buck converters, and safety features such as fuses and emergency stop buttons. Perception is achieved through a RealSense D435i stereo camera, multiple Raspberry Pi cameras, and a BNO055 IMU for localization and mapping. Communication between the rover and base station is maintained via Ubiquiti Rocket M5 modules over a ROS network. The software stack includes RTAB-Map for SLAM, MoveIt for motion planning, and custom Python interfaces for operator control, ensuring robust performance across all mission phases.",
+      "image": "assets/img/mars-rover-anweshan-renaissance/RN_4.jpg",
+      "gallery": [
+        {
+          "src": "assets/img/mars-rover-anweshan-renaissance/RN_1.jpg",
+          "caption": "Rover during test run after manufacturing — iteration 2"
+        },
+        {
+          "src": "assets/img/mars-rover-anweshan-renaissance/RN_4.jpg",
+          "caption": "Rover during test run after manufacturing — iteration 1"
+        },
+        {
+          "src": "assets/img/mars-rover-anweshan-renaissance/RN_2.jpg",
+          "caption": "Rover assembly in progress at our ROV lab"
+        },
+        {
+          "src": "assets/img/mars-rover-anweshan-renaissance/RN_3.jpg",
+          "caption": "Robotic arm during assembly and debugging phase"
+        },
+        {
+          "src": "assets/img/mars-rover-anweshan-renaissance/RN_5.jpg",
+          "caption": "3D view of the PCB for the science module controller"
+        },
+        {
+          "src": "assets/img/mars-rover-anweshan-renaissance/RN_6.jpg",
+          "caption": "3D view of the PCB for the wheel motor controller"
+        },
+        {
+          "src": "assets/img/mars-rover-anweshan-renaissance/RN_7.jpg",
+          "caption": "3D view of the power distribution board with connector layout"
+        }
+      ],
+      "tags": [
+        "Undergraduate Team Project"
+      ],
+      "specs": [
+        {
+          "k": "My Role",
+          "v": "Project Leader, Electrical Subteam"
+        },
+        {
+          "k": "My Responsibilities",
+          "v": "Designing the schematic and PCB layout for the system. <br> Analytical calculation of required battery consumption <br> Selecting appropriate electrical components and a suitable development board to ensure compatibility and performance. <br> Identifing and integrating robust sensors capable of withstanding environmental conditions relevant to the project."
+        },
+        {
+          "k": "Project's Objective",
+          "v": "To design and develop a multifunctional Mars rover capable of autonomous navigation, scientific exploration, and precision manipulation, with robust electrical systems enabling real-time control, perception, and task execution in simulated extraterrestrial environments."
+        },
+        {
+          "k": "Materials",
+          "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel + Low Carbon Steel"
+        },
+        {
+          "k": "Software Tools",
+          "v": "Altium, Solidworks, Ansys Mechanical"
+        },
+        {
+          "k": "Manufacturing Tools",
+          "v": "PCB Manufacturing setup, CNC Milling, Wire EDM, CNC Lathe, FDM"
+        }
+      ]
+    },
+    {
+      "slug": "Formula Student Vehicle",
+      "title": "Formula Student Vehicle",
+      "subtitle": "A Combustion Vehicle for Formula Student Competition",
+      "description": "This project centers on the design and development of a student-built Formula Student race car, engineered for performance, reliability, and manufacturability. A steel tube space frame chassis was chosen to meet weight and strength requirements, with iterative analysis optimizing torsional rigidity and impact resistance. The suspension system employs unequal-length double wishbones with push-rod actuation, ensuring minimal camber gain and stable roll center behavior during cornering, bump, and rebound. Steering geometry is based on Ackermann principles to prevent outer wheel skidding, and the braking system uses CNC-machined aluminum calipers with locally fabricated discs for effective heat dissipation and structural integrity. Aerodynamic components such as undertray, diffuser, and sidepods were designed to enhance downforce and cooling efficiency while minimizing drag and manufacturing complexity. <br> The powertrain system features a KTM Duke 390 engine, selected for its lightweight, liquid-cooled configuration and compatibility with event regulations. The intake system includes a 20mm restrictor optimized to reduce flow separation, while the exhaust length and diameter were calculated using Smith and Bell equations to match target RPM ranges. The fuel tank, fabricated from AISI 1100 aluminum alloy, is positioned behind the driver for optimal packaging. The differential bracket, CNC-machined from aluminum, ensures precise alignment and structural integrity under chain tension. Throughout the project, simulation tools like SolidWorks, Ansys, and CFD analysis were used to validate mechanical, thermal, and fluid performance, ensuring that each subsystem meets the demands of competitive motorsport.",
+      "image": "assets/img/formula-student-vehicle/FS_6.png",
+      "gallery": [
+        {
+          "src": "assets/img/formula-student-vehicle/FS_1.jpg",
+          "caption": "Side view of the chassis after manufacturing, showcasing structural integrity"
+        },
+        {
+          "src": "assets/img/formula-student-vehicle/FS_2.jpg",
+          "caption": "Isometric view of the manufactured chassis highlighting tube layout and mounting points"
+        },
+        {
+          "src": "assets/img/formula-student-vehicle/FS_3.jpeg",
+          "caption": "CNC milling process of the bell crank component for suspension actuation"
+        },
+        {
+          "src": "assets/img/formula-student-vehicle/FS_4.jpg",
+          "caption": "Bell crank after manufacturing with machined surfaces and mounting holes"
+        },
+        {
+          "src": "assets/img/formula-student-vehicle/FS_5.jpeg",
+          "caption": "Finished bell crank component post-machining, ready for assembly"
+        },
+        {
+          "src": "assets/img/formula-student-vehicle/FS_7.jpeg",
+          "caption": "CNC milling of the upright component for steering and suspension interface"
+        },
+        {
+          "src": "assets/img/formula-student-vehicle/FS_8.jpeg",
+          "caption": "Finite element analysis of the suspension system under predetermined loading conditions"
+        },
+        {
+          "src": "assets/img/formula-student-vehicle/FS_9.jpeg",
+          "caption": "Upright component after manufacturing, prepared for integration with wheel assembly"
+        }
+      ],
+      "tags": [
+        "Undergraduate Team Project"
+      ],
+      "specs": [
+        {
+          "k": "My Role",
+          "v": "Subteam Lead, Vehicle Suspension Section"
+        },
+        {
+          "k": "My Responsibilities",
+          "v": "Analytical calculation of spring rate, roll center, length and angle of control arm, upright, bell crank. <br> Design for manufacturing and assembly of the suspension parts. <br> Stress analysis of control arm, upright, bell crank. <br> Manufacturing the control arm, tab joint, bell crank and upright. <br> Experimental test of the control arm in a Universal Testing Machine"
+        },
+        {
+          "k": "Project's Objective",
+          "v": "To design a lightweight, reliable, and cost-effective vehicle system with simplified subsystems—powertrain, steering, suspension, braking, and aerodynamics—prioritizing drivability and manufacturability."
+        },
+        {
+          "k": "Materials",
+          "v": "Aluminum Alloy + Stainless Steel + Low Carbon Steel"
+        },
+        {
+          "k": "Software Tools",
+          "v": "Solidworks, Ansys Mechanical, OptimumKinematics"
+        },
+        {
+          "k": "Manufacturing Tools",
+          "v": "CNC Milling, Wire EDM, CNC Lathe, FDM, welding machine, bending machine"
+        }
+      ]
+    },
+    {
+      "slug": "IPAS- Nirveek v1.0",
+      "title": "IPAS- Nirveek v1.0",
+      "subtitle": "Design Concept for a Drone in the Martian Environment",
+      "description": "This project presents the development of Nirveek V1.0, an autonomous UAV designed for Martian exploration under the International Planetary Aerial Systems 2021. Engineered to navigate harsh Martian terrain, Nirveek features a lightweight quadcopter frame (128×128×35 cm, 5.1 kg) capable of sustained 10-minute flights at altitudes up to 45 meters. It integrates a 360° vision system powered by a customized GoPro Max and Lidar, and relies on visual-inertial odometry (VIO) for GPS-independent navigation. Built on ROS for mission planning, the UAV includes a modular design for ease of repair, a 10000mAh LiPo battery, and a thermal management system to maintain operability in extreme temperatures. A custom gas compression system enables accurate sensor readings by heating and pressurizing Martian air, while a 2.4GHz radio link ensures communication up to 6.5 km. Designed with serviceability and adaptability in mind, Nirveek is equipped to perform autonomous missions, detect environmental hazards, and support future planetary research.",
+      "image": "assets/img/ipas-nirveek-v1-0/NR_1.jpg",
+      "gallery": [
+        {
+          "src": "assets/img/ipas-nirveek-v1-0/NR_1.jpg",
+          "caption": "Rendered CAD model of Nirveek V1.0 in isometric view"
+        },
+        {
+          "src": "assets/img/ipas-nirveek-v1-0/NR_2.jpg",
+          "caption": "System architecture of the electrical subsystem for Mars UAV operations"
+        },
+        {
+          "src": "assets/img/ipas-nirveek-v1-0/NR_3.jpg",
+          "caption": "CAD model showcasing structural layout and aerodynamic design of the drone"
+        },
+        {
+          "src": "assets/img/ipas-nirveek-v1-0/NR_4.jpg",
+          "caption": "Rendered CAD model highlighting integrated subsystems and mission-critical modules"
+        },
+        {
+          "src": "assets/img/ipas-nirveek-v1-0/NR_5.jpg",
+          "caption": "3D view of the flight controller PCB design"
+        }
+      ],
+      "tags": [
+        "Undergraduate Team Project"
+      ],
+      "specs": [
+        {
+          "k": "My Role",
+          "v": "Member, Electrical Subteam"
+        },
+        {
+          "k": "My Responsibilities",
+          "v": "Designing the schematic and PCB layout for the system. <br> Analytical calculation of required thrust, battery consumption and drone mass <br> Selecting appropriate electrical components and a suitable development board to ensure compatibility and performance. <br> Identifing and integrating robust sensors capable of withstanding environmental conditions relevant to the project."
+        },
+        {
+          "k": "Project's Objective",
+          "v": "To design and deploy a modular, autonomous UAV capable of navigating Martian terrain, performing environmental sensing, and maintaining operational stability under extreme atmospheric conditions."
+        },
+        {
+          "k": "Materials",
+          "v": "Carbon fiber + Silicone rubber"
+        },
+        {
+          "k": "Software Tools",
+          "v": "Altium, Microsoft Excel"
+        }
+      ]
+    },
+    {
+      "slug": "Cooling Tower",
+      "title": "Cooling Tower",
+      "subtitle": "Miniature Prototype of a Mechanically Driven Variable-Flow Nozzle Integrated Cooling Tower",
+      "description": "This project focuses on the design, fabrication, and performance evaluation of a cooling tower equipped with a variable nozzle mechanism to adapt to changing operational demands. The system integrates a feedback control strategy to regulate water flow and airflow, with a key innovation in dynamically adjusting the number of active nozzles based on flow rate. Three nozzle configurations were explored—double pipe, double disk, and double sheet mechanisms—with the double sheet design selected for its superior manufacturability and surface finish. The cooling tower body is constructed from 5 mm acrylic sheets, reinforced with wood to support the belt pulley system, while plastic film fills are used to maximize heat transfer efficiency. This modular and responsive design aims to improve cooling performance, reduce energy consumption, and offer scalable solutions for industrial applications.",
+      "image": "assets/img/cooling-tower/CT_1.jpg",
+      "gallery": [
+        {
+          "src": "assets/img/cooling-tower/CT_1.jpg",
+          "caption": "Rendered isometric view of the cooling tower CAD model"
+        },
+        {
+          "src": "assets/img/cooling-tower/CT_5.jpg",
+          "caption": "Isometric CAD model showcasing structural layout and nozzle configuration"
+        },
+        {
+          "src": "assets/img/cooling-tower/CT_2.jpeg",
+          "caption": "Top-down view of the miniature cooling tower after fabrication"
+        },
+        {
+          "src": "assets/img/cooling-tower/CT_3.jpeg",
+          "caption": "Isometric view of the fabricated cooling tower with integrated fill material"
+        },
+        {
+          "src": "assets/img/cooling-tower/CT_4.jpg",
+          "caption": "Detailed view of the nozzle driving mechanism and actuation setup"
+        },
+        {
+          "src": "assets/img/cooling-tower/CT_6.jpg",
+          "caption": "Third iteration of the nozzle assembly highlighting modular improvements"
+        }
+      ],
+      "tags": [
+        "Undergraduate Project"
+      ],
+      "specs": [
+        {
+          "k": "My Role",
+          "v": "Team Lead"
+        },
+        {
+          "k": "My Responsibilities",
+          "v": "Analytical calculations of mass flow rate, effectiveness, cooling capacity, evaporation loss, NTU. <br> CAD Design. <br> Manufacturing the parts and assembly with available local parts."
+        },
+        {
+          "k": "Project's Objective",
+          "v": "To design, fabricate, and evaluate a cooling tower with a variable nozzle, including performance analysis of a miniature prototype and investigation of flow-dependent efficiency variations."
+        },
+        {
+          "k": "Materials",
+          "v": "Acrylic + Polypropylene + Aluminum Alloy + Stainless Steel"
+        },
+        {
+          "k": "Software Tools",
+          "v": "Solidworks, Microsoft Excel"
+        },
+        {
+          "k": "Manufacturing Tools",
+          "v": "CNC Milling, Laser cutting machine, FDM"
+        }
+      ]
+    },
+    {
+      "slug": "Aqua Monitor",
+      "title": "Aqua Monitor",
+      "subtitle": "A Digital Water Quality & Flow Monitoring Device with a Proper Billing System",
+      "description": "This project introduces a smart water monitoring system composed of two integrated units: one for assessing water quality and another for tracking water usage. The water quality monitoring unit features a cylindrical flow-through design to minimize impedance and houses four key sensors—TDS, pH, turbidity, and dissolved oxygen—managed by an ESP32 microcontroller with built-in Wi-Fi and Bluetooth for seamless data transmission. A UV light module is incorporated to neutralize microbial contaminants, ensuring safe drinking water. The water usage monitoring unit includes a flow sensor to measure consumption and an automated solenoid valve that can shut off supply in response to anomalies. Together, these modules enable both users and service providers to monitor real-time water metrics, promoting transparency and accountability. The circuit powering this system includes essential features such as ESD protection, a manual reset via push-button switch, USB debugging support, dual power compatibility (12V adapter or rechargeable battery), a built-in display for live data visualization, and an LED indicator for system status. By digitizing water quality and usage data, the system supports fair billing practices—addressing the current issue of uniform charges despite varying consumption—and enables personalized access through customer ID via web and mobile platforms. Targeting over 15 million WASA users, this solution not only enhances public health and resource management but also lays the foundation for scalable, economic water treatment and equitable service delivery.",
+      "image": "assets/img/aqua-monitor/WF_6.png",
+      "gallery": [
+        {
+          "src": "assets/img/aqua-monitor/WF_6.png",
+          "caption": "CAD model of the water quality monitoring system, highlighting sensor placement and structural layout"
+        },
+        {
+          "src": "assets/img/aqua-monitor/WF_1.png",
+          "caption": "System architecture showcasing the development board and integrated electrical components"
+        },
+        {
+          "src": "assets/img/aqua-monitor/WF_7.png",
+          "caption": "PCB layout of the water usage monitoring system, illustrating circuit paths and component positioning"
+        },
+        {
+          "src": "assets/img/aqua-monitor/WF_8.png",
+          "caption": "PCB layout of the water quality monitoring system, detailing sensor interfaces and signal routing"
+        },
+        {
+          "src": "assets/img/aqua-monitor/WF_3.png",
+          "caption": "3D view of the water usage monitoring PCB highlighting layout"
+        },
+        {
+          "src": "assets/img/aqua-monitor/WF_2.png",
+          "caption": "3D view of the water quality monitoring PCB, showing component placement and board structure"
+        },
+        {
+          "src": "assets/img/aqua-monitor/WF_4.png",
+          "caption": "Exploded CAD view of the water usage monitoring system, illustrating layered assembly and component alignment"
+        },
+        {
+          "src": "assets/img/aqua-monitor/WF_5.png",
+          "caption": "Exploded CAD view of the water quality monitoring system, showing internal structure and sensor positioning"
+        }
+      ],
+      "tags": [
+        "Undergraduate Project",
+        "Winning Project of National STEM Competition"
+      ],
+      "specs": [
+        {
+          "k": "My Role",
+          "v": "Team Member, Electrical Subsection"
+        },
+        {
+          "k": "My Responsibilities",
+          "v": "Designing the schematic and PCB layout for the system. <br> Selecting appropriate electrical components and a suitable development board to ensure compatibility and performance. <br> Identifing and integrating robust sensors capable of withstanding environmental conditions relevant to the project."
+        },
+        {
+          "k": "Project's Objective",
+          "v": "To develop an integrated water monitoring system that accurately tracks daily water usage and flow rates across residential and commercial zones, enabling precise billing, promoting accountability for excessive consumption, and providing real-time water quality diagnostics to ensure public health and resource sustainability."
+        },
+        {
+          "k": "Software Tools",
+          "v": "Altium, EasyEDA, Arduino IDE"
+        }
+      ]
+    },
+    {
+      "slug": "Line Follower Robot",
+      "title": "Line Follower Robot",
+      "subtitle": "Autonomous Ground Robot for Line-Based Navigation and Obstacle Avoidance",
+      "description": "This project involves the design and development of an autonomous ground robot capable of line-based navigation and obstacle avoidance, using IR sensors for path detection and a sonar sensor for real-time environmental awareness. Built with a combination of plastic wood and nylon for structural durability, the robot is powered by an Arduino Nano and driven by an L298n motor driver. A PID control algorithm was implemented to enhance line-tracking precision, and after extensive tuning, the proportional and derivative gains were optimized for stable performance. The robot successfully solved complex line mazes and was able to identify the shortest path after completing a full scan of the environment. Key responsibilities included schematic and PCB design, breadboard prototyping, programming and debugging, component soldering and final assembly, followed by test runs using Altium, EasyEDA, and Arduino IDE.",
+      "image": "assets/img/line-follower-robot/LFR_1.jpg",
+      "gallery": [
+        {
+          "src": "assets/img/line-follower-robot/LFR_1.jpg",
+          "caption": "Isometric view of LFR iteration 2"
+        },
+        {
+          "src": "assets/img/line-follower-robot/LFR_2.jpg",
+          "caption": "Isometric view of LFR iteration 1"
+        }
+      ],
+      "tags": [
+        "Undergraduate Project",
+        "Completed"
+      ],
+      "specs": [
+        {
+          "k": "My Role",
+          "v": "Team Lead"
+        },
+        {
+          "k": "My Responsibilities",
+          "v": "Schematic and PCB design.<br>Prototyping on a breadboard.<br>Programming and debugging.<br>Components soldering and assembly.<br>Test run."
+        },
+        {
+          "k": "Project's Objective",
+          "v": "To develop an autonomous IR sensor–based line follower robot capable of detecting and following a predefined path with high accuracy, while integrating a sonar sensor to detect and avoid obstacles in real time."
+        },
+        {
+          "k": "Materials",
+          "v": "Plastic wood + Nylon"
+        },
+        {
+          "k": "Software Tools",
+          "v": "Altium, EasyEDA, Arduino IDE"
+        },
+        {
+          "k": "Components",
+          "v": "Arduino Nano, IR sensor, Sonar sensor, L298n motor driver"
+        }
+      ]
+    },
+    {
+      "slug": "Height Adjustable Table",
+      "title": "Height Adjustable Table",
+      "subtitle": "Ergonomic Table with Adjustable Height from 600 mm to 1300 mm",
+      "description": "This ergonomic height-adjustable table is designed to support a wide range of user postures, offering a smooth vertical adjustment from 600 mm to 1300 mm using a screw-based telescopic mechanism. Each leg consists of three key components: an internal screw shaft, an external screw with a small nut, and a square beam housing a larger nut, all working together to ensure stable and precise motion. Two DC motors independently drive the legs, requiring careful synchronization to maintain level alignment during movement. The system includes a preset height memory feature for user convenience, and the substantial adjustment range accommodates diverse ergonomic needs. Supporting components such as motor mounts, control circuitry, and structural reinforcements complete the design, making it both functional and adaptable for modern workspaces.",
+      "image": "assets/img/height-adjustable-table/HAT_3.jpg",
+      "gallery": [
+        {
+          "src": "assets/img/height-adjustable-table/HAT_1.jpg",
+          "caption": "Isometric view of the CAD model"
+        },
+        {
+          "src": "assets/img/height-adjustable-table/HAT_2.jpg",
+          "caption": "Rendered CAD model in standing position with telescopic beam fully extended"
+        },
+        {
+          "src": "assets/img/height-adjustable-table/HAT_3.jpg",
+          "caption": "Rendered CAD model in sitting position with telescopic beam fully retracted"
+        }
+      ],
+      "tags": [
+        "Self-Initiated Project",
+        "Ongoing"
+      ],
+      "specs": [
+        {
+          "k": "My Role",
+          "v": "Sole Developer"
+        },
+        {
+          "k": "My Responsibilities",
+          "v": "Design for manufacturing and assembly. <br> Telescopic beam mechanism. <br> Analytical calculation."
+        },
+        {
+          "k": "Project's Objective",
+          "v": "To design and develop a height-adjustable ergonomic table that accommodates both sitting and standing postures, promoting user comfort, flexibility, and long-term well-being."
+        },
+        {
+          "k": "Materials",
+          "v": "Wood, Stainless steel, Nylon"
+        },
+        {
+          "k": "Software Tools",
+          "v": "Solidworks"
+        },
+        {
+          "k": "Manufacturing Tools",
+          "v": "CNC Milling, Wire EDM, CNC Lathe, FDM"
+        }
+      ]
+    },
+    {
+      "slug": "Automated Quiz Buzzer System",
+      "title": "Automated Quiz Buzzer System",
+      "subtitle": "Arduino-Based Buzzer System for Competitive Quiz Events Supporting up to 8 Teams",
+      "description": "This project centers on the design and deployment of an automated quiz buzzer system tailored for competitive quiz events involving up to eight teams. The system integrates a custom-manufactured PCB that consolidates signal routing, input handling, and relay control for indicator lights. After initial prototyping, the finalized board supports reliable team input detection and visual feedback through relay-switched outputs. The buzzer logic is built to ensure lockout functionality, preventing simultaneous responses and preserving fairness during high-speed rounds. The system architecture emphasizes modularity and maintainability, with clearly defined input channels and output control paths. The use of relays enables safe switching of external indicators, while the PCB layout minimizes noise and cross-talk between channels. Designed for real-time responsiveness, the system supports rapid identification of the first responder and immediate visual signaling. Its compact footprint and robust signal isolation make it suitable for deployment in academic, corporate, or televised quiz formats. The project demonstrates practical integration of embedded control, digital logic, and hardware interfacing. Overall, it serves as a scalable foundation for future enhancements such as wireless input modules or score-tracking integration.",
+      "image": "assets/img/automated-quiz-buzzer-system/BZ_1.jpg",
+      "gallery": [
+        {
+          "src": "assets/img/automated-quiz-buzzer-system/BZ_1.jpg",
+          "caption": "Overview of quiz buzzer system with prototype, schematic, PCB layout, and manufactured PCB"
+        }
+      ],
+      "tags": [
+        "Self-Initiated Project",
+        "Delivered",
+        "Operational under a university club"
+      ],
+      "specs": [
+        {
+          "k": "My Role",
+          "v": "Sole Developer"
+        },
+        {
+          "k": "My Responsibilities",
+          "v": "Schematic and PCB design.<br>Prototyping on a breadboard.<br>Components soldering and assembly.<br>Test run."
+        },
+        {
+          "k": "Project's Objective",
+          "v": "To design and implement an automated quiz buzzer system supporting up to 8 teams, featuring a custom-manufactured PCB and relay-controlled indicator lights for competitive event."
+        },
+        {
+          "k": "Components",
+          "v": "Arduino Nano, Magnetic Relay"
+        },
+        {
+          "k": "Software Tools",
+          "v": "Altium, Arduino IDE"
+        },
+        {
+          "k": "Manufacturing Tools",
+          "v": "Homemade PCB setup, Soldering iron"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "",
+          "text": "",
+          "image": "",
+          "caption": "",
+          "align": ""
+        }
+      ]
+    }
+  ]
+}

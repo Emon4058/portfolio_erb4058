@@ -1,0 +1,88 @@
+{
+  "certifications": [
+    {
+      "title": "SOLIDWORKS Drawing Tools Professional",
+      "issuer": "Dassault Systèmes",
+      "description": "Skills: Computer-Aided Design (CAD) · SOLIDWORKS Drawing",
+      "link": "https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-FEHLYCJ693"
+    },
+    {
+      "title": "SOLIDWORKS Sheet Metal Professional",
+      "issuer": "Dassault Systèmes",
+      "description": "Skills: Computer-Aided Design (CAD) · SOLIDWORKS Sheetmetal",
+      "link": "https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-A4PRGC5T6H"
+    },
+    {
+      "title": "SOLIDWORKS Weldments Professional",
+      "issuer": "Dassault Systèmes",
+      "description": "Skills: Computer-Aided Design (CAD) · SOLIDWORKS Weldments",
+      "link": "https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-3PZKNAEXC7"
+    },
+    {
+      "title": "Topology Optimization Using Ansys Mechanical",
+      "issuer": "Ansys",
+      "description": "Skills: Topology optimization · Ansys Mechanical",
+      "link": "https://innoverse.ansys.com/badges/badge/dG9wb2xvZ3ktb3B0aW1pemF0aW9uLXVzaW5nLWFuc3lzLW1lY2hhbmljYWwtMTU%3D"
+    },
+    {
+      "title": "BAJA SAE Chassis Dynamic Analysis Using Ansys Mechanical",
+      "issuer": "Ansys",
+      "description": "Skills:  Ansys Mechanical · ANSYS Workbench",
+      "link": "https://innoverse.ansys.com/badges/badge/YmFqYS1zYWUtY2hhc3Npcy1keW5hbWljLWFuYWx5c2lzLXVzaW5nLWFuc3lzLW1lY2hhbmljYWwtMjY="
+    },
+    {
+      "title": "Ansys Tutorial",
+      "issuer": "Udemy",
+      "description": "Skills: Ansys ACP · Composite Material",
+      "link": "https://www.udemy.com/certificate/UC-be9d452f-5478-47c7-bc57-3f40a31a86d5/"
+    },
+    {
+      "title": "Stress Analysis in Solid Mechanics",
+      "issuer": "Ansys",
+      "description": "Skills: Solid Mechanics · Ansys Mechanical · Stress Analysis",
+      "link": "https://innoverse.ansys.com/badges/badge/c3RyZXNzLWFuYWx5c2lzLWluLXNvbGlkLW1lY2hhbmljcy0xMzA%3D"
+    },
+    {
+      "title": "SOLIDWORKS CAD Design Professional (CSWP)",
+      "issuer": "Dassault Systèmes",
+      "description": "Skills: Computer-Aided Design (CAD) · SOLIDWORKS · Design for Assembly",
+      "link": "https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-HM7QU4C6VD"
+    },
+    {
+      "title": "Finite Element Analysis Convergence and Mesh Independence",
+      "issuer": "Coursera",
+      "description": "Skills: Finite Element Analysis (FEA) · SimScale",
+      "link": "https://www.coursera.org/account/accomplishments/verify/DYGBZYKAQFL3"
+    },
+    {
+      "title": "FEM - Linear, Nonlinear Analysis & Post-Processing",
+      "issuer": "Coursera",
+      "description": "Skills: Non-linear Analysis · Finite Element Analysis (FEA) · SimScale",
+      "link": "https://www.coursera.org/account/accomplishments/verify/Y6PY4XWY5DKK"
+    },
+    {
+      "title": "Mechanical Design Solidworks Associate (CSWA)",
+      "issuer": "Dassault Systèmes",
+      "description": "Skills: Computer-Aided Design (CAD) · SOLIDWORKS",
+      "link": "https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-9G7EDFK4NZ"
+    },
+    {
+      "title": "MATLAB Onramp",
+      "issuer": "MathWorks",
+      "description": "Skills: MATLAB",
+      "link": "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=fb95d1c0-27ba-4a4f-8095-f971bcff5bf2&"
+    },
+    {
+      "title": "Ultimate Python Course - Learn from Scratch",
+      "issuer": "Udemy",
+      "description": "Skills: Python (Programming Language)",
+      "link": "https://www.udemy.com/certificate/UC-612cadcb-bc0b-4574-9ced-089ec62bbea4/"
+    },
+    {
+      "title": "Python 3 for ABSOLUTE beginners",
+      "issuer": "Udemy",
+      "description": "Skills: Python (Programming Language)",
+      "link": "https://www.udemy.com/certificate/UC-f20609c1-c94c-4c45-9df6-17e1a052faba/"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "education": [
+    {
+      "institution": "Bangladesh University of Engineering and Technology",
+      "location": "Dhaka, Bangladesh",
+      "degree": "BSc in Mechanical Engineering",
+      "period": "2018-09-2024-07",
+      "url": "https://www.buet.ac.bd/",
+      "highlights": [
+        "CGPA 3.43/4.00",
+        "Relevant Courses: Machine Design, Electro-Mechanical System Design, Mechatronics, Composite Materials, Automobile Engineering, Bio-Engineering, Instrumentation and Measurement, Heat Transfer Equipment Design, Fluid Machinery"
+      ]
+    },
+    {
+      "institution": "Notre Dame College",
+      "location": "Dhaka, Bangladesh",
+      "degree": "Higher Secondary School Certificate",
+      "period": "2016-2018",
+      "url": "https://ndc.edu.bd/",
+      "highlights": [
+        "Group — Science, GPA 5.00/5.00",
+        "General grade scholarship, Dhaka Board"
+      ]
+    },
+    {
+      "institution": "Sylhet Government Pilot High School",
+      "location": "Sylhet, Bangladesh",
+      "degree": "Secondary School Certificate",
+      "period": "2014-01-2016-10",
+      "url": "https://www.sylgovpilothss.edu.bd/",
+      "highlights": [
+        "Group — Science, GPA 5.00/5.00",
+        "General grade scholarship, Sylhet Board"
+      ]
+    }
+  ]
+}

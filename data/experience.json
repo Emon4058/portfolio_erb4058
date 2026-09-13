@@ -1,0 +1,126 @@
+{
+  "experience": [
+    {
+      "company": "Cybernetics Hi-Tech Solutions (Pvt) Ltd.",
+      "position": "Research And Development Engineer",
+      "location": "Dhaka, Bangladesh",
+      "period": "01 July 2024 - Present",
+      "url": "https://cyberneticsbd.com/",
+      "highlights": [
+        "Developing a man‑portable EOD ROV with 7 DoF robotic arm for military applications.",
+        "Analyzed the structural performance of fixed‑wing UAVs and multirotor drones designed to carry high payloads of up to 50 kg.",
+        "Acquired hands‑on experience in CNC machining, fused deposition modeling, composite manufacturing, and molding.",
+        "Iteratively refined the manufacturing process of carbon fiber parts using vacuum infusion and compression molding techniques to achieve high structural performance."
+      ],
+      "tech": [
+        "Composite Manufacturing",
+        "Additive Manufacturing",
+        "Finite Element Analysis",
+        "Soft Robotics",
+        "Structural Analysis"
+      ]
+    },
+    {
+      "company": "Spectrum Engineering Consortium Ltd.",
+      "position": "Intern, Research And Development Team",
+      "location": "Dhaka, Bangladesh",
+      "period": "01 June 2023 - 30 June 2024",
+      "url": "https://www.spectrum-bd.com/",
+      "highlights": [
+        "Engineered an ROV equipped with a 6 DoF arm, meticulously designed to operate and sustain functionality in harsh and challenging environments, ensuring robustness and reliability",
+        "Verified the structural integrity of the mechanical designs of an ROV through finite element analysis (FEA), identifying potential stress points and weaknesses"
+      ],
+      "tech": [
+        "Computer Aided Design",
+        "3d Printing",
+        "Finite Element Analysis",
+        "Mechanical Assembly",
+        "Non‑Linear Analysis"
+      ]
+    },
+    {
+      "company": "Runner Automobiles PLC",
+      "position": "Intern, 3 Wheeler Manufacturing Section",
+      "location": "Mymensingh, Bangladesh",
+      "period": "01 Nov 2023 - 20 Nov 2023",
+      "url": "https://runnerautomobiles.com/",
+      "highlights": [
+        "Acquired comprehensive knowledge of the three‑wheeler manufacturing process, encompassing welding, painting, and assembly sections",
+        "Developed a thorough understanding of industrial automation processes and the application of industrial robotic arms",
+        "Conducted a detailed analysis to identify and recommend improvements to make the manufacturing process more efficient"
+      ],
+      "tech": [
+        "Engine Assembly",
+        "Vehicle Assembly",
+        "Spot Welding",
+        "Robotic Welding",
+        "Welding Inspection",
+        "Painting"
+      ]
+    },
+    {
+      "company": "Team Interplanetar",
+      "position": "Member, Electrical and Communication Subteam",
+      "location": "Dhaka, Bangladesh",
+      "period": "May 2020 - August 2023",
+      "url": "https://buetinterplanetar.com/",
+      "highlights": [
+        "Built a Mars Rover capable of traversing through rocky terrain, collecting and processing specimens from the environment, and performing various tasks",
+        "Designed and implemented the PCB for the rover’s power distribution system, actuators, and sensors for onboard scientific experiment",
+        "Constructed a 6 DoF robotic arm from scratch, capable of holding a 5 kg payload in extended position"
+      ],
+      "tech": [
+        "PCB Design",
+        "Soldering",
+        "CAD Design",
+        "Robot Operating System"
+      ]
+    },
+    {
+      "company": "Automaestro",
+      "position": [
+        "Lead, Suspension Subteam",
+        "Member, Suspension Subteam"
+      ],
+      "location": "Dhaka, Bangladesh",
+      "period": [
+        "Dec 2022- July 2024",
+        "Dec 2021 -Dec 2022"
+      ],
+      "url": "https://automaestro.org/",
+      "highlights": [
+        "Contributed to the development of a competitive Formula Student automobile, taking part in the design, manufacturing, and experiments",
+        "Led the suspension team successfully, guiding the design and fabrication of critical components such as the upright, control arm, and bell crank"
+      ],
+      "tech": [
+        "CAD Design",
+        "Stress Analysis",
+        "Arc Welding",
+        "CNC Machining",
+        "Design for Assembly"
+      ]
+    },
+    {
+      "company": "BUET Robotics Society",
+      "position": [
+        "Vice President",
+        "Publicity and Outreach Coordinator"
+      ],
+      "location": "Dhaka, Bangladesh",
+      "period": [
+        "June 2023 - June 2024",
+        "June 2022 - June 2023"
+      ],
+      "url": "https://brs-buet.com/",
+      "highlights": [
+        "Supervised and coordinated the work of subcommittees to ensure alignment with club goals",
+        "Oversaw society activities like workshops, or campaigns. Ensured logistics, communication, and execution run smoothly."
+      ],
+      "tech": [
+        "CAD Design",
+        "PCB Design",
+        "Project Management Tools"
+      ]
+    }
+  ]
+}

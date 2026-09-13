@@ -539,7 +539,7 @@
             const params = new URLSearchParams(location.search);
             const slugParam = params.get("slug");
             const idxParam = parseInt(params.get("i"), 10);
-            const PROFILE_URL = "../../data/profile.json";
+            const PROFILE_URL = "../../data/projects.json";
 
             const slugify = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
             const resolveAsset = (src) => {
@@ -552,10 +552,11 @@
 
             fetch(PROFILE_URL)
                 .then(r => r.json())
-                .then(profile => {
+                .then(data => {
+                    const projectsArr = data.projects || [];
                     let project = null;
-                    if (slugParam) project = profile.projects.find(p => slugify(p.slug || p.title) === slugParam);
-                    if (!project) project = Number.isInteger(idxParam) && profile.projects[idxParam] ? profile.projects[idxParam] : profile.projects[0];
+                    if (slugParam) project = projectsArr.find(p => slugify(p.slug || p.title) === slugParam);
+                    if (!project) project = Number.isInteger(idxParam) && projectsArr[idxParam] ? projectsArr[idxParam] : projectsArr[0];
                     if (!project) throw new Error("No project found");
 
                     const title = project.title || "Project";

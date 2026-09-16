@@ -165,12 +165,8 @@
           "caption": "CAD assembly model featuring arm integration"
         },
         {
-          "src": "assets/img/jontro-soinik-1-0/JS_5.jpg",
-          "caption": "Live testing of core functionalities — 1"
-        },
-        {
           "src": "assets/img/jontro-soinik-1-0/JS_6.jpg",
-          "caption": "Live testing of core functionalities — 2"
+          "caption": "Live testing of core functionalities"
         },
         {
           "src": "assets/img/jontro-soinik-1-0/JS_7.jpg",
@@ -330,18 +326,6 @@
         {
           "src": "assets/img/smart-soinik-1-0/SS_6.jpg",
           "caption": "EOD ROV during testing at night light"
-        },
-        {
-          "src": "assets/img/smart-soinik-1-0/SS_7.jpg",
-          "caption": "Delivery ceremony of Smart Soinik"
-        },
-        {
-          "src": "assets/img/smart-soinik-1-0/SS_8.JPG",
-          "caption": "Robot with some of team members and Peruvian Armed Forces"
-        },
-        {
-          "src": "assets/img/smart-soinik-1-0/SS_9.jpg",
-          "caption": "Official handover ceremony to Peruvian Armed Forces"
         }
       ],
       "tags": [
@@ -474,6 +458,10 @@
           "caption": "Sectional view of CAD model illustrating internal configuration"
         },
         {
+          "src": "assets/img/hilsha-bot/RF_5.jpg",
+          "caption": "Exerimental testing of the soft robotic fish in a controlled water tank"
+        },
+        {
           "src": "assets/img/hilsha-bot/RF_9.jpg",
           "caption": "Isometric CAD model view from rear perspective"
         },
@@ -524,7 +512,7 @@
         },
         {
           "k": "Materials",
-          "v": "Silicone Rubber, PLA, Acrylic"
+          "v": "Silicone Rubber, PLA, Acrylic Plastic (Plexiglass)"
         },
         {
           "k": "Software Tools",
@@ -586,15 +574,19 @@
       "title": "Soft Robotic Actuator",
       "subtitle": "A Tendon-Driven Soft Actuator for Surgical Operation",
       "description": "The soft actuator is a tendon-driven soft continuum robot designed for minimally invasive surgery. It is fabricated primarily from inert and biocompatible silicone rubber, utilizing a process that includes Fused Deposition Modelling for creating molds and subsequent liquid silicone rubber moulding. The actuator achieves a minimum of three degrees of freedom, including bending along two axes and rotation around its central axis. The structure is based on repeating single units, with a typical diameter of 15 mm. These units are assembled by routing tension cables, which can be made of material like unfilled Nylon 6.6, through their multiple circular channels. The system operates by applying tension to these cables to induce bending or rotation.The finalized design (Version 2.1) features separate units dedicated to bending and rotation functionalities, enhancing efficiency, and includes an additional internal hole to accommodate a tool grabbing mechanism and power cable routing. A thin rigid layer is used between adjacent units to help minimize frictional loss. Control is managed through a sophisticated closed-loop system incorporating four DC motors connected to the tendons, an Arduino development board, and a custom PCB, using motor current as real-time feedback. Finite element analysis was utilized during development to predict the structure’s deformation and stress behavior under load",
-      "image": "assets/img/soft-robotic-actuator/SRA_8.jpeg",
+      "image": "assets/img/soft-robotic-actuator/SRA_9.jpeg",
       "gallery": [
         {
-          "src": "assets/img/soft-robotic-actuator/SRA_2.jpeg",
-          "caption": "Assembled silicone structure—iteration 1.5"
+          "src": "assets/img/soft-robotic-actuator/SRA_9.jpeg",
+          "caption": "Different bending configurations of the soft actuator"
         },
         {
           "src": "assets/img/soft-robotic-actuator/SRA_3.jpg",
           "caption": "Structural configuration and component layout"
+        },
+        {
+          "src": "assets/img/soft-robotic-actuator/SRA_2.jpeg",
+          "caption": "Prototype testing of assembled silicone structure—iteration 1.5"
         },
         {
           "src": "assets/img/soft-robotic-actuator/SRA_1.jpeg",

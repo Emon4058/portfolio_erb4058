@@ -58,7 +58,7 @@
         },
         {
           "k": "Project's Objective",
-          "v": "To develop an EOD ROV which is capable of precise manipulation, terrain adaptability, and reliable operation in critical tactical missions including CIED, surveillance, and bomb disposal."
+          "v": "To develop a ROV which is capable of precise manipulation, terrain adaptability, and reliable operation in critical missions including industrial maintenance work, inspection, and rescue operations."
         },
         {
           "k": "Materials",
@@ -138,81 +138,50 @@
       }
     },
     {
-      "slug": "Jontro Soinik 1.0",
-      "title": "Jontro Soinik 1.0",
-      "subtitle": "A Medium Platform EOD ROV (Updated Version of Smart Soinik 1.0)",
-      "description": "Jontro Soinik 1.0 (JS1.0) is Bangladesh’s third generation and most advanced indigenously developed Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV) with environmental adaptability and disrupter firing capacity, which is first of its kind, engineered for rapid deployment and rugged performance in high-risk environments. Successfully tested by the Bangladesh Army, including live disrupter firing and IP55 water protection trials, it proves its readiness for real-world missions. Equipped with advanced electronics like GPS, thermal imaging, IR night vision, 4x optical zoom, and a 2MP camera system, it supports precision surveillance and remote neutralization of threats. With robust mechanical capabilities—stair climbing, slope handling (up to 40°), 360° claw rotation, 40kg grip force, and a lifting capacity of up to 20kg—the ROV is built for maneuverability and strength. Its 16Ah battery enables extended operations with active/passive overload protection, self-diagnostics, and fast recharging. Designed for battlefield reliability, Jontro Soinik 1.0 embodies innovation, adaptability, and national pride in defense technology. \n Jontro Soinik 1.0 is set for deployment in 2025 under the UN Peacekeeping Mission in the Republic of the Congo.",
-      "image": "assets/img/jontro-soinik-1-0/JS_9.jpg",
+      "slug": "Automated Guided Vehicle",
+      "title": "Automated Guided Vehicle",
+      "subtitle": "An Aruco Marker-Guided AGV for Material Transport in RMG Factories",
+      "description": "The Automated Guided Vehicle (AGV) is an indigenously developed material-transport robot built for use on garments (RMG) factory floors in Bangladesh. It autonomously moves packages and materials from one point to another, using an onboard camera and LiDAR combined with Aruco marker-based navigation for precise, repeatable localization and path following. Each unit carries a payload of up to 100 kg at a maximum speed of 3 km/h on a flat, load-bearing deck. The chassis is built from MS sheet metal, MS, and stainless steel, with FDM-printed (PLA/ABS) components used for auxiliary parts. Three units have been built and delivered to an RMG company, where they now operate as part of the factory's material-handling workflow.",
+      "image": "assets/img/automated-guided-vehicle/AGV_1.jpg",
       "gallery": [
         {
-          "src": "assets/img/jontro-soinik-1-0/JS_1.jpg",
-          "caption": "Field-ready robot alongside development team"
+          "src": "assets/img/automated-guided-vehicle/AGV_1.jpg",
+          "caption": "AGVs transporting packages along the factory floor"
         },
         {
-          "src": "assets/img/jontro-soinik-1-0/JS_11.jpg",
-          "caption": "Side view of the robot with arm extended"
+          "src": "assets/img/automated-guided-vehicle/AGV_2.jpg",
+          "caption": "AGV units near Aruco marker way-point stands used for navigation"
         },
         {
-          "src": "assets/img/jontro-soinik-1-0/JS_3.jpg",
-          "caption": "Side view of the robot"
-        },
-        {
-          "src": "assets/img/jontro-soinik-1-0/JS_2.jpg",
-          "caption": "Robot displayed at gallery"
-        },
-        {
-          "src": "assets/img/jontro-soinik-1-0/JS_4.jpg",
-          "caption": "CAD assembly model featuring arm integration"
-        },
-        {
-          "src": "assets/img/jontro-soinik-1-0/JS_6.jpg",
-          "caption": "Live testing of core functionalities"
-        },
-        {
-          "src": "assets/img/jontro-soinik-1-0/JS_7.jpg",
-          "caption": "During development at Assembly Lab"
-        },
-        {
-          "src": "assets/img/jontro-soinik-1-0/JS_8.jpg",
-          "caption": "Fully assembled unit undergoing in-house validation"
-        },
-        {
-          "src": "assets/img/jontro-soinik-1-0/JS_9.jpg",
-          "caption": "Manipulator performance test during final QA"
-        },
-        {
-          "src": "assets/img/jontro-soinik-1-0/JS_10.png",
-          "caption": "Isometric CAD visualization of complete system"
+          "src": "assets/img/automated-guided-vehicle/AGV_3.jpg",
+          "caption": "Fleet of three AGVs parked at the factory's designated Robot Parking Area"
         }
       ],
       "tags": [
         "Delivered",
-        "Operational under Bangladesh Army"
+        "Deployed at RMG Factory",
+        "3 Units Built"
       ],
       "specs": [
         {
           "k": "My Role",
-          "v": "Intern, Research and Development Team (Mechanical)"
+          "v": "Research and Development Engineer (Mechanical)"
         },
         {
           "k": "My Responsibilities",
-          "v": "Analytical calculations of robotic arm, gripper. <br> Finite Element Analysis of Robotic Arm. <br> Determining the required torque and speed of actuators at joints. <br> CAD Design of attachments. <br> Track belt's traction analysis during stair climb."
+          "v": "Designing the robot <br> Procurement of components and materials <br> Manufacturing of mechanical parts <br> Assembly of the complete unit"
         },
         {
           "k": "Project's Objective",
-          "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger"
+          "v": "To develop an Automated Guided Vehicle capable of autonomously transporting packages and materials from one location to another across a garments (RMG) factory floor"
         },
         {
           "k": "Materials",
-          "v": "Aluminum Alloy + Stainless Steel + High Carbon Steel"
-        },
-        {
-          "k": "Software Tools",
-          "v": "Solidworks, Ansys Mechanical, PrusaSlicer"
+          "v": "MS Sheet Metal + MS + Stainless Steel + FDM (PLA, ABS)"
         },
         {
           "k": "Manufacturing Tools",
-          "v": "CNC Milling, Wire EDM, CNC Lathe, FDM"
+          "v": "Sheet Metal Fabrication, FDM 3D Printing"
         }
       ],
       "tablesOrder": [
@@ -227,26 +196,8 @@
             "Specification"
           ],
           "rows": {
-            "Water Ingress Protection": "IP55",
-            "Stair Climbing Ability": "8 inch (min)",
-            "Slopes": "40 Deg (min)",
-            "Vertical Obstacle": "20 cm (min)",
-            "Horizontal Obstacle/ Ditch": "35 cm (min)",
-            "Slide Tilt": "30 Deg (min)",
-            "Speed": "5 km/h",
-            "Turning Radius": "0",
-            "Turret": "200 Deg (min)",
-            "Shoulder": "200 Deg (min)",
-            "Elbow": "270 Deg (min)",
-            "Claw Joint": "360 Deg",
-            "Gripper Opening": "10 cm (min)",
-            "Grip Force": "40 Kg (min)",
-            "Lift Capacity (Retracted)": "20 Kg (min)",
-            "Lift Capacity (Extended)": "8 Kg (min)",
-            "Lift Capacity (Side)": "8 Kg (min)",
-            "Vertical Reach": "150 cm (min)",
-            "Horizontal Reach": "100 cm (min)",
-            "Vertical Reach Beneath": "25 cm (min)"
+            "Payload Capacity": "100 kg",
+            "Max Speed": "3 km/h"
           }
         },
         "Electrical Specification": {
@@ -256,94 +207,103 @@
             "Specification"
           ],
           "rows": {
-            "GPS Locator": "Available",
-            "Wireless HCU": "Available",
-            "Claw Camera": "IR night vision capability",
-            "Laser Range Finder": "Minimum 1, Range: 10 cm to 40 m",
-            "Proximity Sensor": "Available",
-            "Shock Tube Initiator": "2 channel shock tube initiator",
-            "Calibration": "Self-calibration and display calibration status",
-            "OCU": "Available",
-            "ROV Battery": "Maintaining 16Ah battery capacity",
-            "Main PTZ": "Available",
-            "Camera Zoom": "4X Optical Zoom",
-            "Front and Rear Camera": "Viewing heat map",
-            "Under Vehicle Kit": "Image inspection under vehicles",
-            "Thermal Camera": "Viewing heat map",
-            "Self Collision Avoider": "Use of short sensors or pulse encoders",
-            "Battery Weight": "10 kg is optimum",
-            "Battery Type (48 Volt)": "48 Volt",
-            "Active Communication Port": "Minimum 1 and indication in OCU",
-            "Passive Communication Port": "Passive use mechanism",
-            "Communication Port": "Minimum 1",
-            "Self Recovery": "Self recover from typical errors",
-            "Self-diagnostic": "Display warning, scan logs",
-            "Minimum Battery Capacity": "Minimum 10Ah capacity",
-            "Operational Temperature Range": "Up to 50°C",
-            "Deployment Time": "Maximum 5 mins",
-            "Temperature Sensor": "Will be installed",
-            "RF Extender": "Video/data transmission up to 1.5 km",
-            "Firing Circuit": "LOS 4Z firing circuit set in each ROV",
-            "Range": "LOS 1000 ft (min), NLOS 300 ft (min)",
-            "Screen": "Daylight readable screen",
-            "Battery Indicator": "Status indicator",
-            "Lights": "High luminosity 12V 5W lights (front and back)",
-            "Camera Tilt": "0–84 degree angle",
-            "Video Storage": "High-definition recording, ≥ 320 GB",
-            "Battery Recharge Time": "2 hours",
-            "AC Power and Charging Facility": "220V ±10%, 50Hz standard",
-            "Additional Rechargeable Battery": "More than 5 hours beyond 3–5 hours",
-            "Humidity During Operation": "95% at operating temperature",
-            "Storage Temperature": "Up to 50°C",
-            "Camera Resolution": "≥ 2 megapixel"
+            "Camera": "Available",
+            "LiDAR": "Available",
+            "Navigation": "Aruco marker-based navigation",
+            "Other Electrical Specifications": "To be updated"
           }
         }
       }
     },
     {
-      "slug": "Smart Soinik 1.0",
-      "title": "Smart Soinik 1.0",
-      "subtitle": "A Medium Platform Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV)",
-      "description": "Smart Soinik 1.0 (SS1.0) is the second-generation, indigenously developed Explosive Ordnance Disposal (EOD) Remotely Operated Vehicle (ROV) from Bangladesh, designed for rapid deployment and unmatched performance in high-risk operational environments. Rigorously tested and validated by the Bangladesh Army, SS1.0 combines cutting-edge electronics — such as thermal imaging, IR night vision, 4× optical zoom, and high-resolution video capture — with rugged mechanical strength, including stair-climbing ability, 30° slope handling, 360° claw rotation, and a powerful 40 kg grip force. Powered by a 16 Ah battery system with overload protection, self-diagnostics, and fast recharge capability, it ensures extended field endurance and operational reliability. On May 5, 2024, Smart Soinik 1.0 was officially gifted to the Peruvian Armed Forces by the Bangladesh Army and is now proudly deployed under the United Nations Peacekeeping Mission in the Republic of Mali, showcasing Bangladesh's growing footprint in global defense innovation and humanitarian operations.",
-      "image": "assets/img/smart-soinik-1-0/SS_1.jpg",
+      "slug": "Medium Platform ROV",
+      "title": "Medium Platform ROV",
+      "subtitle": "A Medium Platform Ground Robot for Industrial Maintenance and Rescue Operations (v1.0 & v2.0)",
+      "description": "Medium Platform ROV is an indigenously developed Remotely Operated Vehicle (ROV) platform built to reach places that are dangerous or hazardous for humans, serving industrial maintenance inspections and rescue operations. The platform has been developed across two iterations.\nVersion 1.0 was engineered for rapid deployment and unmatched performance in high-risk operational environments. Rigorously tested and validated, it combines cutting-edge electronics — such as thermal imaging, IR night vision, 4× optical zoom, and high-resolution video capture — with rugged mechanical strength, including stair-climbing ability, 30° slope handling, 360° claw rotation, and a powerful 40 kg grip force. Powered by a 16 Ah battery system with overload protection, self-diagnostics, and fast recharge capability, it ensures extended field endurance and operational reliability.\nVersion 2.0 is the more advanced, third-generation iteration of the platform, adding environmental adaptability and tool-actuation capacity as a first of its kind, engineered for rapid deployment and rugged performance in high-risk environments. Successfully tested, including live tool-actuation and IP55 water protection trials, it proves its readiness for real-world missions. Equipped with advanced electronics like GPS, thermal imaging, IR night vision, 4x optical zoom, and a 2MP camera system, it supports precision surveillance and remote operation in hazardous sites. With robust mechanical capabilities—stair climbing, slope handling (up to 40°), 360° claw rotation, 40kg grip force, and a lifting capacity of up to 20kg—the ROV is built for maneuverability and strength. Its 16Ah battery enables extended operations with active/passive overload protection, self-diagnostics, and fast recharging. Designed for rugged field reliability, Version 2.0 embodies innovation, adaptability, and engineering excellence, and is set for deployment in industrial maintenance and rescue operations.",
+      "image": "assets/img/jontro-soinik-1-0/JS_9.jpg",
       "gallery": [
         {
           "src": "assets/img/smart-soinik-1-0/SS_2.jpg",
-          "caption": "EOD ROV after manufacturing and assembly"
+          "caption": "Version 1.0 — ROV after manufacturing and assembly"
         },
         {
           "src": "assets/img/smart-soinik-1-0/SS_3.png",
-          "caption": "Cad Model of the robot"
+          "caption": "Version 1.0 — Cad Model of the robot"
         },
         {
           "src": "assets/img/smart-soinik-1-0/SS_4.png",
-          "caption": "Cad Model of the robot"
+          "caption": "Version 1.0 — Cad Model of the robot"
         },
         {
           "src": "assets/img/smart-soinik-1-0/SS_5.png",
-          "caption": "Cad Model of the robot"
+          "caption": "Version 1.0 — Cad Model of the robot"
         },
         {
           "src": "assets/img/smart-soinik-1-0/SS_6.jpg",
-          "caption": "EOD ROV during testing at night light"
+          "caption": "Version 1.0 — ROV during testing at night light"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_1.jpg",
+          "caption": "Version 2.0 — Field-ready robot alongside development team"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_11.jpg",
+          "caption": "Version 2.0 — Side view of the robot with arm extended"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_3.jpg",
+          "caption": "Version 2.0 — Side view of the robot"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_2.jpg",
+          "caption": "Version 2.0 — Robot displayed at gallery"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_4.jpg",
+          "caption": "Version 2.0 — CAD assembly model featuring arm integration"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_6.jpg",
+          "caption": "Version 2.0 — Live testing of core functionalities"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_7.jpg",
+          "caption": "Version 2.0 — During development at Assembly Lab"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_8.jpg",
+          "caption": "Version 2.0 — Fully assembled unit undergoing in-house validation"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_9.jpg",
+          "caption": "Version 2.0 — Manipulator performance test during final QA"
+        },
+        {
+          "src": "assets/img/jontro-soinik-1-0/JS_10.png",
+          "caption": "Version 2.0 — Isometric CAD visualization of complete system"
         }
       ],
       "tags": [
         "Delivered",
-        "Deployed at UN Peacekeeping Mission"
+        "Two Iterations: v1.0 & v2.0",
+        "Deployed for Field Operations"
       ],
       "specs": [
         {
           "k": "My Role",
-          "v": "Intern, Research and Development Team (Mechanical)"
+          "v": "Research and Development Engineer (Mechanical)"
         },
         {
           "k": "My Responsibilities",
-          "v": "Analytical calculations of robotic arm, gripper, required specifications of actuator. <br> Stress analysis of robotic arm. <br> Track belt's traction analysis during stair climb."
+          "v": "Analytical calculations of torque and speed at different joint of robotic arm, gripper. <br> Stress and Finite Element Analysis of robotic arm. <br> Determining required torque and speed of actuators at joints. <br> CAD design of attachments. <br> Track belt's traction analysis during stair climb."
         },
         {
           "k": "Project's Objective",
-          "v": "To safely detect, assess, and neutralize explosive threats like IEDs or unexploded ordnance—without exposing human operators to danger"
+          "v": "To develop a ground robot platform, across two iterations, that can safely inspect, access, and operate in industrial maintenance and rescue scenarios—reaching hazardous or dangerous locations without exposing human operators to danger"
+        },
+        {
+          "k": "Versions",
+          "v": "v1.0 — Medium Platform ROV v1.0 (initial platform) <br> v2.0 — Advanced iteration with improved environmental adaptability, mobility, and tool-actuation capacity"
         },
         {
           "k": "Materials",
@@ -359,11 +319,13 @@
         }
       ],
       "tablesOrder": [
-        "Mechanical Specification",
-        "Electrical Specification"
+        "Mechanical Specification (v1.0)",
+        "Electrical Specification (v1.0)",
+        "Mechanical Specification (v2.0)",
+        "Electrical Specification (v2.0)"
       ],
       "tables": {
-        "Mechanical Specification": {
+        "Mechanical Specification (v1.0)": {
           "collapsed": true,
           "columns": [
             "Functionality",
@@ -392,7 +354,7 @@
             "Vertical Reach Beneath": "25 cm"
           }
         },
-        "Electrical Specification": {
+        "Electrical Specification (v1.0)": {
           "collapsed": true,
           "columns": [
             "Item",
@@ -402,7 +364,7 @@
             "Claw Camera": "IR night vision capability",
             "Laser Range Finder": "Minimum 1, Range: 10cm to 40m",
             "Proximity Sensor": "Minimum 2",
-            "Shock Tube Initiator": "2 channel shock tube initiator",
+            "Tool Actuation Circuit": "2 channel actuation circuit for auxiliary tools",
             "Calibration": "Self-calibration and display calibration status",
             "OCU": "Video feed, command system",
             "ROV Battery": "Maintaining 16Ah battery capacity",
@@ -424,7 +386,7 @@
             "Deployment time": "Maximum 5 mins",
             "Temperature sensor": "Will be available",
             "RF Extender": "To increase video/data transmission up to 152m",
-            "Firing Circuit": "4× 24V firing circuit set in each ROV",
+            "Tool Power Circuit": "4× 24V tool power circuit set in each ROV",
             "Range": "LOS 1000ft minimum, NLOS 300ft minimum",
             "Screen": "Daylight readable screen",
             "Battery indicator": "Status indicator",
@@ -438,6 +400,84 @@
             "Storage temperature test": "0 to 50 degree Celsius",
             "Camera resolution": "2 megapixel at least",
             "Wireless HCU": "To be provided"
+          }
+        },
+        "Mechanical Specification (v2.0)": {
+          "collapsed": true,
+          "columns": [
+            "Functionality",
+            "Specification"
+          ],
+          "rows": {
+            "Water Ingress Protection": "IP55",
+            "Stair Climbing Ability": "8 inch (min)",
+            "Slopes": "40 Deg (min)",
+            "Vertical Obstacle": "20 cm (min)",
+            "Horizontal Obstacle/ Ditch": "35 cm (min)",
+            "Slide Tilt": "30 Deg (min)",
+            "Speed": "5 km/h",
+            "Turning Radius": "0",
+            "Turret": "200 Deg (min)",
+            "Shoulder": "200 Deg (min)",
+            "Elbow": "270 Deg (min)",
+            "Claw Joint": "360 Deg",
+            "Gripper Opening": "10 cm (min)",
+            "Grip Force": "40 Kg (min)",
+            "Lift Capacity (Retracted)": "20 Kg (min)",
+            "Lift Capacity (Extended)": "8 Kg (min)",
+            "Lift Capacity (Side)": "8 Kg (min)",
+            "Vertical Reach": "150 cm (min)",
+            "Horizontal Reach": "100 cm (min)",
+            "Vertical Reach Beneath": "25 cm (min)"
+          }
+        },
+        "Electrical Specification (v2.0)": {
+          "collapsed": true,
+          "columns": [
+            "Functionality",
+            "Specification"
+          ],
+          "rows": {
+            "GPS Locator": "Available",
+            "Wireless HCU": "Available",
+            "Claw Camera": "IR night vision capability",
+            "Laser Range Finder": "Minimum 1, Range: 10 cm to 40 m",
+            "Proximity Sensor": "Available",
+            "Tool Actuation Circuit": "2 channel actuation circuit for auxiliary tools",
+            "Calibration": "Self-calibration and display calibration status",
+            "OCU": "Available",
+            "ROV Battery": "Maintaining 16Ah battery capacity",
+            "Main PTZ": "Available",
+            "Camera Zoom": "4X Optical Zoom",
+            "Front and Rear Camera": "Viewing heat map",
+            "Under Vehicle Kit": "Image inspection under vehicles",
+            "Thermal Camera": "Viewing heat map",
+            "Self Collision Avoider": "Use of short sensors or pulse encoders",
+            "Battery Weight": "10 kg is optimum",
+            "Battery Type (48 Volt)": "48 Volt",
+            "Active Communication Port": "Minimum 1 and indication in OCU",
+            "Passive Communication Port": "Passive use mechanism",
+            "Communication Port": "Minimum 1",
+            "Self Recovery": "Self recover from typical errors",
+            "Self-diagnostic": "Display warning, scan logs",
+            "Minimum Battery Capacity": "Minimum 10Ah capacity",
+            "Operational Temperature Range": "Up to 50°C",
+            "Deployment Time": "Maximum 5 mins",
+            "Temperature Sensor": "Will be installed",
+            "RF Extender": "Video/data transmission up to 1.5 km",
+            "Tool Power Circuit": "4× 24V tool power circuit set in each ROV",
+            "Range": "LOS 1000 ft (min), NLOS 300 ft (min)",
+            "Screen": "Daylight readable screen",
+            "Battery Indicator": "Status indicator",
+            "Lights": "High luminosity 12V 5W lights (front and back)",
+            "Camera Tilt": "0–84 degree angle",
+            "Video Storage": "High-definition recording, ≥ 320 GB",
+            "Battery Recharge Time": "2 hours",
+            "AC Power and Charging Facility": "220V ±10%, 50Hz standard",
+            "Additional Rechargeable Battery": "More than 5 hours beyond 3–5 hours",
+            "Humidity During Operation": "95% at operating temperature",
+            "Storage Temperature": "Up to 50°C",
+            "Camera Resolution": "≥ 2 megapixel"
           }
         }
       }
@@ -750,7 +790,7 @@
         }
       ],
       "tags": [
-        "Completed"
+        "Prototype model"
       ],
       "specs": [
         {

@@ -421,34 +421,39 @@
         .theme-switch {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-        }
-
-        .theme-btn {
+            gap: 8px;
+            padding: 5px 12px 5px 5px;
             background: var(--card);
             border: 1px solid var(--border);
-            color: var(--text);
-            width: 36px;
-            height: 36px;
-            padding: 0;
-            border-radius: 50%;
+            border-radius: 999px;
             cursor: pointer;
-            font-size: 14px;
+            user-select: none;
+        }
+
+        .theme-switch:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .theme-switch:hover .theme-label,
+        .theme-switch:hover .theme-icon {
+            color: #fff;
+        }
+
+        .theme-icon {
+            width: 26px;
+            height: 26px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            font-size: 14px;
         }
 
-        .theme-btn:hover {
-            background: var(--primary);
-            color: #fff;
-            border-color: var(--primary);
-        }
-
-        .theme-opt.active {
-            background: var(--primary);
-            color: #fff;
-            border-color: var(--primary);
+        .theme-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text);
+            white-space: nowrap;
         }
     </style>
 
@@ -461,13 +466,9 @@
         <div class="topbar-inner">
             <a class="brand" href="../../index.html">Home</a>
             <a class="back" href="../../index.html#projects">← Back to Projects</a>
-            <div class="theme-switch" id="theme-toggle" role="group" aria-label="Theme" style="margin-left:auto">
-                <button type="button" class="theme-btn theme-opt" data-theme-option="light" aria-pressed="false"
-                    title="Light"><i class="fa-regular fa-sun"></i></button>
-                <button type="button" class="theme-btn theme-opt" data-theme-option="dark" aria-pressed="false"
-                    title="Dark"><i class="fa-regular fa-moon"></i></button>
-                <button type="button" class="theme-btn theme-opt" data-theme-option="system" aria-pressed="false"
-                    title="System default"><i class="fa-solid fa-circle-half-stroke"></i></button>
+            <div class="theme-switch" id="theme-toggle" style="margin-left:auto" role="button" tabindex="0" title="System" aria-label="Theme: System">
+                    <span class="theme-icon"><i class="fa-solid fa-circle-half-stroke"></i></span>
+                <span class="theme-label">System</span>
             </div>
         </div>
     </header>

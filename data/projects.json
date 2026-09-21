@@ -12,36 +12,52 @@
           "caption": "CAD model — isometric view"
         },
         {
-          "src": "assets/img/man-transportable-rov/MP_2.jpeg",
-          "caption": "Arm extended — deployment configuration"
-        },
-        {
-          "src": "assets/img/man-transportable-rov/MP_3.jpeg",
-          "caption": "Arm retracted — standby configuration"
-        },
-        {
-          "src": "assets/img/man-transportable-rov/MP_4.jpg",
-          "caption": "Robot carrier — carbon fiber, iteration 1"
-        },
-        {
-          "src": "assets/img/man-transportable-rov/MP_5.jpg",
-          "caption": "Vacuum infusion process — manufacturing phase"
-        },
-        {
-          "src": "assets/img/man-transportable-rov/MP_6.jpg",
-          "caption": "Vacuum infusion process — alternate angle"
-        },
-        {
-          "src": "assets/img/man-transportable-rov/MP_1.jpeg",
-          "caption": "CAD model — pre-rendered version"
-        },
-        {
           "src": "assets/img/man-transportable-rov/MP_9.png",
           "caption": "CAD model — isometric rear view"
         },
         {
           "src": "assets/img/man-transportable-rov/MP_11.png",
           "caption": "CAD model — isometric front view"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_10.png",
+          "caption": "CAD model — arm extended pose"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_6.jpg",
+          "caption": "Vacuum infusion process — alternate angle"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_18.jpeg",
+          "caption": "Carbon fiber layup — clamped and bonding"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_19.jpeg",
+          "caption": "Carbon fiber layup — alternate angle"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_14.jpg",
+          "caption": "Machined flipper housing — finished part"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_15.jpg",
+          "caption": "Telescopic beam mechanism — actuation test"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_20.jpg",
+          "caption": "Gripper assemblies — carbon fiber arm variants"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_21.jpg",
+          "caption": "Arm assembly on test stand — wiring and integration"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_22.jpg",
+          "caption": "Fully assembled robot — arm and camera mast deployed"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_23.jpg",
+          "caption": "Two completed units — final assembly"
         }
       ],
       "tags": [
@@ -140,8 +156,8 @@
     {
       "slug": "Automated Guided Vehicle",
       "title": "Automated Guided Vehicle",
-      "subtitle": "An Aruco Marker-Guided AGV for Material Transport in RMG Factories",
-      "description": "The Automated Guided Vehicle (AGV) is an indigenously developed material-transport robot built for use on garments (RMG) factory floors in Bangladesh. It autonomously moves packages and materials from one point to another, using an onboard camera and LiDAR combined with Aruco marker-based navigation for precise, repeatable localization and path following. Each unit carries a payload of up to 100 kg at a maximum speed of 3 km/h on a flat, load-bearing deck. The chassis is built from MS sheet metal, MS, and stainless steel, with FDM-printed (PLA/ABS) components used for auxiliary parts. Three units have been built and delivered to an RMG company, where they now operate as part of the factory's material-handling workflow.",
+      "subtitle": "An AprilTag-Guided AGV for Material Transport in RMG Factories",
+      "description": "The Automated Guided Vehicle (AGV) is an indigenously developed material-transport robot built for use on garments (RMG) factory floors in Bangladesh. It autonomously moves packages and materials from one point to another, using an onboard camera and LiDAR combined with AprilTag-based navigation for precise, repeatable localization and path following. Each unit carries a payload of up to 100 kg at a maximum speed of 3 km/h on a flat, load-bearing deck. The chassis is built from MS sheet metal, MS, and stainless steel, with FDM-printed (PLA/ABS) components used for auxiliary parts. Three units have been built and delivered to an RMG company, where they now operate as part of the factory's material-handling workflow.",
       "image": "assets/img/automated-guided-vehicle/AGV_1.jpg",
       "gallery": [
         {
@@ -150,7 +166,7 @@
         },
         {
           "src": "assets/img/automated-guided-vehicle/AGV_2.jpg",
-          "caption": "AGV units near Aruco marker way-point stands used for navigation"
+          "caption": "AGV units near AprilTag way-point stands used for navigation"
         },
         {
           "src": "assets/img/automated-guided-vehicle/AGV_3.jpg",
@@ -197,7 +213,8 @@
           ],
           "rows": {
             "Payload Capacity": "100 kg",
-            "Max Speed": "3 km/h"
+            "Max Speed": "3 km/h",
+            "Drive": "2x DC motors with gearbox, high-resolution encoders"
           }
         },
         "Electrical Specification": {
@@ -209,8 +226,10 @@
           "rows": {
             "Camera": "Available",
             "LiDAR": "Available",
-            "Navigation": "Aruco marker-based navigation",
-            "Other Electrical Specifications": "To be updated"
+            "Navigation": "AprilTag-based navigation",
+            "Fleet Coordinator": "Central laptop (fleet management software)",
+            "Onboard Compute": "Raspberry Pi (one per robot)",
+            "Motor Interface": "RS-485 Modbus RTU"
           }
         }
       }

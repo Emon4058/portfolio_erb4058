@@ -3,6 +3,17 @@
 (function () {
   var root = document.documentElement;
   var STORAGE_KEY = "theme"; // values: "dark" | "light" | "system"
+  var MODES = ["system", "light", "dark"];
+  var ICONS = {
+    system: "fa-solid fa-circle-half-stroke",
+    light: "fa-regular fa-sun",
+    dark: "fa-regular fa-moon",
+  };
+  var LABELS = {
+    system: "System",
+    light: "Light",
+    dark: "Dark",
+  };
   var media =
     window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -34,12 +45,16 @@
   }
 
   function updateControlUI() {
-    var buttons = document.querySelectorAll("[data-theme-option]");
-    for (var i = 0; i < buttons.length; i++) {
-      var btn = buttons[i];
-      var isActive = btn.getAttribute("data-theme-option") === currentMode;
-      btn.classList.toggle("active", isActive);
-      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+    var groups = document.querySelectorAll("#theme-toggle");
+    for (var i = 0; i < groups.length; i++) {
+      var group = groups[i];
+      var btn = group;
+      var icon = group.querySelector(".theme-icon i");
+      var label = group.querySelector(".theme-label");
+      if (icon) icon.className = ICONS[currentMode];
+      if (label) label.textContent = LABELS[currentMode];
+      if (btn) btn.setAttribute("title", LABELS[currentMode]);
+      if (btn) btn.setAttribute("aria-label", "Theme: " + LABELS[currentMode]);
     }
   }
 
@@ -50,14 +65,22 @@
     updateControlUI();
   }
 
+  function nextMode() {
+    var index = MODES.indexOf(currentMode);
+    setMode(MODES[(index + 1) % MODES.length]);
+  }
+
   function initControl() {
-    var group = document.getElementById("theme-toggle");
-    if (!group) return;
-    group.addEventListener("click", function (e) {
-      var btn = e.target.closest("[data-theme-option]");
-      if (!btn) return;
-      setMode(btn.getAttribute("data-theme-option"));
-    });
+    var groups = document.querySelectorAll("#theme-toggle");
+    for (var i = 0; i < groups.length; i++) {
+      groups[i].addEventListener("click", nextMode);
+      groups[i].addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          nextMode();
+        }
+      });
+    }
     updateControlUI();
   }
 

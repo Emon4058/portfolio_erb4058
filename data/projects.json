@@ -36,12 +36,40 @@
           "caption": "Carbon fiber layup — alternate angle"
         },
         {
+          "src": "assets/img/man-transportable-rov/MP_25.jpg",
+          "caption": "Carbon fiber chassis shell — after resin infusion"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_26.jpg",
+          "caption": "Carbon fiber chassis shells — cured and trimmed"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_27.jpg",
+          "caption": "Chassis mock-up — tracks, flippers and drive motors fitted"
+        },
+        {
           "src": "assets/img/man-transportable-rov/MP_14.jpg",
           "caption": "Machined flipper housing — finished part"
         },
         {
           "src": "assets/img/man-transportable-rov/MP_15.jpg",
           "caption": "Telescopic beam mechanism — actuation test"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_28.jpg",
+          "caption": "Telescopic beam — carbon fiber square tube sections"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_29.jpg",
+          "caption": "Telescopic beam — nested sections fit check"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_24.jpg",
+          "caption": "Gripper parts — machined base with carbon fiber fingers"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_30.jpg",
+          "caption": "Gripper — assembled on carbon fiber housing"
         },
         {
           "src": "assets/img/man-transportable-rov/MP_20.jpg",
@@ -58,6 +86,22 @@
         {
           "src": "assets/img/man-transportable-rov/MP_23.jpg",
           "caption": "Two completed units — final assembly"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_31.jpg",
+          "caption": "Final assembly — two units, front three-quarter view"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_32.jpg",
+          "caption": "Final assembly — side view with arms extended"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_33.jpg",
+          "caption": "Final assembly — elevated view of arm and track layout"
+        },
+        {
+          "src": "assets/img/man-transportable-rov/MP_34.jpg",
+          "caption": "Final assembly — arms raised with grippers open"
         }
       ],
       "tags": [
@@ -705,7 +749,7 @@
     {
       "slug": "Titan, A Large Scale FDM Printer",
       "title": "Titan, A Large Scale FDM Printer",
-      "subtitle": "A FDM 3D Printer with a Bed Volume of 510mm×510mm×550mm",
+      "subtitle": "An FDM 3D Printer with a Bed Volume of 510mm×510mm×550mm",
       "description": "Titan is a large-format FDM printer designed for high-speed, precision additive manufacturing with a 510 × 510 × 550 mm build volume, ±0.1 mm accuracy, and 0.02 mm repeatability; it features CoreXY motion with GT2 belts, a direct-drive dual-gear extruder (MK8), a 0.8 mm swappable nozzle, and a heated glass bed up to 120°C. The hotend reaches 300°C for engineering-grade thermoplastics, powered by a Bigtreetech controller with TMC2209 drivers running Marlin 2.0 firmware. Titan includes a 4.3 inch touchscreen with jog wheel, Wi-Fi, Ethernet, and USB-C connectivity. Safety features comprise thermal-runaway protection, power-loss resume, and door interlock. The MeanWell 24V / 30A PFC power supply ensures stable operation. Titan supports rapid prototyping and functional part fabrication with silent actuation and high-flow extrusion. Its optimized motion system enables smooth, vibration-free performance. The printer achieves up to 200 mm/s print speed, with a recommended range of 60–120 mm/s. Layer resolution spans 50–400 µm for fine detail and robust builds. Titan is ideal for research, industrial prototyping, and large-scale fabrication workflows.",
       "image": "assets/img/titan-a-large-scale-fdm-printer/TP_21.jpeg",
       "gallery": [

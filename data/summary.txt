@@ -1,6 +1,7 @@
-Building robots, from design and analysis to manufacturing and assembly, is my passion. For the 
-past three years, I have been working across soft robotics, industrial robotics, additive manufacturing, 
-composite materials, and more.
+Passionate about end-to-end robotic systems development, I have three years of hands-on experience spanning 
+soft robotics, industrial robotics, additive manufacturing, and advanced composite materials. My technical 
+expertise covers mechanical design, computational analysis, manufacturing, and system assembly to deliver 
+innovative engineering solutions.
 
 As a Research and Development Engineer at Cybernetics Hi‑Tech Solutions (Pvt.) Ltd., I am focused on the 
 development and analysis of remotely operated vehicles for industrial applications and rescue operations. 

@@ -16,6 +16,7 @@
   // Load profile data (split across multiple files under data/)
   Promise.all([
     fetch("data/profile.json").then((r) => r.json()),
+    fetch("data/summary.txt").then((r) => r.text()),
     fetch("data/projects.json").then((r) => r.json()),
     fetch("data/skills.json").then((r) => r.json()),
     fetch("data/experience.json").then((r) => r.json()),
@@ -26,6 +27,7 @@
     .then(
       ([
         profile,
+        summaryText,
         projects,
         skills,
         experience,
@@ -33,6 +35,13 @@
         certifications,
         achievements,
       ]) => {
+        // summary.txt: paragraphs separated by blank lines; single line breaks
+        // inside a paragraph are just editor wrapping and become spaces.
+        profile.summary = summaryText
+          .trim()
+          .split(/\r?\n\s*\r?\n/)
+          .map((p) => p.replace(/\s*\r?\n\s*/g, " ").trim())
+          .join("\n");
         Object.assign(
           profile,
           projects,

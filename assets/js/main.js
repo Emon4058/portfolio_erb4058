@@ -23,6 +23,7 @@
     fetch("data/education.json").then((r) => r.json()),
     fetch("data/certifications.json").then((r) => r.json()),
     fetch("data/achievements.json").then((r) => r.json()),
+    fetch("data/language-proficiency.json").then((r) => r.json()),
   ])
     .then(
       ([
@@ -34,6 +35,7 @@
         education,
         certifications,
         achievements,
+        languageProficiency,
       ]) => {
         // summary.txt: paragraphs separated by blank lines; single line breaks
         // inside a paragraph are just editor wrapping and become spaces.
@@ -49,7 +51,8 @@
           experience,
           education,
           certifications,
-          achievements
+          achievements,
+          languageProficiency
         );
         return profile;
       }
@@ -434,6 +437,24 @@
             certList.appendChild(wrapper);
           });
         }
+
+
+      // Language proficiency
+      const langList = document.getElementById("languages-list");
+      if (langList && Array.isArray(profile.languageProficiency)) {
+        langList.innerHTML = "";
+
+        profile.languageProficiency.forEach((l) => {
+          const wrapper = document.createElement("div");
+          wrapper.className = "cert-card";
+          wrapper.innerHTML = `
+            <h4 class="cert-title">${l.language || ""}</h4>
+            ${l.level ? `<div class="cert-issuer">${l.level}</div>` : ""}
+            ${l.score ? `<p class="cert-desc">${l.score}</p>` : ""}
+          `;
+          langList.appendChild(wrapper);
+        });
+      }
 
 
       // Achievements (Title, Position, Year)

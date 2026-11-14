@@ -781,7 +781,8 @@ a.card:hover {
 
 
 /* Certifications list */
-#certifications-list {
+#certifications-list,
+#languages-list {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -973,6 +974,7 @@ html[data-theme="dark"] .ach-badge {
 /* Responsive layout */
 @media(max-width:768px) {
   #certifications-list,
+  #languages-list,
   #achievements-list {
     grid-template-columns: 1fr;
   }
